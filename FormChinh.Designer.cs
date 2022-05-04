@@ -45,7 +45,7 @@
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.lblTenNguoiDung = new System.Windows.Forms.Label();
             this.lblChucnang = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlBody = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -287,6 +287,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.iconPictureBox2);
             this.panel1.Controls.Add(this.lblTenNguoiDung);
             this.panel1.Controls.Add(this.lblChucnang);
@@ -299,7 +300,7 @@
             // iconPictureBox2
             // 
             this.iconPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconPictureBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.iconPictureBox2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.iconPictureBox2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
             this.iconPictureBox2.IconColor = System.Drawing.SystemColors.ControlText;
@@ -307,9 +308,10 @@
             this.iconPictureBox2.IconSize = 42;
             this.iconPictureBox2.Location = new System.Drawing.Point(1046, 48);
             this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(45, 42);
+            this.iconPictureBox2.Size = new System.Drawing.Size(42, 42);
             this.iconPictureBox2.TabIndex = 1;
             this.iconPictureBox2.TabStop = false;
+            this.iconPictureBox2.Click += new System.EventHandler(this.iconPictureBox2_Click);
             // 
             // lblTenNguoiDung
             // 
@@ -333,20 +335,22 @@
             this.lblChucnang.TabIndex = 0;
             this.lblChucnang.Text = "namebutton";
             // 
-            // panel2
+            // pnlBody
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(200, 117);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1103, 649);
-            this.panel2.TabIndex = 2;
+            this.pnlBody.BackColor = System.Drawing.Color.Snow;
+            this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBody.Location = new System.Drawing.Point(200, 117);
+            this.pnlBody.Name = "pnlBody";
+            this.pnlBody.Size = new System.Drawing.Size(1103, 649);
+            this.pnlBody.TabIndex = 2;
             // 
             // FormChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1303, 766);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlBody);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlMenu);
             this.Name = "FormChinh";
@@ -380,6 +384,6 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private System.Windows.Forms.Label lblTenNguoiDung;
         private System.Windows.Forms.Label lblChucnang;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlBody;
     }
 }

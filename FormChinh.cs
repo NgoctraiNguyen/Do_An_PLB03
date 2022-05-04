@@ -16,6 +16,7 @@ namespace Do_An_PLB03
         private IconButton btnClick;
         private Panel borderbtn;
         private bool admin;
+        private Form chillform;
         public FormChinh()
         {
             InitializeComponent();
@@ -61,6 +62,21 @@ namespace Do_An_PLB03
             iconButton9.Visible = admin;
         }
 
+        private void Openchillform(Form formsender)
+        {
+            if(chillform != null)
+            {
+                chillform.Close();
+            }
+            chillform = formsender;
+            chillform.TopLevel = false;
+            chillform.Dock = DockStyle.Fill;
+            pnlBody.Controls.Add(chillform);
+            pnlBody.Tag = chillform;
+            chillform.BringToFront();
+            chillform.Show();
+        }
+
         private void iconButton2_Click(object sender, EventArgs e)
         {
             clickbutton(sender);
@@ -104,6 +120,12 @@ namespace Do_An_PLB03
         private void iconButton9_Click(object sender, EventArgs e)
         {
             clickbutton(sender);
+        }
+
+        private void iconPictureBox2_Click(object sender, EventArgs e)
+        {
+            Openchillform(new FormConTaiKhoan());
+            lblChucnang.Text = "user Profile";
         }
     }
 }
