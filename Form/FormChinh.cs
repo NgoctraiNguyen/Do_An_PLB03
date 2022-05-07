@@ -36,7 +36,7 @@ namespace Do_An_PLB03
                 btnClick.ForeColor = System.Drawing.SystemColors.MenuHighlight;
                 btnClick.IconColor = System.Drawing.SystemColors.MenuHighlight;
                 btnClick.BackColor = Color.PaleTurquoise;
-                lblChucnang.Text = btnClick.Name;
+                lblChucnang.Text = btnClick.Text;
 
                 borderbtn.Location = new Point(0,btnClick.Location.Y);
                 borderbtn.Visible = true;
@@ -57,7 +57,7 @@ namespace Do_An_PLB03
 
         private void displayviewadmin()
         {
-            iconButton7.Visible = admin;
+            iconbtnQuanLyNhanVien.Visible = admin;
             iconButton8.Visible = admin;
             iconButton9.Visible = admin;
         }
