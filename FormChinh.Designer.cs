@@ -76,13 +76,13 @@
             // iconButton9
             // 
             this.iconButton9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton9.Font = new System.Drawing.Font("SVN-Harabaras", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton9.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton9.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconButton9.IconColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton9.Location = new System.Drawing.Point(0, 559);
+            this.iconButton9.Location = new System.Drawing.Point(0, 557);
             this.iconButton9.Name = "iconButton9";
             this.iconButton9.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton9.Size = new System.Drawing.Size(200, 50);
@@ -95,13 +95,13 @@
             // iconButton8
             // 
             this.iconButton8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton8.Font = new System.Drawing.Font("SVN-Harabaras", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton8.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconButton8.IconColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton8.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton8.Location = new System.Drawing.Point(0, 509);
+            this.iconButton8.Location = new System.Drawing.Point(0, 507);
             this.iconButton8.Name = "iconButton8";
             this.iconButton8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton8.Size = new System.Drawing.Size(200, 50);
@@ -114,13 +114,13 @@
             // iconButton7
             // 
             this.iconButton7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton7.Font = new System.Drawing.Font("SVN-Harabaras", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton7.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconButton7.IconColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton7.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.Location = new System.Drawing.Point(0, 459);
+            this.iconButton7.Location = new System.Drawing.Point(0, 457);
             this.iconButton7.Name = "iconButton7";
             this.iconButton7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton7.Size = new System.Drawing.Size(200, 50);
@@ -134,25 +134,25 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("SVN-Harabaras", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label2.Location = new System.Drawing.Point(0, 438);
+            this.label2.Location = new System.Drawing.Point(0, 437);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(70, 21);
+            this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = "Admin";
             // 
             // iconButton6
             // 
             this.iconButton6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton6.Font = new System.Drawing.Font("SVN-Harabaras", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton6.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconButton6.IconColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.Location = new System.Drawing.Point(0, 388);
+            this.iconButton6.Location = new System.Drawing.Point(0, 387);
             this.iconButton6.Name = "iconButton6";
             this.iconButton6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton6.Size = new System.Drawing.Size(200, 50);
@@ -165,13 +165,13 @@
             // iconButton5
             // 
             this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton5.Font = new System.Drawing.Font("SVN-Harabaras", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconButton5.IconColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(0, 338);
+            this.iconButton5.Location = new System.Drawing.Point(0, 337);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton5.Size = new System.Drawing.Size(200, 50);
@@ -184,13 +184,13 @@
             // iconButton4
             // 
             this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton4.Font = new System.Drawing.Font("SVN-Harabaras", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconButton4.IconColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(0, 288);
+            this.iconButton4.Location = new System.Drawing.Point(0, 287);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton4.Size = new System.Drawing.Size(200, 50);
@@ -203,13 +203,13 @@
             // iconButton3
             // 
             this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton3.Font = new System.Drawing.Font("SVN-Harabaras", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconButton3.IconColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 238);
+            this.iconButton3.Location = new System.Drawing.Point(0, 237);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton3.Size = new System.Drawing.Size(200, 50);
@@ -222,13 +222,13 @@
             // iconButton2
             // 
             this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.Font = new System.Drawing.Font("SVN-Harabaras", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconButton2.IconColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 188);
+            this.iconButton2.Location = new System.Drawing.Point(0, 187);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton2.Size = new System.Drawing.Size(200, 50);
@@ -241,13 +241,13 @@
             // iconButton1
             // 
             this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.Font = new System.Drawing.Font("SVN-Harabaras", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconButton1.IconColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 138);
+            this.iconButton1.Location = new System.Drawing.Point(0, 137);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton1.Size = new System.Drawing.Size(200, 50);
@@ -261,12 +261,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("SVN-Harabaras", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.label1.Location = new System.Drawing.Point(0, 117);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(96, 21);
+            this.label1.Size = new System.Drawing.Size(106, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Main Menu";
             // 
@@ -317,21 +317,21 @@
             // 
             this.lblTenNguoiDung.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTenNguoiDung.AutoSize = true;
-            this.lblTenNguoiDung.Font = new System.Drawing.Font("SVN-Harabaras", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenNguoiDung.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.lblTenNguoiDung.Location = new System.Drawing.Point(930, 48);
             this.lblTenNguoiDung.Name = "lblTenNguoiDung";
-            this.lblTenNguoiDung.Size = new System.Drawing.Size(110, 29);
+            this.lblTenNguoiDung.Size = new System.Drawing.Size(129, 29);
             this.lblTenNguoiDung.TabIndex = 0;
             this.lblTenNguoiDung.Text = "UserName";
             // 
             // lblChucnang
             // 
             this.lblChucnang.AutoSize = true;
-            this.lblChucnang.Font = new System.Drawing.Font("SVN-Harabaras", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChucnang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChucnang.Location = new System.Drawing.Point(22, 48);
             this.lblChucnang.Name = "lblChucnang";
-            this.lblChucnang.Size = new System.Drawing.Size(123, 29);
+            this.lblChucnang.Size = new System.Drawing.Size(139, 29);
             this.lblChucnang.TabIndex = 0;
             this.lblChucnang.Text = "namebutton";
             // 
