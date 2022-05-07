@@ -36,7 +36,7 @@ namespace Do_An_PLB03
                 btnClick.ForeColor = System.Drawing.SystemColors.MenuHighlight;
                 btnClick.IconColor = System.Drawing.SystemColors.MenuHighlight;
                 btnClick.BackColor = Color.PaleTurquoise;
-                lblChucnang.Text = btnClick.Name;
+                lblChucnang.Text = btnClick.Text;
 
                 borderbtn.Location = new Point(0,btnClick.Location.Y);
                 borderbtn.Visible = true;
@@ -110,11 +110,13 @@ namespace Do_An_PLB03
         private void iconButton7_Click(object sender, EventArgs e)
         {
             clickbutton(sender);
+            Openchillform(new FormConNhanVien());
         }
 
         private void iconButton8_Click(object sender, EventArgs e)
         {
             clickbutton(sender);
+            Openchillform(new FormConDichVu());
         }
 
         private void iconButton9_Click(object sender, EventArgs e)
@@ -126,6 +128,7 @@ namespace Do_An_PLB03
         {
             Openchillform(new FormConTaiKhoan());
             lblChucnang.Text = "user Profile";
+            disablebutton();
         }
     }
 }

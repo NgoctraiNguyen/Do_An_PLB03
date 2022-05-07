@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.5.15.4\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp.Pro, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.Pro.5.15.4\lib\net48\FontAwesome.Sharp.Pro.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -55,6 +61,18 @@
     </Compile>
     <Compile Include="FormChinh.Designer.cs">
       <DependentUpon>FormChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConDichVu.Designer.cs">
+      <DependentUpon>FormConDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConNhanVien.Designer.cs">
+      <DependentUpon>FormConNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="FormConTaiKhoan.cs">
       <SubType>Form</SubType>
@@ -85,6 +103,12 @@
     <EmbeddedResource Include="FormChinh.resx">
       <DependentUpon>FormChinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormConDichVu.resx">
+      <DependentUpon>FormConDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConNhanVien.resx">
+      <DependentUpon>FormConNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormConTaiKhoan.resx">
       <DependentUpon>FormConTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +131,7 @@
     <EmbeddedResource Include="UserControlDatSan.resx">
       <DependentUpon>UserControlDatSan.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
