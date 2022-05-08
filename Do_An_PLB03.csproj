@@ -56,6 +56,18 @@
     <Compile Include="FormChinh.Designer.cs">
       <DependentUpon>FormChinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConDichVu.Designer.cs">
+      <DependentUpon>FormConDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConNhanVien.Designer.cs">
+      <DependentUpon>FormConNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +102,12 @@
     </Compile>
     <EmbeddedResource Include="FormChinh.resx">
       <DependentUpon>FormChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConDichVu.resx">
+      <DependentUpon>FormConDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConNhanVien.resx">
+      <DependentUpon>FormConNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConTaiKhoan.resx">
       <DependentUpon>FormConTaiKhoan.cs</DependentUpon>
@@ -134,6 +152,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\illustration-shows-soccer-set-vector-football-player-kicks-ball-88023388.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.Sharp">
+      <Version>5.15.4</Version>
+    </PackageReference>
+    <PackageReference Include="FontAwesome.Sharp.Pro">
+      <Version>5.15.4</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
