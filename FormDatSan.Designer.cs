@@ -29,13 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button10 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -45,11 +41,16 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button10 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,9 +62,24 @@
             this.panel1.Size = new System.Drawing.Size(215, 558);
             this.panel1.TabIndex = 0;
             // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.LightCyan;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserCog;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.MidnightBlue;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 166;
+            this.iconPictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(215, 166);
+            this.iconPictureBox1.TabIndex = 0;
+            this.iconPictureBox1.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.panel2.Controls.Add(this.iconButton1);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.listView1);
@@ -74,67 +90,16 @@
             this.panel2.Size = new System.Drawing.Size(799, 560);
             this.panel2.TabIndex = 1;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.LightCyan;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button3.Location = new System.Drawing.Point(664, 468);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(122, 54);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Thay đổi mã sân";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // listView1
-            // 
-            this.listView1.AllowDrop = true;
-            this.listView1.BackColor = System.Drawing.SystemColors.Window;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(536, 112);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(250, 243);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Mã Sân";
-            this.columnHeader1.Width = 122;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Tình Trạng";
-            this.columnHeader2.Width = 126;
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.LightCyan;
             this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.LightCyan;
-            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Right;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(0, 0);
+            this.dateTimePicker1.Location = new System.Drawing.Point(472, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(327, 27);
             this.dateTimePicker1.TabIndex = 3;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.LightCyan;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button10.Location = new System.Drawing.Point(42, 468);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(94, 54);
-            this.button10.TabIndex = 0;
-            this.button10.Text = "Thêm Sân";
-            this.button10.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -251,19 +216,70 @@
             this.button1.Text = "Sân 5A";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // iconPictureBox1
+            // listView1
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.LightCyan;
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserCog;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.MidnightBlue;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 166;
-            this.iconPictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(215, 166);
-            this.iconPictureBox1.TabIndex = 0;
-            this.iconPictureBox1.TabStop = false;
+            this.listView1.AllowDrop = true;
+            this.listView1.BackColor = System.Drawing.SystemColors.Window;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.GridLines = true;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(536, 112);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(250, 243);
+            this.listView1.TabIndex = 1;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Mã Sân";
+            this.columnHeader1.Width = 122;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Tình Trạng";
+            this.columnHeader2.Width = 126;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.LightCyan;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.button10.Location = new System.Drawing.Point(42, 468);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(94, 54);
+            this.button10.TabIndex = 0;
+            this.button10.Text = "Thêm Sân";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.LightCyan;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.button3.Location = new System.Drawing.Point(664, 468);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(122, 54);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Thay đổi mã sân";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.LightCyan;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Backward;
+            this.iconButton1.IconColor = System.Drawing.Color.MidnightBlue;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 40;
+            this.iconButton1.Location = new System.Drawing.Point(15, 12);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(46, 36);
+            this.iconButton1.TabIndex = 4;
+            this.iconButton1.Text = "iconButton1";
+            this.iconButton1.UseVisualStyleBackColor = false;
             // 
             // FormDatSan
             // 
@@ -275,9 +291,9 @@
             this.Name = "FormDatSan";
             this.Text = "FormDatSan";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -302,5 +318,6 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button10;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }
