@@ -288,6 +288,7 @@
             this.ClientSize = new System.Drawing.Size(1013, 557);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDatSan";
             this.Text = "FormDatSan";
             this.panel1.ResumeLayout(false);

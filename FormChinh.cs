@@ -85,6 +85,7 @@ namespace Do_An_PLB03
         private void iconButton1_Click(object sender, EventArgs e)
         {
             clickbutton(sender);
+            Openchillform(new FormDatSan());
         }
 
         private void iconButton3_Click(object sender, EventArgs e)

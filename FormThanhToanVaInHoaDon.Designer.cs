@@ -42,6 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.button2 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -58,7 +59,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -237,6 +237,23 @@
             this.panel2.Size = new System.Drawing.Size(679, 573);
             this.panel2.TabIndex = 1;
             // 
+            // iconButton2
+            // 
+            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Receipt;
+            this.iconButton2.IconColor = System.Drawing.Color.MidnightBlue;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 40;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(512, 495);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(131, 55);
+            this.iconButton2.TabIndex = 10;
+            this.iconButton2.Text = "In hóa đơn";
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            // 
             // iconButton1
             // 
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Backward;
@@ -394,23 +411,6 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Số điện thoại:";
             // 
-            // iconButton2
-            // 
-            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Receipt;
-            this.iconButton2.IconColor = System.Drawing.Color.MidnightBlue;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 40;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(512, 495);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(131, 55);
-            this.iconButton2.TabIndex = 10;
-            this.iconButton2.Text = "In hóa đơn";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton2.UseVisualStyleBackColor = true;
-            // 
             // FormThanhToanVaInHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -418,6 +418,7 @@
             this.ClientSize = new System.Drawing.Size(897, 575);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormThanhToanVaInHoaDon";
             this.Text = "FormThanhToanVaInHoaDon";
             this.Load += new System.EventHandler(this.FormThanhToanVaInHoaDon_Load);
