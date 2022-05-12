@@ -51,12 +51,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormHienThiKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormHienThiKhachHang.Designer.cs">
-      <DependentUpon>FormHienThiKhachHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formthongke.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,9 +124,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDatSan.resx">
       <DependentUpon>FormDatSan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormHienThiKhachHang.resx">
-      <DependentUpon>FormHienThiKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThanhToanVaInHoaDon.resx">
       <DependentUpon>FormThanhToanVaInHoaDon.cs</DependentUpon>
