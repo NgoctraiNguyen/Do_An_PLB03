@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Do_An_PLB03
 {
-    public partial class Formthongke : Form
+    public partial class FormHienThiKhachHang : Form
     {
-        public Formthongke()
+        public FormHienThiKhachHang()
         {
             InitializeComponent();
-        }
-
-        private void Formthongke_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

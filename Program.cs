@@ -16,7 +16,8 @@ namespace Do_An_PLB03
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Formthongke());
+            Application.Run(new FormChinh());
+
         }
     }
 }
