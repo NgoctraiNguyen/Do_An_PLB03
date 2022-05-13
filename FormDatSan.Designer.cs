@@ -223,7 +223,7 @@
             this.button1.BackColor = System.Drawing.Color.LightCyan;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button1.Location = new System.Drawing.Point(23, 20);
+            this.button1.Location = new System.Drawing.Point(23, 21);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 54);
             this.button1.TabIndex = 0;

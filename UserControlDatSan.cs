@@ -31,5 +31,15 @@ namespace Do_An_PLB03
         {
 
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserControlDatSan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
