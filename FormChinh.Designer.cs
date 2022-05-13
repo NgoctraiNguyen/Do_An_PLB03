@@ -273,6 +273,8 @@
             // iconPictureBox1
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.Snow;
+            this.iconPictureBox1.BackgroundImage = global::Do_An_PLB03.Properties.Resources._1637209246_933_Download_1000_hinh_anh_welcome_dep_hap_dan_nguoi_xem;
+            this.iconPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.iconPictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.None;

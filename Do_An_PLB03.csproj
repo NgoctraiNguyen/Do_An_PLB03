@@ -171,5 +171,8 @@
       <Version>5.15.4</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1637209246_933_Download-1000-hinh-anh-welcome-dep-hap-dan-nguoi-xem.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

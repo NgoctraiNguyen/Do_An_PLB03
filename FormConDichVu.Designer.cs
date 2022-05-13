@@ -35,15 +35,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.iconButton9 = new FontAwesome.Sharp.IconButton();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.clhSttDv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clmTenDv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.vlhIdDv = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhSoLuong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhGia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhDonVi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -114,6 +110,7 @@
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.Snow;
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.txtUser);
             this.groupBox1.Controls.Add(this.iconButton9);
             this.groupBox1.Location = new System.Drawing.Point(51, 599);
@@ -130,7 +127,7 @@
             this.txtUser.Location = new System.Drawing.Point(11, 21);
             this.txtUser.Name = "txtUser";
             this.txtUser.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtUser.Size = new System.Drawing.Size(264, 30);
+            this.txtUser.Size = new System.Drawing.Size(210, 30);
             this.txtUser.TabIndex = 14;
             // 
             // iconButton9
@@ -151,64 +148,30 @@
             this.iconButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton9.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // dataGridView1
             // 
-            this.listView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.listView1.BackColor = System.Drawing.Color.Snow;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.clhSttDv,
-            this.clmTenDv,
-            this.vlhIdDv,
-            this.clhSoLuong,
-            this.clhGia,
-            this.clhDonVi});
-            this.listView1.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(103, 26);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1046, 532);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Snow;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(30, 43);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1189, 526);
+            this.dataGridView1.TabIndex = 6;
             // 
-            // clhSttDv
+            // comboBox1
             // 
-            this.clhSttDv.Text = "STT";
-            this.clhSttDv.Width = 164;
-            // 
-            // clmTenDv
-            // 
-            this.clmTenDv.DisplayIndex = 2;
-            this.clmTenDv.Text = "Tên Dịch Vụ";
-            this.clmTenDv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.clmTenDv.Width = 233;
-            // 
-            // vlhIdDv
-            // 
-            this.vlhIdDv.DisplayIndex = 1;
-            this.vlhIdDv.Text = "ID";
-            this.vlhIdDv.Width = 140;
-            // 
-            // clhSoLuong
-            // 
-            this.clhSoLuong.DisplayIndex = 5;
-            this.clhSoLuong.Text = "Số Lượng còn lại";
-            this.clhSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.clhSoLuong.Width = 159;
-            // 
-            // clhGia
-            // 
-            this.clhGia.DisplayIndex = 3;
-            this.clhGia.Text = "Giá";
-            this.clhGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.clhGia.Width = 192;
-            // 
-            // clhDonVi
-            // 
-            this.clhDonVi.DisplayIndex = 4;
-            this.clhDonVi.Text = "Đơn Vị";
-            this.clhDonVi.Width = 127;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Tên Dịch Vụ",
+            "Giá"});
+            this.comboBox1.Location = new System.Drawing.Point(243, 18);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(208, 33);
+            this.comboBox1.TabIndex = 17;
             // 
             // FormConDichVu
             // 
@@ -216,15 +179,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Moccasin;
             this.ClientSize = new System.Drawing.Size(1248, 754);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.listView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormConDichVu";
             this.Text = "FormConDichVu";
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -238,12 +202,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtUser;
         private FontAwesome.Sharp.IconButton iconButton9;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader clhSttDv;
-        private System.Windows.Forms.ColumnHeader clmTenDv;
-        private System.Windows.Forms.ColumnHeader vlhIdDv;
-        private System.Windows.Forms.ColumnHeader clhSoLuong;
-        private System.Windows.Forms.ColumnHeader clhGia;
-        private System.Windows.Forms.ColumnHeader clhDonVi;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
