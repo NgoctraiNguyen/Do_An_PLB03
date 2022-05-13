@@ -63,6 +63,16 @@ namespace Do_An_PLB03.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1637209246_933_Download_1000_hinh_anh_welcome_dep_hap_dan_nguoi_xem {
+            get {
+                object obj = ResourceManager.GetObject("1637209246_933_Download-1000-hinh-anh-welcome-dep-hap-dan-nguoi-xem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap illustration_shows_soccer_set_vector_football_player_kicks_ball_88023388 {
             get {
                 object obj = ResourceManager.GetObject("illustration-shows-soccer-set-vector-football-player-kicks-ball-88023388", resourceCulture);

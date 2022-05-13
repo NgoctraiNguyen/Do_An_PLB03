@@ -131,5 +131,6 @@ namespace Do_An_PLB03
             lblChucnang.Text = "Tài khoảng cá nhân";
             disablebutton();
         }
+
     }
 }
