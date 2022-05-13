@@ -87,7 +87,7 @@
             this.iconButton9.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton9.Size = new System.Drawing.Size(226, 50);
             this.iconButton9.TabIndex = 12;
-            this.iconButton9.Text = "iconButton9";
+            this.iconButton9.Text = "Quản lý khách hàng";
             this.iconButton9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton9.UseVisualStyleBackColor = true;
             this.iconButton9.Click += new System.EventHandler(this.iconButton9_Click);
@@ -106,7 +106,7 @@
             this.iconButton8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton8.Size = new System.Drawing.Size(226, 50);
             this.iconButton8.TabIndex = 11;
-            this.iconButton8.Text = "Quản lý Dịch Vụ";
+            this.iconButton8.Text = "Quản lý dịch vụ";
             this.iconButton8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton8.UseVisualStyleBackColor = true;
             this.iconButton8.Click += new System.EventHandler(this.iconButton8_Click);
