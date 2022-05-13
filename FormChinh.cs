@@ -123,7 +123,6 @@ namespace Do_An_PLB03
         private void iconButton9_Click(object sender, EventArgs e)
         {
             clickbutton(sender);
-            Openchillform(new FormHienThiKhachHang());
         }
 
         private void iconPictureBox2_Click(object sender, EventArgs e)

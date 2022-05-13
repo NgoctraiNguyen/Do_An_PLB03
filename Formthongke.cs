@@ -26,5 +26,10 @@ namespace Do_An_PLB03
         {
 
         }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
