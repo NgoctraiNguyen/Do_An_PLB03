@@ -40,6 +40,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.listView1 = new System.Windows.Forms.ListView();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -54,8 +56,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -63,6 +63,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.FloralWhite;
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
@@ -70,7 +72,7 @@
             this.panel1.Controls.Add(this.iconPictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(215, 573);
+            this.panel1.Size = new System.Drawing.Size(215, 636);
             this.panel1.TabIndex = 0;
             // 
             // button4
@@ -137,7 +139,7 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label5.Location = new System.Drawing.Point(508, 62);
+            this.label5.Location = new System.Drawing.Point(543, 65);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(153, 22);
             this.label5.TabIndex = 0;
@@ -150,7 +152,7 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label7.Location = new System.Drawing.Point(508, 101);
+            this.label7.Location = new System.Drawing.Point(543, 104);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 22);
             this.label7.TabIndex = 0;
@@ -181,13 +183,16 @@
             // 
             this.dateTimePicker1.CustomFormat = "dd/MM/yyyy | hh:mm:ss tt";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(528, 12);
+            this.dateTimePicker1.Location = new System.Drawing.Point(563, 15);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(186, 22);
             this.dateTimePicker1.TabIndex = 2;
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.LightCyan;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.iconButton3);
@@ -214,13 +219,37 @@
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel2.Location = new System.Drawing.Point(215, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(853, 573);
+            this.panel2.Size = new System.Drawing.Size(930, 639);
             this.panel2.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label3.Location = new System.Drawing.Point(39, 379);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 22);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Tổng tiền:";
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.iconButton3.IconColor = System.Drawing.Color.MidnightBlue;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 30;
+            this.iconButton3.Location = new System.Drawing.Point(825, 91);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(50, 37);
+            this.iconButton3.TabIndex = 12;
+            this.iconButton3.UseVisualStyleBackColor = true;
             // 
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(510, 147);
+            this.listView1.Location = new System.Drawing.Point(545, 150);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(328, 318);
             this.listView1.TabIndex = 11;
@@ -235,7 +264,7 @@
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 40;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(512, 495);
+            this.iconButton2.Location = new System.Drawing.Point(547, 498);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(131, 55);
             this.iconButton2.TabIndex = 10;
@@ -268,14 +297,14 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(684, 103);
+            this.textBox3.Location = new System.Drawing.Point(719, 106);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(84, 22);
             this.textBox3.TabIndex = 5;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(684, 60);
+            this.textBox7.Location = new System.Drawing.Point(719, 63);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(154, 22);
             this.textBox7.TabIndex = 5;
@@ -354,37 +383,14 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Số điện thoại:";
             // 
-            // iconButton3
-            // 
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.iconButton3.IconColor = System.Drawing.Color.MidnightBlue;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 30;
-            this.iconButton3.Location = new System.Drawing.Point(790, 88);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(50, 37);
-            this.iconButton3.TabIndex = 12;
-            this.iconButton3.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(39, 379);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 22);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Tổng tiền:";
-            // 
             // FormThanhToanVaInHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 575);
+            this.ClientSize = new System.Drawing.Size(1144, 639);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormThanhToanVaInHoaDon";
             this.Text = "FormThanhToanVaInHoaDon";
             this.Load += new System.EventHandler(this.FormThanhToanVaInHoaDon_Load);
