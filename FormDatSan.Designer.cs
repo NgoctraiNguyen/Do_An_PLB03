@@ -113,8 +113,9 @@
             // 
             this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.LightCyan;
             this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.LightCyan;
+            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Right;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(517, 0);
+            this.dateTimePicker1.Location = new System.Drawing.Point(528, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(327, 27);
             this.dateTimePicker1.TabIndex = 3;
@@ -244,7 +245,7 @@
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(594, 113);
+            this.listView1.Location = new System.Drawing.Point(536, 112);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(250, 243);
             this.listView1.TabIndex = 1;
