@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Do_An_PLB03.BUS;
+using Do_An_PLB03.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +18,7 @@ namespace Do_An_PLB03
         {
             InitializeComponent();
         }
-
+        DTONguoiDung user = new DTONguoiDung();
         private void txtUser_Leave(object sender, EventArgs e)
         {
             txtUser.ForeColor = Color.MidnightBlue;
@@ -47,6 +49,36 @@ namespace Do_An_PLB03
         {
             iptDisEye.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
             txtPassword.PasswordChar = '*';
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            user.SDT = txtUser.Text;
+            user.MatKhau = txtPassword.Text;
+            if(BUSDangNhap.DangNhap(user) == 1)
+            {
+                MessageBox.Show("Chao Admin");
+                this.Hide();
+                FormChinh frm = new FormChinh();
+                frm.ShowDialog();
+                this.Close();
+            }
+            else if(BUSDangNhap.DangNhap(user) == 0)
+            {
+                MessageBox.Show("Chao User");
+                this.Hide();
+                FormChinh frm = new FormChinh();
+                frm.ShowDialog();
+                this.Close();
+            } else if(BUSDangNhap.DangNhap(user) == 2)
+            {
+                MessageBox.Show("Sai Mat khau");
+            }
+            else if(BUSDangNhap.DangNhap(user) == 3)
+            {
+                MessageBox.Show("Tai khoan khong hop le");
+            }
+            
         }
     }
 }

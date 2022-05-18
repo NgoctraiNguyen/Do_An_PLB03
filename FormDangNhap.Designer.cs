@@ -76,7 +76,7 @@
             // 
             this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLogin.BackColor = System.Drawing.Color.Azure;
-            this.btnLogin.Font = new System.Drawing.Font("SVN-Arial 3", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.DarkTurquoise;
             this.btnLogin.IconChar = FontAwesome.Sharp.IconChar.GgCircle;
             this.btnLogin.IconColor = System.Drawing.Color.DarkTurquoise;
@@ -90,49 +90,50 @@
             this.btnLogin.Text = "Login";
             this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("SVN-Arial 3", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label3.Location = new System.Drawing.Point(43, 177);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 18);
+            this.label3.Size = new System.Drawing.Size(79, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Password:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("SVN-Arial 3", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label2.Location = new System.Drawing.Point(43, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 18);
+            this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "User:";
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("SVN-Arial 3", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.DarkTurquoise;
             this.txtPassword.Location = new System.Drawing.Point(46, 198);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(261, 34);
+            this.txtPassword.Size = new System.Drawing.Size(261, 30);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPassword_MouseClick);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
             // txtUser
             // 
-            this.txtUser.Font = new System.Drawing.Font("SVN-Arial 3", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.ForeColor = System.Drawing.Color.DarkTurquoise;
             this.txtUser.Location = new System.Drawing.Point(46, 109);
             this.txtUser.Name = "txtUser";
             this.txtUser.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtUser.Size = new System.Drawing.Size(303, 34);
+            this.txtUser.Size = new System.Drawing.Size(303, 30);
             this.txtUser.TabIndex = 0;
             this.txtUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtUser_MouseClick);
             this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
@@ -140,11 +141,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("SVN-Arial 3", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkTurquoise;
             this.label1.Location = new System.Drawing.Point(125, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 31);
+            this.label1.Size = new System.Drawing.Size(143, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Đăng Nhập";
             // 
