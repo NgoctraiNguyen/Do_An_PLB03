@@ -33,10 +33,18 @@
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.iconButton9 = new FontAwesome.Sharp.IconButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -119,6 +127,20 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Tên đồ uống",
+            "Giá"});
+            this.comboBox1.Location = new System.Drawing.Point(243, 18);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(208, 33);
+            this.comboBox1.TabIndex = 17;
+            // 
             // txtUser
             // 
             this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -157,21 +179,100 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1189, 526);
+            this.dataGridView1.Size = new System.Drawing.Size(1189, 452);
             this.dataGridView1.TabIndex = 6;
             // 
-            // comboBox1
+            // label2
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Tên Dịch Vụ",
-            "Giá"});
-            this.comboBox1.Location = new System.Drawing.Point(243, 18);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(208, 33);
-            this.comboBox1.TabIndex = 17;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("SVN-Arial 3", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label2.Location = new System.Drawing.Point(229, 509);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 18);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Tên Đồ Uống:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.Font = new System.Drawing.Font("SVN-Arial 3", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.textBox1.Location = new System.Drawing.Point(232, 528);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox1.Size = new System.Drawing.Size(147, 34);
+            this.textBox1.TabIndex = 7;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox2.Font = new System.Drawing.Font("SVN-Arial 3", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.textBox2.Location = new System.Drawing.Point(424, 528);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox2.Size = new System.Drawing.Size(157, 34);
+            this.textBox2.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("SVN-Arial 3", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label1.Location = new System.Drawing.Point(421, 509);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 18);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Số Lượng:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox3.Font = new System.Drawing.Font("SVN-Arial 3", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.textBox3.Location = new System.Drawing.Point(644, 528);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox3.Size = new System.Drawing.Size(168, 34);
+            this.textBox3.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("SVN-Arial 3", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label3.Location = new System.Drawing.Point(641, 509);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 18);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Giá Bán:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox4.Font = new System.Drawing.Font("SVN-Arial 3", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.textBox4.Location = new System.Drawing.Point(883, 528);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox4.Size = new System.Drawing.Size(168, 34);
+            this.textBox4.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("SVN-Arial 3", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label4.Location = new System.Drawing.Point(880, 509);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 18);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Giá Gốc:";
             // 
             // FormConDichVu
             // 
@@ -179,6 +280,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Moccasin;
             this.ClientSize = new System.Drawing.Size(1248, 754);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -190,6 +299,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -203,6 +313,14 @@
         private System.Windows.Forms.TextBox txtUser;
         private FontAwesome.Sharp.IconButton iconButton9;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
     }
 }
