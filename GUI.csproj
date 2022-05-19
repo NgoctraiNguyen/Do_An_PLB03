@@ -52,8 +52,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\BUSDangNhap.cs" />
+    <Compile Include="BUS\BUSDoUong.cs" />
+    <Compile Include="BUS\BUSNguoiDung.cs" />
     <Compile Include="DAL\DALDangNhap.cs" />
+    <Compile Include="DAL\DALDoUong.cs" />
+    <Compile Include="DAL\DALNguoiDung.cs" />
     <Compile Include="DAL\dbConnectionData.cs" />
+    <Compile Include="DTO\DTODoUong.cs" />
     <Compile Include="DTO\DTONguoiDung.cs" />
     <Compile Include="FormHienThiKhachHang.cs">
       <SubType>Form</SubType>

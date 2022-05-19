@@ -20,12 +20,28 @@ namespace Do_An_PLB03.DAL
             command.CommandText = "sp_DangNhap";
             command.Connection = conn;
 
-            command.Parameters.AddWithValue("@phone", user.SDT);
-            command.Parameters.AddWithValue("@password", user.MatKhau);
+            command.Parameters.AddWithValue("@user", user.TenDangNhap);
+            command.Parameters.AddWithValue("@pass", user.MatKhau);
 
             object o = command.ExecuteScalar();
             int code = Convert.ToInt32(o);
             return code;
+        }
+
+        public static DataTable GetAllKhachHang()
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            SqlCommand command = new SqlCommand("sp_GetAllKhachHang",conn);
+            command.CommandType = CommandType.StoredProcedure;
+            
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = command;
+            DataTable dt =new DataTable(); 
+            adapter.Fill(dt);
+            conn.Close();
+            return dt;
         }
     }
 }

@@ -53,7 +53,7 @@ namespace Do_An_PLB03
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            user.SDT = txtUser.Text;
+            user.TenDangNhap = txtUser.Text;
             user.MatKhau = txtPassword.Text;
             if(BUSDangNhap.DangNhap(user) == 1)
             {

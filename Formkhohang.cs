@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Do_An_PLB03.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,35 +16,34 @@ namespace Do_An_PLB03
         public Formkhohang()
         {
             InitializeComponent();
+            GUI();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public void GUI()
         {
-
+            dataGridView1.DataSource = BUSDoUong.GetAllDoUong();
+            dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
-        private void Formkhohang_Load(object sender, EventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dataGridView1.Rows[e.RowIndex];
+                txtTenDoUong.Text = row.Cells[0].Value.ToString();
+                txtSoLuong.Text = row.Cells[1].Value.ToString();
+                txtGiaBan.Text = row.Cells[2].Value.ToString();
+                txtGiaGoc.Text = row.Cells[2].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
     }

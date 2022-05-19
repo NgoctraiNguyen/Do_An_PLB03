@@ -32,11 +32,11 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTenKhachHang = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -65,17 +65,18 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1009, 246);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtSDT);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtTenKhachHang);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtUser);
+            this.panel1.Controls.Add(this.txtID);
             this.panel1.Location = new System.Drawing.Point(16, 287);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1009, 260);
@@ -92,16 +93,16 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Số điện thoại:";
             // 
-            // textBox2
+            // txtSDT
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.textBox2.Location = new System.Drawing.Point(181, 166);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox2.Size = new System.Drawing.Size(318, 30);
-            this.textBox2.TabIndex = 8;
+            this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.txtSDT.Location = new System.Drawing.Point(181, 166);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.ReadOnly = true;
+            this.txtSDT.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtSDT.Size = new System.Drawing.Size(318, 30);
+            this.txtSDT.TabIndex = 8;
             // 
             // label1
             // 
@@ -114,16 +115,16 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Tên khách hàng:";
             // 
-            // textBox1
+            // txtTenKhachHang
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.textBox1.Location = new System.Drawing.Point(181, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(318, 30);
-            this.textBox1.TabIndex = 6;
+            this.txtTenKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenKhachHang.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.txtTenKhachHang.Location = new System.Drawing.Point(181, 100);
+            this.txtTenKhachHang.Name = "txtTenKhachHang";
+            this.txtTenKhachHang.ReadOnly = true;
+            this.txtTenKhachHang.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtTenKhachHang.Size = new System.Drawing.Size(318, 30);
+            this.txtTenKhachHang.TabIndex = 6;
             // 
             // label3
             // 
@@ -136,16 +137,16 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "ID: ";
             // 
-            // txtUser
+            // txtID
             // 
-            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.txtUser.Location = new System.Drawing.Point(181, 39);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.ReadOnly = true;
-            this.txtUser.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtUser.Size = new System.Drawing.Size(318, 30);
-            this.txtUser.TabIndex = 4;
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.txtID.Location = new System.Drawing.Point(181, 39);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtID.Size = new System.Drawing.Size(318, 30);
+            this.txtID.TabIndex = 4;
             // 
             // FormHienThiKhachHang
             // 
@@ -171,10 +172,10 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTenKhachHang;
     }
 }

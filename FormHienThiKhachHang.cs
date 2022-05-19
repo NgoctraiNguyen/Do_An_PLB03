@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Do_An_PLB03.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,31 @@ namespace Do_An_PLB03
         public FormHienThiKhachHang()
         {
             InitializeComponent();
+            GUI();
+        }
+        public void GUI()
+        {
+            dataGridView1.DataSource = BUSDangNhap.Getallkhachhang();
+            dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dataGridView1.Rows[e.RowIndex];
+                txtID.Text = row.Cells[0].Value.ToString();
+                txtTenKhachHang.Text = row.Cells[1].Value.ToString();
+                txtSDT.Text = row.Cells[2].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }
