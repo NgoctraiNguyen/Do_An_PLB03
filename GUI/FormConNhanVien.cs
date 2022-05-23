@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Do_An_PLB03
+namespace Do_An_PLB03.GUI
 {
     public partial class FormConNhanVien : Form
     {

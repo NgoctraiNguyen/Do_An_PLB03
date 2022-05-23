@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Do_An_PLB03
+namespace Do_An_PLB03.GUI
 {
-    public partial class FormDatSan : Form
+    public partial class FormConDichVu : Form
     {
-        public FormDatSan()
+        public FormConDichVu()
         {
             InitializeComponent();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Do_An_PLB03
+﻿namespace Do_An_PLB03.GUI
 {
     partial class UserControlDatSan
     {
