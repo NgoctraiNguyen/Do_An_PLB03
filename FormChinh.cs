@@ -17,13 +17,14 @@ namespace Do_An_PLB03
         private Panel borderbtn;
         private bool admin;
         private Form chillform;
-        public FormChinh()
+        public FormChinh(string tendangnhap)
         {
             InitializeComponent();
             borderbtn = new Panel();
             borderbtn.Size = new Size(7, 50);
             pnlMenu.Controls.Add(borderbtn);
             admin = true;
+            lblTenNguoiDung.Text = tendangnhap;
             displayviewadmin();
         }
 
@@ -60,6 +61,7 @@ namespace Do_An_PLB03
             iconButton7.Visible = admin;
             iconButton8.Visible = admin;
             iconButton9.Visible = admin;
+            timer1.Enabled = true;
         }
 
         private void Openchillform(Form formsender)
@@ -134,5 +136,9 @@ namespace Do_An_PLB03
             disablebutton();
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblNgayGio.Text = DateTime.Now.ToString();
+        }
     }
 }

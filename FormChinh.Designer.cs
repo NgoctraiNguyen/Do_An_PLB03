@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.iconButton9 = new FontAwesome.Sharp.IconButton();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
@@ -46,6 +47,8 @@
             this.lblTenNguoiDung = new System.Windows.Forms.Label();
             this.lblChucnang = new System.Windows.Forms.Label();
             this.pnlBody = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblNgayGio = new System.Windows.Forms.Label();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -290,6 +293,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.lblNgayGio);
             this.panel1.Controls.Add(this.iconPictureBox2);
             this.panel1.Controls.Add(this.lblTenNguoiDung);
             this.panel1.Controls.Add(this.lblChucnang);
@@ -346,6 +350,20 @@
             this.pnlBody.Size = new System.Drawing.Size(1279, 715);
             this.pnlBody.TabIndex = 2;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblNgayGio
+            // 
+            this.lblNgayGio.AutoSize = true;
+            this.lblNgayGio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNgayGio.Location = new System.Drawing.Point(478, 48);
+            this.lblNgayGio.Name = "lblNgayGio";
+            this.lblNgayGio.Size = new System.Drawing.Size(139, 29);
+            this.lblNgayGio.TabIndex = 2;
+            this.lblNgayGio.Text = "namebutton";
+            // 
             // FormChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -387,5 +405,7 @@
         private System.Windows.Forms.Label lblChucnang;
         private System.Windows.Forms.Panel pnlBody;
         private FontAwesome.Sharp.IconButton iconButton9;
+        private System.Windows.Forms.Label lblNgayGio;
+        private System.Windows.Forms.Timer timer1;
     }
 }

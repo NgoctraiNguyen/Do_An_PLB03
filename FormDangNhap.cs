@@ -59,7 +59,7 @@ namespace Do_An_PLB03
             {
                 MessageBox.Show("Chao Admin");
                 this.Hide();
-                FormChinh frm = new FormChinh();
+                FormChinh frm = new FormChinh(user.TenDangNhap);
                 frm.ShowDialog();
                 this.Close();
             }
@@ -67,7 +67,7 @@ namespace Do_An_PLB03
             {
                 MessageBox.Show("Chao User");
                 this.Hide();
-                FormChinh frm = new FormChinh();
+                FormChinh frm = new FormChinh(user.TenDangNhap);
                 frm.ShowDialog();
                 this.Close();
             } else if(BUSDangNhap.DangNhap(user) == 2)
