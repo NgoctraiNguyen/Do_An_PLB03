@@ -27,6 +27,14 @@ namespace Do_An_PLB03.DTO
             _GiaGoc = giaGoc;
         }
 
+        public DTODoUong(string tenDoUong, int soLuong, int giaBan, int giaGoc)
+        {
+            _TenDoUong = tenDoUong;
+            _SoLuong = soLuong;
+            _GiaBan = giaBan;
+            _GiaGoc = giaGoc;
+        }
+
         public int MaDoUong { get => _MaDoUong; set => _MaDoUong = value; }
         public string TenDoUong { get => _TenDoUong; set => _TenDoUong = value; }
         public int SoLuong { get => _SoLuong; set => _SoLuong = value; }

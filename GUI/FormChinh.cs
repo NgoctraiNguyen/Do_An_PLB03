@@ -120,7 +120,7 @@ namespace Do_An_PLB03.GUI
         private void iconButton8_Click(object sender, EventArgs e)
         {
             clickbutton(sender);
-            Openchillform(new Formkhohang());
+            Openchillform(new FormConDichVu());
         }
 
         private void iconButton9_Click(object sender, EventArgs e)

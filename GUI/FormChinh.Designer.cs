@@ -43,12 +43,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNgayGio = new System.Windows.Forms.Label();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.lblTenNguoiDung = new System.Windows.Forms.Label();
             this.lblChucnang = new System.Windows.Forms.Label();
             this.pnlBody = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblNgayGio = new System.Windows.Forms.Label();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -303,6 +303,16 @@
             this.panel1.Size = new System.Drawing.Size(1279, 117);
             this.panel1.TabIndex = 1;
             // 
+            // lblNgayGio
+            // 
+            this.lblNgayGio.AutoSize = true;
+            this.lblNgayGio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNgayGio.Location = new System.Drawing.Point(478, 48);
+            this.lblNgayGio.Name = "lblNgayGio";
+            this.lblNgayGio.Size = new System.Drawing.Size(139, 29);
+            this.lblNgayGio.TabIndex = 2;
+            this.lblNgayGio.Text = "namebutton";
+            // 
             // iconPictureBox2
             // 
             this.iconPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -353,16 +363,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // lblNgayGio
-            // 
-            this.lblNgayGio.AutoSize = true;
-            this.lblNgayGio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayGio.Location = new System.Drawing.Point(478, 48);
-            this.lblNgayGio.Name = "lblNgayGio";
-            this.lblNgayGio.Size = new System.Drawing.Size(139, 29);
-            this.lblNgayGio.TabIndex = 2;
-            this.lblNgayGio.Text = "namebutton";
             // 
             // FormChinh
             // 
