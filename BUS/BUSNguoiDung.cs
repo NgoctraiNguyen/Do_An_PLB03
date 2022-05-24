@@ -1,4 +1,5 @@
 ﻿using Do_An_PLB03.DAL;
+using Do_An_PLB03.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,6 +14,18 @@ namespace Do_An_PLB03.BUS
         public static DataTable GetAllNguoiDung()
         {
             return DALNguoiDung.GetAllNguoiDung();
+        }
+        public static void InsertNguoiDung(DTONguoiDung a)
+        {
+            DALNguoiDung.InsertNguoiDung(a);
+        }
+        public static void UpdateNguoiDung(DTONguoiDung a)
+        {
+            DALNguoiDung.UpdateNguoiDung(a);
+        }
+        public static void DeleteNguoiDung(int a)
+        {
+            DALNguoiDung.DeleteNguoiDung(a);
         }
     }
 }
