@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Do_An_PLB03.DTO;
 using FontAwesome.Sharp;
 
 namespace Do_An_PLB03.GUI
@@ -131,8 +132,9 @@ namespace Do_An_PLB03.GUI
 
         private void iconPictureBox2_Click(object sender, EventArgs e)
         {
-            Openchillform(new FormConTaiKhoan());
-            lblChucnang.Text = "Tài khoảng cá nhân";
+            DTONguoiDung a = new DTONguoiDung();
+            Openchillform(new FormConTaiKhoan(a, lblTenNguoiDung.Text));
+            lblChucnang.Text = "Tài khoản cá nhân";
             disablebutton();
         }
 

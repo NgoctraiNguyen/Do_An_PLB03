@@ -27,5 +27,9 @@ namespace Do_An_PLB03.BUS
         {
             DALNguoiDung.DeleteNguoiDung(a);
         }
+        public static void GetThongTinCaNhan(DTONguoiDung a)
+        {
+            DALNguoiDung.GetThongTinCaNhan(a);
+        }
     }
 }

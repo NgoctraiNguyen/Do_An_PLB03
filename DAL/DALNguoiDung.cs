@@ -77,5 +77,24 @@ namespace Do_An_PLB03.DAL
             command.ExecuteNonQuery();
             conn.Close();
         }
+        public static void GetThongTinCaNhan(DTONguoiDung a)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            SqlCommand command = new SqlCommand("select HoTen,Tuoi,SDT,SoCMND,DiaChi,TenDangNhap,MatKhau from NguoiDung where TenDangNhap = @ten", conn);
+            command.CommandType = CommandType.Text;
+            command.Parameters.AddWithValue("@ten", a.TenDangNhap);
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                a.HoTen = reader.GetString(0);
+                a.Tuoi = reader.GetInt32(1);
+                a.SDT = reader.GetString(2);
+                a.SoCMND = reader.GetString(3);
+                a.DiaChi = reader.GetString(4);
+                a.TenDangNhap = reader.GetString(5);
+                a.MatKhau = reader.GetString(6);
+            }
+        }
     }
 }
