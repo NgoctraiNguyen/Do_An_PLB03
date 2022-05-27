@@ -11,21 +11,32 @@ namespace Do_An_PLB03.DAL
 {
     public class DALDangNhap
     {
-        public static int KiemTraDangNhap(DTONguoiDung user)
+        public static bool KiemTraDangNhap(DTONguoiDung user)
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
             SqlCommand command = new SqlCommand();
-            command.CommandType = CommandType.StoredProcedure;
-            command.CommandText = "sp_DangNhap";
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select * from NguoiDung where TenDangNhap = '" + user.TenDangNhap + "' and MatKhau = '" + user.MatKhau + "'";
             command.Connection = conn;
 
-            command.Parameters.AddWithValue("@user", user.TenDangNhap);
-            command.Parameters.AddWithValue("@pass", user.MatKhau);
-
-            object o = command.ExecuteScalar();
-            int code = Convert.ToInt32(o);
-            return code;
+            SqlDataReader reader = command.ExecuteReader();
+            if(reader.Read())
+            {
+                user.MaNguoiDung = reader.GetInt32(0);
+                user.HoTen = reader.GetString(1);
+                user.Tuoi = reader.GetInt32(2);
+                user.DiaChi = reader.GetString(3);
+                user.GioiTinh = reader.GetInt32(4);
+                user.SDT = reader.GetString(5);
+                user.SoCMND = reader.GetString(6);
+                user.Vitri = reader.GetString(7);
+                user.Quyen = reader.GetInt32(8);
+                conn.Close();
+                return true;
+            }
+            conn.Close();
+            return false;
         }
 
         public static DataTable GetAllKhachHang()

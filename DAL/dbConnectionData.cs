@@ -12,7 +12,7 @@ namespace Do_An_PLB03.DAL
     {
         public static SqlConnection HamketNoi()
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-L5DTBUM\SQLEXPRESS;Initial Catalog=QLSB;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=HP-ThanhNhan\SQLEXPRESS;Initial Catalog=QLSB;User ID=sa;Password=12345678");
             return conn;
         }
     }

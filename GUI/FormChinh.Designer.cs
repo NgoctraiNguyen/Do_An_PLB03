@@ -34,12 +34,12 @@
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnLichSu = new FontAwesome.Sharp.IconButton();
+            this.btnHoaDon = new FontAwesome.Sharp.IconButton();
+            this.btnThanhToan = new FontAwesome.Sharp.IconButton();
+            this.btnDichVuSanBong = new FontAwesome.Sharp.IconButton();
+            this.btnThueSan = new FontAwesome.Sharp.IconButton();
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -48,11 +48,14 @@
             this.lblTenNguoiDung = new System.Windows.Forms.Label();
             this.lblChucnang = new System.Windows.Forms.Label();
             this.pnlBody = new System.Windows.Forms.Panel();
+            this.picturewelcome = new FontAwesome.Sharp.IconPictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            this.pnlBody.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picturewelcome)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -62,12 +65,12 @@
             this.pnlMenu.Controls.Add(this.iconButton8);
             this.pnlMenu.Controls.Add(this.iconButton7);
             this.pnlMenu.Controls.Add(this.label2);
+            this.pnlMenu.Controls.Add(this.btnLichSu);
+            this.pnlMenu.Controls.Add(this.btnHoaDon);
+            this.pnlMenu.Controls.Add(this.btnThanhToan);
+            this.pnlMenu.Controls.Add(this.btnDichVuSanBong);
+            this.pnlMenu.Controls.Add(this.btnThueSan);
             this.pnlMenu.Controls.Add(this.iconButton6);
-            this.pnlMenu.Controls.Add(this.iconButton5);
-            this.pnlMenu.Controls.Add(this.iconButton4);
-            this.pnlMenu.Controls.Add(this.iconButton3);
-            this.pnlMenu.Controls.Add(this.iconButton2);
-            this.pnlMenu.Controls.Add(this.iconButton1);
             this.pnlMenu.Controls.Add(this.label1);
             this.pnlMenu.Controls.Add(this.iconPictureBox1);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -81,7 +84,7 @@
             this.iconButton9.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton9.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.iconButton9.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconButton9.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
             this.iconButton9.IconColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton9.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -146,6 +149,101 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Admin";
             // 
+            // btnLichSu
+            // 
+            this.btnLichSu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLichSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLichSu.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnLichSu.IconChar = FontAwesome.Sharp.IconChar.History;
+            this.btnLichSu.IconColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnLichSu.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLichSu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLichSu.Location = new System.Drawing.Point(0, 387);
+            this.btnLichSu.Name = "btnLichSu";
+            this.btnLichSu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLichSu.Size = new System.Drawing.Size(226, 50);
+            this.btnLichSu.TabIndex = 3;
+            this.btnLichSu.Text = "Lịch Sử";
+            this.btnLichSu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLichSu.UseVisualStyleBackColor = true;
+            this.btnLichSu.Click += new System.EventHandler(this.iconButton5_Click);
+            // 
+            // btnHoaDon
+            // 
+            this.btnHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHoaDon.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnHoaDon.IconChar = FontAwesome.Sharp.IconChar.Receipt;
+            this.btnHoaDon.IconColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnHoaDon.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHoaDon.Location = new System.Drawing.Point(0, 337);
+            this.btnHoaDon.Name = "btnHoaDon";
+            this.btnHoaDon.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnHoaDon.Size = new System.Drawing.Size(226, 50);
+            this.btnHoaDon.TabIndex = 7;
+            this.btnHoaDon.Text = "Hóa Đơn";
+            this.btnHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHoaDon.UseVisualStyleBackColor = true;
+            this.btnHoaDon.Click += new System.EventHandler(this.iconButton4_Click);
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnThanhToan.IconChar = FontAwesome.Sharp.IconChar.Paypal;
+            this.btnThanhToan.IconColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnThanhToan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThanhToan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThanhToan.Location = new System.Drawing.Point(0, 287);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnThanhToan.Size = new System.Drawing.Size(226, 50);
+            this.btnThanhToan.TabIndex = 6;
+            this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThanhToan.UseVisualStyleBackColor = true;
+            this.btnThanhToan.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // btnDichVuSanBong
+            // 
+            this.btnDichVuSanBong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDichVuSanBong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDichVuSanBong.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnDichVuSanBong.IconChar = FontAwesome.Sharp.IconChar.Hamburger;
+            this.btnDichVuSanBong.IconColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnDichVuSanBong.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDichVuSanBong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDichVuSanBong.Location = new System.Drawing.Point(0, 237);
+            this.btnDichVuSanBong.Name = "btnDichVuSanBong";
+            this.btnDichVuSanBong.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnDichVuSanBong.Size = new System.Drawing.Size(226, 50);
+            this.btnDichVuSanBong.TabIndex = 5;
+            this.btnDichVuSanBong.Text = "Dịch Vụ Sân Bóng";
+            this.btnDichVuSanBong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDichVuSanBong.UseVisualStyleBackColor = true;
+            this.btnDichVuSanBong.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // btnThueSan
+            // 
+            this.btnThueSan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThueSan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThueSan.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnThueSan.IconChar = FontAwesome.Sharp.IconChar.MapPin;
+            this.btnThueSan.IconColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnThueSan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThueSan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThueSan.Location = new System.Drawing.Point(0, 187);
+            this.btnThueSan.Name = "btnThueSan";
+            this.btnThueSan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnThueSan.Size = new System.Drawing.Size(226, 50);
+            this.btnThueSan.TabIndex = 4;
+            this.btnThueSan.Text = "Thuê Sân";
+            this.btnThueSan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThueSan.UseVisualStyleBackColor = true;
+            this.btnThueSan.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
             // iconButton6
             // 
             this.iconButton6.Dock = System.Windows.Forms.DockStyle.Top;
@@ -155,7 +253,7 @@
             this.iconButton6.IconColor = System.Drawing.SystemColors.AppWorkspace;
             this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton6.Location = new System.Drawing.Point(0, 387);
+            this.iconButton6.Location = new System.Drawing.Point(0, 137);
             this.iconButton6.Name = "iconButton6";
             this.iconButton6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.iconButton6.Size = new System.Drawing.Size(226, 50);
@@ -164,101 +262,6 @@
             this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton6.UseVisualStyleBackColor = true;
             this.iconButton6.Click += new System.EventHandler(this.iconButton6_Click);
-            // 
-            // iconButton5
-            // 
-            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconButton5.IconColor = System.Drawing.SystemColors.AppWorkspace;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(0, 337);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton5.Size = new System.Drawing.Size(226, 50);
-            this.iconButton5.TabIndex = 7;
-            this.iconButton5.Text = "iconButton5";
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton5.UseVisualStyleBackColor = true;
-            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
-            // 
-            // iconButton4
-            // 
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconButton4.IconColor = System.Drawing.SystemColors.AppWorkspace;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(0, 287);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton4.Size = new System.Drawing.Size(226, 50);
-            this.iconButton4.TabIndex = 6;
-            this.iconButton4.Text = "iconButton4";
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = true;
-            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconButton3.IconColor = System.Drawing.SystemColors.AppWorkspace;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 237);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton3.Size = new System.Drawing.Size(226, 50);
-            this.iconButton3.TabIndex = 5;
-            this.iconButton3.Text = "iconButton3";
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = true;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconButton2.IconColor = System.Drawing.SystemColors.AppWorkspace;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 187);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton2.Size = new System.Drawing.Size(226, 50);
-            this.iconButton2.TabIndex = 4;
-            this.iconButton2.Text = "iconButton2";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = true;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconButton1.IconColor = System.Drawing.SystemColors.AppWorkspace;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 137);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton1.Size = new System.Drawing.Size(226, 50);
-            this.iconButton1.TabIndex = 3;
-            this.iconButton1.Text = "iconButton1";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // label1
             // 
@@ -289,10 +292,11 @@
             this.iconPictureBox1.Size = new System.Drawing.Size(226, 117);
             this.iconPictureBox1.TabIndex = 1;
             this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.BackColor = System.Drawing.Color.AliceBlue;
             this.panel1.Controls.Add(this.lblNgayGio);
             this.panel1.Controls.Add(this.iconPictureBox2);
             this.panel1.Controls.Add(this.lblTenNguoiDung);
@@ -305,9 +309,10 @@
             // 
             // lblNgayGio
             // 
+            this.lblNgayGio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNgayGio.AutoSize = true;
             this.lblNgayGio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayGio.Location = new System.Drawing.Point(478, 48);
+            this.lblNgayGio.Location = new System.Drawing.Point(527, 48);
             this.lblNgayGio.Name = "lblNgayGio";
             this.lblNgayGio.Size = new System.Drawing.Size(139, 29);
             this.lblNgayGio.TabIndex = 2;
@@ -332,14 +337,15 @@
             // lblTenNguoiDung
             // 
             this.lblTenNguoiDung.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTenNguoiDung.AutoSize = true;
+            this.lblTenNguoiDung.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblTenNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenNguoiDung.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblTenNguoiDung.Location = new System.Drawing.Point(1087, 61);
+            this.lblTenNguoiDung.Location = new System.Drawing.Point(927, 48);
             this.lblTenNguoiDung.Name = "lblTenNguoiDung";
-            this.lblTenNguoiDung.Size = new System.Drawing.Size(129, 29);
+            this.lblTenNguoiDung.Size = new System.Drawing.Size(289, 42);
             this.lblTenNguoiDung.TabIndex = 0;
             this.lblTenNguoiDung.Text = "UserName";
+            this.lblTenNguoiDung.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblChucnang
             // 
@@ -354,11 +360,30 @@
             // pnlBody
             // 
             this.pnlBody.BackColor = System.Drawing.Color.Snow;
+            this.pnlBody.Controls.Add(this.picturewelcome);
             this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBody.Location = new System.Drawing.Point(226, 117);
             this.pnlBody.Name = "pnlBody";
             this.pnlBody.Size = new System.Drawing.Size(1279, 715);
             this.pnlBody.TabIndex = 2;
+            // 
+            // picturewelcome
+            // 
+            this.picturewelcome.BackColor = System.Drawing.Color.Snow;
+            this.picturewelcome.BackgroundImage = global::Do_An_PLB03.Properties.Resources._1637209246_933_Download_1000_hinh_anh_welcome_dep_hap_dan_nguoi_xem;
+            this.picturewelcome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picturewelcome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picturewelcome.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.picturewelcome.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.picturewelcome.IconColor = System.Drawing.SystemColors.ControlText;
+            this.picturewelcome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.picturewelcome.IconSize = 715;
+            this.picturewelcome.InitialImage = null;
+            this.picturewelcome.Location = new System.Drawing.Point(0, 0);
+            this.picturewelcome.Name = "picturewelcome";
+            this.picturewelcome.Size = new System.Drawing.Size(1279, 715);
+            this.picturewelcome.TabIndex = 0;
+            this.picturewelcome.TabStop = false;
             // 
             // timer1
             // 
@@ -381,6 +406,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            this.pnlBody.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picturewelcome)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -394,11 +421,11 @@
         private FontAwesome.Sharp.IconButton iconButton7;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton iconButton6;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnLichSu;
+        private FontAwesome.Sharp.IconButton btnHoaDon;
+        private FontAwesome.Sharp.IconButton btnThanhToan;
+        private FontAwesome.Sharp.IconButton btnDichVuSanBong;
+        private FontAwesome.Sharp.IconButton btnThueSan;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private System.Windows.Forms.Label lblTenNguoiDung;
@@ -407,5 +434,6 @@
         private FontAwesome.Sharp.IconButton iconButton9;
         private System.Windows.Forms.Label lblNgayGio;
         private System.Windows.Forms.Timer timer1;
+        private FontAwesome.Sharp.IconPictureBox picturewelcome;
     }
 }

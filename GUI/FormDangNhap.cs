@@ -55,30 +55,17 @@ namespace Do_An_PLB03.GUI
         {
             user.TenDangNhap = txtUser.Text;
             user.MatKhau = txtPassword.Text;
-            if(BUSDangNhap.DangNhap(user) == 1)
+            if (BUSDangNhap.DangNhap(user))
             {
-                MessageBox.Show("Chao Admin");
                 this.Hide();
-                FormChinh frm = new FormChinh(user.TenDangNhap);
+                FormChinh frm = new FormChinh(user);
                 frm.ShowDialog();
                 this.Close();
             }
-            else if(BUSDangNhap.DangNhap(user) == 0)
+            else
             {
-                MessageBox.Show("Chao User");
-                this.Hide();
-                FormChinh frm = new FormChinh(user.TenDangNhap);
-                frm.ShowDialog();
-                this.Close();
-            } else if(BUSDangNhap.DangNhap(user) == 2)
-            {
-                MessageBox.Show("Sai Mat khau");
+                lblHopLe.Visible = true;
             }
-            else if(BUSDangNhap.DangNhap(user) == 3)
-            {
-                MessageBox.Show("Tai khoan khong hop le");
-            }
-            
         }
     }
 }

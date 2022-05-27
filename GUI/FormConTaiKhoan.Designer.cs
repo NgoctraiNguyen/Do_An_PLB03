@@ -33,7 +33,7 @@
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,12 +42,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtSoCMND = new System.Windows.Forms.TextBox();
+            this.txtCCCD = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtTuoi = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
-            this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -95,7 +95,7 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.txtPassword);
+            this.panel2.Controls.Add(this.txtMatKhau);
             this.panel2.Controls.Add(this.iconButton2);
             this.panel2.Controls.Add(this.iconButton1);
             this.panel2.Controls.Add(this.label4);
@@ -104,12 +104,12 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.txtSoCMND);
+            this.panel2.Controls.Add(this.txtCCCD);
             this.panel2.Controls.Add(this.txtDiaChi);
             this.panel2.Controls.Add(this.txtTuoi);
             this.panel2.Controls.Add(this.txtSDT);
+            this.panel2.Controls.Add(this.txtTenDangNhap);
             this.panel2.Controls.Add(this.txtUser);
-            this.panel2.Controls.Add(this.txtHoTen);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(215, 0);
             this.panel2.Name = "panel2";
@@ -127,15 +127,15 @@
             this.label9.TabIndex = 6;
             this.label9.Text = "PassWord";
             // 
-            // txtPassword
+            // txtMatKhau
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.txtPassword.Location = new System.Drawing.Point(382, 383);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtPassword.Size = new System.Drawing.Size(264, 30);
-            this.txtPassword.TabIndex = 5;
+            this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.txtMatKhau.Location = new System.Drawing.Point(382, 383);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtMatKhau.Size = new System.Drawing.Size(264, 30);
+            this.txtMatKhau.TabIndex = 5;
             // 
             // iconButton2
             // 
@@ -187,9 +187,9 @@
             this.label6.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label6.Location = new System.Drawing.Point(397, 194);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 16);
+            this.label6.Size = new System.Drawing.Size(97, 16);
             this.label6.TabIndex = 3;
-            this.label6.Text = "Số CMND:";
+            this.label6.Text = "CMND/CCCD";
             // 
             // label7
             // 
@@ -235,15 +235,15 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Họ và tên:";
             // 
-            // txtSoCMND
+            // txtCCCD
             // 
-            this.txtSoCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoCMND.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.txtSoCMND.Location = new System.Drawing.Point(400, 215);
-            this.txtSoCMND.Name = "txtSoCMND";
-            this.txtSoCMND.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtSoCMND.Size = new System.Drawing.Size(264, 30);
-            this.txtSoCMND.TabIndex = 1;
+            this.txtCCCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCCCD.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.txtCCCD.Location = new System.Drawing.Point(400, 215);
+            this.txtCCCD.Name = "txtCCCD";
+            this.txtCCCD.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtCCCD.Size = new System.Drawing.Size(264, 30);
+            this.txtCCCD.TabIndex = 1;
             // 
             // txtDiaChi
             // 
@@ -275,25 +275,25 @@
             this.txtSDT.Size = new System.Drawing.Size(264, 30);
             this.txtSDT.TabIndex = 1;
             // 
+            // txtTenDangNhap
+            // 
+            this.txtTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDangNhap.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.txtTenDangNhap.Location = new System.Drawing.Point(27, 383);
+            this.txtTenDangNhap.Name = "txtTenDangNhap";
+            this.txtTenDangNhap.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtTenDangNhap.Size = new System.Drawing.Size(264, 30);
+            this.txtTenDangNhap.TabIndex = 1;
+            // 
             // txtUser
             // 
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.txtUser.Location = new System.Drawing.Point(27, 383);
+            this.txtUser.Location = new System.Drawing.Point(27, 132);
             this.txtUser.Name = "txtUser";
             this.txtUser.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtUser.Size = new System.Drawing.Size(264, 30);
             this.txtUser.TabIndex = 1;
-            // 
-            // txtHoTen
-            // 
-            this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoTen.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.txtHoTen.Location = new System.Drawing.Point(27, 132);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtHoTen.Size = new System.Drawing.Size(264, 30);
-            this.txtHoTen.TabIndex = 1;
             // 
             // label2
             // 
@@ -334,7 +334,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtHoTen;
+        private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
@@ -343,12 +343,12 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtSoCMND;
+        private System.Windows.Forms.TextBox txtCCCD;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtTuoi;
         private System.Windows.Forms.TextBox txtSDT;
-        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtTenDangNhap;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtMatKhau;
     }
 }

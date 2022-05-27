@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblHopLe = new System.Windows.Forms.Label();
             this.iptDisEye = new FontAwesome.Sharp.IconPictureBox();
             this.btnLogin = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.Snow;
+            this.panel1.Controls.Add(this.lblHopLe);
             this.panel1.Controls.Add(this.iptDisEye);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.label3);
@@ -55,6 +57,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(385, 328);
             this.panel1.TabIndex = 0;
+            // 
+            // lblHopLe
+            // 
+            this.lblHopLe.AutoSize = true;
+            this.lblHopLe.ForeColor = System.Drawing.Color.Red;
+            this.lblHopLe.Location = new System.Drawing.Point(105, 243);
+            this.lblHopLe.Name = "lblHopLe";
+            this.lblHopLe.Size = new System.Drawing.Size(147, 16);
+            this.lblHopLe.TabIndex = 5;
+            this.lblHopLe.Text = "Tài khoản không hợp lệ";
+            this.lblHopLe.Visible = false;
             // 
             // iptDisEye
             // 
@@ -176,6 +189,7 @@
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton btnLogin;
         private FontAwesome.Sharp.IconPictureBox iptDisEye;
+        private System.Windows.Forms.Label lblHopLe;
     }
 }
 

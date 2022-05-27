@@ -11,7 +11,7 @@ namespace Do_An_PLB03.BUS
 {
     public class BUSDangNhap
     {
-        public static int DangNhap(DTONguoiDung user)
+        public static bool DangNhap(DTONguoiDung user)
         {
             return DALDangNhap.KiemTraDangNhap(user);
         }

@@ -1,6 +1,4 @@
-﻿using Do_An_PLB03.BUS;
-using Do_An_PLB03.DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,23 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Do_An_PLB03.DTO;
 
 namespace Do_An_PLB03.GUI
 {
     public partial class FormConTaiKhoan : Form
     {
-        public FormConTaiKhoan(DTONguoiDung a, string tendangnhap)
+        private DTONguoiDung _user;
+        public FormConTaiKhoan(DTONguoiDung user)
         {
-            a.TenDangNhap = tendangnhap;
             InitializeComponent();
-            BUSNguoiDung.GetThongTinCaNhan(a);
-            txtHoTen.Text = a.HoTen;
-            txtTuoi.Text = a.Tuoi + "";
-            txtSDT.Text = a.SDT;
-            txtSoCMND.Text = a.SoCMND;
-            txtDiaChi.Text = a.DiaChi;
-            txtUser.Text = a.TenDangNhap;
-            txtPassword.Text = a.MatKhau;
+            _user = user;
+            txtUser.Text = _user.HoTen;
+            txtTuoi.Text = Convert.ToString(_user.Tuoi);
+            txtSDT.Text = Convert.ToString(_user.SDT);
+            txtDiaChi.Text = _user.DiaChi;
+            txtTenDangNhap.Text = _user.TenDangNhap;
+            txtMatKhau.Text = _user.MatKhau;
+            txtCCCD.Text = _user.SoCMND;
         }
     }
 }
