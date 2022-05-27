@@ -35,7 +35,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnLuuThayDoi = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.txtTuoi = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
-            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -97,7 +97,7 @@
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.txtMatKhau);
             this.panel2.Controls.Add(this.iconButton2);
-            this.panel2.Controls.Add(this.iconButton1);
+            this.panel2.Controls.Add(this.btnLuuThayDoi);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label7);
@@ -109,7 +109,7 @@
             this.panel2.Controls.Add(this.txtTuoi);
             this.panel2.Controls.Add(this.txtSDT);
             this.panel2.Controls.Add(this.txtTenDangNhap);
-            this.panel2.Controls.Add(this.txtUser);
+            this.panel2.Controls.Add(this.txtHoTen);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(215, 0);
             this.panel2.Name = "panel2";
@@ -154,21 +154,22 @@
             this.iconButton2.UseVisualStyleBackColor = true;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
-            // iconButton1
+            // btnLuuThayDoi
             // 
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.PencilAlt;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.iconButton1.Location = new System.Drawing.Point(27, 453);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(145, 46);
-            this.iconButton1.TabIndex = 4;
-            this.iconButton1.Text = "Lưu thay đổi";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.btnLuuThayDoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuuThayDoi.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnLuuThayDoi.IconChar = FontAwesome.Sharp.IconChar.PencilAlt;
+            this.btnLuuThayDoi.IconColor = System.Drawing.Color.Black;
+            this.btnLuuThayDoi.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLuuThayDoi.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnLuuThayDoi.Location = new System.Drawing.Point(27, 453);
+            this.btnLuuThayDoi.Name = "btnLuuThayDoi";
+            this.btnLuuThayDoi.Size = new System.Drawing.Size(145, 46);
+            this.btnLuuThayDoi.TabIndex = 4;
+            this.btnLuuThayDoi.Text = "Lưu thay đổi";
+            this.btnLuuThayDoi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLuuThayDoi.UseVisualStyleBackColor = true;
+            this.btnLuuThayDoi.Click += new System.EventHandler(this.btnLuuThayDoi_Click);
             // 
             // label4
             // 
@@ -286,15 +287,15 @@
             this.txtTenDangNhap.Size = new System.Drawing.Size(264, 30);
             this.txtTenDangNhap.TabIndex = 1;
             // 
-            // txtUser
+            // txtHoTen
             // 
-            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.txtUser.Location = new System.Drawing.Point(27, 132);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtUser.Size = new System.Drawing.Size(264, 30);
-            this.txtUser.TabIndex = 1;
+            this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.txtHoTen.Location = new System.Drawing.Point(27, 132);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtHoTen.Size = new System.Drawing.Size(264, 30);
+            this.txtHoTen.TabIndex = 1;
             // 
             // label2
             // 
@@ -335,10 +336,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnLuuThayDoi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;

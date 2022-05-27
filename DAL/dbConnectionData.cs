@@ -12,7 +12,8 @@ namespace Do_An_PLB03.DAL
     {
         public static SqlConnection HamketNoi()
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-7RL4O9C2;Initial Catalog=QLSB;Integrated Security=True");
+            //SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-7RL4O9C2;Initial Catalog=QLSB;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source =DESKTOP-L5DTBUM\SQLEXPRESS;Initial Catalog=QLSB;Integrated Security=True");
             return conn;
         }
     }
