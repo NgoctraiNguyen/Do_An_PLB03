@@ -54,12 +54,18 @@
     <Compile Include="BUS\BUSDangNhap.cs" />
     <Compile Include="BUS\BUSDoUong.cs" />
     <Compile Include="BUS\BUSNguoiDung.cs" />
+    <Compile Include="BUS\BUSSan.cs" />
+    <Compile Include="BUS\BUSTrangThaiSan.cs" />
     <Compile Include="DAL\DALDangNhap.cs" />
     <Compile Include="DAL\DALDoUong.cs" />
     <Compile Include="DAL\DALNguoiDung.cs" />
+    <Compile Include="DAL\DALSan.cs" />
     <Compile Include="DAL\dbConnectionData.cs" />
+    <Compile Include="DAL\DALTrangThaiSan.cs" />
     <Compile Include="DTO\DTODoUong.cs" />
     <Compile Include="DTO\DTONguoiDung.cs" />
+    <Compile Include="DTO\DTOSan.cs" />
+    <Compile Include="DTO\DTOTrangThaiSan.cs" />
     <Compile Include="GUI\FormDatSan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,12 +126,6 @@
     <Compile Include="GUI\FormDangNhap.Designer.cs">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FormThanhToanVaInHoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\FormThanhToanVaInHoaDon.Designer.cs">
-      <DependentUpon>FormThanhToanVaInHoaDon.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\FormNhanSan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,9 +160,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormSudungdichvuvaThanhtoan.resx">
       <DependentUpon>FormSudungdichvuvaThanhtoan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FormThanhToanVaInHoaDon.resx">
-      <DependentUpon>FormThanhToanVaInHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Formthongke.resx">
       <DependentUpon>Formthongke.cs</DependentUpon>
