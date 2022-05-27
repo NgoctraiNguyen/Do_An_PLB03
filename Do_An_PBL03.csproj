@@ -78,6 +78,12 @@
     <Compile Include="GUI\Formkhohang.Designer.cs">
       <DependentUpon>Formkhohang.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormSudungdichvuvaThanhtoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormSudungdichvuvaThanhtoan.Designer.cs">
+      <DependentUpon>FormSudungdichvuvaThanhtoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Formthongke.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Formkhohang.resx">
       <DependentUpon>Formkhohang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormSudungdichvuvaThanhtoan.resx">
+      <DependentUpon>FormSudungdichvuvaThanhtoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormThanhToanVaInHoaDon.resx">
       <DependentUpon>FormThanhToanVaInHoaDon.cs</DependentUpon>
