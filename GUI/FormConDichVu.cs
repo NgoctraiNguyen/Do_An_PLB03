@@ -57,7 +57,7 @@ namespace Do_An_PLB03.GUI
                 int giagoc = Convert.ToInt32(txtGiaGoc.Text);
                 DTODoUong douong = new DTODoUong(ten, sl, giaban, giagoc);
                 BUSDoUong.InsertDoUong(douong);
-                MessageBox.Show("Them thanh cong");
+                MessageBox.Show("Thêm thành công");
                 dataGridView1.DataSource = BUSDoUong.GetAllDoUong();
             }
             catch (Exception ex)

@@ -316,10 +316,10 @@
             // iconPictureBox2
             // 
             this.iconPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconPictureBox2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.iconPictureBox2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox2.BackColor = System.Drawing.Color.AliceBlue;
+            this.iconPictureBox2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
-            this.iconPictureBox2.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox2.IconColor = System.Drawing.SystemColors.HotTrack;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox2.IconSize = 42;
             this.iconPictureBox2.Location = new System.Drawing.Point(1222, 48);
@@ -334,8 +334,13 @@
             this.lblTenNguoiDung.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTenNguoiDung.AutoSize = true;
             this.lblTenNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< Updated upstream
             this.lblTenNguoiDung.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.lblTenNguoiDung.Location = new System.Drawing.Point(1087, 61);
+=======
+            this.lblTenNguoiDung.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTenNguoiDung.Location = new System.Drawing.Point(927, 48);
+>>>>>>> Stashed changes
             this.lblTenNguoiDung.Name = "lblTenNguoiDung";
             this.lblTenNguoiDung.Size = new System.Drawing.Size(129, 29);
             this.lblTenNguoiDung.TabIndex = 0;
@@ -374,7 +379,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlMenu);
             this.Name = "FormChinh";
-            this.Text = "FormChinh";
+            this.Text = "Phần mền quản lý sân bóng đá";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlMenu.ResumeLayout(false);
             this.pnlMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();

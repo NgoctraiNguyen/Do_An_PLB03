@@ -24,8 +24,22 @@ namespace Do_An_PLB03.GUI
             borderbtn = new Panel();
             borderbtn.Size = new Size(7, 50);
             pnlMenu.Controls.Add(borderbtn);
+<<<<<<< Updated upstream
             admin = true;
             lblTenNguoiDung.Text = tendangnhap;
+=======
+            _user = user;
+            if (user.Quyen == 1)
+            {
+                admin = true;
+                lblTenNguoiDung.Text = "Admin ";
+            }
+            else
+            {
+                lblTenNguoiDung.Text = "Nhân viên ";
+            }
+            lblTenNguoiDung.Text = lblTenNguoiDung.Text + _user.HoTen ;
+>>>>>>> Stashed changes
             displayviewadmin();
         }
 
@@ -109,7 +123,7 @@ namespace Do_An_PLB03.GUI
         private void iconButton6_Click(object sender, EventArgs e)
         {
             clickbutton(sender);
-            Openchillform(new FormThanhToanVaInHoaDon());
+            Openchillform(new FormSudungdichvuvaThanhtoan());
         }
 
         private void iconButton7_Click(object sender, EventArgs e)
@@ -132,9 +146,14 @@ namespace Do_An_PLB03.GUI
 
         private void iconPictureBox2_Click(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             DTONguoiDung a = new DTONguoiDung();
             Openchillform(new FormConTaiKhoan(a, lblTenNguoiDung.Text));
             lblChucnang.Text = "Tài khoản cá nhân";
+=======
+            Openchillform(new FormConTaiKhoan(_user,this));
+            lblChucnang.Text = "Tài khoảng cá nhân";
+>>>>>>> Stashed changes
             disablebutton();
         }
 
