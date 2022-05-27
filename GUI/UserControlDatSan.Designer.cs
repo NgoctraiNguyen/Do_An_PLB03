@@ -47,6 +47,7 @@
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -68,7 +69,7 @@
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label3.Location = new System.Drawing.Point(112, 243);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 20);
+            this.label3.Size = new System.Drawing.Size(79, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Bắt đầu:";
             // 
@@ -80,7 +81,7 @@
             this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label4.Location = new System.Drawing.Point(112, 287);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 20);
+            this.label4.Size = new System.Drawing.Size(89, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Kết Thúc:";
             // 
@@ -134,6 +135,7 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(190, 22);
             this.dateTimePicker2.TabIndex = 7;
             this.dateTimePicker2.Value = new System.DateTime(2022, 5, 13, 8, 45, 6, 0);
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // label6
             // 
@@ -280,11 +282,19 @@
             this.iconButton1.TabIndex = 3;
             this.iconButton1.UseVisualStyleBackColor = true;
             // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Location = new System.Drawing.Point(376, 256);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker3.TabIndex = 9;
+            // 
             // UserControlDatSan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
+            this.Controls.Add(this.dateTimePicker3);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
@@ -333,5 +343,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
     }
 }

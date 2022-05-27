@@ -46,5 +46,14 @@ namespace Do_An_PLB03.GUI
         {
 
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimePicker2.Value = dateTimePicker1.Value.AddHours(1);
+        }
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
