@@ -26,5 +26,13 @@ namespace Do_An_PLB03.GUI
             txtMatKhau.Text = _user.MatKhau;
             txtCCCD.Text = _user.SoCMND;
         }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            DialogResult dl = MessageBox.Show("Bạn chắc chắn muốn đăng xuất không?", "Cảnh báo", MessageBoxButtons.YesNo);
+            if(dl == DialogResult.Yes) { 
+                
+            }
+        }
     }
 }

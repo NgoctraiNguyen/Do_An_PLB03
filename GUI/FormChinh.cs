@@ -62,9 +62,10 @@ namespace Do_An_PLB03.GUI
 
         private void displayviewadmin()
         {
-            iconButton7.Visible = admin;
-            iconButton8.Visible = admin;
-            iconButton9.Visible = admin;
+            btnQuanLyNhanVien.Visible = admin;
+            btnQuanLyDichVu.Visible = admin;
+            btnQuanLyKhachHang.Visible = admin;
+            btnThongKe.Visible = admin;
             timer1.Enabled = true;
         }
 

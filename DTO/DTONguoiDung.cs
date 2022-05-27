@@ -39,21 +39,6 @@ namespace Do_An_PLB03.DTO
             _Quyen = quyen;
         }
 
-        public void setvalue(int maNguoiDung, string hoTen, int tuoi, string diaChi, int gioiTinh, int sDT, string soCMND, string tenDangNhap, string matKhau, string vitri, int quyen)
-        {
-            _MaNguoiDung = maNguoiDung;
-            _HoTen = hoTen;
-            _Tuoi = tuoi;
-            _DiaChi = diaChi;
-            _GioiTinh = gioiTinh;
-            _SDT = sDT.ToString();
-            _SoCMND = soCMND;
-            _TenDangNhap = tenDangNhap;
-            _MatKhau = matKhau;
-            _Vitri = vitri;
-            _Quyen = quyen;
-        }
-
 
         public int MaNguoiDung { get => _MaNguoiDung; set => _MaNguoiDung = value; }
         public string HoTen { get => _HoTen; set => _HoTen = value; }
