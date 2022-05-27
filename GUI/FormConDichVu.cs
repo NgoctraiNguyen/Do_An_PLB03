@@ -99,9 +99,9 @@ namespace Do_An_PLB03.GUI
             {
                 MessageBox.Show(ex.Message);
             }
-            Focus();
+            Focuss();
         }
-        public void Focus()
+        public void Focuss()
         {
             txtMaDoUong.Text = "";
             txtTenDoUong.Text = "";

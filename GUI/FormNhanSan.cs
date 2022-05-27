@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Do_An_PLB03.GUI
 {
-    public partial class FormDatSan : Form
+    public partial class Nhận_sân : Form
     {
-        public FormDatSan()
+        public Nhận_sân()
         {
             InitializeComponent();
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox6_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }
