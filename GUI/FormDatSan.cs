@@ -174,10 +174,6 @@ namespace Do_An_PLB03.GUI
         private void iconButton3_Click(object sender, EventArgs e)
         {
 
-
-            
-
-
         }
 
         private void cbbTenSan_SelectedIndexChanged(object sender, EventArgs e)
@@ -188,7 +184,25 @@ namespace Do_An_PLB03.GUI
 
         private void btnDatSan_Click(object sender, EventArgs e)
         {
+            trangthaisan.TenSan = cbbTenSan.Text;
+            trangthaisan.ThoiGianBatDau = dtpNgayGioNhan.Value;
+            trangthaisan.ThoiGianKetThuc = dtpNgayGioTra.Value;
+            BUSTrangThaiSan.TrangThaiSan(trangthaisan);
 
+            khachhang.TenKhachHang = txtTenKhachHang.Text;
+            khachhang.SDTKhachHang = txtSDTKhachHang.Text;
+            BUSKhachHang.KhachHang(khachhang);
+        }
+
+        string ten, sdt;
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            BUSKhachHang.getkhachhang(khachhang, txtSDT.Text);
+            ten = BUSKhachHang.ten;
+            sdt = BUSKhachHang.SDTkhachhang;
+
+            txtTenKhachHang.Text = ten;
+            txtSDTKhachHang.Text = sdt;
         }
     }
 }
