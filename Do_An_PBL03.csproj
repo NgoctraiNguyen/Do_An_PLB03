@@ -53,16 +53,22 @@
   <ItemGroup>
     <Compile Include="BUS\BUSDangNhap.cs" />
     <Compile Include="BUS\BUSDoUong.cs" />
+    <Compile Include="BUS\BUSGia.cs" />
+    <Compile Include="BUS\BUSKhachHang.cs" />
     <Compile Include="BUS\BUSNguoiDung.cs" />
     <Compile Include="BUS\BUSSan.cs" />
     <Compile Include="BUS\BUSTrangThaiSan.cs" />
     <Compile Include="DAL\DALDangNhap.cs" />
     <Compile Include="DAL\DALDoUong.cs" />
+    <Compile Include="DAL\DALGia.cs" />
+    <Compile Include="DAL\DALKhachHang.cs" />
     <Compile Include="DAL\DALNguoiDung.cs" />
     <Compile Include="DAL\DALSan.cs" />
     <Compile Include="DAL\dbConnectionData.cs" />
     <Compile Include="DAL\DALTrangThaiSan.cs" />
     <Compile Include="DTO\DTODoUong.cs" />
+    <Compile Include="DTO\DTOGia.cs" />
+    <Compile Include="DTO\DTOKhachHang.cs" />
     <Compile Include="DTO\DTONguoiDung.cs" />
     <Compile Include="DTO\DTOSan.cs" />
     <Compile Include="DTO\DTOTrangThaiSan.cs" />
