@@ -87,6 +87,18 @@ namespace Do_An_PLB03.GUI
         {
 
         }
+        public TimeSpan[] tgbd_toarray(List<TimeSpan> tgbd)
+        {
+            return tgbd.ToArray();
+        }
+        public TimeSpan[] tgkt_toarray(List<TimeSpan> tgkt)
+        {
+            return tgkt.ToArray();
+        }
+        public int[] giatheogio_toarray(List<int> giatheogio)
+        {
+            return giatheogio.ToArray();
+        }
 
         private void txtSoGio_MouseLeave(object sender, EventArgs e)
         {
@@ -99,10 +111,53 @@ namespace Do_An_PLB03.GUI
             {
                 int hthem = Convert.ToInt32(txtSoGio.Text);
                 dtpNgayGioTra.Value = dtpNgayGioNhan.Value.AddHours(hthem);
-            }
-                
 
-           
+                tgbd = BUSGia.tgbatdau(gia, int.Parse(tenloaisan));
+                tgkt = BUSGia.tgketthuc(gia, int.Parse(tenloaisan));
+                giatheogio = BUSGia.gia(gia, int.Parse(tenloaisan));
+
+                Tgbd = tgbd_toarray(tgbd);
+                Tgkt = tgkt_toarray(tgkt);
+                Giatheogio = giatheogio_toarray(giatheogio);
+
+                int k = 0, p = 0, tien = 0, price = 0;
+
+                for (int i = 0; i < Tgbd.Count(); i++)
+                {
+                    if (((int)Tgbd[i].TotalHours) <= dtpNgayGioNhan.Value.Hour &&
+                            ((int)Tgkt[i].TotalHours) > dtpNgayGioNhan.Value.Hour)
+                    {
+                        k = i;
+                    }
+                    if (((int)Tgbd[i].TotalHours) < dtpNgayGioTra.Value.Hour &&
+                        ((int)Tgkt[i].TotalHours) >= dtpNgayGioTra.Value.Hour)
+                    {
+                        p = i;
+                    }
+                }
+
+                if (k == p)
+                {
+                    tien = (dtpNgayGioTra.Value.Hour - dtpNgayGioNhan.Value.Hour) * Giatheogio[k];
+                }
+                else
+                {
+                    for (int i = k + 1; i < p; i++)
+                    {
+                        price += ((((int)Tgkt[i].TotalHours) - ((int)tgbd[i].TotalHours)) * Giatheogio[i]);
+                    }
+
+                    tien = price + ((((int)Tgkt[k].TotalHours)) - dtpNgayGioNhan.Value.Hour) * Giatheogio[k]
+                                        + (dtpNgayGioTra.Value.Hour - ((int)Tgbd[p].TotalHours)) * Giatheogio[p];
+                }
+
+
+                txtGia.Text = tien.ToString();
+
+            }
+
+
+
         }
 
         private void txtSoGio_TextChanged(object sender, EventArgs e)
@@ -128,6 +183,11 @@ namespace Do_An_PLB03.GUI
         private void cbbTenSan_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtTenSan.Text=cbbTenSan.Text;
+
+        }
+
+        private void btnDatSan_Click(object sender, EventArgs e)
+        {
 
         }
     }

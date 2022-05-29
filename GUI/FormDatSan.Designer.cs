@@ -265,6 +265,7 @@
             this.btnDatSan.TabIndex = 6;
             this.btnDatSan.Text = "Đặt Sân";
             this.btnDatSan.UseVisualStyleBackColor = false;
+            this.btnDatSan.Click += new System.EventHandler(this.btnDatSan_Click);
             // 
             // groupBox3
             // 
