@@ -14,11 +14,25 @@ namespace Do_An_PLB03.GUI
 {
     public partial class FormDatSan : Form
     {
-        BUSTrangThaiSan trangthaisan= new BUSTrangThaiSan();
+        DTOTrangThaiSan trangthaisan= new DTOTrangThaiSan();
         DTOSan san= new DTOSan();
+        DTOGia gia = new DTOGia();
+        DTOKhachHang khachhang = new DTOKhachHang();
+
         public static List<string> loaisan=new List<string>();
         public static List<string> tensan= new List<string>();
+
+        public static List<TimeSpan> tgbd = new List<TimeSpan>();
+        public static List<TimeSpan> tgkt = new List<TimeSpan>();
+        public static List<int> giatheogio = new List<int>();
+
+        public static TimeSpan[] Tgbd = new TimeSpan[50];
+        public static TimeSpan[] Tgkt = new TimeSpan[50];
+        public int[] Giatheogio = new int[50];
+
         string tenloaisan;
+        int i;
+
 
         public FormDatSan()
         {
@@ -50,10 +64,11 @@ namespace Do_An_PLB03.GUI
                 txtMaLoaiSan.Text = cbbLoaiSan.Text;
                 tenloaisan = cbbLoaiSan.Text;
 
+                tensan.Clear();
                 tensan = BUSSan.tensandat(san, tenloaisan);
+                cbbTenSan.DataSource = null;
                 cbbTenSan.Items.Clear();
                 cbbTenSan.DataSource = tensan;
-
 
             }
 
@@ -98,11 +113,12 @@ namespace Do_An_PLB03.GUI
         private void txtSoGio_MouseClick(object sender, MouseEventArgs e)
         {
             txtSoGio.Text = "";
+
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
-           //MessageBox.Show(tenloaisan);
+
 
             
 
@@ -111,7 +127,7 @@ namespace Do_An_PLB03.GUI
 
         private void cbbTenSan_SelectedIndexChanged(object sender, EventArgs e)
         {
-         
+            txtTenSan.Text=cbbTenSan.Text;
 
         }
     }
