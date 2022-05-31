@@ -9,16 +9,22 @@ using Do_An_PLB03.DTO;
 namespace Do_An_PLB03.BUS
 {
     internal class BUSTrangThaiSan
-    {
+    {   
+
         public static void TrangThaiSan(DTOTrangThaiSan trangthaisan)
         {
 
-            //if (trangthaisan.TenSan != null)
-            //    trangthaisan.TrangThai = 1;
-            //else trangthaisan.TrangThai = 0;
+            if (trangthaisan.TenSan != null)
+               trangthaisan.TrangThai = 1;
+            else trangthaisan.TrangThai = 0;
             DALTrangThaiSan.DatSan(trangthaisan);
 
-
+        }
+        public static int ma;
+        public static void matrangthaisan(DTOTrangThaiSan trangthaisan,int tgbd)
+        {
+            ma=DALTrangThaiSan.matrangthai(trangthaisan, tgbd);
+            
         }
     }
 }

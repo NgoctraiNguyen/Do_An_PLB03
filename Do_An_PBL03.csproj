@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\BUSDangNhap.cs" />
+    <Compile Include="BUS\BUSDonHang.cs" />
     <Compile Include="BUS\BUSDoUong.cs" />
     <Compile Include="BUS\BUSGia.cs" />
     <Compile Include="BUS\BUSKhachHang.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="BUS\BUSSan.cs" />
     <Compile Include="BUS\BUSTrangThaiSan.cs" />
     <Compile Include="DAL\DALDangNhap.cs" />
+    <Compile Include="DAL\DALDonHang.cs" />
     <Compile Include="DAL\DALDoUong.cs" />
     <Compile Include="DAL\DALGia.cs" />
     <Compile Include="DAL\DALKhachHang.cs" />
@@ -66,6 +68,7 @@
     <Compile Include="DAL\DALSan.cs" />
     <Compile Include="DAL\dbConnectionData.cs" />
     <Compile Include="DAL\DALTrangThaiSan.cs" />
+    <Compile Include="DTO\DTODonHang.cs" />
     <Compile Include="DTO\DTODoUong.cs" />
     <Compile Include="DTO\DTOGia.cs" />
     <Compile Include="DTO\DTOKhachHang.cs" />

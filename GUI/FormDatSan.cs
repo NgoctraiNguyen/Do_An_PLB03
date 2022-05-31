@@ -18,6 +18,7 @@ namespace Do_An_PLB03.GUI
         DTOSan san= new DTOSan();
         DTOGia gia = new DTOGia();
         DTOKhachHang khachhang = new DTOKhachHang();
+        DTODonHang donhang= new DTODonHang();
 
         public static List<string> loaisan=new List<string>();
         public static List<string> tensan= new List<string>();
@@ -31,7 +32,7 @@ namespace Do_An_PLB03.GUI
         public int[] Giatheogio = new int[50];
 
         string tenloaisan;
-        int i;
+        
 
 
         public FormDatSan()
@@ -192,6 +193,20 @@ namespace Do_An_PLB03.GUI
             khachhang.TenKhachHang = txtTenKhachHang.Text;
             khachhang.SDTKhachHang = txtSDTKhachHang.Text;
             BUSKhachHang.KhachHang(khachhang);
+
+            BUSKhachHang.laymakhachhang(khachhang,txtSDTKhachHang.Text);
+            donhang.MaKhachHang = BUSKhachHang.makhachhang;
+
+            BUSTrangThaiSan.matrangthaisan(trangthaisan,dtpNgayGioNhan.Value.Hour);
+            donhang.MaTrangThaiSan =BUSTrangThaiSan.ma ;
+            donhang.NgayGioTao=DateTime.Now;
+            donhang.TongTienSan = int.Parse(txtGia.Text);
+            donhang.TrangThai =1;
+
+            BUSDonHang.donhang(donhang);
+
+
+
         }
 
         string ten, sdt;

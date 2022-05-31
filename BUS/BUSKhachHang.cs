@@ -10,6 +10,7 @@ namespace Do_An_PLB03.BUS
 {
     internal class BUSKhachHang
     {
+      
         public static string ten;
         public static string SDTkhachhang;
         public static void KhachHang(DTOKhachHang khachhang)
@@ -21,6 +22,13 @@ namespace Do_An_PLB03.BUS
             DALKhachHang.getkhachhang(khachhang,SDT);
             ten = DALKhachHang.ten;
             SDTkhachhang = DALKhachHang.SDTkhachhang;
+        
+        }
+        public static int makhachhang;
+        public static void laymakhachhang(DTOKhachHang khachhang,string SDT)
+        {
+            makhachhang = DALKhachHang.laymakhachhang(khachhang,SDT);
+            
         }
     }
 }

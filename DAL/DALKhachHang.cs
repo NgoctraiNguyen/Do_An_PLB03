@@ -28,7 +28,7 @@ namespace Do_An_PLB03.DAL
             command.ExecuteNonQuery();
 
         }
-
+       
         public static string ten;
         public static string SDTkhachhang;
         public static void getkhachhang(DTOKhachHang khachhang,string SDT)
@@ -47,6 +47,25 @@ namespace Do_An_PLB03.DAL
                 ten=reader.GetString(0);
                 SDTkhachhang=reader.GetString(1);
             }
+
+        }
+        public static int makhachhang;
+        public static int laymakhachhang(DTOKhachHang khachhang, string SDT)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            string querry = " select MaKhachHang from KhachHang where SDTKhachHang='"+SDT+"'";
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = querry;
+            command.Connection = conn;
+
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                makhachhang = reader.GetInt32(0);
+            }
+            return makhachhang;
 
         }
     }
