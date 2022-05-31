@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.btnXemChiTiet = new FontAwesome.Sharp.IconButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtDanhSachDatSan = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnTimKiem = new FontAwesome.Sharp.IconButton();
             this.txtSDT = new System.Windows.Forms.TextBox();
@@ -67,7 +67,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtDanhSachDatSan)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -103,7 +103,7 @@
             // 
             this.groupBox6.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox6.Controls.Add(this.btnXemChiTiet);
-            this.groupBox6.Controls.Add(this.dataGridView1);
+            this.groupBox6.Controls.Add(this.dtDanhSachDatSan);
             this.groupBox6.Location = new System.Drawing.Point(930, 21);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(273, 558);
@@ -129,16 +129,16 @@
             this.btnXemChiTiet.Text = "Xem chi tiết";
             this.btnXemChiTiet.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dtDanhSachDatSan
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(261, 458);
-            this.dataGridView1.TabIndex = 0;
+            this.dtDanhSachDatSan.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dtDanhSachDatSan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtDanhSachDatSan.Location = new System.Drawing.Point(6, 25);
+            this.dtDanhSachDatSan.Name = "dtDanhSachDatSan";
+            this.dtDanhSachDatSan.RowHeadersWidth = 51;
+            this.dtDanhSachDatSan.RowTemplate.Height = 24;
+            this.dtDanhSachDatSan.Size = new System.Drawing.Size(261, 458);
+            this.dtDanhSachDatSan.TabIndex = 0;
             // 
             // groupBox5
             // 
@@ -528,7 +528,7 @@
             this.Load += new System.EventHandler(this.FormDatSan_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtDanhSachDatSan)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -569,7 +569,7 @@
         private System.Windows.Forms.DateTimePicker dtpNgayGioNhan;
         private System.Windows.Forms.GroupBox groupBox6;
         private FontAwesome.Sharp.IconButton btnXemChiTiet;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtDanhSachDatSan;
         private FontAwesome.Sharp.IconButton btnDong;
         private FontAwesome.Sharp.IconButton btnHuy;
         private FontAwesome.Sharp.IconButton btnDatSan;

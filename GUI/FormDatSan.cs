@@ -50,8 +50,9 @@ namespace Do_An_PLB03.GUI
         {
             cbbLoaiSan.Items.Clear();
             loaisan = BUSSan.san(san);
-
             cbbLoaiSan.DataSource = loaisan;
+
+            dtDanhSachDatSan.DataSource = BUSDanhSachDatSan.danhsach();
 
 
 
