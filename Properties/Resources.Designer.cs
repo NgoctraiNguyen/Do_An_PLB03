@@ -83,6 +83,16 @@ namespace Do_An_PLB03.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap phần_mền_quản_lý_sân_bóng_đá_xanh {
+            get {
+                object obj = ResourceManager.GetObject("phần mền quản lý sân bóng đá xanh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap vecteezy_3d_illustration_dot_blue_wave_light_screen_gradient_4440262_899 {
             get {
                 object obj = ResourceManager.GetObject("vecteezy_3d-illustration-dot-blue-wave-light-screen-gradient_4440262_899", resourceCulture);

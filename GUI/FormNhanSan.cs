@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Do_An_PLB03.GUI
 {
-    public partial class Nhận_sân : Form
+    public partial class FormNhanSan : Form
     {
-        public Nhận_sân()
+        public FormNhanSan()
         {
             InitializeComponent();
         }

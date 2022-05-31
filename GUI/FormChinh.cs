@@ -69,7 +69,7 @@ namespace Do_An_PLB03.GUI
             timer1.Enabled = true;
         }
 
-        private void Openchillform(Form formsender)
+        public void Openchillform(Form formsender)
         {
             if(chillform != null)
             {
@@ -92,7 +92,7 @@ namespace Do_An_PLB03.GUI
         private void iconButton1_Click(object sender, EventArgs e)
         {
             clickbutton(sender);
-            Openchillform(new FormDatSan());
+            Openchillform(new FormDatSan(this));
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
@@ -136,7 +136,7 @@ namespace Do_An_PLB03.GUI
 
         private void iconPictureBox2_Click(object sender, EventArgs e)
         {
-            Openchillform(new FormConTaiKhoan(_user));
+            Openchillform(new FormConTaiKhoan(_user,this));
             lblChucnang.Text = "Tài khoảng cá nhân";
             disablebutton();
         }

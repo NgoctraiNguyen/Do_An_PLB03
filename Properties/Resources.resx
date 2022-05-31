@@ -127,4 +127,7 @@
   <data name="1637209246_933_Download-1000-hinh-anh-welcome-dep-hap-dan-nguoi-xem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1637209246_933_Download-1000-hinh-anh-welcome-dep-hap-dan-nguoi-xem.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="phần mền quản lý sân bóng đá xanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phần mền quản lý sân bóng đá xanh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

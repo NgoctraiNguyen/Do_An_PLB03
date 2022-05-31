@@ -38,7 +38,7 @@
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chkNhanSan = new System.Windows.Forms.CheckBox();
             this.btnDong = new FontAwesome.Sharp.IconButton();
             this.btnHuy = new FontAwesome.Sharp.IconButton();
             this.btnDatSan = new FontAwesome.Sharp.IconButton();
@@ -193,7 +193,7 @@
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox4.Controls.Add(this.checkBox1);
+            this.groupBox4.Controls.Add(this.chkNhanSan);
             this.groupBox4.Controls.Add(this.btnDong);
             this.groupBox4.Controls.Add(this.btnHuy);
             this.groupBox4.Controls.Add(this.btnDatSan);
@@ -204,16 +204,16 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Chức Năng";
             // 
-            // checkBox1
+            // chkNhanSan
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.checkBox1.Location = new System.Drawing.Point(19, 20);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(155, 20);
-            this.checkBox1.TabIndex = 9;
-            this.checkBox1.Text = "chuyển đến nhận sân";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkNhanSan.AutoSize = true;
+            this.chkNhanSan.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.chkNhanSan.Location = new System.Drawing.Point(19, 20);
+            this.chkNhanSan.Name = "chkNhanSan";
+            this.chkNhanSan.Size = new System.Drawing.Size(155, 20);
+            this.chkNhanSan.TabIndex = 9;
+            this.chkNhanSan.Text = "chuyển đến nhận sân";
+            this.chkNhanSan.UseVisualStyleBackColor = true;
             // 
             // btnDong
             // 
@@ -580,7 +580,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dtpNgayGioTra;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chkNhanSan;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbbTenSan;
     }

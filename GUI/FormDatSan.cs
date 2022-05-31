@@ -14,6 +14,7 @@ namespace Do_An_PLB03.GUI
 {
     public partial class FormDatSan : Form
     {
+        private FormChinh _formcha;
         DTOTrangThaiSan trangthaisan= new DTOTrangThaiSan();
         DTOSan san= new DTOSan();
         DTOGia gia = new DTOGia();
@@ -32,15 +33,13 @@ namespace Do_An_PLB03.GUI
         public int[] Giatheogio = new int[50];
 
         string tenloaisan;
-        
-
-
-        public FormDatSan()
+        public FormDatSan(FormChinh formcha)
         {
             InitializeComponent();
+            _formcha = formcha;
         }
 
-      
+
 
         private void groupBox6_Enter(object sender, EventArgs e)
         {
@@ -174,7 +173,7 @@ namespace Do_An_PLB03.GUI
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void cbbTenSan_SelectedIndexChanged(object sender, EventArgs e)
@@ -205,7 +204,10 @@ namespace Do_An_PLB03.GUI
 
             BUSDonHang.donhang(donhang);
 
-
+            if (chkNhanSan.Checked)
+            {
+                _formcha.Openchillform(new FormNhanSan());
+            }
 
         }
 

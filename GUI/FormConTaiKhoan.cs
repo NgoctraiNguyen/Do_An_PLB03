@@ -15,7 +15,8 @@ namespace Do_An_PLB03.GUI
     public partial class FormConTaiKhoan : Form
     {
         private DTONguoiDung _user;
-        public FormConTaiKhoan(DTONguoiDung user)
+        private FormChinh _formcha;
+        public FormConTaiKhoan(DTONguoiDung user, FormChinh formcha)
         {
             InitializeComponent();
             _user = user;
@@ -26,13 +27,17 @@ namespace Do_An_PLB03.GUI
             txtTenDangNhap.Text = _user.TenDangNhap;
             txtMatKhau.Text = _user.MatKhau;
             txtCCCD.Text = _user.SoCMND;
+            _formcha = formcha; 
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
             DialogResult dl = MessageBox.Show("Bạn chắc chắn muốn đăng xuất không?", "Cảnh báo", MessageBoxButtons.YesNo);
-            if(dl == DialogResult.Yes) { 
-                
+            if(dl == DialogResult.Yes) {
+                _formcha.Hide();
+                FormDangNhap frm = new FormDangNhap();
+                frm.ShowDialog();
+                _formcha.Close();
             }
         }
 
