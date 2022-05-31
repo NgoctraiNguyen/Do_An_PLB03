@@ -59,7 +59,9 @@
     <Compile Include="BUS\BUSNguoiDung.cs" />
     <Compile Include="BUS\BUSSan.cs" />
     <Compile Include="BUS\BUSTrangThaiSan.cs" />
+    <Compile Include="BUS\BUSDanhSachDatSan.cs" />
     <Compile Include="DAL\DALDangNhap.cs" />
+    <Compile Include="DAL\DALDanhSachDatSan.cs" />
     <Compile Include="DAL\DALDonHang.cs" />
     <Compile Include="DAL\DALDoUong.cs" />
     <Compile Include="DAL\DALGia.cs" />
