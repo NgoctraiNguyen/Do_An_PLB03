@@ -128,6 +128,7 @@
             this.btnXemChiTiet.TabIndex = 9;
             this.btnXemChiTiet.Text = "Xem chi tiết";
             this.btnXemChiTiet.UseVisualStyleBackColor = false;
+            this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
             // 
             // dtDanhSachDatSan
             // 
@@ -139,6 +140,8 @@
             this.dtDanhSachDatSan.RowTemplate.Height = 24;
             this.dtDanhSachDatSan.Size = new System.Drawing.Size(261, 458);
             this.dtDanhSachDatSan.TabIndex = 0;
+            this.dtDanhSachDatSan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtDanhSachDatSan_CellClick);
+            this.dtDanhSachDatSan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtDanhSachDatSan_CellContentClick);
             // 
             // groupBox5
             // 
