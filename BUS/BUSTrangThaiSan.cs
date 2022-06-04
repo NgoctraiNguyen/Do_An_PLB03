@@ -26,5 +26,14 @@ namespace Do_An_PLB03.BUS
             ma=DALTrangThaiSan.matrangthai(trangthaisan, tgbd);
             
         }
+
+        public static DateTime batdau, ketthuc;
+        public static void kiemtrasan(DTOTrangThaiSan trangthaisan,string tensan)
+        {
+            DALTrangThaiSan.kiemtrasan(trangthaisan , tensan);
+            batdau = DALTrangThaiSan.batdau;
+            ketthuc = DALTrangThaiSan.ketthuc;
+
+        }
     }
 }

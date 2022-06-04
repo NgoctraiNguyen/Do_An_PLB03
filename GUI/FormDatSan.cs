@@ -52,6 +52,7 @@ namespace Do_An_PLB03.GUI
             cbbLoaiSan.DataSource = loaisan;
 
             dtDanhSachDatSan.DataSource = BUSDanhSachDatSan.danhsach();
+            lbloigio.Text = "";
 
 
 
@@ -101,6 +102,7 @@ namespace Do_An_PLB03.GUI
             return giatheogio.ToArray();
         }
 
+        public static DateTime batdau, ketthuc;
         private void txtSoGio_MouseLeave(object sender, EventArgs e)
         {
             if (txtSoGio.Text == "")
@@ -108,8 +110,16 @@ namespace Do_An_PLB03.GUI
                 txtSoGio.Text = "0";
                 
             }
+            else if (Convert.ToDouble(txtSoGio.Text)%1!=0 || Convert.ToDouble(txtSoGio.Text)==0)
+            {
+                txtSoGio.Text = "0";
+                lbloigio.Text = "Giờ nhập không hợp lệ";
+            
+
+            }
             else
             {
+                lbloigio.Text = "";
                 int hthem = Convert.ToInt32(txtSoGio.Text);
                 dtpNgayGioTra.Value = dtpNgayGioNhan.Value.AddHours(hthem);
 
@@ -157,8 +167,21 @@ namespace Do_An_PLB03.GUI
 
             }
 
-
-
+            BUSTrangThaiSan.kiemtrasan(trangthaisan, cbbTenSan.Text);
+            batdau = BUSTrangThaiSan.batdau;
+            ketthuc = BUSTrangThaiSan.ketthuc;
+            int s1 = DateTime.Compare(dtpNgayGioNhan.Value, batdau);
+            int s2 = DateTime.Compare(dtpNgayGioNhan.Value, ketthuc);
+            int ss1 = DateTime.Compare(dtpNgayGioTra.Value, batdau);
+            int ss2 = DateTime.Compare(dtpNgayGioTra.Value, ketthuc);
+            if ((s1 > 0 && s2 < 0) || (ss1 > 0 && ss2 < 0))
+            {
+                lbnhan.Text = "thoi gian nay da duoc dat";
+            }
+            else
+            {
+                lbnhan.Text = "";
+            }
         }
 
         private void txtSoGio_TextChanged(object sender, EventArgs e)
@@ -171,10 +194,12 @@ namespace Do_An_PLB03.GUI
             txtSoGio.Text = "";
 
         }
-
+        
         private void iconButton3_Click(object sender, EventArgs e)
         {
             
+           
+
         }
 
         private void cbbTenSan_SelectedIndexChanged(object sender, EventArgs e)
@@ -218,29 +243,42 @@ namespace Do_An_PLB03.GUI
         {
 
         }
-        //TrangThaiSan.TenSan,TenKhachHang,ThoiGianBatDau,ThoiGianKetThuc,SDTKhachHang,DonHang.MaDonHang,DonHang.MaTrangThaiSan,LoaiSan
-        public static string  ctTenSan,ctTen, ctNgayNhan, ctNgayTra, ctSDTKhachHang, ctMaDonHang,ctMaTrangThaiSan, ctLoaiSan;
+
+     
+        private void dtpNgayGioNhan_MouseLeave(object sender, EventArgs e)
+        {
+            
+        }
+        public static string ctTenSan, ctTen, ctNgayNhan, ctNgayTra, ctSDTKhachHang, ctMaDonHang, ctMaTrangThaiSan, ctLoaiSan;
+
         private void dtDanhSachDatSan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = new DataGridViewRow();
-            row = dtDanhSachDatSan.Rows[e.RowIndex];
-            ctTenSan = row.Cells[0].Value.ToString();
-            ctTen= row.Cells[1].Value.ToString();
-            ctNgayNhan=row.Cells[2].Value.ToString();
-            ctNgayTra=row.Cells[3].Value.ToString();
-            ctSDTKhachHang=row.Cells[4].Value.ToString();   
-            ctMaDonHang=row.Cells[5].Value.ToString();
-            ctMaTrangThaiSan = row.Cells[6].Value.ToString();
-            ctLoaiSan=row.Cells[7].Value.ToString();
+            
+                DataGridViewRow row = new DataGridViewRow();
+                row = dtDanhSachDatSan.Rows[e.RowIndex];
+                ctTenSan = row.Cells[0].Value.ToString();
+                ctTen = row.Cells[1].Value.ToString();
+                ctNgayNhan = row.Cells[2].Value.ToString();
+                ctNgayTra = row.Cells[3].Value.ToString();
+                ctSDTKhachHang = row.Cells[4].Value.ToString();
+                ctMaDonHang = row.Cells[5].Value.ToString();
+                ctMaTrangThaiSan = row.Cells[6].Value.ToString();
+                ctLoaiSan = row.Cells[7].Value.ToString();
+            
+           
+
             
            
         }
 
         private void btnXemChiTiet_Click(object sender, EventArgs e)
         {
-
-            FormXemChiTietDatSan formxct= new FormXemChiTietDatSan(ctTenSan,ctTen,ctNgayNhan,ctNgayTra, ctSDTKhachHang, ctMaDonHang, ctMaTrangThaiSan, ctLoaiSan);
-            formxct.ShowDialog();
+            if (dtDanhSachDatSan.SelectedRows.Count != 1) { return; }
+            else
+            {
+                FormXemChiTietDatSan formxct = new FormXemChiTietDatSan(ctTenSan, ctTen, ctNgayNhan, ctNgayTra, ctSDTKhachHang, ctMaDonHang, ctMaTrangThaiSan, ctLoaiSan);
+                formxct.ShowDialog();
+            }
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
