@@ -100,6 +100,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1208, 601);
             this.panel1.TabIndex = 1;
+            this.panel1.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // groupBox6
             // 
@@ -294,6 +296,7 @@
             this.txtSDTKhachHang.Name = "txtSDTKhachHang";
             this.txtSDTKhachHang.Size = new System.Drawing.Size(189, 22);
             this.txtSDTKhachHang.TabIndex = 8;
+            this.txtSDTKhachHang.TextChanged += new System.EventHandler(this.txtSDTKhachHang_TextChanged);
             // 
             // txtTenKhachHang
             // 
@@ -301,6 +304,7 @@
             this.txtTenKhachHang.Name = "txtTenKhachHang";
             this.txtTenKhachHang.Size = new System.Drawing.Size(189, 22);
             this.txtTenKhachHang.TabIndex = 7;
+            this.txtTenKhachHang.TextChanged += new System.EventHandler(this.txtTenKhachHang_TextChanged);
             // 
             // label9
             // 
@@ -540,9 +544,8 @@
             this.lbnhan.ForeColor = System.Drawing.Color.Red;
             this.lbnhan.Location = new System.Drawing.Point(367, 68);
             this.lbnhan.Name = "lbnhan";
-            this.lbnhan.Size = new System.Drawing.Size(41, 13);
+            this.lbnhan.Size = new System.Drawing.Size(0, 13);
             this.lbnhan.TabIndex = 10;
-            this.lbnhan.Text = "label14";
             // 
             // FormDatSan
             // 

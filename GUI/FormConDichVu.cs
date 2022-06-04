@@ -41,7 +41,7 @@ namespace Do_An_PLB03.GUI
                 txtGiaBan.Text = row.Cells[3].Value.ToString();
                 txtGiaGoc.Text = row.Cells[4].Value.ToString();
             }
-            catch (Exception ex)
+            catch (Exception sex)
             {
                
             }

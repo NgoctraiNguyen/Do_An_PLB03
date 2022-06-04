@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnctDong = new System.Windows.Forms.Button();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnHuySan = new FontAwesome.Sharp.IconButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.btnctDong);
-            this.panel1.Controls.Add(this.iconButton1);
+            this.panel1.Controls.Add(this.btnHuySan);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(0, 50);
@@ -80,23 +80,24 @@
             this.btnctDong.UseVisualStyleBackColor = false;
             this.btnctDong.Click += new System.EventHandler(this.btnctDong_Click);
             // 
-            // iconButton1
+            // btnHuySan
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.LightCyan;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.iconButton1.IconColor = System.Drawing.Color.MidnightBlue;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 40;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(20, 341);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(132, 56);
-            this.iconButton1.TabIndex = 2;
-            this.iconButton1.Text = "Hủy Sân";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.btnHuySan.BackColor = System.Drawing.Color.LightCyan;
+            this.btnHuySan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuySan.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnHuySan.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.btnHuySan.IconColor = System.Drawing.Color.MidnightBlue;
+            this.btnHuySan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHuySan.IconSize = 40;
+            this.btnHuySan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHuySan.Location = new System.Drawing.Point(20, 341);
+            this.btnHuySan.Name = "btnHuySan";
+            this.btnHuySan.Size = new System.Drawing.Size(132, 56);
+            this.btnHuySan.TabIndex = 2;
+            this.btnHuySan.Text = "Hủy Sân";
+            this.btnHuySan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHuySan.UseVisualStyleBackColor = false;
+            this.btnHuySan.Click += new System.EventHandler(this.btnHuySan_Click);
             // 
             // groupBox2
             // 
@@ -331,7 +332,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnctDong;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnHuySan;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtctSDT;

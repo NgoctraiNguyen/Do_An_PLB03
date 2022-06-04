@@ -103,18 +103,30 @@ namespace Do_An_PLB03.GUI
         }
 
         public static DateTime batdau, ketthuc;
+        private void cbbTenSan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
+            txtTenSan.Text = cbbTenSan.Text;
+            BUSTrangThaiSan.kiemtrasan(trangthaisan, txtTenSan.Text);
+            batdau = BUSTrangThaiSan.batdau;
+            ketthuc = BUSTrangThaiSan.ketthuc;
+
+
+
+        }
         private void txtSoGio_MouseLeave(object sender, EventArgs e)
         {
             if (txtSoGio.Text == "")
             {
                 txtSoGio.Text = "0";
-                
+                btnDatSan.Enabled = false;
+
             }
             else if (Convert.ToDouble(txtSoGio.Text)%1!=0 || Convert.ToDouble(txtSoGio.Text)==0)
             {
                 txtSoGio.Text = "0";
                 lbloigio.Text = "Giờ nhập không hợp lệ";
-            
+                
 
             }
             else
@@ -167,21 +179,28 @@ namespace Do_An_PLB03.GUI
 
             }
 
-            BUSTrangThaiSan.kiemtrasan(trangthaisan, cbbTenSan.Text);
-            batdau = BUSTrangThaiSan.batdau;
-            ketthuc = BUSTrangThaiSan.ketthuc;
             int s1 = DateTime.Compare(dtpNgayGioNhan.Value, batdau);
             int s2 = DateTime.Compare(dtpNgayGioNhan.Value, ketthuc);
             int ss1 = DateTime.Compare(dtpNgayGioTra.Value, batdau);
             int ss2 = DateTime.Compare(dtpNgayGioTra.Value, ketthuc);
-            if ((s1 > 0 && s2 < 0) || (ss1 > 0 && ss2 < 0))
+            if ((s1 > 0 && s2 < 0) || (ss1 > 0 && ss2 < 0) || (s1 < 0 && ss2 > 0))
             {
                 lbnhan.Text = "thoi gian nay da duoc dat";
+                btnDatSan.Enabled = false;
             }
             else
             {
                 lbnhan.Text = "";
+                btnDatSan.Enabled = true;
             }
+
+
+
+
+
+
+
+            //if (txtSDTKhachHang.Text == "") btnDatSan.Enabled = false;
         }
 
         private void txtSoGio_TextChanged(object sender, EventArgs e)
@@ -197,16 +216,13 @@ namespace Do_An_PLB03.GUI
         
         private void iconButton3_Click(object sender, EventArgs e)
         {
-            
            
 
-        }
 
-        private void cbbTenSan_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            txtTenSan.Text=cbbTenSan.Text;
 
         }
+
+
 
         private void btnDatSan_Click(object sender, EventArgs e)
         {
@@ -250,6 +266,29 @@ namespace Do_An_PLB03.GUI
             
         }
         public static string ctTenSan, ctTen, ctNgayNhan, ctNgayTra, ctSDTKhachHang, ctMaDonHang, ctMaTrangThaiSan, ctLoaiSan;
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (txtGia.Text == "" || txtSDTKhachHang.Text == "" || txtTenKhachHang.Text == ""||txtSoGio.Text=="0")
+            {
+                btnDatSan.Enabled = false;
+            }
+        }
+
+        private void panel1_MouseLeave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSDTKhachHang_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtTenKhachHang_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
 
         private void dtDanhSachDatSan_CellClick(object sender, DataGridViewCellEventArgs e)
         {

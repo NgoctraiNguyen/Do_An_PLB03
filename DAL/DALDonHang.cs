@@ -42,6 +42,18 @@ namespace Do_An_PLB03.DAL
             command.CommandText = querry;
             command.Connection = conn;
         }
+        public static void deletedonhang(int madonhang)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            var command = new SqlCommand();
+            command.Connection = conn;
+            string query = "delete from DonHang where MaDonHang='" + madonhang+ "'";
+            command.CommandType = CommandType.Text;
+            command.CommandText = query;
+            command.ExecuteNonQuery();
+
+        }
 
     }
 }

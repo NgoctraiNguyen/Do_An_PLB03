@@ -27,13 +27,17 @@ namespace Do_An_PLB03.BUS
             
         }
 
-        public static DateTime batdau, ketthuc;
-        public static void kiemtrasan(DTOTrangThaiSan trangthaisan,string tensan)
+        public static DateTime batdau ;
+        public static DateTime ketthuc ;
+        public static void  kiemtrasan(DTOTrangThaiSan trangthaisan,string tensan)
         {
             DALTrangThaiSan.kiemtrasan(trangthaisan , tensan);
             batdau = DALTrangThaiSan.batdau;
             ketthuc = DALTrangThaiSan.ketthuc;
-
+        }
+        public static void deletetrangthai(int matrangthaisan)
+        {
+            DALTrangThaiSan.deletetrangthai(matrangthaisan);
         }
     }
 }

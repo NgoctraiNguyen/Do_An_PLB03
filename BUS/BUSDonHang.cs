@@ -15,6 +15,10 @@ namespace Do_An_PLB03.BUS
         {
             DALDonHang.donhang(donhang);
         }
-        
+        public static void deletedonhang(int madonhang)
+        {
+            DALDonHang.deletedonhang(madonhang);
+        }
+
     }
 }

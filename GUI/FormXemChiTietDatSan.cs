@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Do_An_PLB03.BUS;
 
 namespace Do_An_PLB03.GUI
 {
@@ -19,13 +20,13 @@ namespace Do_An_PLB03.GUI
             
             txtctTenKhachHang.Text = name;
             txtctTenSan.Text = TenSan;
-            txtctNgayNhan.Text = NgayNhan.Substring(0, 5);
-            txtctNgayTra.Text = NgayTra.Substring(0, 5);
+            txtctNgayNhan.Text = NgayNhan.ToString();
+            txtctNgayTra.Text = NgayTra.ToString();
             txtctSDT.Text = SDTKhachHang;
             txtctMaDonHang.Text= MaDonHang;
             txtctMaTrangThai.Text= MaTrangThaiSan;
             txtctTenLoaiSan.Text= LoaiSan;  
-            //txtctSoGio.Text= (int.Parse(NgayTra.Substring(0,2))-int.Parse(NgayNhan.Substring(0,2))).ToString();
+           
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -43,6 +44,13 @@ namespace Do_An_PLB03.GUI
         {
             
            
+        }
+
+        private void btnHuySan_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(" Bạn có chắc muốn xóa đơn hàng");
+            BUSTrangThaiSan.deletetrangthai(int.Parse(txtctMaTrangThai.Text));
+            BUSDonHang.deletedonhang(int.Parse(txtctMaDonHang.Text));
         }
     }
 }
