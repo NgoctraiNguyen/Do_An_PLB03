@@ -16,5 +16,39 @@ namespace Do_An_PLB03.BUS
            DataTable dt = DALDanhSachDatSan.danhsach();
             return dt;
         }
+        public static string HoTen;
+        public static string SDTKhachHang;
+        public static string TenSan;
+        public static string LoaiSan;
+        public static string NgayTra;
+        public static string NgayNhan;
+        public static int Gia;
+        public static bool TimKiem(int MaHoaDon)
+        {
+            if (DALDanhSachDatSan.GetDonHang(MaHoaDon))
+            {
+                HoTen = DALDanhSachDatSan.HoTen;
+                SDTKhachHang = DALDanhSachDatSan.SDTKhachHang;
+                TenSan = DALDanhSachDatSan.TenSan;
+                LoaiSan = DALDanhSachDatSan.LoaiSan;
+                NgayNhan = DALDanhSachDatSan.NgayNhan;
+                NgayTra = DALDanhSachDatSan.NgayTra;
+                Gia = DALDanhSachDatSan.Gia;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        public static void NhanSan(int MaHoaDon)
+        {
+            int MaTrangThaiSan;
+            DALDanhSachDatSan.GetDonHang(MaHoaDon);
+            MaTrangThaiSan = DALDanhSachDatSan.MaTrangThaiSan;
+            DALTrangThaiSan.deletetrangthai(MaTrangThaiSan);
+            DALDonHang.deletedonhang(MaHoaDon);
+        }
     }
 }

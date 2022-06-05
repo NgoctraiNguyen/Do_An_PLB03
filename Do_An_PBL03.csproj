@@ -60,6 +60,7 @@
     <Compile Include="BUS\BUSSan.cs" />
     <Compile Include="BUS\BUSTrangThaiSan.cs" />
     <Compile Include="BUS\BUSDanhSachDatSan.cs" />
+    <Compile Include="DAL\DALHoaDon.cs" />
     <Compile Include="DAL\DALDangNhap.cs" />
     <Compile Include="DAL\DALDanhSachDatSan.cs" />
     <Compile Include="DAL\DALDonHang.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="DAL\DALSan.cs" />
     <Compile Include="DAL\dbConnectionData.cs" />
     <Compile Include="DAL\DALTrangThaiSan.cs" />
+    <Compile Include="DTO\DTOHoaDon.cs" />
     <Compile Include="DTO\DTODonHang.cs" />
     <Compile Include="DTO\DTODoUong.cs" />
     <Compile Include="DTO\DTOGia.cs" />
