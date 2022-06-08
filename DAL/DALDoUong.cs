@@ -68,5 +68,21 @@ namespace Do_An_PLB03.DAL
             command.ExecuteNonQuery();
             conn.Close();
         }
+
+        public static DataTable DSDoUong(int MaHoaDon)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            string query = @"Select DoUong.TenDoUong, ChiTietHoaDon.SoLuong,  DoUong.GiaBan
+                            from DoUong
+                            join ChiTietHoaDon on DoUong.MaDoUong = ChiTietHoaDon.MaDoUong
+                            where ChiTietHoaDon.MaHoaDon = '" + MaHoaDon + "'";
+            SqlDataAdapter da = new SqlDataAdapter(query, conn);
+            DataTable tb = new DataTable();
+            da.Fill(tb);
+            da.Dispose();
+
+            return tb;
+        }
     }
 }

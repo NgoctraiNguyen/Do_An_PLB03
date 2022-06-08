@@ -164,6 +164,7 @@
             // 
             // FormDangNhap
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Do_An_PLB03.Properties.Resources.vecteezy_3d_illustration_dot_blue_wave_light_screen_gradient_4440262_899;

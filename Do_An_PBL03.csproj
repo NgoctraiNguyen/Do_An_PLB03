@@ -60,6 +60,7 @@
     <Compile Include="BUS\BUSSan.cs" />
     <Compile Include="BUS\BUSTrangThaiSan.cs" />
     <Compile Include="BUS\BUSDanhSachDatSan.cs" />
+    <Compile Include="BUS\BUSHoaDon.cs" />
     <Compile Include="DAL\DALHoaDon.cs" />
     <Compile Include="DAL\DALDangNhap.cs" />
     <Compile Include="DAL\DALDanhSachDatSan.cs" />

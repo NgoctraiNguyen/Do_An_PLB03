@@ -15,15 +15,14 @@ namespace Do_An_PLB03.DAL
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
-            string querry = "INSERT INTO HoaDon(MaHoaDon,NgayGioTao,TongTien,MaNguoiDung,MaDonHang) " +
-                            "VALUES (@MaHoaDon,@NgayGioTao,@TongTien,@MaNguoiDung,@MaDonHang)  ";
+            string querry = "INSERT INTO HoaDon(NgayGioTao,TongTien,MaNguoiDung,MaDonHang) " +
+                            "VALUES (@NgayGioTao,@TongTien,@MaNguoiDung,@MaDonHang)  ";
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
             command.CommandText = querry;
             command.Connection = conn;
 
 
-            var mahoadon = command.Parameters.AddWithValue("@MaHoaDon", HoaDon.MaHoaDon);
             var ngaygiotao = command.Parameters.AddWithValue("@NgayGioTao", HoaDon.NgayGioTao);
             var makhachang = command.Parameters.AddWithValue("@TongTien", HoaDon.TongTien);
             var trangthai = command.Parameters.AddWithValue("@MaNguoiDung", HoaDon.MaNguoiDung);
@@ -32,7 +31,7 @@ namespace Do_An_PLB03.DAL
             command.ExecuteNonQuery();
         }
 
-        public static void deletehoadon(int mahoadon)
+        public static void deleteHoaDon(int mahoadon)
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
@@ -42,7 +41,29 @@ namespace Do_An_PLB03.DAL
             command.CommandType = CommandType.Text;
             command.CommandText = query;
             command.ExecuteNonQuery();
-
+        }
+        public static int LayMaTheoTen(string TenSan)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            string query = @"Select MaHoaDon
+                             from HoaDon
+                             join DonHang on HoaDon.MaDonHang = DonHang.MaDonHang
+                             join TrangThaiSan on TrangThaiSan.MaTrangThaiSan = DonHang.MaTrangThaiSan
+                             where TenSan = '" + TenSan + "'";
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = query;
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            if(reader.HasRows)
+            {
+                return reader.GetInt32(0);
+            }
+            else
+            {
+                return -1;
+            }
         }
     }
 }

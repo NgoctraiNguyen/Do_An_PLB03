@@ -53,9 +53,6 @@ namespace Do_An_PLB03.GUI
 
             dtDanhSachDatSan.DataSource = BUSDanhSachDatSan.danhsach();
             lbloigio.Text = "";
-
-
-
         }
 
         private void cbbLoaiSan_SelectedIndexChanged(object sender, EventArgs e)
@@ -242,13 +239,13 @@ namespace Do_An_PLB03.GUI
             donhang.MaTrangThaiSan =BUSTrangThaiSan.ma ;
             donhang.NgayGioTao=DateTime.Now;
             donhang.TongTienSan = int.Parse(txtGia.Text);
-            donhang.TrangThai =1;
+            donhang.TrangThai = 1;
 
             BUSDonHang.donhang(donhang);
 
             if (chkNhanSan.Checked)
             {
-                _formcha.Openchillform(new FormNhanSan());
+                _formcha.Openchillform(new FormNhanSan(_formcha._user));
             }
 
         }
@@ -302,12 +299,7 @@ namespace Do_An_PLB03.GUI
                 ctSDTKhachHang = row.Cells[4].Value.ToString();
                 ctMaDonHang = row.Cells[5].Value.ToString();
                 ctMaTrangThaiSan = row.Cells[6].Value.ToString();
-                ctLoaiSan = row.Cells[7].Value.ToString();
-            
-           
-
-            
-           
+            ctLoaiSan = row.Cells[7].Value.ToString();
         }
 
         private void btnXemChiTiet_Click(object sender, EventArgs e)

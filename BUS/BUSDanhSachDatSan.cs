@@ -42,13 +42,15 @@ namespace Do_An_PLB03.BUS
             }
 
         }
-        public static void NhanSan(int MaHoaDon)
+        public static void NhanSan(int MaDonHang)
         {
-            int MaTrangThaiSan;
-            DALDanhSachDatSan.GetDonHang(MaHoaDon);
-            MaTrangThaiSan = DALDanhSachDatSan.MaTrangThaiSan;
-            DALTrangThaiSan.deletetrangthai(MaTrangThaiSan);
-            DALDonHang.deletedonhang(MaHoaDon);
+            DALDonHang.DoiTrangThai(MaDonHang);
+        }
+        
+        public static DataTable danhsachnhansan()
+        {
+            DataTable dt = DALDanhSachDatSan.DanhSachNhanSan();
+            return dt;
         }
     }
 }

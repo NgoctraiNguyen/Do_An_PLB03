@@ -27,5 +27,9 @@ namespace Do_An_PLB03.BUS
         {
             DALDoUong.DeleteDoUong(MaDoUong);
         }
+        public static DataTable DsDoUong(int MaHoaDon)
+        {
+            return DALDoUong.DSDoUong(MaHoaDon);
+        }
     }
 }

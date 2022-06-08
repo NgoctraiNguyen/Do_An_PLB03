@@ -19,6 +19,9 @@ namespace Do_An_PLB03.BUS
         {
             DALDonHang.deletedonhang(madonhang);
         }
-
+        public static int GetTongTien(int madonhang)
+        {
+            return DALDonHang.GetTongTien(madonhang);
+        }
     }
 }

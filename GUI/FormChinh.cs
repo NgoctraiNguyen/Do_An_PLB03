@@ -19,7 +19,7 @@ namespace Do_An_PLB03.GUI
         private bool admin;
         private Form chillform;
 
-        private DTONguoiDung _user;
+        public DTONguoiDung _user;
         public FormChinh(DTONguoiDung user)
         {
             InitializeComponent();
@@ -87,7 +87,7 @@ namespace Do_An_PLB03.GUI
         private void iconButton2_Click(object sender, EventArgs e)
         {
             clickbutton(sender);
-            Openchillform(new FormNhanSan());
+            Openchillform(new FormNhanSan(this._user));
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -104,6 +104,7 @@ namespace Do_An_PLB03.GUI
         private void iconButton4_Click(object sender, EventArgs e)
         {
             clickbutton(sender);
+            Openchillform(new FormSudungdichvuvaThanhtoan());
         }
 
         private void iconButton5_Click(object sender, EventArgs e)
