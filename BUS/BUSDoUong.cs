@@ -31,5 +31,17 @@ namespace Do_An_PLB03.BUS
         {
             return DALDoUong.DSDoUong(MaHoaDon);
         }
+        public static List<string> DoUong()
+        {
+            return DALDoUong.DoUong();
+        }
+        public static int GiaDoUongTheoMa(int madouong)
+        {
+            return DALDoUong.GiaDoUongTheoMa(madouong);
+        }
+        public static void ThemDichVu(int mahoadon, int madouong, int soluong)
+        {
+            DALDoUong.ThemDichVu(mahoadon, madouong, soluong);  
+        }
     }
 }

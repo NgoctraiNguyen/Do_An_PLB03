@@ -58,12 +58,48 @@ namespace Do_An_PLB03.DAL
             SqlDataReader reader = command.ExecuteReader();
             if(reader.HasRows)
             {
-                return reader.GetInt32(0);
+                while (reader.Read())
+                {
+                    return reader.GetInt32(0);
+                }
+                return 4;
             }
             else
             {
                 return -1;
             }
+        }
+        public static int tongtienthuesan = 0;
+        public static int GetTongTien(int MaHoaDon)
+        {
+            if (MaHoaDon == -1) return -1;
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            string query = @"select TongTien from HoaDon where MaHoaDon = '"+ MaHoaDon +"'";
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = query;
+            command.Connection = conn;
+            SqlDataReader reader1 = command.ExecuteReader();
+            while(reader1.Read())
+            {
+                tongtienthuesan = reader1.GetInt32(0);
+            }
+
+
+            SqlConnection Conn = dbConnectionData.HamketNoi();
+            Conn.Open();
+            string Query = @"select TongTien from ChiTietHoaDon where MaHoaDon = '" + MaHoaDon + "'";
+            SqlCommand Command = new SqlCommand();
+            Command.CommandType = CommandType.Text;
+            Command.CommandText = Query;
+            Command.Connection = Conn;
+            SqlDataReader reader2 = Command.ExecuteReader();
+            while( reader2.Read())
+            {
+                tongtienthuesan += reader2.GetInt32(0);
+            }
+            return tongtienthuesan;
         }
     }
 }

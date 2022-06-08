@@ -15,7 +15,7 @@ namespace Do_An_PLB03.GUI
 {
     public partial class FormSudungdichvuvaThanhtoan : Form
     {
-        private int mahoadon;
+        private int mahoadon = -1;
         public FormSudungdichvuvaThanhtoan()
         {
             InitializeComponent();
@@ -74,7 +74,7 @@ namespace Do_An_PLB03.GUI
         {
             if(KiemTra("5A"))
             {
-                btn5A.BackColor = Color.Green;
+                btn5A.BackColor = Color.LightGreen;
                 btn5A.Enabled = true;
             }
             else
@@ -84,7 +84,7 @@ namespace Do_An_PLB03.GUI
             }
             if (KiemTra("5B"))
             {
-                btn5B.BackColor = Color.Green;
+                btn5B.BackColor = Color.LightGreen;
                 btn5B.Enabled = true;
             }
             else
@@ -94,7 +94,7 @@ namespace Do_An_PLB03.GUI
             }
             if (KiemTra("5C"))
             {
-                btn5C.BackColor = Color.Green;
+                btn5C.BackColor = Color.LightGreen;
                 btn5C.Enabled = true;
             }
             else
@@ -104,7 +104,7 @@ namespace Do_An_PLB03.GUI
             }
             if (KiemTra("7A"))
             {
-                btn7A.BackColor = Color.Green;
+                btn7A.BackColor = Color.LightYellow;
                 btn7A.Enabled = true;
             }
             else
@@ -114,7 +114,7 @@ namespace Do_An_PLB03.GUI
             }
             if (KiemTra("7B"))
             {
-                btn7B.BackColor = Color.Green;
+                btn7B.BackColor = Color.LightYellow;
                 btn7B.Enabled = true;
             }
             else
@@ -122,6 +122,7 @@ namespace Do_An_PLB03.GUI
                 btn7B.BackColor = Color.Gray;
                 btn7B.Enabled = false;
             }
+            comboBox1.DataSource = DALDoUong.DoUong();
         }
 
         private void btn5A_Click(object sender, EventArgs e)
@@ -130,7 +131,34 @@ namespace Do_An_PLB03.GUI
         }
         private void FormSudungdichvuvaThanhtoan_Click(object sender, EventArgs e)
         {
-            dtDichVu.DataSource = BUSDoUong.DsDoUong(DALHoaDon.LayMaTheoTen(((Button)sender).Text));
+            string tensan = (((Button)sender).Text).Split(' ')[1];
+            int ma = DALHoaDon.LayMaTheoTen(tensan);
+            mahoadon = ma;
+            dtDichVu.DataSource = BUSDoUong.DsDoUong(ma);
+            txtTongTien.Text = (DALHoaDon.GetTongTien(mahoadon)).ToString();
+        }
+        //them dich vu
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(cbbSoLuong.Text == "")
+            {
+
+            }
+            else
+            {
+                int madouong = DALDoUong.MaDoUong(comboBox1.Text);
+                BUSDoUong.ThemDichVu(mahoadon, madouong, int.Parse(cbbSoLuong.Text));
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtGia.Text = BUSDoUong.GiaDoUongTheoMa(DALDoUong.MaDoUong(comboBox1.Text)).ToString();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

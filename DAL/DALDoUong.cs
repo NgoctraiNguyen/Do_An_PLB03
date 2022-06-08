@@ -84,5 +84,78 @@ namespace Do_An_PLB03.DAL
 
             return tb;
         }
+        public static List<string> douong = new List<string>();
+        public static List<string> DoUong()
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            string queryss = "select  distinct TenDoUong from DoUong where SoLuong > 0";
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = queryss;
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+
+                douong.Add(reader.GetString(0));
+
+            }
+            return douong;
+        }
+        public static int MaDoUong(string tendouong)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            string queryss = string.Format("select MaDoUong from DoUong where TenDoUong = N'{0}'",tendouong);
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = queryss;
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+
+                return reader.GetInt32(0);
+
+            }
+            return -1;
+        }
+        public static int GiaDoUongTheoMa(int madouong)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            string queryss = string.Format("select GiaBan from DoUong where MaDoUong = {0}", madouong);
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = queryss;
+            command.Connection = conn;
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+
+                return reader.GetInt32(0);
+
+            }
+            return -1;
+        }
+        public static void ThemDichVu(int mahoadon, int madouong, int soluong)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            string querry = "INSERT INTO ChiTietHoaDon(MaDoUong,SoLuong,TongTien,MaHoaDon) " +
+                            "VALUES (@MaDoUong,@SoLuong,@TongTien,@MaHoaDon)  ";
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = querry;
+            command.Connection = conn;
+
+            int tongtien = GiaDoUongTheoMa(madouong)*soluong;
+            var matrangthaisan = command.Parameters.AddWithValue("@MaDoUong", madouong);
+            var ngaygiotao = command.Parameters.AddWithValue("@SoLuong", soluong);
+            var makhachang = command.Parameters.AddWithValue("@TongTien", tongtien);
+            var trangthai = command.Parameters.AddWithValue("@MaHoaDon", mahoadon);
+            command.ExecuteNonQuery();
+        }
     }
 }
