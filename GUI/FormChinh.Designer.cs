@@ -220,7 +220,7 @@
             this.btnThanhToan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnThanhToan.Size = new System.Drawing.Size(226, 50);
             this.btnThanhToan.TabIndex = 6;
-            this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.Text = "Dịch Vụ và Thanh Toán";
             this.btnThanhToan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThanhToan.UseVisualStyleBackColor = true;
             this.btnThanhToan.Click += new System.EventHandler(this.iconButton3_Click);
@@ -239,7 +239,7 @@
             this.btnDichVuSanBong.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnDichVuSanBong.Size = new System.Drawing.Size(226, 50);
             this.btnDichVuSanBong.TabIndex = 5;
-            this.btnDichVuSanBong.Text = "Dịch Vụ Sân Bóng";
+            this.btnDichVuSanBong.Text = "Nhận Sân";
             this.btnDichVuSanBong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDichVuSanBong.UseVisualStyleBackColor = true;
             this.btnDichVuSanBong.Click += new System.EventHandler(this.iconButton2_Click);

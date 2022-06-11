@@ -58,6 +58,7 @@
     <Compile Include="BUS\BUSKhachHang.cs" />
     <Compile Include="BUS\BUSNguoiDung.cs" />
     <Compile Include="BUS\BUSSan.cs" />
+    <Compile Include="BUS\BUSThongke.cs" />
     <Compile Include="BUS\BUSTrangThaiSan.cs" />
     <Compile Include="BUS\BUSDanhSachDatSan.cs" />
     <Compile Include="BUS\BUSHoaDon.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="DAL\DALKhachHang.cs" />
     <Compile Include="DAL\DALNguoiDung.cs" />
     <Compile Include="DAL\DALSan.cs" />
+    <Compile Include="DAL\DALThongKe.cs" />
     <Compile Include="DAL\dbConnectionData.cs" />
     <Compile Include="DAL\DALTrangThaiSan.cs" />
     <Compile Include="DTO\DTOHoaDon.cs" />
@@ -128,12 +130,6 @@
     <Compile Include="GUI\FormSudungdichvuvaThanhtoan.Designer.cs">
       <DependentUpon>FormSudungdichvuvaThanhtoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Formthongke.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Formthongke.Designer.cs">
-      <DependentUpon>Formthongke.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\FormChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +165,12 @@
     </Compile>
     <Compile Include="GUI\FormNhanSan.Designer.cs">
       <DependentUpon>FormNhanSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Formthongke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Formthongke.designer.cs">
+      <DependentUpon>Formthongke.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FormXemChiTietDatSan.cs">
       <SubType>Form</SubType>
@@ -217,11 +219,11 @@
     <EmbeddedResource Include="GUI\FormSudungdichvuvaThanhtoan.resx">
       <DependentUpon>FormSudungdichvuvaThanhtoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Formthongke.resx">
-      <DependentUpon>Formthongke.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormNhanSan.resx">
       <DependentUpon>FormNhanSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Formthongke.resx">
+      <DependentUpon>Formthongke.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormXemChiTietDatSan.resx">
       <DependentUpon>FormXemChiTietDatSan.cs</DependentUpon>

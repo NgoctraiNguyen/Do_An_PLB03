@@ -99,6 +99,7 @@ namespace Do_An_PLB03.GUI
         private void iconButton3_Click(object sender, EventArgs e)
         {
             clickbutton(sender);
+            Openchillform(new FormSudungdichvuvaThanhtoan());
         }
 
         private void iconButton4_Click(object sender, EventArgs e)
@@ -115,7 +116,7 @@ namespace Do_An_PLB03.GUI
         private void iconButton6_Click(object sender, EventArgs e)
         {
             clickbutton(sender);
-            Openchillform(new FormSudungdichvuvaThanhtoan());
+            Openchillform(new Formthongke());
         }
 
         private void iconButton7_Click(object sender, EventArgs e)
