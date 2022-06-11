@@ -124,6 +124,7 @@ namespace Do_An_PLB03.GUI
             {
                 MessageBox.Show(ex.Message);
             }
+            d();
             this.Hide();
             
         }
