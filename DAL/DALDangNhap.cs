@@ -27,7 +27,7 @@ namespace Do_An_PLB03.DAL
                 user.HoTen = reader.GetString(1);
                 user.Tuoi = reader.GetInt32(2);
                 user.DiaChi = reader.GetString(3);
-                user.GioiTinh = reader.GetInt32(4);
+                user.GioiTinh = reader.GetString(4);
                 user.SDT = reader.GetString(5);
                 user.SoCMND = reader.GetString(6);
                 user.Vitri = reader.GetString(7);

@@ -37,16 +37,6 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new FontAwesome.Sharp.IconButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtTenDoUong = new System.Windows.Forms.TextBox();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtGiaBan = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtGiaGoc = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtMaDoUong = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -140,7 +130,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Tên đồ uống",
-            "Giá"});
+            "Giá bán"});
             this.comboBox1.Location = new System.Drawing.Point(243, 18);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(208, 33);
@@ -174,6 +164,7 @@
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // dataGridView1
             // 
@@ -188,138 +179,12 @@
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(249, 509);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 16);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Tên Đồ Uống:";
-            // 
-            // txtTenDoUong
-            // 
-            this.txtTenDoUong.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTenDoUong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenDoUong.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.txtTenDoUong.Location = new System.Drawing.Point(252, 528);
-            this.txtTenDoUong.Name = "txtTenDoUong";
-            this.txtTenDoUong.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtTenDoUong.Size = new System.Drawing.Size(147, 30);
-            this.txtTenDoUong.TabIndex = 7;
-            // 
-            // txtSoLuong
-            // 
-            this.txtSoLuong.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoLuong.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.txtSoLuong.Location = new System.Drawing.Point(503, 528);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtSoLuong.Size = new System.Drawing.Size(157, 30);
-            this.txtSoLuong.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(500, 509);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 16);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Số Lượng:";
-            // 
-            // txtGiaBan
-            // 
-            this.txtGiaBan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtGiaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGiaBan.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.txtGiaBan.Location = new System.Drawing.Point(771, 528);
-            this.txtGiaBan.Name = "txtGiaBan";
-            this.txtGiaBan.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtGiaBan.Size = new System.Drawing.Size(168, 30);
-            this.txtGiaBan.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(768, 509);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 16);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Giá Bán:";
-            // 
-            // txtGiaGoc
-            // 
-            this.txtGiaGoc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtGiaGoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGiaGoc.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.txtGiaGoc.Location = new System.Drawing.Point(1051, 528);
-            this.txtGiaGoc.Name = "txtGiaGoc";
-            this.txtGiaGoc.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtGiaGoc.Size = new System.Drawing.Size(168, 30);
-            this.txtGiaGoc.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(1048, 509);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 16);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Giá Gốc:";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label5.Location = new System.Drawing.Point(27, 509);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 16);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Mã Đồ Uống:";
-            // 
-            // txtMaDoUong
-            // 
-            this.txtMaDoUong.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMaDoUong.Enabled = false;
-            this.txtMaDoUong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaDoUong.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.txtMaDoUong.Location = new System.Drawing.Point(30, 528);
-            this.txtMaDoUong.Name = "txtMaDoUong";
-            this.txtMaDoUong.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtMaDoUong.Size = new System.Drawing.Size(147, 30);
-            this.txtMaDoUong.TabIndex = 9;
-            // 
             // FormConDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Moccasin;
             this.ClientSize = new System.Drawing.Size(1248, 754);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtMaDoUong);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtGiaGoc);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtGiaBan);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtSoLuong);
-            this.Controls.Add(this.txtTenDoUong);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -331,7 +196,6 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -345,16 +209,6 @@
         private System.Windows.Forms.TextBox txtUser;
         private FontAwesome.Sharp.IconButton btnTimKiem;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtTenDoUong;
-        private System.Windows.Forms.TextBox txtSoLuong;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtGiaBan;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtGiaGoc;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtMaDoUong;
     }
 }

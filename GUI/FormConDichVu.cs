@@ -35,13 +35,9 @@ namespace Do_An_PLB03.GUI
             {
                 DataGridViewRow row = new DataGridViewRow();
                 row = dataGridView1.Rows[e.RowIndex];
-                txtMaDoUong.Text = row.Cells[0].Value.ToString();
-                txtTenDoUong.Text = row.Cells[1].Value.ToString();
-                txtSoLuong.Text = row.Cells[2].Value.ToString();
-                txtGiaBan.Text = row.Cells[3].Value.ToString();
-                txtGiaGoc.Text = row.Cells[4].Value.ToString();
+                
             }
-            catch (Exception sex)
+            catch (Exception ex)
             {
                
             }
@@ -49,48 +45,33 @@ namespace Do_An_PLB03.GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string ten = txtTenDoUong.Text;
-                int sl = Convert.ToInt32(txtSoLuong.Text);
-                int giaban = Convert.ToInt32(txtGiaBan.Text);
-                int giagoc = Convert.ToInt32(txtGiaGoc.Text);
-                DTODoUong douong = new DTODoUong(ten, sl, giaban, giagoc);
-                BUSDoUong.InsertDoUong(douong);
-                MessageBox.Show("Them thanh cong");
-                dataGridView1.DataSource = BUSDoUong.GetAllDoUong();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
+            FormConThemDichVu f = new FormConThemDichVu();
+            f.d += new FormConThemDichVu.MyDel(GetAllDoUong);
+            f.Show();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            try
-            {
-                int ma = Convert.ToInt32(txtMaDoUong.Text);
-                string ten = txtTenDoUong.Text;
-                int sl = Convert.ToInt32(txtSoLuong.Text);
-                int giaban = Convert.ToInt32(txtGiaBan.Text);
-                int giagoc = Convert.ToInt32(txtGiaGoc.Text);
-                DTODoUong douong = new DTODoUong(ma, ten, sl, giaban, giagoc);
-                BUSDoUong.UpdateDoUong(douong);
-                MessageBox.Show("Sua thanh cong");
-                dataGridView1.DataSource = BUSDoUong.GetAllDoUong();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
+            DataGridViewRow row = dataGridView1.SelectedCells[0].OwningRow;
+
+            string ma1 = row.Cells["MaDoUong"].Value.ToString();
+            int ma = Convert.ToInt32(ma1);
+            DTODoUong d = new DTODoUong();
+            FormConSuaDichVu f = new FormConSuaDichVu(ma, d);
+            f.d += new FormConSuaDichVu.MyDel(GetAllDoUong);
+            f.Show();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            DataGridViewRow row = dataGridView1.SelectedCells[0].OwningRow;
+
+            string ma1 = row.Cells["MaDoUong"].Value.ToString();
             try
             {
-                int ma = Convert.ToInt32(txtMaDoUong.Text);
+                int ma = Convert.ToInt32(ma1);
                 BUSDoUong.DeleteDoUong(ma);
                 MessageBox.Show("Xoa thanh cong");
                 dataGridView1.DataSource = BUSDoUong.GetAllDoUong();
@@ -99,15 +80,23 @@ namespace Do_An_PLB03.GUI
             {
                 MessageBox.Show(ex.Message);
             }
-            Focuss();
         }
-        public void Focuss()
+        
+        private void GetAllDoUong()
         {
-            txtMaDoUong.Text = "";
-            txtTenDoUong.Text = "";
-            txtSoLuong.Text = "";
-            txtGiaBan.Text = "";
-            txtGiaGoc.Text = "";
+            dataGridView1.DataSource = BUSDoUong.GetAllDoUong();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                dataGridView1.DataSource = BUSDoUong.TimKiemTheoTen(txtUser.Text);
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                dataGridView1.DataSource = BUSDoUong.TimKiemTheoGiaBan(txtUser.Text);
+            }
         }
     }
 }

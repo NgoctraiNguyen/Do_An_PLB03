@@ -31,5 +31,33 @@ namespace Do_An_PLB03.BUS
         {
             DALNguoiDung.LuuThongTinCaNhan(a);
         }
+        public static void HienThiThongTinSua(int ma, DTONguoiDung user)
+        {
+            DALNguoiDung.HienThiThongTinSua(ma, user);
+        }
+        public static int GetMaNguoiDung(int a)
+        {
+            return DALNguoiDung.GetMaNguoiDung(a);
+        }
+        public static void ResetMatKhau(DTONguoiDung a)
+        {
+            DALNguoiDung.ResetMatKhau(a);
+        }
+        public static DataTable TimKiemTheoTen(string ten)
+        {
+            return DALNguoiDung.TimKiemTheoTen(ten);
+        }
+        public static DataTable TimKiemTheoSDT(string sdt)
+        {
+            return DALNguoiDung.TimKiemTheoSDT(sdt);
+        }
+        public static DataTable TimKiemTheoCMND(string cmnd)
+        {
+            return DALNguoiDung.TimKiemTheoCMND(cmnd);
+        }
+        public static DataTable TimKiemTheoViTri(string vt)
+        {
+            return DALNguoiDung.TimKiemTheoViTri(vt);
+        }
     }
 }

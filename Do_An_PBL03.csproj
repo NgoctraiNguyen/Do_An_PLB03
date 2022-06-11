@@ -80,6 +80,30 @@
     <Compile Include="DTO\DTONguoiDung.cs" />
     <Compile Include="DTO\DTOSan.cs" />
     <Compile Include="DTO\DTOTrangThaiSan.cs" />
+    <Compile Include="GUI\FormConSuaDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormConSuaDichVu.Designer.cs">
+      <DependentUpon>FormConSuaDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormConSuaNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormConSuaNhanVien.Designer.cs">
+      <DependentUpon>FormConSuaNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormConThemDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormConThemDichVu.Designer.cs">
+      <DependentUpon>FormConThemDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormConThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormConThemNhanVien.Designer.cs">
+      <DependentUpon>FormConThemNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormDatSan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,8 +187,20 @@
     <EmbeddedResource Include="GUI\FormConNhanVien.resx">
       <DependentUpon>FormConNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormConSuaDichVu.resx">
+      <DependentUpon>FormConSuaDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormConSuaNhanVien.resx">
+      <DependentUpon>FormConSuaNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormConTaiKhoan.resx">
       <DependentUpon>FormConTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormConThemDichVu.resx">
+      <DependentUpon>FormConThemDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormConThemNhanVien.resx">
+      <DependentUpon>FormConThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>

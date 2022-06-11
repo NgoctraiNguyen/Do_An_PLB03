@@ -12,7 +12,7 @@ namespace Do_An_PLB03.DTO
         private string _HoTen;
         private int _Tuoi;
         private string _DiaChi;
-        private int _GioiTinh;
+        private string _GioiTinh;
         private string _SDT;
         private string _SoCMND;
         private string _Vitri;
@@ -25,7 +25,7 @@ namespace Do_An_PLB03.DTO
 
         }
 
-        public DTONguoiDung(int maNguoiDung, string hoTen, int tuoi, string diaChi, int gioiTinh, string sDT, string soCMND, string vitri, int quyen, string tenDangNhap, string matKhau)
+        public DTONguoiDung(int maNguoiDung, string hoTen, int tuoi, string diaChi, string gioiTinh, string sDT, string soCMND, string vitri, int quyen, string tenDangNhap, string matKhau)
         {
             _MaNguoiDung = maNguoiDung;
             _HoTen = hoTen;
@@ -39,8 +39,19 @@ namespace Do_An_PLB03.DTO
             _TenDangNhap = tenDangNhap;
             _MatKhau = matKhau;
         }
-
-        public DTONguoiDung(string hoTen, int tuoi, string diaChi, int gioiTinh, string sDT, string soCMND, string vitri, int quyen, string tenDangNhap, string matKhau)
+        public DTONguoiDung(int maNguoiDung, string hoTen, int tuoi, string diaChi, string gioiTinh, string sDT, string soCMND, string vitri, int quyen)
+        {
+            _MaNguoiDung = maNguoiDung;
+            _HoTen = hoTen;
+            _Tuoi = tuoi;
+            _DiaChi = diaChi;
+            _GioiTinh = gioiTinh;
+            _SDT = sDT;
+            _SoCMND = soCMND;
+            _Vitri = vitri;
+            _Quyen = quyen;
+        }
+        public DTONguoiDung(string hoTen, int tuoi, string diaChi, string gioiTinh, string sDT, string soCMND, string vitri, int quyen, string tenDangNhap, string matKhau)
         {
             _HoTen = hoTen;
             _Tuoi = tuoi;
@@ -63,11 +74,18 @@ namespace Do_An_PLB03.DTO
             _TenDangNhap = tenDangNhap;
             _MatKhau = matKhau;
         }
+        public DTONguoiDung(int maNguoiDung, string matKhau)
+        {
+            _MaNguoiDung = maNguoiDung;
+            _MatKhau = matKhau;
+        }
+
+
         public int MaNguoiDung { get => _MaNguoiDung; set => _MaNguoiDung = value; }
         public string HoTen { get => _HoTen; set => _HoTen = value; }
         public int Tuoi { get => _Tuoi; set => _Tuoi = value; }
         public string DiaChi { get => _DiaChi; set => _DiaChi = value; }
-        public int GioiTinh { get => _GioiTinh; set => _GioiTinh = value; }
+        public string GioiTinh { get => _GioiTinh; set => _GioiTinh = value; }
         public string SDT { get => _SDT; set => _SDT = value; }
         public string SoCMND { get => _SoCMND; set => _SoCMND = value; }
         public string TenDangNhap { get => _TenDangNhap; set => _TenDangNhap = value; }

@@ -43,5 +43,17 @@ namespace Do_An_PLB03.BUS
         {
             DALDoUong.ThemDichVu(mahoadon, madouong, soluong);  
         }
+        public static void HienThiThongTinSua(int ma, DTODoUong d)
+        {
+            DALDoUong.HienthiThongTinSua(ma, d);
+        }
+        public static DataTable TimKiemTheoTen(string ma)
+        {
+            return DALDoUong.TimKiemTenDoUong(ma);
+        }
+        public static DataTable TimKiemTheoGiaBan(string gia)
+        {
+            return DALDoUong.TimKiemGiaBan(gia);
+        }
     }
 }

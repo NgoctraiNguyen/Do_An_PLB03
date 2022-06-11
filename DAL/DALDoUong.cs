@@ -15,8 +15,8 @@ namespace Do_An_PLB03.DAL
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
-            SqlCommand command = new SqlCommand("sp_GetAllDoUong", conn);
-            command.CommandType = CommandType.StoredProcedure;
+            SqlCommand command = new SqlCommand("select * from DoUong", conn);
+            command.CommandType = CommandType.Text;
 
 
             SqlDataAdapter adapter = new SqlDataAdapter();
@@ -31,8 +31,8 @@ namespace Do_An_PLB03.DAL
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
-            SqlCommand command = new SqlCommand("sp_InsertDoUong", conn);
-            command.CommandType = CommandType.StoredProcedure;
+            SqlCommand command = new SqlCommand("insert into DoUong(TenDoUong,SoLuong,GiaBan,GiaGoc)values( @tendouong, @soluong, @giagoc, @giaban)", conn);
+            command.CommandType = CommandType.Text;
 
             command.Parameters.AddWithValue("@tendouong", a.TenDoUong);
             command.Parameters.AddWithValue("@soluong", a.SoLuong);
@@ -46,8 +46,8 @@ namespace Do_An_PLB03.DAL
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
-            SqlCommand command = new SqlCommand("sp_UpdateDoUong", conn);
-            command.CommandType = CommandType.StoredProcedure;
+            SqlCommand command = new SqlCommand("update DoUong set TenDoUong = @tendouong, SoLuong = @soluong, GiaBan = @giaban, GiaGoc = @giagoc where MaDoUong = @MaDoUong", conn);
+            command.CommandType = CommandType.Text;
             command.Parameters.AddWithValue("@MaDoUong", a.MaDoUong);
             command.Parameters.AddWithValue("@tendouong", a.TenDoUong);
             command.Parameters.AddWithValue("@soluong", a.SoLuong);
@@ -61,8 +61,8 @@ namespace Do_An_PLB03.DAL
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
-            SqlCommand command = new SqlCommand("sp_DeleteDoUong", conn);
-            command.CommandType = CommandType.StoredProcedure;
+            SqlCommand command = new SqlCommand("delete from DoUong where MaDoUong = @MaDoUong", conn);
+            command.CommandType = CommandType.Text;
 
             command.Parameters.AddWithValue("@MaDoUong",MaDoUong);
             command.ExecuteNonQuery();
@@ -156,6 +156,46 @@ namespace Do_An_PLB03.DAL
             var makhachang = command.Parameters.AddWithValue("@TongTien", tongtien);
             var trangthai = command.Parameters.AddWithValue("@MaHoaDon", mahoadon);
             command.ExecuteNonQuery();
+        }
+        public static void HienthiThongTinSua(int ma, DTODoUong d)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            SqlCommand command = new SqlCommand("select TenDoUong, SoLuong, GiaBan, GiaGoc from DoUong where MaDoUong = @ma", conn);
+            command.CommandType = CommandType.Text;
+
+            command.Parameters.AddWithValue("@ma", ma);
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                d.TenDoUong = reader.GetString(0);
+                d.SoLuong = reader.GetInt32(1);
+                d.GiaBan = reader.GetInt32(2);
+                d.GiaGoc = reader.GetInt32(3);
+            }
+            conn.Close();
+        }
+        public static DataTable TimKiemTenDoUong(string ten)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter("select TenDoUong, SoLuong, GiaBan, GiaGoc from DoUong where TenDoUong like '%" + ten + "%'", conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            conn.Close();
+            return dt;
+        }
+
+        public static DataTable TimKiemGiaBan(string gia)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+
+            SqlDataAdapter adapter = new SqlDataAdapter("select TenDoUong, SoLuong, GiaBan, GiaGoc from DoUong where GiaBan like '" + gia + "%'", conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            conn.Close();
+            return dt;
         }
     }
 }
