@@ -30,5 +30,9 @@ namespace Do_An_PLB03.BUS
             makhachhang = DALKhachHang.laymakhachhang(khachhang,SDT);
             
         }
+        public static string laytenkhachhang(int makhachhang)
+        {
+            return DALKhachHang.LayTenKhachHang(makhachhang);
+        }
     }
 }

@@ -99,13 +99,13 @@ namespace Do_An_PLB03.GUI
         private void iconButton3_Click(object sender, EventArgs e)
         {
             clickbutton(sender);
-            Openchillform(new FormSudungdichvuvaThanhtoan());
+            Openchillform(new FormSudungdichvuvaThanhtoan(_user));
         }
 
         private void iconButton4_Click(object sender, EventArgs e)
         {
             clickbutton(sender);
-            Openchillform(new FormSudungdichvuvaThanhtoan());
+            Openchillform(new FormSudungdichvuvaThanhtoan(_user));
         }
 
         private void iconButton5_Click(object sender, EventArgs e)

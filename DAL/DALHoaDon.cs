@@ -114,6 +114,24 @@ namespace Do_An_PLB03.DAL
             command.ExecuteNonQuery();
             conn.Close();
         }
+        public static int LayMaKhachHang(String MaHoaDon)
+        {
+            int MaKhachHang = 0;
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            string query = @"select MaNguoiDung from HoaDon where MaHoaDon = '" + MaHoaDon + "'";
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = query;
+            command.Connection = conn;
+            SqlDataReader reader1 = command.ExecuteReader();
+            while (reader1.Read())
+            {
+                MaKhachHang = reader1.GetInt32(0);
+
+            }
+            return MaKhachHang;
+        }
     }
 
 }

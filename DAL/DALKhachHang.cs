@@ -68,5 +68,23 @@ namespace Do_An_PLB03.DAL
             return makhachhang;
 
         }
+        public static string LayTenKhachHang(int MaKhachHang)
+        {
+            String TenKhachHang = "";
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            string querry = " select TenKhachHang from KhachHang where MaKhachHang='" + MaKhachHang + "'";
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = querry;
+            command.Connection = conn;
+
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                TenKhachHang = reader.GetString(0);
+            }
+            return TenKhachHang;
+        }
     }
 }

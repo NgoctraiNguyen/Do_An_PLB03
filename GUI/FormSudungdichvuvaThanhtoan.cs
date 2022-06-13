@@ -16,9 +16,11 @@ namespace Do_An_PLB03.GUI
     public partial class FormSudungdichvuvaThanhtoan : Form
     {
         private int mahoadon = -1;
-        public FormSudungdichvuvaThanhtoan()
+        private DTONguoiDung _user;
+        public FormSudungdichvuvaThanhtoan(DTONguoiDung user)
         {
             InitializeComponent();
+            _user = user;
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -147,6 +149,7 @@ namespace Do_An_PLB03.GUI
             txtdv.Text=tiendichvu.ToString();
             txtTongTien.Text = (DALHoaDon.GetTongTien(mahoadon)).ToString();
             txtsan.Text = (int.Parse(txtTongTien.Text)-int.Parse(txtdv.Text)).ToString();
+            DienHoaDon(ma.ToString(), tensan);
           
             
         }
@@ -190,6 +193,19 @@ namespace Do_An_PLB03.GUI
         private void txtdv_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        private void DienHoaDon(String SoHD, String San)
+        {
+            lblSoHoaDon.Text = SoHD;
+            lblNgayin.Text = DateTime.Now.Day + " - " + DateTime.Now.Month + " - " + DateTime.Now.Year;
+            lblGioIn.Text = DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second;
+            lblSan.Text = San;
+            lblThuNgan.Text = _user.HoTen;
+            int MaKhacHang = BUSHoaDon.laymakhachhang(lblSoHoaDon.Text);
+            lblKhachHang.Text = BUSKhachHang.laytenkhachhang(MaKhacHang);
+            lblThueSan.Text = txtsan.Text;
+            lblDichVu.Text = txtdv.Text;
+            lblTongTien.Text = txtTongTien.Text;
         }
     }
 }

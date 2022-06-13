@@ -23,5 +23,9 @@ namespace Do_An_PLB03.BUS
         {
             DALHoaDon.updateTongTien(madonhang, tongtien);
         }
+        public static int laymakhachhang(string MaHoaDon)
+        {
+            return DALHoaDon.LayMaKhachHang(MaHoaDon);
+        }
     }
 }
