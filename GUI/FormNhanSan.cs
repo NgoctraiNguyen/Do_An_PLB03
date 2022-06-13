@@ -16,7 +16,7 @@ namespace Do_An_PLB03.GUI
     {
         private DTONguoiDung _user;
         int MaDonHang;
-        DTOHoaDon HoaDon = new DTOHoaDon();
+       DTOHoaDon HoaDon = new DTOHoaDon();
         private FormChinh _formcha;
         public FormNhanSan(DTONguoiDung user)
         {
@@ -41,12 +41,12 @@ namespace Do_An_PLB03.GUI
         { 
                 int MaDonHang = int.Parse(textBox1.Text);
                 BUSDanhSachDatSan.NhanSan(MaDonHang);
-                HoaDon.NgayGioTao = DateTime.Now;
-                HoaDon.MaDonHang = MaDonHang;
-                HoaDon.MaNguoiDung = _user.MaNguoiDung;
-                HoaDon.TongTien = BUSDonHang.GetTongTien(MaDonHang);
-                BUSHoaDon.HoaDon(HoaDon);
-            
+            HoaDon.NgayGioTao = DateTime.Now;
+            HoaDon.MaDonHang = MaDonHang;
+            HoaDon.MaNguoiDung = _user.MaNguoiDung;
+            HoaDon.TongTien = BUSDonHang.GetTongTien(MaDonHang);
+            BUSHoaDon.HoaDon(HoaDon);
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -100,6 +100,20 @@ namespace Do_An_PLB03.DAL
                 tongtienthuesan += reader2.GetInt32(0);
             }
             return tongtienthuesan;
+
+        }
+        public static void updateTongTien(int mahoadon,int tongtien)
+        {
+             SqlConnection conn= dbConnectionData.HamketNoi();
+            conn.Open();
+            String query = "update HoaDon  set TongTien='"+tongtien+"' where MaHoaDon='"+mahoadon+"'";
+            SqlCommand command= new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = query;
+            command.Connection = conn;
+            command.ExecuteNonQuery();
+            conn.Close();
         }
     }
+
 }

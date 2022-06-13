@@ -19,5 +19,9 @@ namespace Do_An_PLB03.BUS
         {
             DALHoaDon.deleteHoaDon(MaHoaDon);
         }
+        public static void updateTongTien(int madonhang, int tongtien)
+        {
+            DALHoaDon.updateTongTien(madonhang, tongtien);
+        }
     }
 }

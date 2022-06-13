@@ -73,7 +73,7 @@ namespace Do_An_PLB03.DAL
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
-            string query = @"Select DoUong.TenDoUong, ChiTietHoaDon.SoLuong,  DoUong.GiaBan
+            string query = @"Select DoUong.TenDoUong, ChiTietHoaDon.SoLuong,  DoUong.GiaBan,ChiTietHoaDon.TongTien
                             from DoUong
                             join ChiTietHoaDon on DoUong.MaDoUong = ChiTietHoaDon.MaDoUong
                             where ChiTietHoaDon.MaHoaDon = '" + MaHoaDon + "'";

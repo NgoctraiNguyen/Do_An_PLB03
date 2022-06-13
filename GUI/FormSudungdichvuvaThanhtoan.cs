@@ -129,25 +129,39 @@ namespace Do_An_PLB03.GUI
         {
             
         }
+         
+        public int ma;
         private void FormSudungdichvuvaThanhtoan_Click(object sender, EventArgs e)
         {
+
+            float tiendichvu=0;
+
             string tensan = (((Button)sender).Text).Split(' ')[1];
-            int ma = DALHoaDon.LayMaTheoTen(tensan);
+             ma = DALHoaDon.LayMaTheoTen(tensan);
             mahoadon = ma;
-            //dtDichVu.DataSource = BUSDoUong.DsDoUong(ma);
+            dtDichVu.DataSource = BUSDoUong.DsDoUong(ma);
+
+            int sc = dtDichVu.Rows.Count;
+            for (int i = 0; i < sc - 1; i++)
+                tiendichvu += float.Parse(dtDichVu.Rows[i].Cells[3].Value.ToString());
+            txtdv.Text=tiendichvu.ToString();
             txtTongTien.Text = (DALHoaDon.GetTongTien(mahoadon)).ToString();
+            txtsan.Text = (int.Parse(txtTongTien.Text)-int.Parse(txtdv.Text)).ToString();
+          
+            
         }
         //them dich vu
-        private void button2_Click(object sender, EventArgs e)
+        private void btnThemDichVu_Click(object sender, EventArgs e)
         {
-            if(cbbSoLuong.Text == "")
+            if(txtSL.Text == "")
             {
 
             }
             else
             {
                 int madouong = DALDoUong.MaDoUong(comboBox1.Text);
-                BUSDoUong.ThemDichVu(mahoadon, madouong, int.Parse(cbbSoLuong.Text));
+                BUSDoUong.ThemDichVu(mahoadon, madouong, int.Parse(txtSL.Text));
+                dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
             }
         }
 
@@ -156,9 +170,26 @@ namespace Do_An_PLB03.GUI
             txtGia.Text = BUSDoUong.GiaDoUongTheoMa(DALDoUong.MaDoUong(comboBox1.Text)).ToString();
         }
 
+        DTOHoaDon HoaDon= new DTOHoaDon();
+       
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            BUSHoaDon.updateTongTien(ma, int.Parse(txtTongTien.Text));
+        }
+
+        private void dtDichVu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtdv_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
