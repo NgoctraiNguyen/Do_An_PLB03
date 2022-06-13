@@ -134,7 +134,7 @@ namespace Do_An_PLB03.GUI
             string tensan = (((Button)sender).Text).Split(' ')[1];
             int ma = DALHoaDon.LayMaTheoTen(tensan);
             mahoadon = ma;
-            dtDichVu.DataSource = BUSDoUong.DsDoUong(ma);
+            //dtDichVu.DataSource = BUSDoUong.DsDoUong(ma);
             txtTongTien.Text = (DALHoaDon.GetTongTien(mahoadon)).ToString();
         }
         //them dich vu

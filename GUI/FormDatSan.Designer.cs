@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.btnXemChiTiet = new FontAwesome.Sharp.IconButton();
@@ -55,6 +54,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbnhan = new System.Windows.Forms.Label();
             this.lbloigio = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.dtpNgayGioTra = new System.Windows.Forms.DateTimePicker();
@@ -66,7 +66,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbnhan = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtDanhSachDatSan)).BeginInit();
@@ -77,17 +76,6 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(25, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Đặt Sân";
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.groupBox6);
@@ -96,9 +84,10 @@
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 50);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1208, 601);
+            this.panel1.Size = new System.Drawing.Size(1694, 842);
             this.panel1.TabIndex = 1;
             this.panel1.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -110,7 +99,7 @@
             this.groupBox6.Controls.Add(this.dtDanhSachDatSan);
             this.groupBox6.Location = new System.Drawing.Point(930, 21);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(273, 558);
+            this.groupBox6.Size = new System.Drawing.Size(737, 558);
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Danh sách đặt sân trong ngày";
@@ -143,7 +132,7 @@
             this.dtDanhSachDatSan.RowHeadersWidth = 51;
             this.dtDanhSachDatSan.RowTemplate.Height = 24;
             this.dtDanhSachDatSan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtDanhSachDatSan.Size = new System.Drawing.Size(261, 458);
+            this.dtDanhSachDatSan.Size = new System.Drawing.Size(725, 458);
             this.dtDanhSachDatSan.TabIndex = 0;
             this.dtDanhSachDatSan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtDanhSachDatSan_CellClick);
             this.dtDanhSachDatSan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtDanhSachDatSan_CellContentClick);
@@ -421,6 +410,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đăng kí";
             // 
+            // lbnhan
+            // 
+            this.lbnhan.AutoSize = true;
+            this.lbnhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbnhan.ForeColor = System.Drawing.Color.Red;
+            this.lbnhan.Location = new System.Drawing.Point(367, 68);
+            this.lbnhan.Name = "lbnhan";
+            this.lbnhan.Size = new System.Drawing.Size(0, 13);
+            this.lbnhan.TabIndex = 10;
+            // 
             // lbloigio
             // 
             this.lbloigio.AutoSize = true;
@@ -537,24 +536,13 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Loại sân:";
             // 
-            // lbnhan
-            // 
-            this.lbnhan.AutoSize = true;
-            this.lbnhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbnhan.ForeColor = System.Drawing.Color.Red;
-            this.lbnhan.Location = new System.Drawing.Point(367, 68);
-            this.lbnhan.Name = "lbnhan";
-            this.lbnhan.Size = new System.Drawing.Size(0, 13);
-            this.lbnhan.TabIndex = 10;
-            // 
             // FormDatSan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1215, 641);
+            this.ClientSize = new System.Drawing.Size(1694, 842);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDatSan";
             this.Text = "FormDatSan";
@@ -573,13 +561,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox5;
         private FontAwesome.Sharp.IconButton btnTimKiem;

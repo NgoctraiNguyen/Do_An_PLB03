@@ -35,8 +35,6 @@
             this.btnQuanLyDichVu = new FontAwesome.Sharp.IconButton();
             this.btnQuanLyNhanVien = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnLichSu = new FontAwesome.Sharp.IconButton();
-            this.btnHoaDon = new FontAwesome.Sharp.IconButton();
             this.btnThanhToan = new FontAwesome.Sharp.IconButton();
             this.btnDichVuSanBong = new FontAwesome.Sharp.IconButton();
             this.btnThueSan = new FontAwesome.Sharp.IconButton();
@@ -66,8 +64,6 @@
             this.pnlMenu.Controls.Add(this.btnQuanLyDichVu);
             this.pnlMenu.Controls.Add(this.btnQuanLyNhanVien);
             this.pnlMenu.Controls.Add(this.label2);
-            this.pnlMenu.Controls.Add(this.btnLichSu);
-            this.pnlMenu.Controls.Add(this.btnHoaDon);
             this.pnlMenu.Controls.Add(this.btnThanhToan);
             this.pnlMenu.Controls.Add(this.btnDichVuSanBong);
             this.pnlMenu.Controls.Add(this.btnThueSan);
@@ -88,7 +84,7 @@
             this.btnThongKe.IconColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnThongKe.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(0, 557);
+            this.btnThongKe.Location = new System.Drawing.Point(0, 457);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnThongKe.Size = new System.Drawing.Size(226, 50);
@@ -107,7 +103,7 @@
             this.btnQuanLyKhachHang.IconColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnQuanLyKhachHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnQuanLyKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuanLyKhachHang.Location = new System.Drawing.Point(0, 507);
+            this.btnQuanLyKhachHang.Location = new System.Drawing.Point(0, 407);
             this.btnQuanLyKhachHang.Name = "btnQuanLyKhachHang";
             this.btnQuanLyKhachHang.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnQuanLyKhachHang.Size = new System.Drawing.Size(226, 50);
@@ -126,7 +122,7 @@
             this.btnQuanLyDichVu.IconColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnQuanLyDichVu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnQuanLyDichVu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuanLyDichVu.Location = new System.Drawing.Point(0, 457);
+            this.btnQuanLyDichVu.Location = new System.Drawing.Point(0, 357);
             this.btnQuanLyDichVu.Name = "btnQuanLyDichVu";
             this.btnQuanLyDichVu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnQuanLyDichVu.Size = new System.Drawing.Size(226, 50);
@@ -145,7 +141,7 @@
             this.btnQuanLyNhanVien.IconColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnQuanLyNhanVien.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnQuanLyNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuanLyNhanVien.Location = new System.Drawing.Point(0, 407);
+            this.btnQuanLyNhanVien.Location = new System.Drawing.Point(0, 307);
             this.btnQuanLyNhanVien.Name = "btnQuanLyNhanVien";
             this.btnQuanLyNhanVien.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnQuanLyNhanVien.Size = new System.Drawing.Size(226, 50);
@@ -161,50 +157,12 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label2.Location = new System.Drawing.Point(0, 387);
+            this.label2.Location = new System.Drawing.Point(0, 287);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.label2.Size = new System.Drawing.Size(71, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = "Admin";
-            // 
-            // btnLichSu
-            // 
-            this.btnLichSu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLichSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLichSu.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnLichSu.IconChar = FontAwesome.Sharp.IconChar.History;
-            this.btnLichSu.IconColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnLichSu.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLichSu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLichSu.Location = new System.Drawing.Point(0, 337);
-            this.btnLichSu.Name = "btnLichSu";
-            this.btnLichSu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnLichSu.Size = new System.Drawing.Size(226, 50);
-            this.btnLichSu.TabIndex = 3;
-            this.btnLichSu.Text = "Lịch Sử";
-            this.btnLichSu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLichSu.UseVisualStyleBackColor = true;
-            this.btnLichSu.Click += new System.EventHandler(this.iconButton5_Click);
-            // 
-            // btnHoaDon
-            // 
-            this.btnHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHoaDon.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnHoaDon.IconChar = FontAwesome.Sharp.IconChar.Receipt;
-            this.btnHoaDon.IconColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnHoaDon.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHoaDon.Location = new System.Drawing.Point(0, 287);
-            this.btnHoaDon.Name = "btnHoaDon";
-            this.btnHoaDon.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnHoaDon.Size = new System.Drawing.Size(226, 50);
-            this.btnHoaDon.TabIndex = 7;
-            this.btnHoaDon.Text = "Hóa Đơn";
-            this.btnHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHoaDon.UseVisualStyleBackColor = true;
-            this.btnHoaDon.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // btnThanhToan
             // 
@@ -353,9 +311,9 @@
             this.lblChucnang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChucnang.Location = new System.Drawing.Point(22, 48);
             this.lblChucnang.Name = "lblChucnang";
-            this.lblChucnang.Size = new System.Drawing.Size(139, 29);
+            this.lblChucnang.Size = new System.Drawing.Size(115, 29);
             this.lblChucnang.TabIndex = 0;
-            this.lblChucnang.Text = "namebutton";
+            this.lblChucnang.Text = "Welcome";
             // 
             // pnlBody
             // 
@@ -422,8 +380,6 @@
         private FontAwesome.Sharp.IconButton btnQuanLyNhanVien;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton btnThongKe;
-        private FontAwesome.Sharp.IconButton btnLichSu;
-        private FontAwesome.Sharp.IconButton btnHoaDon;
         private FontAwesome.Sharp.IconButton btnThanhToan;
         private FontAwesome.Sharp.IconButton btnDichVuSanBong;
         private FontAwesome.Sharp.IconButton btnThueSan;
