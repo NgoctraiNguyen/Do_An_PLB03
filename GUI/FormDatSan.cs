@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Do_An_PLB03.BUS;
@@ -183,12 +184,12 @@ namespace Do_An_PLB03.GUI
             if ((s1 > 0 && s2 < 0) || (ss1 > 0 && ss2 < 0) || (s1 < 0 && ss2 > 0))
             {
                 lbnhan.Text = "thoi gian nay da duoc dat";
-                btnDatSan.Enabled = false;
+
             }
             else
             {
                 lbnhan.Text = "";
-                btnDatSan.Enabled = true;
+
             }
 
 
@@ -266,9 +267,14 @@ namespace Do_An_PLB03.GUI
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (txtGia.Text == "" || txtSDTKhachHang.Text == "" || txtTenKhachHang.Text == ""||txtSoGio.Text=="0")
+
+            if (txtGia.Text == "" || txtSDTKhachHang.Text == "" || txtTenKhachHang.Text == "" || txtSoGio.Text == "0" || lbnhan.Text != "" || lbsdt.Text != "")
             {
                 btnDatSan.Enabled = false;
+            }
+            else
+            {
+                btnDatSan.Enabled = true;
             }
         }
 
@@ -279,7 +285,20 @@ namespace Do_An_PLB03.GUI
 
         private void txtSDTKhachHang_TextChanged(object sender, EventArgs e)
         {
-            
+            Regex r = new Regex(@"^(09|03|07|08|05)+([0-9]{8})$");
+            if (string.IsNullOrEmpty(txtSDTKhachHang.Text))
+            {
+                lbsdt.Text = "SDT không được để trống";
+            }
+            else
+            {
+                if (r.IsMatch(txtSDTKhachHang.Text) == false)
+                    lbsdt.Text = "SDT khong hop le";
+                else
+                {
+                    lbsdt.Text = "";
+                }
+            }
         }
 
         private void txtTenKhachHang_TextChanged(object sender, EventArgs e)

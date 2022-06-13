@@ -66,6 +66,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbsdt = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtDanhSachDatSan)).BeginInit();
@@ -125,6 +126,7 @@
             // 
             // dtDanhSachDatSan
             // 
+            this.dtDanhSachDatSan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtDanhSachDatSan.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dtDanhSachDatSan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtDanhSachDatSan.Location = new System.Drawing.Point(6, 25);
@@ -268,6 +270,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox3.Controls.Add(this.lbsdt);
             this.groupBox3.Controls.Add(this.txtSDTKhachHang);
             this.groupBox3.Controls.Add(this.txtTenKhachHang);
             this.groupBox3.Controls.Add(this.label9);
@@ -536,6 +539,16 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Loại sân:";
             // 
+            // lbsdt
+            // 
+            this.lbsdt.AutoSize = true;
+            this.lbsdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbsdt.ForeColor = System.Drawing.Color.Red;
+            this.lbsdt.Location = new System.Drawing.Point(273, 118);
+            this.lbsdt.Name = "lbsdt";
+            this.lbsdt.Size = new System.Drawing.Size(0, 13);
+            this.lbsdt.TabIndex = 9;
+            // 
             // FormDatSan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -603,5 +616,6 @@
         private System.Windows.Forms.ComboBox cbbTenSan;
         private System.Windows.Forms.Label lbloigio;
         private System.Windows.Forms.Label lbnhan;
+        private System.Windows.Forms.Label lbsdt;
     }
 }

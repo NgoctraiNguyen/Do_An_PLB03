@@ -44,7 +44,8 @@ namespace Do_An_PLB03.DAL
                             from San
                             join TrangThaiSan on San.TenSan = TrangThaiSan.TenSan
                             join DonHang on TrangThaiSan.MaTrangThaiSan = DonHang.MaTrangThaiSan
-                            join KhachHang on DonHang.MaKhachHang = KhachHang.MaKhachHang";
+                            join KhachHang on DonHang.MaKhachHang = KhachHang.MaKhachHang
+                            where DonHang.MaDonHang='" + MaDonHang + "'";
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
             command.CommandText = query;
