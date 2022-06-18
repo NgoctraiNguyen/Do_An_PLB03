@@ -11,12 +11,12 @@ namespace Do_An_PLB03.DAL
 {
     internal class DALHoaDon
     {
-        public static void HoaDon(DTOHoaDon HoaDon)
+        public static void HoaDon(DTOHoaDon HoaDon) // tạo hóa đơn
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
-            string querry = "INSERT INTO HoaDon(NgayGioTao,TongTien,MaNguoiDung,MaDonHang) " +
-                            "VALUES (@NgayGioTao,@TongTien,@MaNguoiDung,@MaDonHang)  ";
+            string querry = "INSERT INTO HoaDon(NgayGioTao,TongTien,MaNguoiDung,MaDonHang,TrangThai) " +
+                            "VALUES (@NgayGioTao,@TongTien,@MaNguoiDung,@MaDonHang,@TrangThai)  ";
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
             command.CommandText = querry;
@@ -25,13 +25,14 @@ namespace Do_An_PLB03.DAL
 
             var ngaygiotao = command.Parameters.AddWithValue("@NgayGioTao", HoaDon.NgayGioTao);
             var makhachang = command.Parameters.AddWithValue("@TongTien", HoaDon.TongTien);
-            var trangthai = command.Parameters.AddWithValue("@MaNguoiDung", HoaDon.MaNguoiDung);
+            var mangnguoidung = command.Parameters.AddWithValue("@MaNguoiDung", HoaDon.MaNguoiDung);
             var tongtienthuesan = command.Parameters.AddWithValue("@MaDonHang", HoaDon.MaDonHang);
+            var trangthai = command.Parameters.AddWithValue("@TrangThai", HoaDon.TrangThai);
 
             command.ExecuteNonQuery();
         }
 
-        public static void deleteHoaDon(int mahoadon)
+        public static void deleteHoaDon(int mahoadon) //xóa hóa đơn
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
@@ -42,7 +43,7 @@ namespace Do_An_PLB03.DAL
             command.CommandText = query;
             command.ExecuteNonQuery();
         }
-        public static int LayMaTheoTen(string TenSan)
+        public static int LayMaTheoTen(string TenSan) // Trả về mã hóa đơn theo tên sân
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
@@ -50,7 +51,7 @@ namespace Do_An_PLB03.DAL
                              from HoaDon
                              join DonHang on HoaDon.MaDonHang = DonHang.MaDonHang
                              join TrangThaiSan on TrangThaiSan.MaTrangThaiSan = DonHang.MaTrangThaiSan
-                             where TenSan = '" + TenSan + "'";
+                             where TenSan = '" + TenSan + "' and DonHang.TrangThai = 0 and HoaDon.TrangThai = 0";
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
             command.CommandText = query;
@@ -70,7 +71,7 @@ namespace Do_An_PLB03.DAL
             }
         }
         public static int tongtienthuesan = 0;
-        public static int GetTongTien(int MaHoaDon)
+        public static int GetTongTien(int MaHoaDon) // Trả về tổng tiền của 1 hóa đơn
         {
             if (MaHoaDon == -1) return -1;
             SqlConnection conn = dbConnectionData.HamketNoi();
@@ -102,11 +103,11 @@ namespace Do_An_PLB03.DAL
             return tongtienthuesan;
 
         }
-        public static void updateTongTien(int mahoadon,int tongtien)
+        public static void updateTongTien(int mahoadon,int tongtien) // cộng tổng tiền khi ấn thanh toán
         {
              SqlConnection conn= dbConnectionData.HamketNoi();
             conn.Open();
-            String query = "update HoaDon  set TongTien='"+tongtien+"' where MaHoaDon='"+mahoadon+"'";
+            String query = "update HoaDon  set TongTien='"+tongtien+"', TrangThai = 1 where MaHoaDon='"+mahoadon+"'";
             SqlCommand command= new SqlCommand();
             command.CommandType = CommandType.Text;
             command.CommandText = query;
@@ -114,7 +115,7 @@ namespace Do_An_PLB03.DAL
             command.ExecuteNonQuery();
             conn.Close();
         }
-        public static int LayMaKhachHang(String MaHoaDon)
+        public static int LayMaKhachHang(String MaHoaDon) // Trả về mã khách hàng từ mã hóa đơn
         {
             int MaKhachHang = 0;
             SqlConnection conn = dbConnectionData.HamketNoi();
@@ -131,6 +132,54 @@ namespace Do_An_PLB03.DAL
 
             }
             return MaKhachHang;
+        }
+        public static DataTable DSThanhToan() //  Trả về danh sách hóa đơn chưa thanh toán
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            SqlCommand command = new SqlCommand("Select MaHoaDon,TenSan, TenKhachHang, HoaDon.TongTien " +
+                "from KhachHang join DonHang on KhachHang.MaKhachHang = DonHang.MaKhachHang " +
+                "join TrangThaiSan on TrangThaiSan.MaTrangThaiSan = DonHang.MaTrangThaiSan " +
+                "join HoaDon on DonHang.MaDonHang = HoaDon.MaDonHang " +
+                "where HoaDon.TrangThai = 0 and DonHang.TrangThai = 2", conn);
+            command.CommandType = CommandType.Text;
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = command;
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            conn.Close();
+            return dt;
+        }
+
+        public static int GetMaDonHang(int MaHoaDon) // Trả về mã đơn hàng của hóa đơn
+        {
+            int MaDonHang = 0;
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            string query = @"select MaDonHang from HoaDon where MaHoaDon = '" + MaHoaDon + "'";
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = query;
+            command.Connection = conn;
+            SqlDataReader reader1 = command.ExecuteReader();
+            while (reader1.Read())
+            {
+                MaDonHang = reader1.GetInt32(0);
+            }
+            return MaDonHang;
+        }
+
+        public static void ThanhToan(int mahoadon) // Chuyển trạng thái khi thanh toán 
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            var command = new SqlCommand();
+            command.Connection = conn;
+            string query = "Update HoaDon SET HoaDon.TrangThai = 1 where HoaDon.MaHoaDon = '" + mahoadon + "'";
+            command.CommandType = CommandType.Text;
+            command.CommandText = query;
+            command.ExecuteNonQuery();
         }
     }
 

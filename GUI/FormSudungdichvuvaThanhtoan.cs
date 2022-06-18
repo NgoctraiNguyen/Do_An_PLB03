@@ -63,7 +63,7 @@ namespace Do_An_PLB03.GUI
         }
         private bool KiemTra(string TenSan)
         {
-            foreach(DataRow data in BUSDanhSachDatSan.danhsachnhansan().Rows)
+            foreach(DataRow data in BUSDanhSachDatSan.danhsachdangda().Rows)
             {
                 if(data["TenSan"].ToString() == TenSan)
                 {
@@ -125,6 +125,7 @@ namespace Do_An_PLB03.GUI
                 btn7B.Enabled = false;
             }
             comboBox1.DataSource = DALDoUong.DoUong();
+            dtThanhToan.DataSource = DALHoaDon.DSThanhToan();
         }
 
         private void btn5A_Click(object sender, EventArgs e)
@@ -139,7 +140,7 @@ namespace Do_An_PLB03.GUI
             float tiendichvu=0;
 
             string tensan = (((Button)sender).Text).Split(' ')[1];
-             ma = DALHoaDon.LayMaTheoTen(tensan);
+            ma = DALHoaDon.LayMaTheoTen(tensan);
             mahoadon = ma;
             dtDichVu.DataSource = BUSDoUong.DsDoUong(ma);
 
@@ -177,7 +178,8 @@ namespace Do_An_PLB03.GUI
        
         private void button3_Click(object sender, EventArgs e)
         {
-            BUSHoaDon.updateTongTien(ma, int.Parse(txtTongTien.Text));
+            //BUSHoaDon.updateTongTien(ma, int.Parse(txtTongTien.Text));
+            BUSHoaDon.ThanhToan(Convert.ToInt32(lblSoHoaDon.Text));
         }
 
         private void dtDichVu_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -201,11 +203,38 @@ namespace Do_An_PLB03.GUI
             lblGioIn.Text = DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second;
             lblSan.Text = San;
             lblThuNgan.Text = _user.HoTen;
-            int MaKhacHang = BUSHoaDon.laymakhachhang(lblSoHoaDon.Text);
-            lblKhachHang.Text = BUSKhachHang.laytenkhachhang(MaKhacHang);
+            int MaKhachHang = BUSHoaDon.laymakhachhang(lblSoHoaDon.Text);
+            lblKhachHang.Text = BUSKhachHang.laytenkhachhang(MaKhachHang);
             lblThueSan.Text = txtsan.Text;
             lblDichVu.Text = txtdv.Text;
             lblTongTien.Text = txtTongTien.Text;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDatSan_Click(object sender, EventArgs e)
+        {
+            
+            DALDonHang.TraSan(DALHoaDon.GetMaDonHang(ma));
+        }
+
+        private void dtThanhToan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            float tiendichvu = 0;
+            DataGridViewRow row = new DataGridViewRow();
+            row = dtThanhToan.Rows[e.RowIndex];
+            ma = Convert.ToInt32(row.Cells[0].Value);
+            dtDichVu.DataSource = BUSDoUong.DsDoUong(ma);
+            int sc = dtDichVu.Rows.Count;
+            for (int i = 0; i < sc - 1; i++)
+                tiendichvu += float.Parse(dtDichVu.Rows[i].Cells[3].Value.ToString());
+            txtdv.Text = tiendichvu.ToString();
+            txtTongTien.Text = row.Cells[3].Value.ToString();
+            txtsan.Text = (int.Parse(txtTongTien.Text) - int.Parse(txtdv.Text)).ToString();
+            DienHoaDon(row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString());
         }
     }
 }

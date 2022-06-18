@@ -27,5 +27,9 @@ namespace Do_An_PLB03.BUS
         {
             return DALHoaDon.LayMaKhachHang(MaHoaDon);
         }
+        public static void ThanhToan(int mahoadon)
+        {
+            DALHoaDon.ThanhToan(mahoadon);
+        }
     }
 }

@@ -52,5 +52,10 @@ namespace Do_An_PLB03.BUS
             DataTable dt = DALDanhSachDatSan.DanhSachNhanSan();
             return dt;
         }
+        public static DataTable danhsachdangda()
+        {
+            DataTable dt = DALDanhSachDatSan.DanhSachDangDa();
+            return dt;
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace Do_An_PLB03.DAL
 {
     internal class DALDanhSachDatSan
     {
-       public static DataTable danhsach()
+       public static DataTable danhsach() // trả về danh sách đặt sân
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
@@ -36,7 +36,7 @@ namespace Do_An_PLB03.DAL
         public static string NgayNhan;
         public static int Gia;
         public static int MaTrangThaiSan;
-        public static bool GetDonHang(int MaDonHang)
+        public static bool GetDonHang(int MaDonHang) //Trả về đơn hàng theo mã đon hàng
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
@@ -72,7 +72,7 @@ namespace Do_An_PLB03.DAL
             }
         }
 
-        public static DataTable DanhSachNhanSan()
+        public static DataTable DanhSachNhanSan() // Trả về danh sách nhận sân 
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
@@ -81,7 +81,26 @@ namespace Do_An_PLB03.DAL
                             join TrangThaiSan on San.TenSan=TrangThaiSan.TenSan                
                             join DonHang on TrangThaiSan.MaTrangThaiSan = DonHang.MaTrangThaiSan
                             join KhachHang on DonHang.MaKhachHang = KhachHang.MaKhachHang
-                            where DonHang.TrangThai = 0";
+                            join HoaDon on DonHang.MaDonHang = HoaDon.MaDonHang
+                            where DonHang.TrangThai = 0 or DonHang.TrangThai = 2";
+            SqlDataAdapter da = new SqlDataAdapter(query, conn);
+            DataTable tb = new DataTable();
+            da.Fill(tb);
+            da.Dispose();
+            return tb;
+        }
+
+        public static DataTable DanhSachDangDa() // Trả về danh sách đang đá
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            string query = @"Select TrangThaiSan.TenSan,TenKhachHang,ThoiGianBatDau,ThoiGianKetThuc,SDTKhachHang,DonHang.MaDonHang,DonHang.MaTrangThaiSan,HoaDon.TrangThai
+                            from San 
+                            join TrangThaiSan on San.TenSan=TrangThaiSan.TenSan                
+                            join DonHang on TrangThaiSan.MaTrangThaiSan = DonHang.MaTrangThaiSan
+                            join KhachHang on DonHang.MaKhachHang = KhachHang.MaKhachHang
+                            join HoaDon on DonHang.MaDonHang = HoaDon.MaDonHang
+                            where DonHang.TrangThai = 0 and HoaDon.TrangThai = 0";
             SqlDataAdapter da = new SqlDataAdapter(query, conn);
             DataTable tb = new DataTable();
             da.Fill(tb);

@@ -39,12 +39,13 @@ namespace Do_An_PLB03.GUI
 
         private void button3_Click(object sender, EventArgs e)
         { 
-                int MaDonHang = int.Parse(textBox1.Text);
-                BUSDanhSachDatSan.NhanSan(MaDonHang);
+            int MaDonHang = int.Parse(textBox1.Text);
+            BUSDanhSachDatSan.NhanSan(MaDonHang);
             HoaDon.NgayGioTao = DateTime.Now;
             HoaDon.MaDonHang = MaDonHang;
             HoaDon.MaNguoiDung = _user.MaNguoiDung;
             HoaDon.TongTien = BUSDonHang.GetTongTien(MaDonHang);
+            HoaDon.TrangThai = 0;
             BUSHoaDon.HoaDon(HoaDon);
 
         }

@@ -11,7 +11,7 @@ namespace Do_An_PLB03.DAL
 {
     internal class DALDonHang
     {
-        public static void donhang(DTODonHang donhang)
+        public static void donhang(DTODonHang donhang) // tạo đơn hàng
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
@@ -32,17 +32,7 @@ namespace Do_An_PLB03.DAL
             command.ExecuteNonQuery();
         }
 
-        public static void danhsachdat()
-        {
-            SqlConnection conn = dbConnectionData.HamketNoi();
-            conn.Open();
-            string querry = "Select";
-            SqlCommand command = new SqlCommand();
-            command.CommandType = CommandType.Text;
-            command.CommandText = querry;
-            command.Connection = conn;
-        }
-        public static void deletedonhang(int madonhang)
+        public static void deletedonhang(int madonhang) // xóa đơn hàng
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
@@ -54,7 +44,7 @@ namespace Do_An_PLB03.DAL
             command.ExecuteNonQuery();
 
         }
-        public static void DoiTrangThai(int madonhang)
+        public static void DoiTrangThai(int madonhang) // Chuyển trạng thái khi nhận sân 
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
@@ -65,7 +55,7 @@ namespace Do_An_PLB03.DAL
             command.CommandText = query;
             command.ExecuteNonQuery();
         }
-        public static int GetTongTien(int MaDonHang)
+        public static int GetTongTien(int MaDonHang) // trả về tổng tiền từ đơn hàng
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
@@ -82,6 +72,31 @@ namespace Do_An_PLB03.DAL
                 return reader.GetInt32(0);
             }
             return rt;
+        }
+        public static void ThanhToan(int mahoadon) // Chuyển trạng thái hóa đơn từ 0->1 khi thanh toán
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            String query = "update HoaDon  set TrangThai = 1 where MaHoaDon='" + mahoadon + "'";
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = query;
+            command.Connection = conn;
+            command.ExecuteNonQuery();
+            conn.Close();
+        }
+        public static void TraSan(int madonhang) // chuyển trạng thái đơn hàng từ 0 -> 2 khi trả sân
+
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            String query = "update DonHang set DonHang.TrangThai = 2 where MaDonHang='" + madonhang + "'";
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = query;
+            command.Connection = conn;
+            command.ExecuteNonQuery();
+            conn.Close();
         }
     }
 }
