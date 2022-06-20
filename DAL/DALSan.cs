@@ -27,11 +27,10 @@ namespace Do_An_PLB03.DAL
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-
                 loaisan.Add(reader.GetString(0));
 
             }
-           return loaisan;  
+             return loaisan;  
 
         }
 

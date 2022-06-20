@@ -48,7 +48,7 @@ namespace Do_An_PLB03.GUI
         }
         private void FormDatSan_Load(object sender, EventArgs e)
         {
-            cbbLoaiSan.Items.Clear();
+            loaisan.Clear();
             loaisan = BUSSan.san(san);
             cbbLoaiSan.DataSource = loaisan;
             dtDanhSachDatSan.DataSource = BUSDanhSachDatSan.danhsach();
@@ -67,7 +67,6 @@ namespace Do_An_PLB03.GUI
                 cbbTenSan.Items.Clear();
                 cbbTenSan.DataSource = tensan;
 
-              
             }
 
 
@@ -191,12 +190,6 @@ namespace Do_An_PLB03.GUI
 
             }
 
-
-
-
-
-
-
             //if (txtSDTKhachHang.Text == "") btnDatSan.Enabled = false;
         }
 
@@ -213,12 +206,9 @@ namespace Do_An_PLB03.GUI
         
         private void iconButton3_Click(object sender, EventArgs e)
         {
-           
-
-
+ 
 
         }
-
 
 
         private void btnDatSan_Click(object sender, EventArgs e)
