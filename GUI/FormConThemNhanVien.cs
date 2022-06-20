@@ -24,100 +24,21 @@ namespace Do_An_PLB03.GUI
         {
             try
             {
-                if (txtHoTen.Text == "")
-                {
-                    MessageBox.Show("Vui lòng nhập lại họ tên");
-                    txtHoTen.Focus();
-                }
-                else
-                {
-                    if (txtTuoi.Text == "")
-                    {
-                        MessageBox.Show("Vui lòng nhập lại tuổi");
-                        txtTuoi.Focus();
-                    }
-                    else
-                    {
-                        if (txtDiaChi.Text == "")
-                        {
-                            MessageBox.Show("Vui lòng nhập lại địa chỉ");
-                            txtDiaChi.Focus();
-                        }
-                        else
-                        {
-                            if (txtGioiTinh.Text == "" && (txtGioiTinh.Text != "Nam" || txtGioiTinh.Text != "Nữ"))
-                            {
-                                MessageBox.Show("Vui lòng nhập lại giới tính");
-                                txtGioiTinh.Focus();
-                            }
-                            else
-                            {
-                                if (txtSDT.Text == "" || txtSDT.Text.Length != 10)
-                                {
-                                    MessageBox.Show("Vui lòng nhập lại số điện thoại");
-                                    txtSDT.Focus();
-                                }
-                                else
-                                {
-                                    if (txtCMND.Text == "" || txtCMND.Text.Length != 9)
-                                    {
-                                        MessageBox.Show("Vui lòng nhập lại số CMND");
-                                        txtCMND.Focus();
-                                    }
-                                    else
-                                    {
-                                        if (txtViTri.Text == "")
-                                        {
-                                            MessageBox.Show("Vui lòng nhập lại vị trí");
-                                            txtViTri.Focus();
-                                        }
-                                        else
-                                        {
-                                            if (txtQuyen.Text == "")
-                                            {
-                                                MessageBox.Show("Vui lòng nhập lại quyền");
-                                                txtQuyen.Focus();
-                                            }
-                                            else
-                                            {
-                                                if (txtTenDangNhap.Text == "")
-                                                {
-                                                    MessageBox.Show("Vui lòng nhập lại tên đăng nhập");
-                                                    txtTenDangNhap.Focus();
-                                                }
-                                                else
-                                                {
-                                                    if (txtMatKhau.Text == "")
-                                                    {
-                                                        MessageBox.Show("Vui lòng nhập lại mật khẩu");
-                                                        txtMatKhau.Focus();
-                                                    }
-                                                    else
-                                                    {
-                                                        string ten = txtHoTen.Text;
-                                                        int tuoi = Convert.ToInt32(txtTuoi.Text);
-                                                        string diachi = txtDiaChi.Text;
-                                                        string gioitinh = txtGioiTinh.Text;
-                                                        string sdt = txtSDT.Text;
-                                                        string socmnd = txtCMND.Text;
-                                                        string vitri = txtViTri.Text;
-                                                        int quyen = Convert.ToInt32(txtQuyen.Text);
-                                                        string tendangnhap = txtTenDangNhap.Text;
-                                                        string matkhau = txtMatKhau.Text;
-                                                        DTONguoiDung nguoidung = new DTONguoiDung(ten, tuoi, diachi, gioitinh, sdt, socmnd, vitri, quyen, tendangnhap, matkhau);
-                                                        BUSNguoiDung.InsertNguoiDung(nguoidung);
-                                                        MessageBox.Show("Thêm thành công");
-                                                        this.Hide();
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+
+                string ten = txtHoTen.Text;
+                int tuoi = Convert.ToInt32(txtTuoi.Text);
+                string diachi = txtDiaChi.Text;
+                string gioitinh = txtGioiTinh.Text;
+                string sdt = txtSDT.Text;
+                string socmnd = txtCMND.Text;
+                string vitri = txtViTri.Text;
+                int quyen = Convert.ToInt32(txtQuyen.Text);
+                string tendangnhap = txtTenDangNhap.Text;
+                string matkhau = txtMatKhau.Text;
+                DTONguoiDung nguoidung = new DTONguoiDung(ten, tuoi, diachi, gioitinh, sdt, socmnd, vitri, quyen, tendangnhap, matkhau);
+                BUSNguoiDung.InsertNguoiDung(nguoidung);
+                MessageBox.Show("Thêm thành công");
+                this.Hide();
 
             }
             catch (Exception ex)
@@ -125,13 +46,162 @@ namespace Do_An_PLB03.GUI
                 MessageBox.Show(ex.Message);
             }
             d();
-            this.Hide();
             
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void txtHoTen_MouseLeave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtHoTen.Text))
+            {
+                lblHoTen.Text = "Vui lòng nhập lại họ tên";
+                txtHoTen.Focus();
+
+            }
+            else
+            {
+                lblHoTen.Text = "";
+            }
+        }
+
+        private void txtTuoi_MouseLeave(object sender, EventArgs e)
+        {
+            int n = 0;
+            if (txtTuoi.Text == "" || (int.TryParse(txtTuoi.Text, out n)) == false)
+
+            {
+                lblTuoi.Text = "Vui lòng nhập lại tuổi";
+                txtTuoi.Focus();
+            }
+            else
+            {
+                lblTuoi.Text = "";
+            }
+        }
+
+        private void txtViTri_MouseLeave(object sender, EventArgs e)
+        {
+            if (txtViTri.Text == "")
+            {
+
+                lblViTri.Text = "Vui lòng nhập lại vị trí";
+                txtViTri.Focus();
+            }
+            else
+            {
+                lblViTri.Text = "";
+            }
+        }
+
+        private void txtDiaChi_MouseLeave(object sender, EventArgs e)
+        {
+            if (txtDiaChi.Text == "")
+            {
+                lblDiaChi.Text = "Vui lòng nhập lại địa chỉ";
+                txtDiaChi.Focus();
+            }
+            else
+            {
+                lblDiaChi.Text = "";
+            }
+        }
+
+        private void txtCMND_MouseLeave(object sender, EventArgs e)
+        {
+            if (txtCMND.Text.Length != 9)
+            {
+                lblCMND.Text = "Vui lòng nhập lại số CMND";
+                txtCMND.Focus();
+            }
+            else
+            {
+                lblCMND.Text = "";
+            }
+        }
+
+        private void txtGioiTinh_MouseLeave(object sender, EventArgs e)
+        {
+            if (txtGioiTinh.Text == "Nam" || txtGioiTinh.Text == "Nữ")
+            {
+                lblGT.Text = "";
+
+            }
+            else
+            {
+                lblGT.Text = "Vui lòng nhập lại giới tính";
+                txtGioiTinh.Focus();
+            }
+        }
+
+        private void txtQuyen_MouseLeave(object sender, EventArgs e)
+        {
+            if (txtQuyen.Text == "0" || txtQuyen.Text == "1")
+            {
+
+                lblQuyen.Text = "";
+            }
+            else
+            {
+
+                lblQuyen.Text = "Quyền không hợp lệ";
+                txtQuyen.Focus();
+            }
+        }
+
+        private void txtSDT_MouseLeave(object sender, EventArgs e)
+        {
+            if (txtSDT.Text.Length != 10)
+            {
+                lblSDT.Text = "Vui lòng nhập lại số điện thoại";
+                txtSDT.Focus();
+            }
+            else
+            {
+                lblSDT.Text = "";
+            }
+        }
+
+        private void txtTenDangNhap_MouseLeave(object sender, EventArgs e)
+        {
+            if (txtTenDangNhap.Text == "")
+            {
+                lblTenDN.Text = "Vui lòng nhập lại tên đăng nhập";
+                txtTenDangNhap.Focus();
+            }
+            else
+            {
+                lblTenDN.Text = "";
+            }
+        }
+
+        private void txtMatKhau_MouseLeave(object sender, EventArgs e)
+        {
+            if (txtMatKhau.Text.Length < 8)
+            {
+
+                lblMK.Text = "Vui lòng nhập lại mật khẩu";
+                txtMatKhau.Focus();
+            }
+            else
+            {
+                lblMK.Text = "";
+            }
+        }
+
+        private void FormConThemNhanVien_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (lblHoTen.Text != "" || lblGT.Text != "" || lblDiaChi.Text != "" || lblCMND.Text != "" || lblSDT.Text != "" || lblQuyen.Text != "" || lblTuoi.Text != "" || lblViTri.Text != "" || lblTenDN.Text != "" || lblMK.Text != "")
+            {
+                btnThem.Enabled = false;
+            }
+            else
+            {
+                btnThem.Enabled = true;
+            }
         }
     }
 }
