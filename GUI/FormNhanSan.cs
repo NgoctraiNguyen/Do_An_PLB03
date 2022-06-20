@@ -28,7 +28,7 @@ namespace Do_An_PLB03.GUI
         {
 
             MaDonHang = int.Parse(txtMaDatSan.Text);
-            if (BUSDanhSachDatSan.TimKiem(MaDonHang))
+            if (BUSDanhSachDatSan.TimKiem(MaDonHang)==true)
             {
                 txtHoTen.Text = BUSDanhSachDatSan.HoTen;
                 txtSDT.Text = BUSDanhSachDatSan.SDTKhachHang;
@@ -39,6 +39,7 @@ namespace Do_An_PLB03.GUI
                 txtGia.Text = (BUSDanhSachDatSan.Gia).ToString();
                 button3.Enabled = true;
             }
+            else
             {
                 MessageBox.Show("không tìm thấy sân");
                 button3.Enabled=false;

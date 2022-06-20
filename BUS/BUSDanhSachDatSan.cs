@@ -25,7 +25,7 @@ namespace Do_An_PLB03.BUS
         public static int Gia;
         public static bool TimKiem(int MaHoaDon)// tìm kiếm sân đã đặt và chưa nhận
         {
-            if (DALDanhSachDatSan.GetDonHang(MaHoaDon))
+            if (DALDanhSachDatSan.GetDonHang(MaHoaDon)==true)
             {
                 HoTen = DALDanhSachDatSan.HoTen;
                 SDTKhachHang = DALDanhSachDatSan.SDTKhachHang;
