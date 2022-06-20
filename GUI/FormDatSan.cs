@@ -233,6 +233,8 @@ namespace Do_An_PLB03.GUI
 
             BUSDonHang.donhang(donhang);
 
+            dtDanhSachDatSan.DataSource = BUSDanhSachDatSan.danhsach();
+
             if (chkNhanSan.Checked)
             {
                 _formcha.Openchillform(new FormNhanSan(_formcha._user));

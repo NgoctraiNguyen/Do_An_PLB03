@@ -11,6 +11,10 @@ namespace Do_An_PLB03.BUS
 {
     public class BUSDoUong
     {
+        public static void updatesoluong(int sluong,string tendouong)
+        {
+            DALDoUong.updatesoluong(sluong, tendouong);
+        }
         public static DataTable GetAllDoUong()
         {
             return DALDoUong.GetAllDoUong();

@@ -180,6 +180,8 @@ namespace Do_An_PLB03.GUI
         {
             //BUSHoaDon.updateTongTien(ma, int.Parse(txtTongTien.Text));
             BUSHoaDon.ThanhToan(Convert.ToInt32(lblSoHoaDon.Text));
+            
+            BUSDoUong.updatesoluong(int.Parse(txtSL.Text),comboBox1.Text);
         }
 
         private void dtDichVu_CellContentClick(object sender, DataGridViewCellEventArgs e)

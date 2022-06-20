@@ -56,6 +56,7 @@ namespace Do_An_PLB03.GUI
             HoaDon.TongTien = BUSDonHang.GetTongTien(MaDonHang);
             HoaDon.TrangThai = 0;
             BUSHoaDon.HoaDon(HoaDon);
+            dataGridView1.DataSource = BUSDanhSachDatSan.danhsachnhansan();
 
         }
 

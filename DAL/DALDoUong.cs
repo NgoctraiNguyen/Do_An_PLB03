@@ -11,6 +11,15 @@ namespace Do_An_PLB03.DAL
 {
     public class DALDoUong
     {
+        public static void updatesoluong(int sluong,string tendouong)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            string query = " update DoUong set SoLuong=SoLuong-'" + sluong + "' where TenDoUong='"+tendouong+"'";
+           SqlCommand command= new SqlCommand(query, conn);
+            command.CommandType = CommandType.Text;   
+            command.ExecuteNonQuery();
+        }
         public static DataTable GetAllDoUong()
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
