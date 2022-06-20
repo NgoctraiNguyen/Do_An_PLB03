@@ -104,6 +104,7 @@ namespace Do_An_PLB03.DAL
             command.CommandText = queryss;
             command.Connection = conn;
             SqlDataReader reader = command.ExecuteReader();
+            douong.Clear();
             while (reader.Read())
             {
 

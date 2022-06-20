@@ -17,6 +17,7 @@ namespace Do_An_PLB03.GUI
     {
         private int mahoadon = -1;
         private DTONguoiDung _user;
+        private List<string> list = new List<string>();
         public FormSudungdichvuvaThanhtoan(DTONguoiDung user)
         {
             InitializeComponent();
@@ -125,6 +126,7 @@ namespace Do_An_PLB03.GUI
                 btn7B.Enabled = false;
             }
             comboBox1.DataSource = DALDoUong.DoUong();
+            
             dtThanhToan.DataSource = DALHoaDon.DSThanhToan();
         }
 
@@ -180,8 +182,19 @@ namespace Do_An_PLB03.GUI
         {
             //BUSHoaDon.updateTongTien(ma, int.Parse(txtTongTien.Text));
             BUSHoaDon.ThanhToan(Convert.ToInt32(lblSoHoaDon.Text));
-            
-            BUSDoUong.updatesoluong(int.Parse(txtSL.Text),comboBox1.Text);
+            if (comboBox1.Text == "")
+            {
+
+            }
+            else
+            {
+                int sc = dtDichVu.Rows.Count;
+                for (int i = 0; i < sc - 1; i++)
+                {
+                    BUSDoUong.updatesoluong(int.Parse(dtDichVu.Rows[i].Cells[1].Value.ToString()), dtDichVu.Rows[i].Cells[0].Value.ToString());
+                }
+            }
+            FormSudungdichvuvaThanhtoan_Load(sender, e);
         }
 
         private void dtDichVu_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -221,6 +234,7 @@ namespace Do_An_PLB03.GUI
         {
             
             DALDonHang.TraSan(DALHoaDon.GetMaDonHang(ma));
+            FormSudungdichvuvaThanhtoan_Load(sender, e);
         }
 
         private void dtThanhToan_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -237,6 +251,13 @@ namespace Do_An_PLB03.GUI
             txtTongTien.Text = row.Cells[3].Value.ToString();
             txtsan.Text = (int.Parse(txtTongTien.Text) - int.Parse(txtdv.Text)).ToString();
             DienHoaDon(row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString());
+
+            mahoadon = ma;
+        }
+
+        private void dtDichVu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }
