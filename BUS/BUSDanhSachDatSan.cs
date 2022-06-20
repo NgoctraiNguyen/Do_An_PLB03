@@ -23,7 +23,7 @@ namespace Do_An_PLB03.BUS
         public static string NgayTra;
         public static string NgayNhan;
         public static int Gia;
-        public static bool TimKiem(int MaHoaDon)
+        public static bool TimKiem(int MaHoaDon)// tìm kiếm sân đã đặt và chưa nhận
         {
             if (DALDanhSachDatSan.GetDonHang(MaHoaDon))
             {

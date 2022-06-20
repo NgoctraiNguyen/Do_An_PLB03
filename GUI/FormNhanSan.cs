@@ -26,20 +26,28 @@ namespace Do_An_PLB03.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MaDonHang = int.Parse(textBox1.Text);
-            BUSDanhSachDatSan.TimKiem(MaDonHang);
-            txtHoTen.Text = BUSDanhSachDatSan.HoTen;
-            txtSDT.Text = BUSDanhSachDatSan.SDTKhachHang;
-            txtTenSan.Text = BUSDanhSachDatSan.TenSan;
-            txtLoaiSan.Text = BUSDanhSachDatSan.LoaiSan;
-            txtNgayNhan.Text = BUSDanhSachDatSan.NgayNhan;
-            txtNgayTra.Text = BUSDanhSachDatSan.NgayTra;
-            txtGia.Text = (BUSDanhSachDatSan.Gia).ToString();
+
+            MaDonHang = int.Parse(txtMaDatSan.Text);
+            if (BUSDanhSachDatSan.TimKiem(MaDonHang))
+            {
+                txtHoTen.Text = BUSDanhSachDatSan.HoTen;
+                txtSDT.Text = BUSDanhSachDatSan.SDTKhachHang;
+                txtTenSan.Text = BUSDanhSachDatSan.TenSan;
+                txtLoaiSan.Text = BUSDanhSachDatSan.LoaiSan;
+                txtNgayNhan.Text = BUSDanhSachDatSan.NgayNhan;
+                txtNgayTra.Text = BUSDanhSachDatSan.NgayTra;
+                txtGia.Text = (BUSDanhSachDatSan.Gia).ToString();
+                button3.Enabled = true;
+            }
+            {
+                MessageBox.Show("không tìm thấy sân");
+                button3.Enabled=false;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         { 
-            int MaDonHang = int.Parse(textBox1.Text);
+            int MaDonHang = int.Parse(txtMaDatSan.Text);
             BUSDanhSachDatSan.NhanSan(MaDonHang);
             HoaDon.NgayGioTao = DateTime.Now;
             HoaDon.MaDonHang = MaDonHang;

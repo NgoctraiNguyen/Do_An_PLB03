@@ -51,7 +51,6 @@ namespace Do_An_PLB03.GUI
             cbbLoaiSan.Items.Clear();
             loaisan = BUSSan.san(san);
             cbbLoaiSan.DataSource = loaisan;
-
             dtDanhSachDatSan.DataSource = BUSDanhSachDatSan.danhsach();
             lbloigio.Text = "";
         }
@@ -60,17 +59,17 @@ namespace Do_An_PLB03.GUI
         {
             if (cbbLoaiSan.SelectedIndex != null)
             {
-
                 txtMaLoaiSan.Text = cbbLoaiSan.Text;
                 tenloaisan = cbbLoaiSan.Text;
-
                 tensan.Clear();
                 tensan = BUSSan.tensandat(san, tenloaisan);
                 cbbTenSan.DataSource = null;
                 cbbTenSan.Items.Clear();
                 cbbTenSan.DataSource = tensan;
 
+              
             }
+
 
         }
 
