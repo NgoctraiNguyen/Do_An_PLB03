@@ -39,6 +39,7 @@
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenDoUong = new System.Windows.Forms.TextBox();
+            this.lblTen = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,10 +80,12 @@
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnThem.Enabled = false;
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.lblTen);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtGiaGoc);
@@ -132,6 +135,7 @@
             this.txtGiaGoc.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtGiaGoc.Size = new System.Drawing.Size(157, 30);
             this.txtGiaGoc.TabIndex = 13;
+            this.txtGiaGoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaGoc_KeyPress);
             // 
             // txtGiaBan
             // 
@@ -143,6 +147,7 @@
             this.txtGiaBan.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtGiaBan.Size = new System.Drawing.Size(147, 30);
             this.txtGiaBan.TabIndex = 14;
+            this.txtGiaBan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaBan_KeyPress);
             // 
             // label1
             // 
@@ -166,6 +171,7 @@
             this.txtSoLuong.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtSoLuong.Size = new System.Drawing.Size(157, 30);
             this.txtSoLuong.TabIndex = 11;
+            this.txtSoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuong_KeyPress);
             // 
             // label2
             // 
@@ -189,6 +195,18 @@
             this.txtTenDoUong.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtTenDoUong.Size = new System.Drawing.Size(147, 30);
             this.txtTenDoUong.TabIndex = 9;
+            this.txtTenDoUong.TextChanged += new System.EventHandler(this.txtTenDoUong_TextChanged);
+            // 
+            // lblTen
+            // 
+            this.lblTen.AutoSize = true;
+            this.lblTen.ForeColor = System.Drawing.Color.Red;
+            this.lblTen.Location = new System.Drawing.Point(19, 84);
+            this.lblTen.Name = "lblTen";
+            this.lblTen.Size = new System.Drawing.Size(122, 16);
+            this.lblTen.TabIndex = 101;
+            this.lblTen.Text = "Tên không phù hợp";
+            this.lblTen.Visible = false;
             // 
             // FormConThemDichVu
             // 
@@ -220,5 +238,6 @@
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTenDoUong;
+        private System.Windows.Forms.Label lblTen;
     }
 }

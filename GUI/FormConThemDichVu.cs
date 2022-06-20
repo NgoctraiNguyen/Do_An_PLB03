@@ -78,5 +78,44 @@ namespace Do_An_PLB03.GUI
         {
             this.Hide();
         }
+
+        private void txtTenDoUong_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtTenDoUong.Text))
+            {
+                lblTen.Visible = false;
+                btnThem.Enabled = true;
+            }
+            else
+            {
+                lblTen.Visible = true;
+                txtTenDoUong.Focus();
+                btnThem.Enabled = false;
+            }
+        }
+
+        private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtGiaBan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtGiaGoc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
