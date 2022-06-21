@@ -220,7 +220,10 @@ namespace Do_An_PLB03.GUI
 
             khachhang.TenKhachHang = txtTenKhachHang.Text;
             khachhang.SDTKhachHang = txtSDTKhachHang.Text;
-            BUSKhachHang.KhachHang(khachhang);
+            if (!BUSKhachHang.kiemtrakhachhang(khachhang, txtSDTKhachHang.Text))
+            {
+                BUSKhachHang.KhachHang(khachhang);
+            }
 
             BUSKhachHang.laymakhachhang(khachhang,txtSDTKhachHang.Text);
             donhang.MaKhachHang = BUSKhachHang.makhachhang;

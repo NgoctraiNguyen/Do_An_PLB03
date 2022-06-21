@@ -31,7 +31,7 @@ namespace Do_An_PLB03.DAL
        
         public static string ten;
         public static string SDTkhachhang;
-        public static void getkhachhang(DTOKhachHang khachhang,string SDT)
+        public static bool getkhachhang(DTOKhachHang khachhang,string SDT)
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
@@ -46,7 +46,9 @@ namespace Do_An_PLB03.DAL
             {
                 ten=reader.GetString(0);
                 SDTkhachhang=reader.GetString(1);
+                return true;
             }
+            return false;
 
         }
         public static int makhachhang;

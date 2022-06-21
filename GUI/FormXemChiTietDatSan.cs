@@ -48,9 +48,13 @@ namespace Do_An_PLB03.GUI
 
         private void btnHuySan_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(" Bạn có chắc muốn xóa đơn hàng");
-            BUSTrangThaiSan.deletetrangthai(int.Parse(txtctMaTrangThai.Text));
-            BUSDonHang.deletedonhang(int.Parse(txtctMaDonHang.Text));
+            try
+            {
+                MessageBox.Show(" Bạn có chắc muốn xóa đơn hàng");
+                BUSTrangThaiSan.deletetrangthai(int.Parse(txtctMaTrangThai.Text));
+                BUSDonHang.deletedonhang(int.Parse(txtctMaDonHang.Text));
+            }
+            catch { };
         }
     }
 }

@@ -34,5 +34,10 @@ namespace Do_An_PLB03.BUS
         {
             return DALKhachHang.LayTenKhachHang(makhachhang);
         }
+
+        public static bool kiemtrakhachhang(DTOKhachHang khachhang, string SDT)
+        {
+            return DALKhachHang.getkhachhang(khachhang, SDT);
+        }
     }
 }
