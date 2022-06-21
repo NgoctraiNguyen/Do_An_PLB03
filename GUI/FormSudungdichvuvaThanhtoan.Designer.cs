@@ -145,6 +145,7 @@
             this.dtThanhToan.Size = new System.Drawing.Size(426, 367);
             this.dtThanhToan.TabIndex = 0;
             this.dtThanhToan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtThanhToan_CellClick);
+            this.dtThanhToan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtThanhToan_CellContentClick);
             // 
             // groupBox6
             // 

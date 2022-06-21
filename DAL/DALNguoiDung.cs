@@ -15,7 +15,7 @@ namespace Do_An_PLB03.DAL
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
-            SqlCommand command = new SqlCommand("select MaNguoiDung,HoTen, Tuoi, DiaChi, GioiTinh, SDT, SoCMND,ViTri, Quyen from NguoiDung", conn);
+            SqlCommand command = new SqlCommand("select MaNguoiDung AS' Mã Người Dùng',HoTen AS' Họ Tên', Tuoi AS' Tuổi', DiaChi AS' Địa Chỉ', GioiTinh AS' Giới Tính', SDT AS ' Số Điện Thoại', SoCMND AS' Số CMND/CCCD',ViTri AS' Vị Trí', Quyen AS ' Quyền' from NguoiDung", conn);
             command.CommandType = CommandType.Text;
 
             SqlDataAdapter adapter = new SqlDataAdapter();

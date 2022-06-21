@@ -137,7 +137,7 @@ namespace Do_An_PLB03.DAL
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
-            SqlCommand command = new SqlCommand("Select MaHoaDon,TenSan, TenKhachHang, HoaDon.TongTien " +
+            SqlCommand command = new SqlCommand("Select MaHoaDon AS'Mã Hóa Đơn',TenSan AS' Tên Sân', TenKhachHang AS' Tên Khách Hàng', HoaDon.TongTien AS'Tổng Tiền' " +
                 "from KhachHang join DonHang on KhachHang.MaKhachHang = DonHang.MaKhachHang " +
                 "join TrangThaiSan on TrangThaiSan.MaTrangThaiSan = DonHang.MaTrangThaiSan " +
                 "join HoaDon on DonHang.MaDonHang = HoaDon.MaDonHang " +

@@ -24,7 +24,7 @@ namespace Do_An_PLB03.DAL
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
-            SqlCommand command = new SqlCommand("select * from DoUong", conn);
+            SqlCommand command = new SqlCommand("select MaDoUong AS' Mã Đồ Uống', TenDoUong AS 'Tên Đồ Uống' ,SoLuong AS' Số Lượng', GiaBan AS' Giá Bán' ,GiaGoc AS ' Giá Gốc' from DoUong", conn);
             command.CommandType = CommandType.Text;
 
 

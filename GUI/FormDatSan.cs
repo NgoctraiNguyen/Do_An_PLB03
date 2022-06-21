@@ -302,7 +302,9 @@ namespace Do_An_PLB03.GUI
 
         private void dtDanhSachDatSan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            try
+            {
+
                 DataGridViewRow row = new DataGridViewRow();
                 row = dtDanhSachDatSan.Rows[e.RowIndex];
                 ctTenSan = row.Cells[0].Value.ToString();
@@ -312,7 +314,12 @@ namespace Do_An_PLB03.GUI
                 ctSDTKhachHang = row.Cells[4].Value.ToString();
                 ctMaDonHang = row.Cells[5].Value.ToString();
                 ctMaTrangThaiSan = row.Cells[6].Value.ToString();
-            ctLoaiSan = row.Cells[7].Value.ToString();
+                ctLoaiSan = row.Cells[7].Value.ToString();
+            }
+            catch
+            {
+
+            }
         }
 
         private void btnXemChiTiet_Click(object sender, EventArgs e)

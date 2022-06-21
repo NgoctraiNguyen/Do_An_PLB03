@@ -15,7 +15,9 @@ namespace Do_An_PLB03.DAL
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
-            string query= @"Select TrangThaiSan.TenSan,TenKhachHang,ThoiGianBatDau,ThoiGianKetThuc,SDTKhachHang,DonHang.MaDonHang,DonHang.MaTrangThaiSan,LoaiSan 
+            string query= @"Select TrangThaiSan.TenSan AS 'Tên Sân',TenKhachHang AS' Tên Khách Hàng',
+                           ThoiGianBatDau AS 'Thời Gian Nhận',ThoiGianKetThuc AS 'Thời Gian Trả',SDTKhachHang AS 'Số Điện Thoại',
+                            DonHang.MaDonHang AS ' Mã Đơn Hàng',DonHang.MaTrangThaiSan AS 'Mã Trạng Thái' ,LoaiSan AS ' Loại Sân'
                             from San 
                             join TrangThaiSan on San.TenSan=TrangThaiSan.TenSan                
                             join DonHang on TrangThaiSan.MaTrangThaiSan = DonHang.MaTrangThaiSan
@@ -76,13 +78,15 @@ namespace Do_An_PLB03.DAL
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
-            string query = @"Select TrangThaiSan.TenSan,TenKhachHang,ThoiGianBatDau,ThoiGianKetThuc,SDTKhachHang,DonHang.MaDonHang,DonHang.MaTrangThaiSan,LoaiSan 
+            string query = @"Select TrangThaiSan.TenSan AS'Tên Sân',TenKhachHang AS'Tên Khách Hàng',
+                            ThoiGianBatDau AS'Thời Gian Nhận',ThoiGianKetThuc AS'Thời Gian Trả',SDTKhachHang'Số Điện Thoại',DonHang.MaDonHang AS ' Mã Đơn Hàng',
+                            DonHang.MaTrangThaiSan AS 'Mã Trạng Thái',LoaiSan AS'Loại Sân' 
                             from San 
                             join TrangThaiSan on San.TenSan=TrangThaiSan.TenSan                
                             join DonHang on TrangThaiSan.MaTrangThaiSan = DonHang.MaTrangThaiSan
                             join KhachHang on DonHang.MaKhachHang = KhachHang.MaKhachHang
                             join HoaDon on DonHang.MaDonHang = HoaDon.MaDonHang
-                            where DonHang.TrangThai = 0 or DonHang.TrangThai = 2";
+                            where (DonHang.TrangThai = 0 or DonHang.TrangThai = 2) And Day(HoaDon.NgayGioTao)=Day(GETDATE()) ";
             SqlDataAdapter da = new SqlDataAdapter(query, conn);
             DataTable tb = new DataTable();
             da.Fill(tb);

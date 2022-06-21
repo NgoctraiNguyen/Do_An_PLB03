@@ -239,25 +239,37 @@ namespace Do_An_PLB03.GUI
 
         private void dtThanhToan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            float tiendichvu = 0;
-            DataGridViewRow row = new DataGridViewRow();
-            row = dtThanhToan.Rows[e.RowIndex];
-            ma = Convert.ToInt32(row.Cells[0].Value);
-            dtDichVu.DataSource = BUSDoUong.DsDoUong(ma);
-            int sc = dtDichVu.Rows.Count;
-            for (int i = 0; i < sc - 1; i++)
-                tiendichvu += float.Parse(dtDichVu.Rows[i].Cells[3].Value.ToString());
-            txtdv.Text = tiendichvu.ToString();
-            txtTongTien.Text = row.Cells[3].Value.ToString();
-            txtsan.Text = (int.Parse(txtTongTien.Text) - int.Parse(txtdv.Text)).ToString();
-            DienHoaDon(row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString());
+            try
+            {
+                float tiendichvu = 0;
+                DataGridViewRow row = new DataGridViewRow();
+                row = dtThanhToan.Rows[e.RowIndex];
+                ma = Convert.ToInt32(row.Cells[0].Value);
+                dtDichVu.DataSource = BUSDoUong.DsDoUong(ma);
+                int sc = dtDichVu.Rows.Count;
+                for (int i = 0; i < sc - 1; i++)
+                    tiendichvu += float.Parse(dtDichVu.Rows[i].Cells[3].Value.ToString());
+                txtdv.Text = tiendichvu.ToString();
+                txtTongTien.Text = row.Cells[3].Value.ToString();
+                txtsan.Text = (int.Parse(txtTongTien.Text) - int.Parse(txtdv.Text)).ToString();
+                DienHoaDon(row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString());
 
-            mahoadon = ma;
+                mahoadon = ma;
+            }
+            catch
+            {
+
+            }
         }
 
         private void dtDichVu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void dtThanhToan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

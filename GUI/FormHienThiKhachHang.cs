@@ -43,5 +43,9 @@ namespace Do_An_PLB03.GUI
 
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

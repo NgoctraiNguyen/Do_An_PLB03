@@ -35,7 +35,7 @@ namespace Do_An_PLB03.DAL
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
-            string querry = " select TenKhachHang ,SDTKhachHang  from KhachHang where SDTKhachHang='"+SDT+"'";
+            string querry = " select TenKhachHang AS'Tên Khách Hàng' ,SDTKhachHang AS 'SDT Khách Hàng'  from KhachHang where SDTKhachHang='"+SDT+"'";
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
             command.CommandText = querry;
