@@ -151,20 +151,71 @@ namespace Do_An_PLB03.DAL
         }
         public static void ThemDichVu(int mahoadon, int madouong, int soluong)
         {
+            
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
-            string querry = "INSERT INTO ChiTietHoaDon(MaDoUong,SoLuong,TongTien,MaHoaDon) " +
+            string queryss = string.Format("select SoLuong from ChiTietHoaDon where MaHoaDon = {0} and MaDoUong = {1}", mahoadon, madouong);
+            SqlCommand command1 = new SqlCommand();
+            command1.CommandType = CommandType.Text;
+            command1.CommandText = queryss;
+            command1.Connection = conn;
+            SqlDataReader reader = command1.ExecuteReader();
+            int sl = 0;
+            if(reader.HasRows)
+            {
+                while(reader.Read())
+                {
+                    sl = reader.GetInt32(0);
+                }
+                sl += soluong;
+                SqlConnection connn = dbConnectionData.HamketNoi();
+                connn.Open();
+                string query = String.Format("Update ChiTietHoaDon SET SoLuong = '" + sl + "' where MaHoaDon = {0} and MaDoUong = {1}", mahoadon, madouong);
+                command1.CommandText = query;
+                command1.Connection = connn;
+                command1.ExecuteNonQuery();
+            }
+            else
+            {
+                SqlConnection con = dbConnectionData.HamketNoi();
+                con.Open();
+                string querry = "INSERT INTO ChiTietHoaDon(MaDoUong,SoLuong,TongTien,MaHoaDon) " +
                             "VALUES (@MaDoUong,@SoLuong,@TongTien,@MaHoaDon)  ";
+                SqlCommand command = new SqlCommand();
+                command.CommandType = CommandType.Text;
+                command.CommandText = querry;
+                command.Connection = con;
+
+                int tongtien = GiaDoUongTheoMa(madouong) * soluong;
+                var matrangthaisan = command.Parameters.AddWithValue("@MaDoUong", madouong);
+                var ngaygiotao = command.Parameters.AddWithValue("@SoLuong", soluong);
+                var makhachang = command.Parameters.AddWithValue("@TongTien", tongtien);
+                var trangthai = command.Parameters.AddWithValue("@MaHoaDon", mahoadon);
+                command.ExecuteNonQuery();
+            }
+        }
+        public static void SuaDichVu(int mahoadon,int madouong,int soluong)
+        {
+            int tongtien = GiaDoUongTheoMa(madouong) * soluong;
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            string query = "Update ChiTietHoaDon SET SoLuong='"+soluong+"',TongTien='"+tongtien+"'where MaHoaDon='"+mahoadon+"'and MaDoUong='"+madouong+"'";
             SqlCommand command = new SqlCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = querry;
+            command.CommandText = query;
             command.Connection = conn;
+            command.ExecuteNonQuery();
 
-            int tongtien = GiaDoUongTheoMa(madouong)*soluong;
-            var matrangthaisan = command.Parameters.AddWithValue("@MaDoUong", madouong);
-            var ngaygiotao = command.Parameters.AddWithValue("@SoLuong", soluong);
-            var makhachang = command.Parameters.AddWithValue("@TongTien", tongtien);
-            var trangthai = command.Parameters.AddWithValue("@MaHoaDon", mahoadon);
+        }
+        public static void XoaDichVu(int mahoadon,int madouong)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            string query = "delete  from ChiTietHoaDon where MaHoaDon='" + mahoadon + "'and MaDoUong='" + madouong + "'";
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = query;
+            command.Connection = conn;
             command.ExecuteNonQuery();
         }
         public static void HienthiThongTinSua(int ma, DTODoUong d)
@@ -202,6 +253,16 @@ namespace Do_An_PLB03.DAL
             conn.Open();
 
             SqlDataAdapter adapter = new SqlDataAdapter("select TenDoUong, SoLuong, GiaBan, GiaGoc from DoUong where GiaBan like '" + gia + "%'", conn);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            conn.Close();
+            return dt;
+        }
+        public static DataTable LaySoLuongTuTenDoUong(string ten) // lấy số lượng từ tên đồ uống
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            SqlDataAdapter adapter = new SqlDataAdapter("select SoLuong from DoUong where TenDoUong = N'" + ten + "'", conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             conn.Close();

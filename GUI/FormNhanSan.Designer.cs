@@ -34,7 +34,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -111,7 +110,6 @@
             // 
             this.groupBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox4.Controls.Add(this.dataGridView1);
-            this.groupBox4.Controls.Add(this.button2);
             this.groupBox4.ForeColor = System.Drawing.Color.DarkBlue;
             this.groupBox4.Location = new System.Drawing.Point(654, 20);
             this.groupBox4.Name = "groupBox4";
@@ -132,18 +130,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(946, 461);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.LightCyan;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button2.Location = new System.Drawing.Point(390, 510);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 37);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Xem chi tiết";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // groupBox3
             // 
@@ -438,7 +424,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;

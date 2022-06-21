@@ -156,18 +156,37 @@ namespace Do_An_PLB03.GUI
           
             
         }
+        private bool xuliSoLuong()// xử lí số lượng
+        {
+            DataTable dt = BUSDoUong.LaySLtuTenDoDuong(comboBox1.SelectedItem.ToString());
+            if (dt.Rows.Count > 0)
+            {
+                if (Convert.ToInt32(dt.Rows[0][0].ToString()) < Convert.ToInt32(txtSL.Text))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
         //them dich vu
         private void btnThemDichVu_Click(object sender, EventArgs e)
         {
-            if(txtSL.Text == "")
+            if (txtSL.Text == "")
             {
-
             }
             else
             {
-                int madouong = DALDoUong.MaDoUong(comboBox1.Text);
-                BUSDoUong.ThemDichVu(mahoadon, madouong, int.Parse(txtSL.Text));
-                dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
+                if (xuliSoLuong() == true)
+                {
+                    MessageBox.Show("Vượt quá số lượng trong kho");
+                    txtSL.Text = "";
+                }
+                else
+                {
+                    int madouong = DALDoUong.MaDoUong(comboBox1.Text);
+                    BUSDoUong.ThemDichVu(mahoadon, madouong, int.Parse(txtSL.Text));
+                    dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
+                }
             }
         }
 
@@ -264,12 +283,32 @@ namespace Do_An_PLB03.GUI
 
         private void dtDichVu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            DataGridViewRow row = new DataGridViewRow();
+            row = dtDichVu.Rows[e.RowIndex];
+            comboBox1.Text = row.Cells[0].Value.ToString();
+            txtGia.Text=row.Cells[2].Value.ToString();
+            txtSL.Text=row.Cells[1].Value.ToString();
+
         }
 
         private void dtThanhToan_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            int madouong = DALDoUong.MaDoUong(comboBox1.Text);
+           
+            BUSDoUong.suadichvu(mahoadon, madouong, int.Parse(txtSL.Text));
+            dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            int madouong = DALDoUong.MaDoUong(comboBox1.Text);
+            BUSDoUong.xoadichvu(mahoadon, madouong);
+            dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
         }
     }
 }

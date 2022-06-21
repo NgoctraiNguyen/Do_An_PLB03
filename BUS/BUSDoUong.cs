@@ -11,6 +11,10 @@ namespace Do_An_PLB03.BUS
 {
     public class BUSDoUong
     {
+        public static DataTable LaySLtuTenDoDuong(string ten)
+        {
+            return DALDoUong.LaySoLuongTuTenDoUong(ten);
+        }
         public static void updatesoluong(int sluong,string tendouong)
         {
             DALDoUong.updatesoluong(sluong, tendouong);
@@ -46,6 +50,14 @@ namespace Do_An_PLB03.BUS
         public static void ThemDichVu(int mahoadon, int madouong, int soluong)
         {
             DALDoUong.ThemDichVu(mahoadon, madouong, soluong);  
+        }
+        public static void suadichvu(int mahoadon,int madouong,int soluong)
+        {
+            DALDoUong.SuaDichVu(mahoadon, madouong,soluong);
+        }
+        public static void xoadichvu(int mahoadon,int madouong)
+        {
+            DALDoUong.XoaDichVu(mahoadon, madouong);
         }
         public static void HienThiThongTinSua(int ma, DTODoUong d)
         {

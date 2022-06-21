@@ -31,6 +31,7 @@
             this.btnThoat = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblTen = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtGiaGoc = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenDoUong = new System.Windows.Forms.TextBox();
-            this.lblTen = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +65,7 @@
             // btnThem
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThem.Enabled = false;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnThem.IconChar = FontAwesome.Sharp.IconChar.CommentMedical;
@@ -80,7 +81,6 @@
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            this.btnThem.Enabled = false;
             // 
             // groupBox1
             // 
@@ -100,6 +100,16 @@
             this.groupBox1.TabIndex = 98;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin dịch vụ";
+            // 
+            // lblTen
+            // 
+            this.lblTen.AutoSize = true;
+            this.lblTen.ForeColor = System.Drawing.Color.Red;
+            this.lblTen.Location = new System.Drawing.Point(19, 84);
+            this.lblTen.Name = "lblTen";
+            this.lblTen.Size = new System.Drawing.Size(0, 16);
+            this.lblTen.TabIndex = 101;
+            this.lblTen.Visible = false;
             // 
             // label4
             // 
@@ -196,17 +206,6 @@
             this.txtTenDoUong.Size = new System.Drawing.Size(147, 30);
             this.txtTenDoUong.TabIndex = 9;
             this.txtTenDoUong.TextChanged += new System.EventHandler(this.txtTenDoUong_TextChanged);
-            // 
-            // lblTen
-            // 
-            this.lblTen.AutoSize = true;
-            this.lblTen.ForeColor = System.Drawing.Color.Red;
-            this.lblTen.Location = new System.Drawing.Point(19, 84);
-            this.lblTen.Name = "lblTen";
-            this.lblTen.Size = new System.Drawing.Size(122, 16);
-            this.lblTen.TabIndex = 101;
-            this.lblTen.Text = "Tên không phù hợp";
-            this.lblTen.Visible = false;
             // 
             // FormConThemDichVu
             // 
