@@ -283,11 +283,18 @@ namespace Do_An_PLB03.GUI
 
         private void dtDichVu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = new DataGridViewRow();
-            row = dtDichVu.Rows[e.RowIndex];
-            comboBox1.Text = row.Cells[0].Value.ToString();
-            txtGia.Text=row.Cells[2].Value.ToString();
-            txtSL.Text=row.Cells[1].Value.ToString();
+            try
+            {
+                DataGridViewRow row = new DataGridViewRow();
+                row = dtDichVu.Rows[e.RowIndex];
+                comboBox1.Text = row.Cells[0].Value.ToString();
+                txtGia.Text = row.Cells[2].Value.ToString();
+                txtSL.Text = row.Cells[1].Value.ToString();
+            }
+            catch { 
+
+                   }
+        
 
         }
 
