@@ -38,6 +38,7 @@ namespace Do_An_PLB03.GUI
         {
             InitializeComponent();
             _formcha = formcha;
+            now.Enabled = true;
         }
         private void FormDatSan_Load(object sender, EventArgs e)
         {
@@ -173,34 +174,41 @@ namespace Do_An_PLB03.GUI
 
         private void btnDatSan_Click(object sender, EventArgs e)
         {
-            trangthaisan.TenSan = cbbTenSan.Text;
-            trangthaisan.ThoiGianBatDau = dtpNgayGioNhan.Value;
-            trangthaisan.ThoiGianKetThuc = dtpNgayGioTra.Value;
-            BUSTrangThaiSan.TrangThaiSan(trangthaisan);
-
-            khachhang.TenKhachHang = txtTenKhachHang.Text;
-            khachhang.SDTKhachHang = txtSDTKhachHang.Text;
-            if (!BUSKhachHang.kiemtrakhachhang(khachhang, txtSDTKhachHang.Text))
+            if (dtpNgayGioTra.Value < DateTime.Now)
             {
-                BUSKhachHang.KhachHang(khachhang);
+                MessageBox.Show("Đã quá giờ đặt sân");
             }
-
-            BUSKhachHang.laymakhachhang(khachhang,txtSDTKhachHang.Text);
-            donhang.MaKhachHang = BUSKhachHang.makhachhang;
-
-            BUSTrangThaiSan.matrangthaisan(trangthaisan,dtpNgayGioNhan.Value.Hour);
-            donhang.MaTrangThaiSan =BUSTrangThaiSan.ma ;
-            donhang.NgayGioTao=DateTime.Now;
-            donhang.TongTienSan = int.Parse(txtGia.Text);
-            donhang.TrangThai = 1;
-
-            BUSDonHang.donhang(donhang);
-
-            dtDanhSachDatSan.DataSource = BUSDanhSachDatSan.danhsach();
-
-            if (chkNhanSan.Checked)
+            else
             {
-                _formcha.Openchillform(new FormNhanSan(_formcha._user));
+                trangthaisan.TenSan = cbbTenSan.Text;
+                trangthaisan.ThoiGianBatDau = dtpNgayGioNhan.Value;
+                trangthaisan.ThoiGianKetThuc = dtpNgayGioTra.Value;
+                BUSTrangThaiSan.TrangThaiSan(trangthaisan);
+
+                khachhang.TenKhachHang = txtTenKhachHang.Text;
+                khachhang.SDTKhachHang = txtSDTKhachHang.Text;
+                if (!BUSKhachHang.kiemtrakhachhang(khachhang, txtSDTKhachHang.Text))
+                {
+                    BUSKhachHang.KhachHang(khachhang);
+                }
+
+                BUSKhachHang.laymakhachhang(khachhang, txtSDTKhachHang.Text);
+                donhang.MaKhachHang = BUSKhachHang.makhachhang;
+
+                BUSTrangThaiSan.matrangthaisan(trangthaisan, dtpNgayGioNhan.Value.Hour);
+                donhang.MaTrangThaiSan = BUSTrangThaiSan.ma;
+                donhang.NgayGioTao = DateTime.Now;
+                donhang.TongTienSan = int.Parse(txtGia.Text);
+                donhang.TrangThai = 1;
+
+                BUSDonHang.donhang(donhang);
+
+                dtDanhSachDatSan.DataSource = BUSDanhSachDatSan.danhsach();
+
+                if (chkNhanSan.Checked)
+                {
+                    _formcha.Openchillform(new FormNhanSan(_formcha._user));
+                }
             }
 
         }
@@ -282,6 +290,17 @@ namespace Do_An_PLB03.GUI
 
             txtTenKhachHang.Text = ten;
             txtSDTKhachHang.Text = sdt;
+        }
+        private void XuLiDonQuaHan(object sender, EventArgs e)
+        {
+            DateTime dt = DateTime.Now;
+            foreach (DataGridViewRow row in dtDanhSachDatSan.Rows)
+            {
+                if (Convert.ToDateTime(row.Cells[3].Value.ToString()) < dt)
+                {
+                    BUSDonHang.deletedonhang(Convert.ToInt32(row.Cells[5].Value));
+                }
+            }
         }
     }
 }

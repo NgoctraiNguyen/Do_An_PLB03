@@ -44,20 +44,41 @@ namespace Do_An_PLB03.GUI
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        { 
-            int MaDonHang = int.Parse(txtMaDatSan.Text);
-            BUSDanhSachDatSan.NhanSan(MaDonHang);
-            HoaDon.NgayGioTao = DateTime.Now;
-            HoaDon.MaDonHang = MaDonHang;
-            HoaDon.MaNguoiDung = _user.MaNguoiDung;
-            HoaDon.TongTien = BUSDonHang.GetTongTien(MaDonHang);
-            HoaDon.TrangThai = 0;
-            BUSHoaDon.HoaDon(HoaDon);
-            dataGridView1.DataSource = BUSDanhSachDatSan.danhsachnhansan();
-
+        public bool KiemTra(string TenSan)
+        {
+            foreach (DataRow data in BUSDanhSachDatSan.danhsachdangda().Rows)
+            {
+                if (data["TenSan"].ToString() == TenSan)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int MaDonHang = int.Parse(txtMaDatSan.Text);
+            if (Convert.ToDateTime(txtNgayNhan.Text) > DateTime.Now.AddMinutes(15))
+            {
+                MessageBox.Show("Chưa tới giờ nhận sân");
+            }
+            else if (KiemTra(BUSDonHang.GetTenSan(MaDonHang)))
+            {
+                MessageBox.Show("Sân đang được sử dụng");
+            }
+            else
+            {
+                BUSDanhSachDatSan.NhanSan(MaDonHang);
+                HoaDon.NgayGioTao = DateTime.Now;
+                HoaDon.MaDonHang = MaDonHang;
+                HoaDon.MaNguoiDung = _user.MaNguoiDung;
+                HoaDon.TongTien = BUSDonHang.GetTongTien(MaDonHang);
+                HoaDon.TrangThai = 0;
+                BUSHoaDon.HoaDon(HoaDon);
+                dataGridView1.DataSource = BUSDanhSachDatSan.danhsachnhansan();
+            }
+        }
         private void FormNhanSan_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = BUSDanhSachDatSan.danhsachnhansan();

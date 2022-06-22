@@ -98,5 +98,25 @@ namespace Do_An_PLB03.DAL
             command.ExecuteNonQuery();
             conn.Close();
         }
+        public static string GetTenSan(int madonhang) //trả về tên sân của đơn hàng
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            string querry = " select TenSan " +
+                            "from TrangThaiSan join DonHang on TrangThaiSan.MaTrangThaiSan = DonHang.MaTrangThaiSan" +
+                            " where MaDonHang = '" + madonhang + "'";
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = querry;
+            command.Connection = conn;
+
+            SqlDataReader reader = command.ExecuteReader();
+            string rt = "0";
+            while (reader.Read())
+            {
+                return reader.GetString(0);
+            }
+            return rt;
+        }
     }
 }
