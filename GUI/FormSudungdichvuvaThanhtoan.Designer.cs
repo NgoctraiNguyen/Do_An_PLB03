@@ -225,7 +225,7 @@
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(123, 358);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(172, 20);
+            this.label22.Size = new System.Drawing.Size(168, 20);
             this.label22.TabIndex = 2;
             this.label22.Text = "2) Dịch Vụ Sân Bóng:";
             // 
@@ -265,7 +265,7 @@
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(123, 327);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(105, 20);
+            this.label19.Size = new System.Drawing.Size(103, 20);
             this.label19.TabIndex = 2;
             this.label19.Text = "1) Thuê Sân:";
             // 
@@ -284,7 +284,7 @@
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(109, 303);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(146, 20);
+            this.label20.Size = new System.Drawing.Size(143, 20);
             this.label20.TabIndex = 1;
             this.label20.Text = "Hóa đơn bao gồm:";
             // 
@@ -294,7 +294,7 @@
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.Location = new System.Drawing.Point(205, 458);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(253, 20);
+            this.label27.Size = new System.Drawing.Size(246, 20);
             this.label27.TabIndex = 1;
             this.label27.Text = "Cảm ơn quý khách - Hẹn gặp lại!";
             // 
@@ -303,7 +303,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(271, 57);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(122, 20);
+            this.label11.Size = new System.Drawing.Size(121, 20);
             this.label11.TabIndex = 1;
             this.label11.Text = "ĐT: 012345678";
             // 
@@ -527,6 +527,7 @@
             // 
             // dtDichVu
             // 
+            this.dtDichVu.AllowUserToAddRows = false;
             this.dtDichVu.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dtDichVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtDichVu.Location = new System.Drawing.Point(5, 21);
@@ -540,6 +541,7 @@
             this.dtDichVu.Size = new System.Drawing.Size(685, 151);
             this.dtDichVu.TabIndex = 0;
             this.dtDichVu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtDichVu_CellClick);
+            this.dtDichVu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtDichVu_CellContentClick);
             // 
             // groupBox3
             // 
@@ -578,7 +580,7 @@
             this.label28.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label28.Location = new System.Drawing.Point(227, 18);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(75, 20);
+            this.label28.Size = new System.Drawing.Size(74, 20);
             this.label28.TabIndex = 9;
             this.label28.Text = "Tiền Sân";
             // 
@@ -597,7 +599,7 @@
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label1.Location = new System.Drawing.Point(5, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 20);
+            this.label1.Size = new System.Drawing.Size(104, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Tiền Dịch Vụ";
             // 
@@ -622,7 +624,7 @@
             this.label6.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label6.Location = new System.Drawing.Point(7, 94);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 20);
+            this.label6.Size = new System.Drawing.Size(75, 20);
             this.label6.TabIndex = 6;
             this.label6.Text = "Giảm giá";
             // 
@@ -649,7 +651,7 @@
             this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label5.Location = new System.Drawing.Point(227, 91);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 20);
+            this.label5.Size = new System.Drawing.Size(77, 20);
             this.label5.TabIndex = 4;
             this.label5.Text = "Tổng tiền";
             // 
@@ -736,7 +738,7 @@
             this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label4.Location = new System.Drawing.Point(369, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 20);
+            this.label4.Size = new System.Drawing.Size(73, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Số lượng";
             // 
@@ -758,7 +760,7 @@
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label2.Location = new System.Drawing.Point(32, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 20);
+            this.label2.Size = new System.Drawing.Size(97, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Loại dịch vụ";
             // 
@@ -851,7 +853,7 @@
             this.label8.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label8.Location = new System.Drawing.Point(183, 57);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 20);
+            this.label8.Size = new System.Drawing.Size(51, 20);
             this.label8.TabIndex = 2;
             this.label8.Text = "Sân 7";
             // 
@@ -862,7 +864,7 @@
             this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label7.Location = new System.Drawing.Point(35, 57);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 20);
+            this.label7.Size = new System.Drawing.Size(51, 20);
             this.label7.TabIndex = 2;
             this.label7.Text = "Sân 5";
             // 

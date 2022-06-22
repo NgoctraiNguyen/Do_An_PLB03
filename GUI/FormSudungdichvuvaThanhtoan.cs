@@ -144,6 +144,17 @@ namespace Do_An_PLB03.GUI
                     dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
                 }
             }
+
+            if (comboBox1.Text == "")
+            {
+            }
+            else
+            {
+
+                //BUSDoUong.updatesoluong(int.Parse(dtDichVu.Rows[i].Cells[1].Value.ToString()), dtDichVu.Rows[i].Cells[0].Value.ToString());
+                BUSDoUong.updatesoluong(int.Parse(txtSL.Text), comboBox1.Text);
+
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -229,26 +240,35 @@ namespace Do_An_PLB03.GUI
                 txtGia.Text = row.Cells[2].Value.ToString();
                 txtSL.Text = row.Cells[1].Value.ToString();
             }
-            catch 
-            { 
+            catch
+            {
 
             }
         }
 
 
+        public static int x;
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
+            x = Convert.ToInt32(dtDichVu.SelectedCells[1].Value); 
             int madouong = DALDoUong.MaDoUong(comboBox1.Text);
-           
             BUSDoUong.suadichvu(mahoadon, madouong, int.Parse(txtSL.Text));
+            BUSDoUong.updatesoluong(int.Parse(txtSL.Text) - x, comboBox1.Text);
             dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            x = Convert.ToInt32(dtDichVu.SelectedCells[1].Value);
             int madouong = DALDoUong.MaDoUong(comboBox1.Text);
             BUSDoUong.xoadichvu(mahoadon, madouong);
+            BUSDoUong.updatesoluong(-x, comboBox1.Text);
             dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
+        }
+
+        private void dtDichVu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
