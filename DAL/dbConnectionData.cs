@@ -15,9 +15,9 @@ namespace Do_An_PLB03.DAL
            
            // SqlConnection conn = new SqlConnection(@"Data Source=HP-ThanhNhan\SQLEXPRESS;Initial Catalog=QLSB;User ID=sa;Password=12345678");
             //Data Source=HP-ThanhNhan\SQLEXPRESS;Initial Catalog=QLSB;User ID=sa;Password=12345678
-            SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-7RL4O9C2;Initial Catalog=QLSB;Integrated Security=True");
+            //SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-7RL4O9C2;Initial Catalog=QLSB;Integrated Security=True");
             //SqlConnection conn = new SqlConnection(@"Data Source=HP-ThanhNhan\SQLEXPRESS;Initial Catalog=QLSB;User ID=sa;Password=12345678");
-            //SqlConnection conn = new SqlConnection(@"Data Source =DESKTOP-L5DTBUM\SQLEXPRESS;Initial Catalog=QLSB;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source =DESKTOP-L5DTBUM\SQLEXPRESS;Initial Catalog=QLSB;Integrated Security=True");
             return conn;
             /*khi đặt sân trạng thái đơn hàng là 1;
              * khi nhận sân trạng thái đơn hàng là 0; tao hóa đơn với trạng thái là 0

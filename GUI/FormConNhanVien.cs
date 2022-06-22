@@ -78,7 +78,7 @@ namespace Do_An_PLB03.GUI
                 row = dataGridView1.Rows[e.RowIndex];
 
             }
-            catch (Exception ex)
+            catch
             {
 
             }

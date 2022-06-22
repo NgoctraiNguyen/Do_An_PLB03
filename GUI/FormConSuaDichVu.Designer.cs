@@ -31,6 +31,7 @@
             this.btnThoat = new FontAwesome.Sharp.IconButton();
             this.btnSua = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblTen = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtGiaGoc = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenDoUong = new System.Windows.Forms.TextBox();
-            this.lblTen = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,6 +99,17 @@
             this.groupBox1.TabIndex = 101;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin dịch vụ";
+            // 
+            // lblTen
+            // 
+            this.lblTen.AutoSize = true;
+            this.lblTen.ForeColor = System.Drawing.Color.Red;
+            this.lblTen.Location = new System.Drawing.Point(22, 84);
+            this.lblTen.Name = "lblTen";
+            this.lblTen.Size = new System.Drawing.Size(122, 16);
+            this.lblTen.TabIndex = 104;
+            this.lblTen.Text = "Tên không phù hợp";
+            this.lblTen.Visible = false;
             // 
             // label4
             // 
@@ -196,22 +207,11 @@
             this.txtTenDoUong.TabIndex = 9;
             this.txtTenDoUong.TextChanged += new System.EventHandler(this.txtTenDoUong_TextChanged);
             // 
-            // lblTen
-            // 
-            this.lblTen.AutoSize = true;
-            this.lblTen.ForeColor = System.Drawing.Color.Red;
-            this.lblTen.Location = new System.Drawing.Point(22, 84);
-            this.lblTen.Name = "lblTen";
-            this.lblTen.Size = new System.Drawing.Size(122, 16);
-            this.lblTen.TabIndex = 104;
-            this.lblTen.Text = "Tên không phù hợp";
-            this.lblTen.Visible = false;
-            // 
             // FormConSuaDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Moccasin;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(476, 305);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnSua);

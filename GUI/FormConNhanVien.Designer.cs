@@ -67,7 +67,7 @@
             "SĐT",
             "CCCD",
             "Vị trí"});
-            this.cboTimKiem.Location = new System.Drawing.Point(253, 21);
+            this.cboTimKiem.Location = new System.Drawing.Point(-1, 21);
             this.cboTimKiem.Name = "cboTimKiem";
             this.cboTimKiem.Size = new System.Drawing.Size(208, 33);
             this.cboTimKiem.TabIndex = 16;
@@ -77,7 +77,7 @@
             this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.txtUser.Location = new System.Drawing.Point(16, 21);
+            this.txtUser.Location = new System.Drawing.Point(237, 21);
             this.txtUser.Name = "txtUser";
             this.txtUser.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtUser.Size = new System.Drawing.Size(224, 30);
@@ -186,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Moccasin;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1229, 754);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox2);

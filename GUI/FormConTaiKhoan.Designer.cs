@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -49,14 +48,16 @@
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.iptDisEye = new FontAwesome.Sharp.IconPictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iptDisEye)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.iconPictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -64,20 +65,9 @@
             this.panel1.Size = new System.Drawing.Size(215, 604);
             this.panel1.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.label1.Location = new System.Drawing.Point(12, 186);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 42);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "User";
-            // 
             // iconPictureBox1
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.LightCyan;
+            this.iconPictureBox1.BackColor = System.Drawing.Color.White;
             this.iconPictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconPictureBox1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserCog;
@@ -94,6 +84,8 @@
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.iptDisEye);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.txtMatKhau);
             this.panel2.Controls.Add(this.iconButton2);
@@ -133,8 +125,9 @@
             this.txtMatKhau.ForeColor = System.Drawing.Color.DarkTurquoise;
             this.txtMatKhau.Location = new System.Drawing.Point(382, 383);
             this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtMatKhau.Size = new System.Drawing.Size(264, 30);
+            this.txtMatKhau.Size = new System.Drawing.Size(235, 30);
             this.txtMatKhau.TabIndex = 5;
             // 
             // iconButton2
@@ -308,6 +301,22 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Thông tin cá nhân";
             // 
+            // iptDisEye
+            // 
+            this.iptDisEye.BackColor = System.Drawing.Color.Snow;
+            this.iptDisEye.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.iptDisEye.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+            this.iptDisEye.IconColor = System.Drawing.Color.MidnightBlue;
+            this.iptDisEye.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iptDisEye.IconSize = 34;
+            this.iptDisEye.Location = new System.Drawing.Point(628, 379);
+            this.iptDisEye.Name = "iptDisEye";
+            this.iptDisEye.Size = new System.Drawing.Size(36, 34);
+            this.iptDisEye.TabIndex = 7;
+            this.iptDisEye.TabStop = false;
+            this.iptDisEye.MouseDown += new System.Windows.Forms.MouseEventHandler(this.iptDisEye_MouseDown);
+            this.iptDisEye.MouseUp += new System.Windows.Forms.MouseEventHandler(this.iptDisEye_MouseUp);
+            // 
             // FormConTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -321,10 +330,10 @@
             this.Name = "FormConTaiKhoan";
             this.Text = "FormConTaiKhoan";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iptDisEye)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -333,7 +342,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtHoTen;
@@ -352,5 +360,6 @@
         private System.Windows.Forms.TextBox txtTenDangNhap;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtMatKhau;
+        private FontAwesome.Sharp.IconPictureBox iptDisEye;
     }
 }

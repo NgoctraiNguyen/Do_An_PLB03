@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Data;
+
 using Do_An_PLB03.BUS;
 
 namespace Do_An_PLB03.GUI

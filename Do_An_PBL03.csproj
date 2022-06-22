@@ -118,12 +118,6 @@
     <Compile Include="GUI\FormHienThiKhachHang.Designer.cs">
       <DependentUpon>FormHienThiKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Formkhohang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Formkhohang.Designer.cs">
-      <DependentUpon>Formkhohang.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\FormSudungdichvuvaThanhtoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,9 +206,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormHienThiKhachHang.resx">
       <DependentUpon>FormHienThiKhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Formkhohang.resx">
-      <DependentUpon>Formkhohang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormSudungdichvuvaThanhtoan.resx">
       <DependentUpon>FormSudungdichvuvaThanhtoan.cs</DependentUpon>

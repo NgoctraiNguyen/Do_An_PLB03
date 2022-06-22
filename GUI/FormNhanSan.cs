@@ -16,8 +16,7 @@ namespace Do_An_PLB03.GUI
     {
         private DTONguoiDung _user;
         int MaDonHang;
-       DTOHoaDon HoaDon = new DTOHoaDon();
-        private FormChinh _formcha;
+        DTOHoaDon HoaDon = new DTOHoaDon();
         public FormNhanSan(DTONguoiDung user)
         {
             InitializeComponent();
@@ -26,7 +25,6 @@ namespace Do_An_PLB03.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             MaDonHang = int.Parse(txtMaDatSan.Text);
             if (BUSDanhSachDatSan.TimKiem(MaDonHang)==true)
             {

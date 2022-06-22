@@ -57,7 +57,7 @@ namespace Do_An_PLB03.GUI
 
         private void cbbLoaiSan_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbbLoaiSan.SelectedIndex != null)
+            if (cbbLoaiSan.SelectedIndex != -1)
             {
                 txtMaLoaiSan.Text = cbbLoaiSan.Text;
                 tenloaisan = cbbLoaiSan.Text;

@@ -61,5 +61,17 @@ namespace Do_An_PLB03.GUI
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void iptDisEye_MouseUp(object sender, MouseEventArgs e)
+        {
+            iptDisEye.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+            txtMatKhau.PasswordChar = '*';
+        }
+
+        private void iptDisEye_MouseDown(object sender, MouseEventArgs e)
+        {
+            iptDisEye.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            txtMatKhau.PasswordChar = '\0';
+        }
     }
 }
