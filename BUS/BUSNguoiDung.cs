@@ -59,5 +59,10 @@ namespace Do_An_PLB03.BUS
         {
             return DALNguoiDung.TimKiemTheoViTri(vt);
         }
+
+        public static bool KiemTraTenDangNhap(String TenDangNhap)
+        {
+            return DALNguoiDung.KiemTraTenDangNhap(TenDangNhap);
+        }
     }
 }

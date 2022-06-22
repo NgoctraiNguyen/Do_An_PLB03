@@ -25,6 +25,7 @@ namespace Do_An_PLB03.GUI
             txtSDT.Text = Convert.ToString(_user.SDT);
             txtDiaChi.Text = _user.DiaChi;
             txtTenDangNhap.Text = _user.TenDangNhap;
+            lblDangNhap.Visible = false;
             txtMatKhau.Text = _user.MatKhau;
             txtCCCD.Text = _user.SoCMND;
             _formcha = formcha; 
@@ -72,6 +73,38 @@ namespace Do_An_PLB03.GUI
         {
             iptDisEye.IconChar = FontAwesome.Sharp.IconChar.Eye;
             txtMatKhau.PasswordChar = '\0';
+        }
+
+        private void ChuaNhapThongTin()
+        {
+            if (txtHoTen.Text == "" || txtCCCD.Text == "" || txtTuoi.Text == "" || txtSDT.Text == "" || txtDiaChi.Text == "" || txtTenDangNhap.Text == "" || txtMatKhau.Text == "")
+            {
+                btnLuuThayDoi.Enabled = false;
+                lblTbLoi.Visible = true;
+            }
+            else
+            {
+                btnLuuThayDoi.Enabled = true;
+                lblTbLoi.Visible = false;
+
+            }
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            ChuaNhapThongTin();
+        }
+
+        private void txtTenDangNhap_TextChanged(object sender, EventArgs e)
+        {
+            if (BUSNguoiDung.KiemTraTenDangNhap(txtTenDangNhap.Text))
+            {
+                lblDangNhap.Visible = false;
+            }
+            else
+            {
+                lblDangNhap.Visible = true;
+            }
         }
     }
 }

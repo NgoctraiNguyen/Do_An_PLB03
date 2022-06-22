@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.iptDisEye = new FontAwesome.Sharp.IconPictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
@@ -48,7 +49,8 @@
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.iptDisEye = new FontAwesome.Sharp.IconPictureBox();
+            this.lblTbLoi = new System.Windows.Forms.Label();
+            this.lblDangNhap = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -94,6 +96,8 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.lblDangNhap);
+            this.panel2.Controls.Add(this.lblTbLoi);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.txtCCCD);
@@ -107,6 +111,23 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(742, 604);
             this.panel2.TabIndex = 1;
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            // 
+            // iptDisEye
+            // 
+            this.iptDisEye.BackColor = System.Drawing.Color.Snow;
+            this.iptDisEye.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.iptDisEye.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+            this.iptDisEye.IconColor = System.Drawing.Color.MidnightBlue;
+            this.iptDisEye.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iptDisEye.IconSize = 34;
+            this.iptDisEye.Location = new System.Drawing.Point(628, 379);
+            this.iptDisEye.Name = "iptDisEye";
+            this.iptDisEye.Size = new System.Drawing.Size(36, 34);
+            this.iptDisEye.TabIndex = 7;
+            this.iptDisEye.TabStop = false;
+            this.iptDisEye.MouseDown += new System.Windows.Forms.MouseEventHandler(this.iptDisEye_MouseDown);
+            this.iptDisEye.MouseUp += new System.Windows.Forms.MouseEventHandler(this.iptDisEye_MouseUp);
             // 
             // label9
             // 
@@ -115,9 +136,9 @@
             this.label9.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label9.Location = new System.Drawing.Point(379, 362);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(79, 16);
+            this.label9.Size = new System.Drawing.Size(69, 16);
             this.label9.TabIndex = 6;
-            this.label9.Text = "PassWord";
+            this.label9.Text = "Mật khẩu";
             // 
             // txtMatKhau
             // 
@@ -215,9 +236,9 @@
             this.label8.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label8.Location = new System.Drawing.Point(24, 362);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 16);
+            this.label8.Size = new System.Drawing.Size(111, 16);
             this.label8.TabIndex = 3;
-            this.label8.Text = "User";
+            this.label8.Text = "Tên đăng nhập";
             // 
             // label3
             // 
@@ -279,6 +300,7 @@
             this.txtTenDangNhap.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtTenDangNhap.Size = new System.Drawing.Size(264, 30);
             this.txtTenDangNhap.TabIndex = 1;
+            this.txtTenDangNhap.TextChanged += new System.EventHandler(this.txtTenDangNhap_TextChanged);
             // 
             // txtHoTen
             // 
@@ -301,21 +323,29 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Thông tin cá nhân";
             // 
-            // iptDisEye
+            // lblTbLoi
             // 
-            this.iptDisEye.BackColor = System.Drawing.Color.Snow;
-            this.iptDisEye.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.iptDisEye.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
-            this.iptDisEye.IconColor = System.Drawing.Color.MidnightBlue;
-            this.iptDisEye.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iptDisEye.IconSize = 34;
-            this.iptDisEye.Location = new System.Drawing.Point(628, 379);
-            this.iptDisEye.Name = "iptDisEye";
-            this.iptDisEye.Size = new System.Drawing.Size(36, 34);
-            this.iptDisEye.TabIndex = 7;
-            this.iptDisEye.TabStop = false;
-            this.iptDisEye.MouseDown += new System.Windows.Forms.MouseEventHandler(this.iptDisEye_MouseDown);
-            this.iptDisEye.MouseUp += new System.Windows.Forms.MouseEventHandler(this.iptDisEye_MouseUp);
+            this.lblTbLoi.AutoSize = true;
+            this.lblTbLoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTbLoi.ForeColor = System.Drawing.Color.Red;
+            this.lblTbLoi.Location = new System.Drawing.Point(24, 515);
+            this.lblTbLoi.Name = "lblTbLoi";
+            this.lblTbLoi.Size = new System.Drawing.Size(197, 16);
+            this.lblTbLoi.TabIndex = 3;
+            this.lblTbLoi.Text = "*Không được để trống các ô";
+            this.lblTbLoi.Visible = false;
+            // 
+            // lblDangNhap
+            // 
+            this.lblDangNhap.AutoSize = true;
+            this.lblDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDangNhap.ForeColor = System.Drawing.Color.Red;
+            this.lblDangNhap.Location = new System.Drawing.Point(24, 416);
+            this.lblDangNhap.Name = "lblDangNhap";
+            this.lblDangNhap.Size = new System.Drawing.Size(179, 16);
+            this.lblDangNhap.TabIndex = 3;
+            this.lblDangNhap.Text = "Tên đăng nhập đã tồn tại";
+            this.lblDangNhap.Visible = false;
             // 
             // FormConTaiKhoan
             // 
@@ -361,5 +391,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtMatKhau;
         private FontAwesome.Sharp.IconPictureBox iptDisEye;
+        private System.Windows.Forms.Label lblTbLoi;
+        private System.Windows.Forms.Label lblDangNhap;
     }
 }

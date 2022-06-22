@@ -194,7 +194,7 @@ namespace Do_An_PLB03.GUI
 
         private void FormConThemNhanVien_MouseMove(object sender, MouseEventArgs e)
         {
-            if (lblHoTen.Text != "" || lblGT.Text != "" || lblDiaChi.Text != "" || lblCMND.Text != "" || lblSDT.Text != "" || lblQuyen.Text != "" || lblTuoi.Text != "" || lblViTri.Text != "" || lblTenDN.Text != "" || lblMK.Text != "")
+            if (lblHoTen.Text != "" || lblGT.Text != "" || lblDiaChi.Text != "" || lblCMND.Text != "" || lblSDT.Text != "" || lblQuyen.Text != "" || lblTuoi.Text != "" || lblViTri.Text != "" || lblTenDN.Text != "" || lblMK.Text != "" || lbltendangnhap.Visible == true)
             {
                 btnThem.Enabled = false;
             }
@@ -207,6 +207,18 @@ namespace Do_An_PLB03.GUI
         private void btnThoat_Click_1(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void txtTenDangNhap_TextChanged(object sender, EventArgs e)
+        {
+            if (BUSNguoiDung.KiemTraTenDangNhap(txtTenDangNhap.Text))
+            {
+                lbltendangnhap.Visible = false;
+            }
+            else
+            {
+                lbltendangnhap.Visible = true;
+            }
         }
     }
 }

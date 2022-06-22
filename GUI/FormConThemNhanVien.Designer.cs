@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbltendangnhap = new System.Windows.Forms.Label();
             this.lblMK = new System.Windows.Forms.Label();
             this.lblTenDN = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -68,6 +69,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lbltendangnhap);
             this.groupBox2.Controls.Add(this.lblMK);
             this.groupBox2.Controls.Add(this.lblTenDN);
             this.groupBox2.Controls.Add(this.label10);
@@ -80,6 +82,17 @@
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tên tài khoản";
+            // 
+            // lbltendangnhap
+            // 
+            this.lbltendangnhap.AutoSize = true;
+            this.lbltendangnhap.ForeColor = System.Drawing.Color.Firebrick;
+            this.lbltendangnhap.Location = new System.Drawing.Point(49, 78);
+            this.lbltendangnhap.Name = "lbltendangnhap";
+            this.lbltendangnhap.Size = new System.Drawing.Size(155, 16);
+            this.lbltendangnhap.TabIndex = 86;
+            this.lbltendangnhap.Text = "Tên đăng nhập đã tồn tại";
+            this.lbltendangnhap.Visible = false;
             // 
             // lblMK
             // 
@@ -145,6 +158,7 @@
             this.txtTenDangNhap.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtTenDangNhap.Size = new System.Drawing.Size(215, 30);
             this.txtTenDangNhap.TabIndex = 0;
+            this.txtTenDangNhap.TextChanged += new System.EventHandler(this.txtTenDangNhap_TextChanged);
             this.txtTenDangNhap.MouseLeave += new System.EventHandler(this.txtTenDangNhap_MouseLeave);
             // 
             // groupBox1
@@ -539,5 +553,6 @@
         private System.Windows.Forms.TextBox txtHoTen;
         private FontAwesome.Sharp.IconButton btnThoat;
         private FontAwesome.Sharp.IconButton btnThem;
+        private System.Windows.Forms.Label lbltendangnhap;
     }
 }

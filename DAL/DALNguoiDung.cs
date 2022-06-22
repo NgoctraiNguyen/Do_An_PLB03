@@ -185,5 +185,21 @@ namespace Do_An_PLB03.DAL
             conn.Close();
             return dt;
         }
+
+        public static bool KiemTraTenDangNhap (String TenDangNhap)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+
+            SqlCommand command = new SqlCommand("select * from nguoidung where tendangnhap = '"+ TenDangNhap +"'",conn);
+            command.CommandType = CommandType.Text;
+            
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                return false;
+            }
+            return true;
+        }
     }    
 }
