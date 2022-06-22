@@ -89,7 +89,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1556, 842);
             this.panel1.TabIndex = 1;
-            this.panel1.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // groupBox6
@@ -105,7 +104,6 @@
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Danh sách đặt sân trong ngày";
-            this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
             // 
             // btnXemChiTiet
             // 
@@ -140,7 +138,6 @@
             this.dtDanhSachDatSan.Size = new System.Drawing.Size(725, 458);
             this.dtDanhSachDatSan.TabIndex = 0;
             this.dtDanhSachDatSan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtDanhSachDatSan_CellClick);
-            this.dtDanhSachDatSan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtDanhSachDatSan_CellContentClick);
             // 
             // groupBox5
             // 
@@ -284,7 +281,6 @@
             this.txtTenKhachHang.Name = "txtTenKhachHang";
             this.txtTenKhachHang.Size = new System.Drawing.Size(189, 22);
             this.txtTenKhachHang.TabIndex = 7;
-            this.txtTenKhachHang.TextChanged += new System.EventHandler(this.txtTenKhachHang_TextChanged);
             // 
             // label9
             // 
@@ -469,8 +465,6 @@
             this.txtSoGio.TabIndex = 5;
             this.txtSoGio.Text = "0";
             this.txtSoGio.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSoGio_MouseClick);
-            this.txtSoGio.TextChanged += new System.EventHandler(this.txtSoGio_TextChanged);
-            this.txtSoGio.Leave += new System.EventHandler(this.txtSoGio_Leave);
             this.txtSoGio.MouseLeave += new System.EventHandler(this.txtSoGio_MouseLeave);
             // 
             // cbbTenSan
@@ -482,7 +476,6 @@
             this.cbbTenSan.Size = new System.Drawing.Size(151, 24);
             this.cbbTenSan.TabIndex = 4;
             this.cbbTenSan.SelectedIndexChanged += new System.EventHandler(this.cbbTenSan_SelectedIndexChanged);
-            this.cbbTenSan.SelectionChangeCommitted += new System.EventHandler(this.cbbLoaiSan_SelectionChangeCommitted);
             // 
             // cbbLoaiSan
             // 
@@ -493,7 +486,6 @@
             this.cbbLoaiSan.Size = new System.Drawing.Size(151, 24);
             this.cbbLoaiSan.TabIndex = 4;
             this.cbbLoaiSan.SelectedIndexChanged += new System.EventHandler(this.cbbLoaiSan_SelectedIndexChanged);
-            this.cbbLoaiSan.SelectionChangeCommitted += new System.EventHandler(this.cbbLoaiSan_SelectionChangeCommitted);
             // 
             // label5
             // 

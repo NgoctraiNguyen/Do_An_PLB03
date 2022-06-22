@@ -58,11 +58,6 @@ namespace Do_An_PLB03.GUI
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void FormNhanSan_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = BUSDanhSachDatSan.danhsachnhansan();

@@ -203,5 +203,10 @@ namespace Do_An_PLB03.GUI
                 btnThem.Enabled = true;
             }
         }
+
+        private void btnThoat_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

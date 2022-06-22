@@ -234,7 +234,6 @@
             title2.Name = "Title1";
             title2.Text = "Biểu đồ doanh thu theo sân";
             this.chrSan.Titles.Add(title2);
-            this.chrSan.Click += new System.EventHandler(this.chrThang_Click);
             // 
             // groupBox2
             // 
@@ -347,7 +346,6 @@
             this.label1.Size = new System.Drawing.Size(54, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Năm :";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Formthongke
             // 
@@ -360,7 +358,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Formthongke";
             this.Text = "Thống kê";
-            this.Load += new System.EventHandler(this.Formthongke_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);

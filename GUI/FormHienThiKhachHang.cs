@@ -36,15 +36,9 @@ namespace Do_An_PLB03.GUI
                 txtTenKhachHang.Text = row.Cells[1].Value.ToString();
                 txtSDT.Text = row.Cells[2].Value.ToString();
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message);
             }
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
         }
     }

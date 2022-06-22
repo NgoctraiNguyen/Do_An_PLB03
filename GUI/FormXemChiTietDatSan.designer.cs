@@ -123,7 +123,6 @@
             this.label9.Size = new System.Drawing.Size(114, 16);
             this.label9.TabIndex = 0;
             this.label9.Text = "SDT Khách Hàng:";
-            this.label9.Click += new System.EventHandler(this.label2_Click);
             // 
             // label8
             // 
@@ -135,7 +134,6 @@
             this.label8.Size = new System.Drawing.Size(110, 16);
             this.label8.TabIndex = 0;
             this.label8.Text = "Tên Khách Hàng:";
-            this.label8.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtctSDT
             // 
@@ -271,7 +269,6 @@
             this.label10.Size = new System.Drawing.Size(92, 16);
             this.label10.TabIndex = 0;
             this.label10.Text = "Mã Đơn Hàng:";
-            this.label10.Click += new System.EventHandler(this.label2_Click);
             // 
             // label2
             // 
@@ -283,7 +280,6 @@
             this.label2.Size = new System.Drawing.Size(125, 16);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã Trạng Thái Sân:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 

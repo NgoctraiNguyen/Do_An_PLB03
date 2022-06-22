@@ -46,7 +46,7 @@ namespace Do_An_PLB03.GUI
         {
             DataGridViewRow row = dataGridView1.SelectedCells[0].OwningRow;
 
-            string ma1 = row.Cells["MaNguoiDung"].Value.ToString();
+            string ma1 = row.Cells[0].Value.ToString();
             int ma = Convert.ToInt32(ma1);
             DTONguoiDung user = new DTONguoiDung();
             FormConSuaNhanVien f = new FormConSuaNhanVien(ma, user);

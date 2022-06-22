@@ -23,45 +23,7 @@ namespace Do_An_PLB03.GUI
             InitializeComponent();
             _user = user;
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         private bool KiemTra(string TenSan)
         {
             foreach(DataRow data in BUSDanhSachDatSan.danhsachdangda().Rows)
@@ -129,12 +91,6 @@ namespace Do_An_PLB03.GUI
             
             dtThanhToan.DataSource = DALHoaDon.DSThanhToan();
         }
-
-        private void btn5A_Click(object sender, EventArgs e)
-        {
-            
-        }
-         
         public int ma;
         private void FormSudungdichvuvaThanhtoan_Click(object sender, EventArgs e)
         {
@@ -216,20 +172,6 @@ namespace Do_An_PLB03.GUI
             FormSudungdichvuvaThanhtoan_Load(sender, e);
         }
 
-        private void dtDichVu_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtdv_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         private void DienHoaDon(String SoHD, String San)
         {
             lblSoHoaDon.Text = SoHD;
@@ -244,10 +186,6 @@ namespace Do_An_PLB03.GUI
             lblTongTien.Text = txtTongTien.Text;
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnDatSan_Click(object sender, EventArgs e)
         {
@@ -291,17 +229,12 @@ namespace Do_An_PLB03.GUI
                 txtGia.Text = row.Cells[2].Value.ToString();
                 txtSL.Text = row.Cells[1].Value.ToString();
             }
-            catch { 
+            catch 
+            { 
 
-                   }
-        
-
+            }
         }
 
-        private void dtThanhToan_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {

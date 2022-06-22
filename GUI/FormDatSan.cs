@@ -39,13 +39,6 @@ namespace Do_An_PLB03.GUI
             InitializeComponent();
             _formcha = formcha;
         }
-
-
-
-        private void groupBox6_Enter(object sender, EventArgs e)
-        {
-
-        }
         private void FormDatSan_Load(object sender, EventArgs e)
         {
             loaisan.Clear();
@@ -68,22 +61,6 @@ namespace Do_An_PLB03.GUI
                 cbbTenSan.DataSource = tensan;
 
             }
-
-
-        }
-
-
-
-        private void cbbLoaiSan_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            
-        }
-
-       
-
-        private void txtSoGio_Leave(object sender, EventArgs e)
-        {
-
         }
         public TimeSpan[] tgbd_toarray(List<TimeSpan> tgbd)
         {
@@ -106,9 +83,6 @@ namespace Do_An_PLB03.GUI
             BUSTrangThaiSan.kiemtrasan(trangthaisan, txtTenSan.Text);
             batdau = BUSTrangThaiSan.batdau;
             ketthuc = BUSTrangThaiSan.ketthuc;
-
-
-
         }
         private void txtSoGio_MouseLeave(object sender, EventArgs e)
         {
@@ -189,13 +163,6 @@ namespace Do_An_PLB03.GUI
                 lbnhan.Text = "";
 
             }
-
-            //if (txtSDTKhachHang.Text == "") btnDatSan.Enabled = false;
-        }
-
-        private void txtSoGio_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void txtSoGio_MouseClick(object sender, MouseEventArgs e)
@@ -203,13 +170,6 @@ namespace Do_An_PLB03.GUI
             txtSoGio.Text = "";
 
         }
-        
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
- 
-
-        }
-
 
         private void btnDatSan_Click(object sender, EventArgs e)
         {
@@ -246,13 +206,6 @@ namespace Do_An_PLB03.GUI
         }
 
         string ten, sdt;
-
-        private void dtDanhSachDatSan_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-     
         private void dtpNgayGioNhan_MouseLeave(object sender, EventArgs e)
         {
             
@@ -271,12 +224,6 @@ namespace Do_An_PLB03.GUI
                 btnDatSan.Enabled = true;
             }
         }
-
-        private void panel1_MouseLeave(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtSDTKhachHang_TextChanged(object sender, EventArgs e)
         {
             Regex r = new Regex(@"^(09|03|07|08|05)+([0-9]{8})$");
@@ -293,11 +240,6 @@ namespace Do_An_PLB03.GUI
                     lbsdt.Text = "";
                 }
             }
-        }
-
-        private void txtTenKhachHang_TextChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void dtDanhSachDatSan_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -29,22 +29,12 @@ namespace Do_An_PLB03.GUI
            
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnctDong_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        
-        private void FormXemChiTietDatSan_Load(object sender, EventArgs e)
-        {
-            
-           
-        }
 
         private void btnHuySan_Click(object sender, EventArgs e)
         {

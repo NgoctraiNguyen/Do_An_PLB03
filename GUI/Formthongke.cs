@@ -20,33 +20,6 @@ namespace Do_An_PLB03.GUI
             InitializeComponent();
         }
 
-        private void Formthongke_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chrThang_Click(object sender, EventArgs e)
-        {
-
-        }
-
-    
-
         private void cbyear_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable sumThang = new DataTable();
@@ -100,12 +73,10 @@ namespace Do_An_PLB03.GUI
                 //sum = BUSThongke.sumsan;
                 dataGridView1.DataSource = sumsan;
             }
-            catch { }
-
+            catch 
+            { 
+            }
         }
 
-        private void btnXem_Click(object sender, EventArgs e)
-        {
-        }
     }
 }
