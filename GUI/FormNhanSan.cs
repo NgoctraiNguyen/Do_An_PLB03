@@ -25,22 +25,25 @@ namespace Do_An_PLB03.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MaDonHang = int.Parse(txtMaDatSan.Text);
-            if (BUSDanhSachDatSan.TimKiem(MaDonHang)==true)
+            if(txtMaDatSan.Text != "")
             {
-                txtHoTen.Text = BUSDanhSachDatSan.HoTen;
-                txtSDT.Text = BUSDanhSachDatSan.SDTKhachHang;
-                txtTenSan.Text = BUSDanhSachDatSan.TenSan;
-                txtLoaiSan.Text = BUSDanhSachDatSan.LoaiSan;
-                txtNgayNhan.Text = BUSDanhSachDatSan.NgayNhan;
-                txtNgayTra.Text = BUSDanhSachDatSan.NgayTra;
-                txtGia.Text = (BUSDanhSachDatSan.Gia).ToString();
-                button3.Enabled = true;
-            }
-            else
-            {
-                MessageBox.Show("không tìm thấy sân");
-                button3.Enabled=false;
+                MaDonHang = int.Parse(txtMaDatSan.Text);
+                if (BUSDanhSachDatSan.TimKiem(MaDonHang) == true)
+                {
+                    txtHoTen.Text = BUSDanhSachDatSan.HoTen;
+                    txtSDT.Text = BUSDanhSachDatSan.SDTKhachHang;
+                    txtTenSan.Text = BUSDanhSachDatSan.TenSan;
+                    txtLoaiSan.Text = BUSDanhSachDatSan.LoaiSan;
+                    txtNgayNhan.Text = BUSDanhSachDatSan.NgayNhan;
+                    txtNgayTra.Text = BUSDanhSachDatSan.NgayTra;
+                    txtGia.Text = (BUSDanhSachDatSan.Gia).ToString();
+                    button3.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("không tìm thấy sân");
+                    button3.Enabled = false;
+                }
             }
         }
 
