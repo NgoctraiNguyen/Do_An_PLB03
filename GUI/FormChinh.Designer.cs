@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnThongKe = new FontAwesome.Sharp.IconButton();
+            this.btnHoaDon = new FontAwesome.Sharp.IconButton();
             this.btnQuanLyKhachHang = new FontAwesome.Sharp.IconButton();
             this.btnQuanLyDichVu = new FontAwesome.Sharp.IconButton();
             this.btnQuanLyNhanVien = new FontAwesome.Sharp.IconButton();
@@ -60,6 +61,7 @@
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.Snow;
             this.pnlMenu.Controls.Add(this.btnThongKe);
+            this.pnlMenu.Controls.Add(this.btnHoaDon);
             this.pnlMenu.Controls.Add(this.btnQuanLyKhachHang);
             this.pnlMenu.Controls.Add(this.btnQuanLyDichVu);
             this.pnlMenu.Controls.Add(this.btnQuanLyNhanVien);
@@ -84,15 +86,34 @@
             this.btnThongKe.IconColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnThongKe.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(0, 457);
+            this.btnThongKe.Location = new System.Drawing.Point(0, 507);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnThongKe.Size = new System.Drawing.Size(226, 50);
-            this.btnThongKe.TabIndex = 8;
+            this.btnThongKe.TabIndex = 13;
             this.btnThongKe.Text = "Thống Kê";
             this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThongKe.UseVisualStyleBackColor = true;
-            this.btnThongKe.Click += new System.EventHandler(this.iconButton6_Click);
+            this.btnThongKe.Click += new System.EventHandler(this.iconButton1_Click_1);
+            // 
+            // btnHoaDon
+            // 
+            this.btnHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHoaDon.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnHoaDon.IconChar = FontAwesome.Sharp.IconChar.Clipboard;
+            this.btnHoaDon.IconColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnHoaDon.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHoaDon.Location = new System.Drawing.Point(0, 457);
+            this.btnHoaDon.Name = "btnHoaDon";
+            this.btnHoaDon.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnHoaDon.Size = new System.Drawing.Size(226, 50);
+            this.btnHoaDon.TabIndex = 8;
+            this.btnHoaDon.Text = "Lịch sử hóa đơn";
+            this.btnHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHoaDon.UseVisualStyleBackColor = true;
+            this.btnHoaDon.Click += new System.EventHandler(this.iconButton6_Click);
             // 
             // btnQuanLyKhachHang
             // 
@@ -230,7 +251,7 @@
             this.label1.Location = new System.Drawing.Point(0, 117);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(106, 20);
+            this.label1.Size = new System.Drawing.Size(105, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Main Menu";
             // 
@@ -381,7 +402,7 @@
         private FontAwesome.Sharp.IconButton btnQuanLyDichVu;
         private FontAwesome.Sharp.IconButton btnQuanLyNhanVien;
         private System.Windows.Forms.Label label2;
-        private FontAwesome.Sharp.IconButton btnThongKe;
+        private FontAwesome.Sharp.IconButton btnHoaDon;
         private FontAwesome.Sharp.IconButton btnThanhToan;
         private FontAwesome.Sharp.IconButton btnDichVuSanBong;
         private FontAwesome.Sharp.IconButton btnThueSan;
@@ -394,5 +415,6 @@
         private System.Windows.Forms.Label lblNgayGio;
         private System.Windows.Forms.Timer timer1;
         private FontAwesome.Sharp.IconPictureBox picturewelcome;
+        private FontAwesome.Sharp.IconButton btnThongKe;
     }
 }

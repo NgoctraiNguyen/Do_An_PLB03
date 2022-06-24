@@ -28,7 +28,7 @@ namespace Do_An_PLB03.GUI
             pnlMenu.Controls.Add(borderbtn);
             _user = user;
             if (user.Quyen == 1) admin = true;
-            lblTenNguoiDung.Text = _user.HoTen ;
+            lblTenNguoiDung.Text = _user.HoTen;
             displayviewadmin();
         }
 
@@ -65,7 +65,7 @@ namespace Do_An_PLB03.GUI
             btnQuanLyNhanVien.Visible = admin;
             btnQuanLyDichVu.Visible = admin;
             btnQuanLyKhachHang.Visible = admin;
-            btnThongKe.Visible = admin;
+            btnHoaDon.Visible = admin;
             timer1.Enabled = true;
         }
 
@@ -116,7 +116,7 @@ namespace Do_An_PLB03.GUI
         private void iconButton6_Click(object sender, EventArgs e)
         {
             clickbutton(sender);
-            Openchillform(new Formthongke());
+            Openchillform(new FormQuanLiHoaDon());
         }
 
         private void iconButton7_Click(object sender, EventArgs e)
@@ -156,6 +156,12 @@ namespace Do_An_PLB03.GUI
                 chillform.Close();
             }
             picturewelcome.Visible = true;
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            clickbutton(sender);
+            Openchillform(new Formthongke());
         }
     }
 }

@@ -2,6 +2,7 @@
 using Do_An_PLB03.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,16 @@ namespace Do_An_PLB03.BUS
         public static void ThanhToan(int mahoadon)
         {
             DALHoaDon.ThanhToan(mahoadon);
+        }
+        public static DataTable DSHoaDon()
+        {
+            DataTable dt = DALHoaDon.DSHoaDon();
+            return dt;
+        }
+        public static DataTable DSThanhToan()
+        {
+            DataTable dt = DALHoaDon.DSThanhToan();
+            return dt;
         }
     }
 }

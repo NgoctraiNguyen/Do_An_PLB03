@@ -181,6 +181,25 @@ namespace Do_An_PLB03.DAL
             command.CommandText = query;
             command.ExecuteNonQuery();
         }
+        public static DataTable DSHoaDon()
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            SqlCommand command = new SqlCommand("Select MaHoaDon AS'Mã Hóa Đơn', TenKhachHang AS 'Tên Khách Hàng', SDTKhachHang as 'SDT Khách Hàng', TenSan AS 'Tên Sân', HoaDon.TongTien AS 'Tổng Tiền',NguoiDung.HoTen as 'Tên Nhân Viên', HoaDon.NgayGioTao as 'Thời gian tạo' " +
+                " from KhachHang join DonHang on KhachHang.MaKhachHang = DonHang.MaKhachHang " +
+                " join TrangThaiSan on TrangThaiSan.MaTrangThaiSan = DonHang.MaTrangThaiSan " +
+                " join HoaDon on DonHang.MaDonHang = HoaDon.MaDonHang " +
+                " join NguoiDung on NguoiDung.MaNguoiDung = HoaDon.MaNguoiDung" +
+                " where HoaDon.TrangThai = 1", conn);
+            command.CommandType = CommandType.Text;
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = command;
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            conn.Close();
+            return dt;
+        }
     }
 
 }

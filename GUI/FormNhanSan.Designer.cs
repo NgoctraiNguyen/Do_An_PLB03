@@ -1,4 +1,4 @@
-﻿namespace Do_An_PLB03.GUI
+﻿ namespace Do_An_PLB03.GUI
 {
     partial class FormNhanSan
     {

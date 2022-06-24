@@ -87,9 +87,9 @@ namespace Do_An_PLB03.GUI
                 btn7B.BackColor = Color.Gray;
                 btn7B.Enabled = false;
             }
-            comboBox1.DataSource = DALDoUong.DoUong();
+            comboBox1.DataSource = BUSDoUong.DoUong();
             
-            dtThanhToan.DataSource = DALHoaDon.DSThanhToan();
+            dtThanhToan.DataSource = BUSHoaDon.DSThanhToan();
         }
         public int ma;
         private void FormSudungdichvuvaThanhtoan_Click(object sender, EventArgs e)
