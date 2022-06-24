@@ -230,7 +230,7 @@
             this.label1.Location = new System.Drawing.Point(0, 117);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(105, 20);
+            this.label1.Size = new System.Drawing.Size(106, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Main Menu";
             // 
@@ -270,6 +270,7 @@
             this.lblNgayGio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNgayGio.AutoSize = true;
             this.lblNgayGio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNgayGio.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblNgayGio.Location = new System.Drawing.Point(527, 48);
             this.lblNgayGio.Name = "lblNgayGio";
             this.lblNgayGio.Size = new System.Drawing.Size(169, 29);
@@ -296,8 +297,8 @@
             // 
             this.lblTenNguoiDung.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTenNguoiDung.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblTenNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenNguoiDung.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTenNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenNguoiDung.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblTenNguoiDung.Location = new System.Drawing.Point(927, 48);
             this.lblTenNguoiDung.Name = "lblTenNguoiDung";
             this.lblTenNguoiDung.Size = new System.Drawing.Size(289, 42);
@@ -308,10 +309,11 @@
             // lblChucnang
             // 
             this.lblChucnang.AutoSize = true;
-            this.lblChucnang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChucnang.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChucnang.ForeColor = System.Drawing.Color.MidnightBlue;
             this.lblChucnang.Location = new System.Drawing.Point(22, 48);
             this.lblChucnang.Name = "lblChucnang";
-            this.lblChucnang.Size = new System.Drawing.Size(115, 29);
+            this.lblChucnang.Size = new System.Drawing.Size(139, 32);
             this.lblChucnang.TabIndex = 0;
             this.lblChucnang.Text = "Welcome";
             // 

@@ -59,7 +59,7 @@ namespace Do_An_PLB03.GUI
             DataGridViewRow row = dataGridView1.SelectedCells[0].OwningRow;
             try
             {
-                int ma = Convert.ToInt32(row.Cells["MaNguoiDung"].Value.ToString());
+                int ma = Convert.ToInt32(row.Cells[0].Value.ToString());
                 BUSNguoiDung.DeleteNguoiDung(ma);
                 MessageBox.Show("Xóa thành công");
                 dataGridView1.DataSource = BUSNguoiDung.GetAllNguoiDung();

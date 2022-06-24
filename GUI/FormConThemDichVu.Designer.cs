@@ -94,6 +94,8 @@
             this.groupBox1.Controls.Add(this.txtSoLuong);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtTenDoUong);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.groupBox1.Location = new System.Drawing.Point(20, 22);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(397, 201);
@@ -107,7 +109,7 @@
             this.lblTen.ForeColor = System.Drawing.Color.Red;
             this.lblTen.Location = new System.Drawing.Point(19, 84);
             this.lblTen.Name = "lblTen";
-            this.lblTen.Size = new System.Drawing.Size(0, 16);
+            this.lblTen.Size = new System.Drawing.Size(0, 20);
             this.lblTen.TabIndex = 101;
             this.lblTen.Visible = false;
             // 

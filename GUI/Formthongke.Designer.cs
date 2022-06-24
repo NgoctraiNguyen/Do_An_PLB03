@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.LegendCellColumn legendCellColumn1 = new System.Windows.Forms.DataVisualization.Charting.LegendCellColumn();
-            System.Windows.Forms.DataVisualization.Charting.LegendCellColumn legendCellColumn2 = new System.Windows.Forms.DataVisualization.Charting.LegendCellColumn();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.LegendCellColumn legendCellColumn3 = new System.Windows.Forms.DataVisualization.Charting.LegendCellColumn();
+            System.Windows.Forms.DataVisualization.Charting.LegendCellColumn legendCellColumn4 = new System.Windows.Forms.DataVisualization.Charting.LegendCellColumn();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -93,6 +93,8 @@
             // 
             this.groupBox4.BackColor = System.Drawing.Color.White;
             this.groupBox4.Controls.Add(this.chrThang);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.Color.MidnightBlue;
             this.groupBox4.Location = new System.Drawing.Point(934, 83);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(610, 504);
@@ -105,45 +107,47 @@
             this.chrThang.BackColor = System.Drawing.Color.LightSkyBlue;
             this.chrThang.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
             this.chrThang.BorderlineColor = System.Drawing.Color.LightCyan;
-            chartArea1.Name = "ChartArea1";
-            this.chrThang.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chrThang.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chrThang.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chrThang.Legends.Add(legend3);
             this.chrThang.Location = new System.Drawing.Point(13, 46);
             this.chrThang.Name = "chrThang";
             this.chrThang.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
-            series1.BorderWidth = 3;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Color = System.Drawing.Color.Red;
-            series1.Legend = "Legend1";
-            series1.Name = "DoanhThuThang";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(100)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            series2.IsValueShownAsLabel = true;
-            series2.IsVisibleInLegend = false;
-            series2.LabelBackColor = System.Drawing.Color.White;
-            series2.Legend = "Legend1";
-            series2.Name = "columm";
-            series2.SmartLabelStyle.CalloutBackColor = System.Drawing.Color.Empty;
-            series2.SmartLabelStyle.CalloutLineAnchorCapStyle = System.Windows.Forms.DataVisualization.Charting.LineAnchorCapStyle.None;
-            series2.SmartLabelStyle.CalloutStyle = System.Windows.Forms.DataVisualization.Charting.LabelCalloutStyle.None;
-            this.chrThang.Series.Add(series1);
-            this.chrThang.Series.Add(series2);
+            series4.BorderWidth = 3;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Color = System.Drawing.Color.Red;
+            series4.Legend = "Legend1";
+            series4.Name = "DoanhThuThang";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(100)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            series5.IsValueShownAsLabel = true;
+            series5.IsVisibleInLegend = false;
+            series5.LabelBackColor = System.Drawing.Color.White;
+            series5.Legend = "Legend1";
+            series5.Name = "columm";
+            series5.SmartLabelStyle.CalloutBackColor = System.Drawing.Color.Empty;
+            series5.SmartLabelStyle.CalloutLineAnchorCapStyle = System.Windows.Forms.DataVisualization.Charting.LineAnchorCapStyle.None;
+            series5.SmartLabelStyle.CalloutStyle = System.Windows.Forms.DataVisualization.Charting.LabelCalloutStyle.None;
+            this.chrThang.Series.Add(series4);
+            this.chrThang.Series.Add(series5);
             this.chrThang.Size = new System.Drawing.Size(551, 430);
             this.chrThang.TabIndex = 0;
             this.chrThang.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "ttdoanhthu";
-            title1.Text = "Biểu đồ doanh thu theo tháng";
-            this.chrThang.Titles.Add(title1);
+            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title3.Name = "ttdoanhthu";
+            title3.Text = "Biểu đồ doanh thu theo tháng";
+            this.chrThang.Titles.Add(title3);
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
             this.groupBox3.Controls.Add(this.dataGridView1);
             this.groupBox3.Controls.Add(this.chrSan);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.MidnightBlue;
             this.groupBox3.Location = new System.Drawing.Point(5, 83);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(865, 476);
@@ -173,7 +177,7 @@
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 89;
+            this.Column1.Width = 112;
             // 
             // Column3
             // 
@@ -189,51 +193,51 @@
             this.chrSan.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
             this.chrSan.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.chrSan.BorderlineWidth = 2;
-            chartArea2.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
-            chartArea2.Area3DStyle.Enable3D = true;
-            chartArea2.Area3DStyle.IsRightAngleAxes = false;
-            chartArea2.Area3DStyle.Perspective = 10;
-            chartArea2.BackColor = System.Drawing.Color.Azure;
-            chartArea2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            chartArea2.BorderColor = System.Drawing.Color.White;
-            chartArea2.Name = "ChartArea1";
-            chartArea2.ShadowColor = System.Drawing.Color.White;
-            this.chrSan.ChartAreas.Add(chartArea2);
-            legendCellColumn1.ColumnType = System.Windows.Forms.DataVisualization.Charting.LegendCellColumnType.SeriesSymbol;
-            legendCellColumn1.ForeColor = System.Drawing.Color.White;
-            legendCellColumn1.HeaderBackColor = System.Drawing.Color.White;
-            legendCellColumn1.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legendCellColumn1.HeaderForeColor = System.Drawing.Color.MidnightBlue;
-            legendCellColumn1.HeaderText = "Sân";
-            legendCellColumn1.Name = "Column1";
-            legendCellColumn2.Name = "Column2";
-            legendCellColumn2.Text = "#AXISLABEL";
-            legend2.CellColumns.Add(legendCellColumn1);
-            legend2.CellColumns.Add(legendCellColumn2);
-            legend2.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Column;
-            legend2.Name = "Legend2";
-            this.chrSan.Legends.Add(legend2);
+            chartArea4.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
+            chartArea4.Area3DStyle.Enable3D = true;
+            chartArea4.Area3DStyle.IsRightAngleAxes = false;
+            chartArea4.Area3DStyle.Perspective = 10;
+            chartArea4.BackColor = System.Drawing.Color.Azure;
+            chartArea4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            chartArea4.BorderColor = System.Drawing.Color.White;
+            chartArea4.Name = "ChartArea1";
+            chartArea4.ShadowColor = System.Drawing.Color.White;
+            this.chrSan.ChartAreas.Add(chartArea4);
+            legendCellColumn3.ColumnType = System.Windows.Forms.DataVisualization.Charting.LegendCellColumnType.SeriesSymbol;
+            legendCellColumn3.ForeColor = System.Drawing.Color.White;
+            legendCellColumn3.HeaderBackColor = System.Drawing.Color.White;
+            legendCellColumn3.HeaderFont = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legendCellColumn3.HeaderForeColor = System.Drawing.Color.MidnightBlue;
+            legendCellColumn3.HeaderText = "Sân";
+            legendCellColumn3.Name = "Column1";
+            legendCellColumn4.Name = "Column2";
+            legendCellColumn4.Text = "#AXISLABEL";
+            legend4.CellColumns.Add(legendCellColumn3);
+            legend4.CellColumns.Add(legendCellColumn4);
+            legend4.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Column;
+            legend4.Name = "Legend2";
+            this.chrSan.Legends.Add(legend4);
             this.chrSan.Location = new System.Drawing.Point(10, 18);
             this.chrSan.Name = "chrSan";
             this.chrSan.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series3.IsValueShownAsLabel = true;
-            series3.Label = "#PERCENT";
-            series3.LabelToolTip = "#PERCENT";
-            series3.Legend = "Legend2";
-            series3.Name = "San";
-            this.chrSan.Series.Add(series3);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series6.IsValueShownAsLabel = true;
+            series6.Label = "#PERCENT";
+            series6.LabelToolTip = "#PERCENT";
+            series6.Legend = "Legend2";
+            series6.Name = "San";
+            this.chrSan.Series.Add(series6);
             this.chrSan.Size = new System.Drawing.Size(603, 458);
             this.chrSan.TabIndex = 0;
             this.chrSan.Text = "chart1";
-            title2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            title2.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.Percent60;
-            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.ForeColor = System.Drawing.Color.MidnightBlue;
-            title2.Name = "Title1";
-            title2.Text = "Biểu đồ doanh thu theo sân";
-            this.chrSan.Titles.Add(title2);
+            title4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            title4.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.Percent60;
+            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title4.ForeColor = System.Drawing.Color.MidnightBlue;
+            title4.Name = "Title1";
+            title4.Text = "Biểu đồ doanh thu theo sân";
+            this.chrSan.Titles.Add(title4);
             // 
             // groupBox2
             // 
@@ -242,6 +246,8 @@
             this.groupBox2.Controls.Add(this.cbNam);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.groupBox2.Location = new System.Drawing.Point(5, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(456, 74);
@@ -267,7 +273,7 @@
             "12"});
             this.cbThang.Location = new System.Drawing.Point(72, 25);
             this.cbThang.Name = "cbThang";
-            this.cbThang.Size = new System.Drawing.Size(121, 24);
+            this.cbThang.Size = new System.Drawing.Size(121, 28);
             this.cbThang.TabIndex = 1;
             this.cbThang.SelectedIndexChanged += new System.EventHandler(this.cbThang_SelectedIndexChanged);
             // 
@@ -286,7 +292,7 @@
             "2029"});
             this.cbNam.Location = new System.Drawing.Point(285, 25);
             this.cbNam.Name = "cbNam";
-            this.cbNam.Size = new System.Drawing.Size(121, 24);
+            this.cbNam.Size = new System.Drawing.Size(121, 28);
             this.cbNam.TabIndex = 1;
             this.cbNam.SelectedIndexChanged += new System.EventHandler(this.cbNam_SelectedIndexChanged);
             // 
@@ -315,12 +321,14 @@
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.cbyear);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.groupBox1.Location = new System.Drawing.Point(934, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(492, 74);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thống kê theo quý";
+            this.groupBox1.Text = "Thống kê theo tháng";
             // 
             // cbyear
             // 
@@ -333,7 +341,7 @@
             "2025"});
             this.cbyear.Location = new System.Drawing.Point(86, 25);
             this.cbyear.Name = "cbyear";
-            this.cbyear.Size = new System.Drawing.Size(121, 24);
+            this.cbyear.Size = new System.Drawing.Size(121, 28);
             this.cbyear.TabIndex = 1;
             this.cbyear.SelectedIndexChanged += new System.EventHandler(this.cbyear_SelectedIndexChanged);
             // 

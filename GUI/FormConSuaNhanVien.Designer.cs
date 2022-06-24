@@ -142,6 +142,8 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtTuoi);
             this.groupBox1.Controls.Add(this.txtHoTen);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.groupBox1.Location = new System.Drawing.Point(92, 33);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(542, 310);
@@ -155,7 +157,7 @@
             this.lblSDT.ForeColor = System.Drawing.Color.Red;
             this.lblSDT.Location = new System.Drawing.Point(303, 289);
             this.lblSDT.Name = "lblSDT";
-            this.lblSDT.Size = new System.Drawing.Size(0, 16);
+            this.lblSDT.Size = new System.Drawing.Size(0, 20);
             this.lblSDT.TabIndex = 86;
             // 
             // lblDiaChi
@@ -164,7 +166,7 @@
             this.lblDiaChi.ForeColor = System.Drawing.Color.Red;
             this.lblDiaChi.Location = new System.Drawing.Point(29, 289);
             this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(0, 16);
+            this.lblDiaChi.Size = new System.Drawing.Size(0, 20);
             this.lblDiaChi.TabIndex = 85;
             // 
             // lblQuyen
@@ -173,7 +175,7 @@
             this.lblQuyen.ForeColor = System.Drawing.Color.Red;
             this.lblQuyen.Location = new System.Drawing.Point(301, 214);
             this.lblQuyen.Name = "lblQuyen";
-            this.lblQuyen.Size = new System.Drawing.Size(0, 16);
+            this.lblQuyen.Size = new System.Drawing.Size(0, 20);
             this.lblQuyen.TabIndex = 84;
             // 
             // lblViTri
@@ -182,7 +184,7 @@
             this.lblViTri.ForeColor = System.Drawing.Color.Red;
             this.lblViTri.Location = new System.Drawing.Point(29, 214);
             this.lblViTri.Name = "lblViTri";
-            this.lblViTri.Size = new System.Drawing.Size(0, 16);
+            this.lblViTri.Size = new System.Drawing.Size(0, 20);
             this.lblViTri.TabIndex = 83;
             // 
             // lblGT
@@ -191,7 +193,7 @@
             this.lblGT.ForeColor = System.Drawing.Color.Red;
             this.lblGT.Location = new System.Drawing.Point(301, 143);
             this.lblGT.Name = "lblGT";
-            this.lblGT.Size = new System.Drawing.Size(0, 16);
+            this.lblGT.Size = new System.Drawing.Size(0, 20);
             this.lblGT.TabIndex = 82;
             // 
             // lblTuoi
@@ -200,7 +202,7 @@
             this.lblTuoi.ForeColor = System.Drawing.Color.Red;
             this.lblTuoi.Location = new System.Drawing.Point(32, 143);
             this.lblTuoi.Name = "lblTuoi";
-            this.lblTuoi.Size = new System.Drawing.Size(0, 16);
+            this.lblTuoi.Size = new System.Drawing.Size(0, 20);
             this.lblTuoi.TabIndex = 81;
             // 
             // lblCMND
@@ -209,7 +211,7 @@
             this.lblCMND.ForeColor = System.Drawing.Color.Red;
             this.lblCMND.Location = new System.Drawing.Point(301, 77);
             this.lblCMND.Name = "lblCMND";
-            this.lblCMND.Size = new System.Drawing.Size(0, 16);
+            this.lblCMND.Size = new System.Drawing.Size(0, 20);
             this.lblCMND.TabIndex = 80;
             // 
             // lblHoTen
@@ -218,7 +220,7 @@
             this.lblHoTen.ForeColor = System.Drawing.Color.Red;
             this.lblHoTen.Location = new System.Drawing.Point(29, 77);
             this.lblHoTen.Name = "lblHoTen";
-            this.lblHoTen.Size = new System.Drawing.Size(0, 16);
+            this.lblHoTen.Size = new System.Drawing.Size(0, 20);
             this.lblHoTen.TabIndex = 79;
             // 
             // label8

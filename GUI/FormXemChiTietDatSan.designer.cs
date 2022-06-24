@@ -106,6 +106,8 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.txtctSDT);
             this.groupBox2.Controls.Add(this.txtctTenKhachHang);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.groupBox2.Location = new System.Drawing.Point(469, 52);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(240, 159);
@@ -139,14 +141,14 @@
             // 
             this.txtctSDT.Location = new System.Drawing.Point(20, 106);
             this.txtctSDT.Name = "txtctSDT";
-            this.txtctSDT.Size = new System.Drawing.Size(122, 22);
+            this.txtctSDT.Size = new System.Drawing.Size(122, 27);
             this.txtctSDT.TabIndex = 1;
             // 
             // txtctTenKhachHang
             // 
             this.txtctTenKhachHang.Location = new System.Drawing.Point(20, 60);
             this.txtctTenKhachHang.Name = "txtctTenKhachHang";
-            this.txtctTenKhachHang.Size = new System.Drawing.Size(122, 22);
+            this.txtctTenKhachHang.Size = new System.Drawing.Size(122, 27);
             this.txtctTenKhachHang.TabIndex = 1;
             // 
             // groupBox1
@@ -164,8 +166,8 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.groupBox1.Location = new System.Drawing.Point(12, 36);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(394, 261);
@@ -177,42 +179,42 @@
             // 
             this.txtctNgayTra.Location = new System.Drawing.Point(220, 162);
             this.txtctNgayTra.Name = "txtctNgayTra";
-            this.txtctNgayTra.Size = new System.Drawing.Size(122, 24);
+            this.txtctNgayTra.Size = new System.Drawing.Size(122, 27);
             this.txtctNgayTra.TabIndex = 1;
             // 
             // txtctNgayNhan
             // 
             this.txtctNgayNhan.Location = new System.Drawing.Point(220, 106);
             this.txtctNgayNhan.Name = "txtctNgayNhan";
-            this.txtctNgayNhan.Size = new System.Drawing.Size(122, 24);
+            this.txtctNgayNhan.Size = new System.Drawing.Size(122, 27);
             this.txtctNgayNhan.TabIndex = 1;
             // 
             // txtctTenSan
             // 
             this.txtctTenSan.Location = new System.Drawing.Point(223, 50);
             this.txtctTenSan.Name = "txtctTenSan";
-            this.txtctTenSan.Size = new System.Drawing.Size(122, 24);
+            this.txtctTenSan.Size = new System.Drawing.Size(122, 27);
             this.txtctTenSan.TabIndex = 1;
             // 
             // txtctTenLoaiSan
             // 
             this.txtctTenLoaiSan.Location = new System.Drawing.Point(9, 162);
             this.txtctTenLoaiSan.Name = "txtctTenLoaiSan";
-            this.txtctTenLoaiSan.Size = new System.Drawing.Size(122, 24);
+            this.txtctTenLoaiSan.Size = new System.Drawing.Size(122, 27);
             this.txtctTenLoaiSan.TabIndex = 1;
             // 
             // txtctMaDonHang
             // 
             this.txtctMaDonHang.Location = new System.Drawing.Point(9, 50);
             this.txtctMaDonHang.Name = "txtctMaDonHang";
-            this.txtctMaDonHang.Size = new System.Drawing.Size(122, 24);
+            this.txtctMaDonHang.Size = new System.Drawing.Size(122, 27);
             this.txtctMaDonHang.TabIndex = 1;
             // 
             // txtctMaTrangThai
             // 
             this.txtctMaTrangThai.Location = new System.Drawing.Point(9, 116);
             this.txtctMaTrangThai.Name = "txtctMaTrangThai";
-            this.txtctMaTrangThai.Size = new System.Drawing.Size(122, 24);
+            this.txtctMaTrangThai.Size = new System.Drawing.Size(122, 27);
             this.txtctMaTrangThai.TabIndex = 1;
             // 
             // label6
