@@ -30,36 +30,38 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNgayGio = new System.Windows.Forms.Label();
+            this.lblTenNguoiDung = new System.Windows.Forms.Label();
+            this.lblChucnang = new System.Windows.Forms.Label();
+            this.pnlBody = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.picturewelcome = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.btnThongKe = new FontAwesome.Sharp.IconButton();
             this.btnHoaDon = new FontAwesome.Sharp.IconButton();
             this.btnQuanLyKhachHang = new FontAwesome.Sharp.IconButton();
             this.btnQuanLyDichVu = new FontAwesome.Sharp.IconButton();
             this.btnQuanLyNhanVien = new FontAwesome.Sharp.IconButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnThanhToan = new FontAwesome.Sharp.IconButton();
             this.btnDichVuSanBong = new FontAwesome.Sharp.IconButton();
             this.btnThueSan = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblNgayGio = new System.Windows.Forms.Label();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.lblTenNguoiDung = new System.Windows.Forms.Label();
-            this.lblChucnang = new System.Windows.Forms.Label();
-            this.pnlBody = new System.Windows.Forms.Panel();
-            this.picturewelcome = new FontAwesome.Sharp.IconPictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.pnlMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.pnlBody.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturewelcome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.Snow;
+            this.pnlMenu.Controls.Add(this.iconButton1);
             this.pnlMenu.Controls.Add(this.btnThongKe);
             this.pnlMenu.Controls.Add(this.btnHoaDon);
             this.pnlMenu.Controls.Add(this.btnQuanLyKhachHang);
@@ -77,12 +79,135 @@
             this.pnlMenu.Size = new System.Drawing.Size(226, 832);
             this.pnlMenu.TabIndex = 0;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label2.Location = new System.Drawing.Point(0, 287);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.label2.Size = new System.Drawing.Size(71, 20);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Admin";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label1.Location = new System.Drawing.Point(0, 117);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.label1.Size = new System.Drawing.Size(106, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Main Menu";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel1.Controls.Add(this.lblNgayGio);
+            this.panel1.Controls.Add(this.iconPictureBox2);
+            this.panel1.Controls.Add(this.lblTenNguoiDung);
+            this.panel1.Controls.Add(this.lblChucnang);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(226, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1279, 117);
+            this.panel1.TabIndex = 1;
+            // 
+            // lblNgayGio
+            // 
+            this.lblNgayGio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNgayGio.AutoSize = true;
+            this.lblNgayGio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNgayGio.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblNgayGio.Location = new System.Drawing.Point(527, 48);
+            this.lblNgayGio.Name = "lblNgayGio";
+            this.lblNgayGio.Size = new System.Drawing.Size(169, 29);
+            this.lblNgayGio.TabIndex = 2;
+            this.lblNgayGio.Text = "hienthingaygio";
+            // 
+            // lblTenNguoiDung
+            // 
+            this.lblTenNguoiDung.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTenNguoiDung.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblTenNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenNguoiDung.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblTenNguoiDung.Location = new System.Drawing.Point(927, 48);
+            this.lblTenNguoiDung.Name = "lblTenNguoiDung";
+            this.lblTenNguoiDung.Size = new System.Drawing.Size(289, 42);
+            this.lblTenNguoiDung.TabIndex = 0;
+            this.lblTenNguoiDung.Text = "UserName";
+            this.lblTenNguoiDung.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblChucnang
+            // 
+            this.lblChucnang.AutoSize = true;
+            this.lblChucnang.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChucnang.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.lblChucnang.Location = new System.Drawing.Point(22, 48);
+            this.lblChucnang.Name = "lblChucnang";
+            this.lblChucnang.Size = new System.Drawing.Size(139, 32);
+            this.lblChucnang.TabIndex = 0;
+            this.lblChucnang.Text = "Welcome";
+            // 
+            // pnlBody
+            // 
+            this.pnlBody.BackColor = System.Drawing.Color.Snow;
+            this.pnlBody.Controls.Add(this.picturewelcome);
+            this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBody.Location = new System.Drawing.Point(226, 117);
+            this.pnlBody.Name = "pnlBody";
+            this.pnlBody.Size = new System.Drawing.Size(1279, 715);
+            this.pnlBody.TabIndex = 2;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // picturewelcome
+            // 
+            this.picturewelcome.BackColor = System.Drawing.Color.Snow;
+            this.picturewelcome.BackgroundImage = global::Do_An_PLB03.Properties.Resources.phần_mền_quản_lý_sân_bóng_đá_xanh;
+            this.picturewelcome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picturewelcome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picturewelcome.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.picturewelcome.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.picturewelcome.IconColor = System.Drawing.SystemColors.ControlText;
+            this.picturewelcome.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.picturewelcome.IconSize = 715;
+            this.picturewelcome.InitialImage = null;
+            this.picturewelcome.Location = new System.Drawing.Point(0, 0);
+            this.picturewelcome.Name = "picturewelcome";
+            this.picturewelcome.Size = new System.Drawing.Size(1279, 715);
+            this.picturewelcome.TabIndex = 0;
+            this.picturewelcome.TabStop = false;
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconPictureBox2.BackColor = System.Drawing.Color.AliceBlue;
+            this.iconPictureBox2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
+            this.iconPictureBox2.IconColor = System.Drawing.SystemColors.HotTrack;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 42;
+            this.iconPictureBox2.Location = new System.Drawing.Point(1222, 48);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(42, 42);
+            this.iconPictureBox2.TabIndex = 1;
+            this.iconPictureBox2.TabStop = false;
+            this.iconPictureBox2.Click += new System.EventHandler(this.iconPictureBox2_Click);
+            // 
             // btnThongKe
             // 
             this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnThongKe.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
+            this.btnThongKe.IconChar = FontAwesome.Sharp.IconChar.Clipboard;
             this.btnThongKe.IconColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnThongKe.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -91,7 +216,7 @@
             this.btnThongKe.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnThongKe.Size = new System.Drawing.Size(226, 50);
             this.btnThongKe.TabIndex = 13;
-            this.btnThongKe.Text = "Thống Kê";
+            this.btnThongKe.Text = "Lịch sử hóa đơn ";
             this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThongKe.UseVisualStyleBackColor = true;
             this.btnThongKe.Click += new System.EventHandler(this.iconButton1_Click_1);
@@ -101,7 +226,7 @@
             this.btnHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHoaDon.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnHoaDon.IconChar = FontAwesome.Sharp.IconChar.Clipboard;
+            this.btnHoaDon.IconChar = FontAwesome.Sharp.IconChar.CommentDollar;
             this.btnHoaDon.IconColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnHoaDon.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -110,7 +235,7 @@
             this.btnHoaDon.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnHoaDon.Size = new System.Drawing.Size(226, 50);
             this.btnHoaDon.TabIndex = 8;
-            this.btnHoaDon.Text = "Lịch sử hóa đơn";
+            this.btnHoaDon.Text = "Quản lí giá sân";
             this.btnHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHoaDon.UseVisualStyleBackColor = true;
             this.btnHoaDon.Click += new System.EventHandler(this.iconButton6_Click);
@@ -172,19 +297,6 @@
             this.btnQuanLyNhanVien.UseVisualStyleBackColor = true;
             this.btnQuanLyNhanVien.Click += new System.EventHandler(this.iconButton7_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label2.Location = new System.Drawing.Point(0, 287);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(71, 20);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Admin";
-            // 
             // btnThanhToan
             // 
             this.btnThanhToan.Dock = System.Windows.Forms.DockStyle.Top;
@@ -242,19 +354,6 @@
             this.btnThueSan.UseVisualStyleBackColor = true;
             this.btnThueSan.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label1.Location = new System.Drawing.Point(0, 117);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.label1.Size = new System.Drawing.Size(106, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Main Menu";
-            // 
             // iconPictureBox1
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.Snow;
@@ -273,102 +372,24 @@
             this.iconPictureBox1.TabStop = false;
             this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
             // 
-            // panel1
+            // iconButton1
             // 
-            this.panel1.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel1.Controls.Add(this.lblNgayGio);
-            this.panel1.Controls.Add(this.iconPictureBox2);
-            this.panel1.Controls.Add(this.lblTenNguoiDung);
-            this.panel1.Controls.Add(this.lblChucnang);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(226, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1279, 117);
-            this.panel1.TabIndex = 1;
-            // 
-            // lblNgayGio
-            // 
-            this.lblNgayGio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNgayGio.AutoSize = true;
-            this.lblNgayGio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayGio.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblNgayGio.Location = new System.Drawing.Point(527, 48);
-            this.lblNgayGio.Name = "lblNgayGio";
-            this.lblNgayGio.Size = new System.Drawing.Size(169, 29);
-            this.lblNgayGio.TabIndex = 2;
-            this.lblNgayGio.Text = "hienthingaygio";
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconPictureBox2.BackColor = System.Drawing.Color.AliceBlue;
-            this.iconPictureBox2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
-            this.iconPictureBox2.IconColor = System.Drawing.SystemColors.HotTrack;
-            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 42;
-            this.iconPictureBox2.Location = new System.Drawing.Point(1222, 48);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(42, 42);
-            this.iconPictureBox2.TabIndex = 1;
-            this.iconPictureBox2.TabStop = false;
-            this.iconPictureBox2.Click += new System.EventHandler(this.iconPictureBox2_Click);
-            // 
-            // lblTenNguoiDung
-            // 
-            this.lblTenNguoiDung.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTenNguoiDung.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblTenNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenNguoiDung.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblTenNguoiDung.Location = new System.Drawing.Point(927, 48);
-            this.lblTenNguoiDung.Name = "lblTenNguoiDung";
-            this.lblTenNguoiDung.Size = new System.Drawing.Size(289, 42);
-            this.lblTenNguoiDung.TabIndex = 0;
-            this.lblTenNguoiDung.Text = "UserName";
-            this.lblTenNguoiDung.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblChucnang
-            // 
-            this.lblChucnang.AutoSize = true;
-            this.lblChucnang.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChucnang.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.lblChucnang.Location = new System.Drawing.Point(22, 48);
-            this.lblChucnang.Name = "lblChucnang";
-            this.lblChucnang.Size = new System.Drawing.Size(139, 32);
-            this.lblChucnang.TabIndex = 0;
-            this.lblChucnang.Text = "Welcome";
-            // 
-            // pnlBody
-            // 
-            this.pnlBody.BackColor = System.Drawing.Color.Snow;
-            this.pnlBody.Controls.Add(this.picturewelcome);
-            this.pnlBody.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBody.Location = new System.Drawing.Point(226, 117);
-            this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(1279, 715);
-            this.pnlBody.TabIndex = 2;
-            // 
-            // picturewelcome
-            // 
-            this.picturewelcome.BackColor = System.Drawing.Color.Snow;
-            this.picturewelcome.BackgroundImage = global::Do_An_PLB03.Properties.Resources.phần_mền_quản_lý_sân_bóng_đá_xanh;
-            this.picturewelcome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picturewelcome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picturewelcome.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.picturewelcome.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.picturewelcome.IconColor = System.Drawing.SystemColors.ControlText;
-            this.picturewelcome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.picturewelcome.IconSize = 715;
-            this.picturewelcome.InitialImage = null;
-            this.picturewelcome.Location = new System.Drawing.Point(0, 0);
-            this.picturewelcome.Name = "picturewelcome";
-            this.picturewelcome.Size = new System.Drawing.Size(1279, 715);
-            this.picturewelcome.TabIndex = 0;
-            this.picturewelcome.TabStop = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
+            this.iconButton1.IconColor = System.Drawing.SystemColors.AppWorkspace;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(0, 557);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.iconButton1.Size = new System.Drawing.Size(226, 50);
+            this.iconButton1.TabIndex = 14;
+            this.iconButton1.Text = "Thống kê";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click_2);
             // 
             // FormChinh
             // 
@@ -384,12 +405,12 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlMenu.ResumeLayout(false);
             this.pnlMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.pnlBody.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picturewelcome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -416,5 +437,6 @@
         private System.Windows.Forms.Timer timer1;
         private FontAwesome.Sharp.IconPictureBox picturewelcome;
         private FontAwesome.Sharp.IconButton btnThongKe;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

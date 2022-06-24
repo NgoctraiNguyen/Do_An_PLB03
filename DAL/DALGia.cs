@@ -70,6 +70,30 @@ namespace Do_An_PLB03.DAL
             return giatheogio;
 
         }
+        public static DataTable BangGiaSan()
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            SqlCommand command = new SqlCommand("select MaGiaSan AS'Mã Giá Sân',LoaiSan AS'Loại Sân', ThoiGianBatDau AS'Thời gian bắt đầu', ThoiGianKetThuc AS'Thời gian kết thúc',GiaTheoGio AS'Giá theo giờ' from Gia", conn);
+            command.CommandType = CommandType.Text;
 
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.SelectCommand = command;
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            conn.Close();
+            return dt;
+        }
+        public static void SuaGia(DTOGia a)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            SqlCommand command = new SqlCommand("update Gia set GiaTheoGio = @gia where MaGiaSan = @ma", conn);
+            command.CommandType = CommandType.Text;
+            command.Parameters.AddWithValue("@gia", a.GiaTheoGio);
+            command.Parameters.AddWithValue("@ma", a.MaGiaSan);
+            command.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

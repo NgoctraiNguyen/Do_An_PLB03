@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Do_An_PLB03.DTO;
 using Do_An_PLB03.DAL;
-
+using System.Data;
 
 namespace Do_An_PLB03.BUS
 {
@@ -29,6 +29,13 @@ namespace Do_An_PLB03.BUS
             giatheogio = DALGia.gia(gia, loaisan);
             return giatheogio;
         }
-
+        public static DataTable BangGiaSan()
+        {
+            return DALGia.BangGiaSan();
+        }
+        public static void SuaGia(DTOGia a)
+        {
+            DALGia.SuaGia(a);
+        }
     }
 }

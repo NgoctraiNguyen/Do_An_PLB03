@@ -41,5 +41,10 @@ namespace Do_An_PLB03.GUI
             }
 
         }
+
+        private void FormHienThiKhachHang_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

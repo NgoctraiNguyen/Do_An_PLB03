@@ -116,7 +116,7 @@ namespace Do_An_PLB03.GUI
         private void iconButton6_Click(object sender, EventArgs e)
         {
             clickbutton(sender);
-            Openchillform(new FormQuanLiHoaDon());
+            Openchillform(new FormConGiaSan());
         }
 
         private void iconButton7_Click(object sender, EventArgs e)
@@ -159,6 +159,12 @@ namespace Do_An_PLB03.GUI
         }
 
         private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            clickbutton(sender);
+            Openchillform(new FormQuanLiHoaDon());
+        }
+
+        private void iconButton1_Click_2(object sender, EventArgs e)
         {
             clickbutton(sender);
             Openchillform(new Formthongke());
