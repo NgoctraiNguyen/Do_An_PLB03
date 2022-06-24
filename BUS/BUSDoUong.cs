@@ -71,5 +71,9 @@ namespace Do_An_PLB03.BUS
         {
             return DALDoUong.TimKiemGiaBan(gia);
         }
+        public static int MaDoUong(string ten)
+        {
+            return DALDoUong.MaDoUong(ten);
+        }
     }
 }

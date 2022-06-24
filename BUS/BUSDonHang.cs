@@ -27,5 +27,9 @@ namespace Do_An_PLB03.BUS
         {
             return DALDonHang.GetTenSan(madonhang);
         }
+        public static void TraSan(int madonhang)
+        {
+            DALDonHang.TraSan(madonhang);
+        }
     }
 }

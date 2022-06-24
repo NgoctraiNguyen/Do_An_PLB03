@@ -42,5 +42,17 @@ namespace Do_An_PLB03.BUS
             DataTable dt = DALHoaDon.DSThanhToan();
             return dt;
         }
+        public static int LayMaTheoTen(string ten)
+        {
+            return DALHoaDon.LayMaTheoTen(ten);
+        }
+        public static int GetTongTien(int MaHoaDon)
+        {
+            return DALHoaDon.GetTongTien(MaHoaDon);
+        }
+        public static int GetMaDonHang(int ma)
+        {
+            return DALHoaDon.GetMaDonHang(ma);
+        }
     }
 }

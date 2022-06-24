@@ -98,7 +98,7 @@ namespace Do_An_PLB03.GUI
             float tiendichvu=0;
 
             string tensan = (((Button)sender).Text).Split(' ')[1];
-            ma = DALHoaDon.LayMaTheoTen(tensan);
+            ma = BUSHoaDon.LayMaTheoTen(tensan);
             mahoadon = ma;
             dtDichVu.DataSource = BUSDoUong.DsDoUong(ma);
 
@@ -106,7 +106,7 @@ namespace Do_An_PLB03.GUI
             for (int i = 0; i <= sc - 1; i++)
                 tiendichvu += float.Parse(dtDichVu.Rows[i].Cells[3].Value.ToString());
             txtdv.Text=tiendichvu.ToString();
-            txtTongTien.Text = (DALHoaDon.GetTongTien(mahoadon)).ToString();
+            txtTongTien.Text = (BUSHoaDon.GetTongTien(mahoadon)).ToString();
             txtsan.Text = (int.Parse(txtTongTien.Text)-int.Parse(txtdv.Text)).ToString();
             DienHoaDon(ma.ToString(), tensan);
           
@@ -139,7 +139,7 @@ namespace Do_An_PLB03.GUI
                 }
                 else
                 {
-                    int madouong = DALDoUong.MaDoUong(comboBox1.Text);
+                    int madouong = BUSDoUong.MaDoUong(comboBox1.Text);
                     BUSDoUong.ThemDichVu(mahoadon, madouong, int.Parse(txtSL.Text));
                     dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
                 }
@@ -160,7 +160,7 @@ namespace Do_An_PLB03.GUI
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtGia.Text = BUSDoUong.GiaDoUongTheoMa(DALDoUong.MaDoUong(comboBox1.Text)).ToString();
+            txtGia.Text = BUSDoUong.GiaDoUongTheoMa(BUSDoUong.MaDoUong(comboBox1.Text)).ToString();
         }
 
         DTOHoaDon HoaDon= new DTOHoaDon();
@@ -210,7 +210,7 @@ namespace Do_An_PLB03.GUI
         {
             try
             {
-                DALDonHang.TraSan(DALHoaDon.GetMaDonHang(ma));
+                BUSDonHang.TraSan(BUSHoaDon.GetMaDonHang(ma));
                 FormSudungdichvuvaThanhtoan_Load(sender, e);
             }
             catch
@@ -267,7 +267,7 @@ namespace Do_An_PLB03.GUI
             try
             {
                 x = Convert.ToInt32(dtDichVu.SelectedCells[1].Value);
-                int madouong = DALDoUong.MaDoUong(comboBox1.Text);
+                int madouong = BUSDoUong.MaDoUong(comboBox1.Text);
                 BUSDoUong.suadichvu(mahoadon, madouong, int.Parse(txtSL.Text));
                 BUSDoUong.updatesoluong(int.Parse(txtSL.Text) - x, comboBox1.Text);
                 dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
@@ -280,7 +280,7 @@ namespace Do_An_PLB03.GUI
             try
             {
                 x = Convert.ToInt32(dtDichVu.SelectedCells[1].Value);
-                int madouong = DALDoUong.MaDoUong(comboBox1.Text);
+                int madouong = BUSDoUong.MaDoUong(comboBox1.Text);
                 BUSDoUong.xoadichvu(mahoadon, madouong);
                 BUSDoUong.updatesoluong(-x, comboBox1.Text);
                 dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
