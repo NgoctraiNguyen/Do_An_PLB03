@@ -68,7 +68,7 @@ namespace Do_An_PLB03.GUI
         {
             DataGridViewRow row = dataGridView1.SelectedCells[0].OwningRow;
 
-            string ma1 = row.Cells["MaDoUong"].Value.ToString();
+            string ma1 = row.Cells[0].Value.ToString();
             try
             {
                 int ma = Convert.ToInt32(ma1);

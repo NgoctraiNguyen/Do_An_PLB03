@@ -57,7 +57,7 @@ namespace Do_An_PLB03.GUI
                                 int sl = Convert.ToInt32(txtSoLuong.Text);
                                 int giaban = Convert.ToInt32(txtGiaBan.Text);
                                 int giagoc = Convert.ToInt32(txtGiaGoc.Text);
-                                DTODoUong douong = new DTODoUong(ten, sl, giaban, giagoc);
+                                DTODoUong douong = new DTODoUong(ten, sl, giagoc, giaban);
                                 BUSDoUong.InsertDoUong(douong);
                                 MessageBox.Show("Them thanh cong");
                             }
