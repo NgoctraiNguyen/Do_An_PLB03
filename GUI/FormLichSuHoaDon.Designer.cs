@@ -260,6 +260,7 @@
             this.Controls.Add(this.lbTong);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormQuanLiHoaDon";
             this.Text = "FormQuanLiHoaDon";
             ((System.ComponentModel.ISupportInitialize)(this.dtHoaDon)).EndInit();
