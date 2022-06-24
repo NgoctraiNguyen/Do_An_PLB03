@@ -140,7 +140,7 @@ namespace Do_An_PLB03.GUI
         private void iconPictureBox2_Click(object sender, EventArgs e)
         {
             Openchillform(new FormConTaiKhoan(_user,this));
-            lblChucnang.Text = "Tài khoảng cá nhân";
+            lblChucnang.Text = "Tài khoản cá nhân";
             disablebutton();
         }
 

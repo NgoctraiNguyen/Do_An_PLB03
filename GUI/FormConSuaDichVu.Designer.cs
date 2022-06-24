@@ -219,7 +219,7 @@
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormConSuaDichVu";
-            this.Text = "FormConSuaDichVu";
+            this.Text = "Sửa Dịch Vụ";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

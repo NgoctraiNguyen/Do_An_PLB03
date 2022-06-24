@@ -426,7 +426,7 @@
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnSua);
             this.Name = "FormConSuaNhanVien";
-            this.Text = "FormConSuaNhanVien";
+            this.Text = "Sửa Nhân Viên";
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormConSuaNhanVien_MouseMove);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -274,12 +274,16 @@ namespace Do_An_PLB03.GUI
 
         private void btnXemChiTiet_Click(object sender, EventArgs e)
         {
-            if (dtDanhSachDatSan.SelectedRows.Count != 1) { return; }
-            else
+            try
             {
-                FormXemChiTietDatSan formxct = new FormXemChiTietDatSan(ctTenSan, ctTen, ctNgayNhan, ctNgayTra, ctSDTKhachHang, ctMaDonHang, ctMaTrangThaiSan, ctLoaiSan);
-                formxct.ShowDialog();
+                if (dtDanhSachDatSan.SelectedRows.Count != 1) { return; }
+                else
+                {
+                    FormXemChiTietDatSan formxct = new FormXemChiTietDatSan(ctTenSan, ctTen, ctNgayNhan, ctNgayTra, ctSDTKhachHang, ctMaDonHang, ctMaTrangThaiSan, ctLoaiSan);
+                    formxct.ShowDialog();
+                }
             }
+            catch { }
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
