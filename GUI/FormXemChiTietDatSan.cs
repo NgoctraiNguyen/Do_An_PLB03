@@ -17,15 +17,19 @@ namespace Do_An_PLB03.GUI
         public FormXemChiTietDatSan( string TenSan, string name, string NgayNhan,string NgayTra, string SDTKhachHang, string MaDonHang, string MaTrangThaiSan, string LoaiSan)
         {
             InitializeComponent();
-            
-            txtctTenKhachHang.Text = name;
-            txtctTenSan.Text = TenSan;
-            txtctNgayNhan.Text = NgayNhan.ToString();
-            txtctNgayTra.Text = NgayTra.ToString();
-            txtctSDT.Text = SDTKhachHang;
-            txtctMaDonHang.Text= MaDonHang;
-            txtctMaTrangThai.Text= MaTrangThaiSan;
-            txtctTenLoaiSan.Text= LoaiSan;  
+            try
+            {
+                txtctTenKhachHang.Text = name;
+                txtctTenSan.Text = TenSan;
+                txtctNgayNhan.Text = NgayNhan.ToString();
+                txtctNgayTra.Text = NgayTra.ToString();
+                txtctSDT.Text = SDTKhachHang;
+                txtctMaDonHang.Text = MaDonHang;
+                txtctMaTrangThai.Text = MaTrangThaiSan;
+                txtctTenLoaiSan.Text = LoaiSan;
+            }
+            catch { }
+  
            
         }
 

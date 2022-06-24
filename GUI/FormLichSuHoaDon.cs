@@ -21,6 +21,7 @@ namespace Do_An_PLB03.GUI
             dtpBatDau.Value = new DateTime(2022, 1, 1);
             dtpKetThuc.Value = new DateTime(2022, 12, 31);
             txtTongSoHoaDon.Text = dtHoaDon.RowCount.ToString();
+            dtHoaDon.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void Text_Changed(object sender, EventArgs e)
@@ -54,8 +55,16 @@ namespace Do_An_PLB03.GUI
         }
         private void dtHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = dtHoaDon.Rows[e.RowIndex];
-            dataGridView1.DataSource = BUSDoUong.DsDoUong(Convert.ToInt32(row.Cells[0].Value));
+            try
+            {
+                DataGridViewRow row = dtHoaDon.Rows[e.RowIndex];
+                dataGridView1.DataSource = BUSDoUong.DsDoUong(Convert.ToInt32(row.Cells[0].Value));
+                dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
+            catch
+            {
+
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -168,20 +168,27 @@ namespace Do_An_PLB03.GUI
         private void button3_Click(object sender, EventArgs e)
         {
             //BUSHoaDon.updateTongTien(ma, int.Parse(txtTongTien.Text));
-            BUSHoaDon.ThanhToan(Convert.ToInt32(lblSoHoaDon.Text));
-            if (comboBox1.Text == "")
+            try
+            {
+                BUSHoaDon.ThanhToan(Convert.ToInt32(lblSoHoaDon.Text));
+                if (comboBox1.Text == "")
+                {
+
+                }
+                else
+                {
+                    int sc = dtDichVu.Rows.Count;
+                    for (int i = 0; i < sc - 1; i++)
+                    {
+                        BUSDoUong.updatesoluong(int.Parse(dtDichVu.Rows[i].Cells[1].Value.ToString()), dtDichVu.Rows[i].Cells[0].Value.ToString());
+                    }
+                }
+                FormSudungdichvuvaThanhtoan_Load(sender, e);
+            }
+            catch
             {
 
             }
-            else
-            {
-                int sc = dtDichVu.Rows.Count;
-                for (int i = 0; i < sc - 1; i++)
-                {
-                    BUSDoUong.updatesoluong(int.Parse(dtDichVu.Rows[i].Cells[1].Value.ToString()), dtDichVu.Rows[i].Cells[0].Value.ToString());
-                }
-            }
-            FormSudungdichvuvaThanhtoan_Load(sender, e);
         }
 
         private void DienHoaDon(String SoHD, String San)
@@ -201,9 +208,15 @@ namespace Do_An_PLB03.GUI
 
         private void btnDatSan_Click(object sender, EventArgs e)
         {
-            
-            DALDonHang.TraSan(DALHoaDon.GetMaDonHang(ma));
-            FormSudungdichvuvaThanhtoan_Load(sender, e);
+            try
+            {
+                DALDonHang.TraSan(DALHoaDon.GetMaDonHang(ma));
+                FormSudungdichvuvaThanhtoan_Load(sender, e);
+            }
+            catch
+            {
+
+            }
         }
 
         private void dtThanhToan_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -264,11 +277,19 @@ namespace Do_An_PLB03.GUI
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            x = Convert.ToInt32(dtDichVu.SelectedCells[1].Value);
-            int madouong = DALDoUong.MaDoUong(comboBox1.Text);
-            BUSDoUong.xoadichvu(mahoadon, madouong);
-            BUSDoUong.updatesoluong(-x, comboBox1.Text);
-            dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
+            try
+            {
+                x = Convert.ToInt32(dtDichVu.SelectedCells[1].Value);
+                int madouong = DALDoUong.MaDoUong(comboBox1.Text);
+                BUSDoUong.xoadichvu(mahoadon, madouong);
+                BUSDoUong.updatesoluong(-x, comboBox1.Text);
+                dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
+            }
+            catch
+            {
+
+            }
+            
         }
 
         private void dtDichVu_CellContentClick(object sender, DataGridViewCellEventArgs e)
