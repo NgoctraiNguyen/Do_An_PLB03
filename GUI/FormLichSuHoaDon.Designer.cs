@@ -58,6 +58,7 @@
             // dtHoaDon
             // 
             this.dtHoaDon.AllowUserToAddRows = false;
+            this.dtHoaDon.BackgroundColor = System.Drawing.Color.White;
             this.dtHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtHoaDon.Location = new System.Drawing.Point(0, 21);
             this.dtHoaDon.Name = "dtHoaDon";
@@ -81,6 +82,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 21);
             this.dataGridView1.Name = "dataGridView1";
@@ -241,18 +243,22 @@
             // 
             // btnReset
             // 
+            this.btnReset.BackColor = System.Drawing.Color.LightCyan;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.Color.MidnightBlue;
             this.btnReset.Location = new System.Drawing.Point(1121, 53);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(136, 42);
             this.btnReset.TabIndex = 6;
             this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // FormQuanLiHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1538, 795);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.groupBox2);
