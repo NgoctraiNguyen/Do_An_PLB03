@@ -103,7 +103,7 @@ namespace Do_An_PLB03.GUI
             dtDichVu.DataSource = BUSDoUong.DsDoUong(ma);
 
             int sc = dtDichVu.Rows.Count;
-            for (int i = 0; i < sc - 1; i++)
+            for (int i = 0; i <= sc - 1; i++)
                 tiendichvu += float.Parse(dtDichVu.Rows[i].Cells[3].Value.ToString());
             txtdv.Text=tiendichvu.ToString();
             txtTongTien.Text = (DALHoaDon.GetTongTien(mahoadon)).ToString();
@@ -143,18 +143,19 @@ namespace Do_An_PLB03.GUI
                     BUSDoUong.ThemDichVu(mahoadon, madouong, int.Parse(txtSL.Text));
                     dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
                 }
+                if (comboBox1.Text == "")
+                {
+                }
+                else
+                {
+
+                    //BUSDoUong.updatesoluong(int.Parse(dtDichVu.Rows[i].Cells[1].Value.ToString()), dtDichVu.Rows[i].Cells[0].Value.ToString());
+                    BUSDoUong.updatesoluong(int.Parse(txtSL.Text), comboBox1.Text);
+
+                }
             }
 
-            if (comboBox1.Text == "")
-            {
-            }
-            else
-            {
-
-                //BUSDoUong.updatesoluong(int.Parse(dtDichVu.Rows[i].Cells[1].Value.ToString()), dtDichVu.Rows[i].Cells[0].Value.ToString());
-                BUSDoUong.updatesoluong(int.Parse(txtSL.Text), comboBox1.Text);
-
-            }
+           
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -250,11 +251,15 @@ namespace Do_An_PLB03.GUI
         public static int x;
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            x = Convert.ToInt32(dtDichVu.SelectedCells[1].Value); 
-            int madouong = DALDoUong.MaDoUong(comboBox1.Text);
-            BUSDoUong.suadichvu(mahoadon, madouong, int.Parse(txtSL.Text));
-            BUSDoUong.updatesoluong(int.Parse(txtSL.Text) - x, comboBox1.Text);
-            dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
+            try
+            {
+                x = Convert.ToInt32(dtDichVu.SelectedCells[1].Value);
+                int madouong = DALDoUong.MaDoUong(comboBox1.Text);
+                BUSDoUong.suadichvu(mahoadon, madouong, int.Parse(txtSL.Text));
+                BUSDoUong.updatesoluong(int.Parse(txtSL.Text) - x, comboBox1.Text);
+                dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
+            }
+            catch { }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
