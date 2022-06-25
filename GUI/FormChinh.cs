@@ -66,6 +66,8 @@ namespace Do_An_PLB03.GUI
             btnQuanLyDichVu.Visible = admin;
             btnQuanLyKhachHang.Visible = admin;
             btnHoaDon.Visible = admin;
+            btnThongKe.Visible = admin;
+            iconButton1.Visible = admin;
             timer1.Enabled = true;
         }
 
