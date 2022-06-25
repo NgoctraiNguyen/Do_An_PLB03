@@ -72,11 +72,22 @@ namespace Do_An_PLB03.GUI
             {
                 lblGia.Text = "Vui lòng nhập lại";
                 txtGia.Focus();
-                btnSua.Enabled = false;
             }
             else
             {
                 lblGia.Text = "";
+            }
+        }
+
+        private void FormConGiaSan_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(lblGia.Text != "")
+            {
+                btnSua.Enabled = false;
+            }
+            else
+            {
+                btnSua.Enabled = true;
             }
         }
     }

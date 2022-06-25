@@ -88,5 +88,44 @@ namespace Do_An_PLB03.DAL
             }
             return TenKhachHang;
         }
+        public static void InsertKhachHang(DTOKhachHang a)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open(); 
+            SqlCommand command = new SqlCommand("insert into KhachHang(TenKhachHang,SDTKhachHang)values( @ten, @sdt)", conn);
+            command.CommandType = CommandType.Text;
+
+            command.Parameters.AddWithValue("@ten", a.TenKhachHang);
+            command.Parameters.AddWithValue("@sdt", a.SDTKhachHang);
+
+            command.ExecuteNonQuery();
+            conn.Close();
+        }
+        public static void UpdateKhachHang(DTOKhachHang a)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            SqlCommand command = new SqlCommand("update KhachHang set TenKhachHang = @ten, SDTKhachHang = @sdt, where MaKhachHang = @ma", conn);
+            command.CommandType = CommandType.Text;
+
+            command.Parameters.AddWithValue("@ma", a.MaKhachHang);
+            command.Parameters.AddWithValue("@ten", a.TenKhachHang);
+            command.Parameters.AddWithValue("@sdt", a.SDTKhachHang);
+
+            command.ExecuteNonQuery();
+            conn.Close();
+        }
+        public static void DeleteKhachHang(DTOKhachHang a)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            SqlCommand command = new SqlCommand("delete from KhachHang where MaKhachHang = @ma", conn);
+            command.CommandType = CommandType.Text;
+
+            command.Parameters.AddWithValue("@ma", a.MaKhachHang);
+
+            command.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

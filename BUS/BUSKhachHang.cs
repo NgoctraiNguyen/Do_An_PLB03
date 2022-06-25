@@ -39,5 +39,17 @@ namespace Do_An_PLB03.BUS
         {
             return DALKhachHang.getkhachhang(khachhang, SDT);
         }
+        public static void InsertKhachHang(DTOKhachHang a)
+        {
+            DALKhachHang.InsertKhachHang(a);
+        }
+        public static void UpdateKhachHang(DTOKhachHang a)
+        {
+            DALKhachHang.UpdateKhachHang(a);
+        }
+        public static void DeleteKhachHang(DTOKhachHang a)
+        {
+            DALKhachHang.DeleteKhachHang(a);
+        }
     }
 }

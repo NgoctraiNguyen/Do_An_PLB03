@@ -50,7 +50,7 @@
             this.groupBox1.Controls.Add(this.txtUser);
             this.groupBox1.Controls.Add(this.btnTimKiem);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(34, 609);
+            this.groupBox1.Location = new System.Drawing.Point(33, 609);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(467, 122);
             this.groupBox1.TabIndex = 1;

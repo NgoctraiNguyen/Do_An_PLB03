@@ -43,7 +43,7 @@ namespace Do_An_PLB03.DAL
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
-            SqlCommand command = new SqlCommand("Select MaKhachHang AS' Mã Khách Hàng', TenKhachHang AS'Tên Khách Hàng', SDTKhachHang AS' SDT Khách Hàng' from KhachHang" ,conn);
+            SqlCommand command = new SqlCommand("Select MaKhachHang AS'Ma', TenKhachHang , SDTKhachHang from KhachHang" ,conn);
             command.CommandType = CommandType.Text;
             
 

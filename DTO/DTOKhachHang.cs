@@ -20,6 +20,12 @@ namespace Do_An_PLB03.DTO
             this.SDTKhachHang = SDTKhachHang;
 
         }
+        public DTOKhachHang( string TenKhachHang, string SDTKhachHang)
+        {
+            this.TenKhachHang = TenKhachHang;
+            this.SDTKhachHang = SDTKhachHang;
+
+        }
 
         public int MaKhachHang { get => _MaKhachHang; set => _MaKhachHang = value; }
         public string TenKhachHang { get => _TenKhachHang; set => _TenKhachHang = value; }

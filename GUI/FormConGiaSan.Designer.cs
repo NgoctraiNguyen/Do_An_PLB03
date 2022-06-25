@@ -180,6 +180,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormConGiaSan";
             this.Text = "Quản lí giá sân";
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormConGiaSan_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.dtGiaSan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
