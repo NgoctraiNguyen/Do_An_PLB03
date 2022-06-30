@@ -12,6 +12,11 @@ namespace Do_An_PLB03.BUS
     {
         public static List<string > loaisan= new List<string>();
         public static List<string> tensan= new List<string>();
+
+        public static void them(string loai,string ten)
+        {
+            DALSan.them(loai,ten);
+        }
         public static List<string > san (DTOSan san)
         {
             loaisan= DALSan.san(san);
@@ -19,6 +24,7 @@ namespace Do_An_PLB03.BUS
         }
         public static List<string> tensandat(DTOSan san,string tenloaisan)
         {
+            tensan.Clear();
             tensan= DALSan.tensandat(san,tenloaisan);
             return tensan;
         }

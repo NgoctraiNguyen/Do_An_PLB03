@@ -105,7 +105,7 @@ namespace Do_An_PLB03.DAL
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
-            SqlCommand command = new SqlCommand("update KhachHang set TenKhachHang = @ten, SDTKhachHang = @sdt, where MaKhachHang = @ma", conn);
+            SqlCommand command = new SqlCommand("update KhachHang set TenKhachHang = @ten, SDTKhachHang = @sdt  where MaKhachHang = @ma", conn);
             command.CommandType = CommandType.Text;
 
             command.Parameters.AddWithValue("@ma", a.MaKhachHang);

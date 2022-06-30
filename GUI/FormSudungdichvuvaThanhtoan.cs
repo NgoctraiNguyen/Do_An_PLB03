@@ -17,12 +17,15 @@ namespace Do_An_PLB03.GUI
     {
         private int mahoadon = -1;
         private DTONguoiDung _user;
-        private List<string> list = new List<string>();
+        private DTOSan san;
+     
+   
         public FormSudungdichvuvaThanhtoan(DTONguoiDung user)
         {
             InitializeComponent();
             _user = user;
         }
+        
 
         private bool KiemTra(string TenSan)
         {
@@ -35,8 +38,16 @@ namespace Do_An_PLB03.GUI
             }
             return false;
         }
-        private void FormSudungdichvuvaThanhtoan_Load(object sender, EventArgs e)
+
+
+
+      private void FormSudungdichvuvaThanhtoan_Load(object sender, EventArgs e)
         {
+           
+            
+            showsan5();
+            showsan7();
+            /*
             if(KiemTra("5A"))
             {
                 btn5A.BackColor = Color.LightGreen;
@@ -89,7 +100,8 @@ namespace Do_An_PLB03.GUI
             }
             comboBox1.DataSource = BUSDoUong.DoUong();
             
-            dtThanhToan.DataSource = BUSHoaDon.DSThanhToan();
+            dtThanhToan.DataSource = BUSHoaDon.DSThanhToan();*/
+
         }
         public int ma;
         private void FormSudungdichvuvaThanhtoan_Click(object sender, EventArgs e)
@@ -292,9 +304,59 @@ namespace Do_An_PLB03.GUI
             
         }
 
-        private void dtDichVu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        
+
+     
+
+        private void btnThemSan_Click(object sender, EventArgs e)
         {
 
+            FormThemSan formThemSan = new FormThemSan();
+            formThemSan.t += new FormThemSan.them(themsan);
+            formThemSan.d+= new FormThemSan.load(showsan5);
+            formThemSan.d += new FormThemSan.load(showsan7);
+            formThemSan.Show();
+
+
         }
+        private void themsan(string loai,string txt)
+        {
+
+            BUSSan.them(loai, txt);
+        }
+        private void showsan5()
+        {
+            fl1.Controls.Clear();
+            List<string> tensan5 = new List<string>();
+            BUSSan.tensandat(san, "5");
+            tensan5 = BUSSan.tensan;
+            foreach (var s5 in tensan5)
+            {
+                
+                Button bt1 = new Button();
+                bt1.Text = s5;
+                bt1.Size = new System.Drawing.Size(100, 50);
+                fl1.Controls.Add(bt1);
+            }
+
+            
+          
+        }
+        private void showsan7()
+        {
+            fl2.Controls.Clear();
+            List<string> tensan7 = new List<string>();
+            BUSSan.tensandat(san, "7");
+            tensan7=BUSSan.tensan;
+            foreach (var s7 in tensan7)
+                  {
+                      Button bt2 = new Button();
+                      bt2.Text = s7;
+                      bt2.Size = new System.Drawing.Size(100, 50);
+                      fl2.Controls.Add(bt2);
+                  }
+
+        }
+
     }
 }

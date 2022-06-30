@@ -145,13 +145,13 @@ namespace Do_An_PLB03.GUI
             {
                 btnThem.Enabled = false;
                 btnSua.Enabled = false;
-                btnXoa.Enabled = false;
+
             }
             else
             {
                 btnThem.Enabled = true;
                 btnSua.Enabled = true;
-                btnXoa.Enabled = true;
+                
             }
         }
 

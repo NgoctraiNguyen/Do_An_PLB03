@@ -14,6 +14,18 @@ namespace Do_An_PLB03.DAL
         public static List<string> loaisan= new List<string>() ;
         public static List<string> tensan= new List<string>() ;
     
+
+        public static void them(string loai,string ten)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            string query = "insert into San(LoaiSan,TenSan) values('"+loai+"','"+ten+"') ";
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = query;
+            command.Connection = conn;
+            command.ExecuteNonQuery();
+        }
         public static List<string> san(DTOSan san)
         {
 
