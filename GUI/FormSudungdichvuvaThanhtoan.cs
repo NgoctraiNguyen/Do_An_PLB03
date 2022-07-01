@@ -331,7 +331,80 @@ namespace Do_An_PLB03.GUI
                 fl2.Controls.Add(bt2);
                 bt2.Click += new EventHandler(this.FormSudungdichvuvaThanhtoan_Click);
             }
-
         }
+
+        private void btnThemGio_Click(object sender, EventArgs e)
+        {
+            if(cbbThemGio.Text == "")
+            {
+                MessageBox.Show("Chưa nhập số giờ cần thêm!");
+                return;
+            }
+            DateTime Thoigianthem = BUSTrangThaiSan.ThoiGianSauKhiCong(BUSTrangThaiSan.getMaTrangThaiSan(BUSHoaDon.GetMaDonHang(ma)),Convert.ToInt32(cbbThemGio.Text));
+            if(Check(Thoigianthem) == false)
+            {
+                MessageBox.Show("Sân đã được đặt");
+                return;
+            }
+            ThemGio(Convert.ToInt32(cbbThemGio.Text));
+            List<TimeSpan> tgbd = new List<TimeSpan>();
+            List<TimeSpan> tgkt = new List<TimeSpan>();
+            List<int> giatheogio = new List<int>();
+            tgbd = BUSGia.tgbatdau(BUSTrangThaiSan.getloaisan(ma));
+            tgkt = BUSGia.tgketthuc(BUSTrangThaiSan.getloaisan(ma));
+            giatheogio = BUSGia.gia(BUSTrangThaiSan.getloaisan(ma));
+
+
+            int k = 0, p = 0, tien = 0, price = 0;
+
+            for (int i = 0; i < tgbd.Count(); i++)
+            {
+                if (((int)tgbd[i].TotalHours) <= BUSTrangThaiSan.tgbd(ma) &&
+                        ((int)tgkt[i].TotalHours) > BUSTrangThaiSan.tgbd(ma))
+                {
+                    k = i;
+                }
+                if (((int)tgbd[i].TotalHours) < BUSTrangThaiSan.tgkt(ma) &&
+                    ((int)tgkt[i].TotalHours) >= BUSTrangThaiSan.tgkt(ma))
+                {
+                    p = i;
+                }
+            }
+
+            if (k == p)
+            {
+                tien = (BUSTrangThaiSan.tgkt(ma) - BUSTrangThaiSan.tgbd(ma)) * giatheogio[k];
+            }
+            else
+            {
+                for (int i = k + 1; i < p; i++)
+                {
+                    price += ((((int)tgkt[i].TotalHours) - ((int)tgbd[i].TotalHours)) * giatheogio[i]);
+                }
+
+                tien = price + ((((int)tgkt[k].TotalHours)) - BUSTrangThaiSan.tgbd(ma)) * giatheogio[k]
+                                    + (BUSTrangThaiSan.tgkt(ma) - ((int)tgbd[p].TotalHours)) * giatheogio[p];
+            }
+            BUSDonHang.UpdateTongTien(BUSHoaDon.GetMaDonHang(ma), tien);
+            BUSHoaDon.updatetongtien(ma, tien);
+        }
+        private void ThemGio(int sogio)
+        {
+            BUSTrangThaiSan.themgio(ma, sogio);
+        }
+        private bool Check(DateTime thoigianthem)
+        {
+            List<DateTime> batdau = new List<DateTime>();
+            batdau = BUSTrangThaiSan.BatDau(BUSDonHang.GetTenSan(BUSHoaDon.GetMaDonHang(ma)));
+            foreach(var i in batdau)
+            {
+                if(DateTime.Compare(thoigianthem,i) > 0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+       
     }
 }

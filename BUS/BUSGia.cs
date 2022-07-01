@@ -14,19 +14,19 @@ namespace Do_An_PLB03.BUS
         public static List<TimeSpan> tgbd = new List<TimeSpan>();
         public static List<TimeSpan> tgkt = new List<TimeSpan>();
         public static List<int> giatheogio = new List<int>();
-        public static List<TimeSpan> tgbatdau(DTOGia gia,int loaisan)
+        public static List<TimeSpan> tgbatdau(int loaisan)
         {
-           tgbd=DALGia.tgbatdau(gia, loaisan);
+           tgbd=DALGia.tgbatdau(loaisan);
             return tgbd;
         }
-        public static List<TimeSpan> tgketthuc(DTOGia gia, int loaisan)
+        public static List<TimeSpan> tgketthuc( int loaisan)
         {
-            tgkt = DALGia.tgketthuc(gia, loaisan);
+            tgkt = DALGia.tgketthuc( loaisan);
             return tgkt;
         }
-        public static List<int> gia(DTOGia gia, int loaisan)
+        public static List<int> gia(int loaisan)
         {
-            giatheogio = DALGia.gia(gia, loaisan);
+            giatheogio = DALGia.gia(loaisan);
             return giatheogio;
         }
         public static DataTable BangGiaSan()

@@ -107,9 +107,9 @@ namespace Do_An_PLB03.GUI
                 int hthem = Convert.ToInt32(txtSoGio.Text);
                 dtpNgayGioTra.Value = dtpNgayGioNhan.Value.AddHours(hthem);
 
-                tgbd = BUSGia.tgbatdau(gia, int.Parse(tenloaisan));
-                tgkt = BUSGia.tgketthuc(gia, int.Parse(tenloaisan));
-                giatheogio = BUSGia.gia(gia, int.Parse(tenloaisan));
+                tgbd = BUSGia.tgbatdau( int.Parse(tenloaisan));
+                tgkt = BUSGia.tgketthuc( int.Parse(tenloaisan));
+                giatheogio = BUSGia.gia( int.Parse(tenloaisan));
 
                 Tgbd = tgbd_toarray(tgbd);
                 Tgkt = tgkt_toarray(tgkt);
@@ -160,7 +160,6 @@ namespace Do_An_PLB03.GUI
                 if ((s1 > 0 && s2 < 0) || (ss1 > 0 && ss2 < 0) || (s1 < 0 && ss2 > 0))
                 {
                     lbnhan.Text = "thoi gian nay da duoc dat";
-
                 }
                 else
                 {

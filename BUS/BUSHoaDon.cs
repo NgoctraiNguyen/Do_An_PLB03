@@ -54,5 +54,9 @@ namespace Do_An_PLB03.BUS
         {
             return DALHoaDon.GetMaDonHang(ma);
         }
+        public static void updatetongtien(int mahoadon, int tien)
+        {
+            DALHoaDon.updatetongtien(mahoadon, tien);
+        }
     }
 }

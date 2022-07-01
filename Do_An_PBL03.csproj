@@ -82,6 +82,12 @@
     <Compile Include="DTO\DTONguoiDung.cs" />
     <Compile Include="DTO\DTOSan.cs" />
     <Compile Include="DTO\DTOTrangThaiSan.cs" />
+    <Compile Include="GUI\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormThemSan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +198,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormThemSan.resx">
       <DependentUpon>FormThemSan.cs</DependentUpon>
     </EmbeddedResource>

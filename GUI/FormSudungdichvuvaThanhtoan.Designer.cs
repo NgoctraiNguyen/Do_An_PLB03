@@ -93,6 +93,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.btnThemGio = new FontAwesome.Sharp.IconButton();
+            this.cbbThemGio = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -134,7 +136,7 @@
             this.groupBox8.Size = new System.Drawing.Size(264, 100);
             this.groupBox8.TabIndex = 8;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Nhận sân";
+            this.groupBox8.Text = "Tạo sân mới";
             // 
             // btnThemSan
             // 
@@ -510,6 +512,8 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.cbbThemGio);
+            this.groupBox6.Controls.Add(this.btnThemGio);
             this.groupBox6.Controls.Add(this.btnTraSan);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.ForeColor = System.Drawing.Color.MidnightBlue;
@@ -517,7 +521,7 @@
             this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox6.Size = new System.Drawing.Size(277, 134);
+            this.groupBox6.Size = new System.Drawing.Size(277, 168);
             this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Trả sân";
@@ -532,10 +536,10 @@
             this.btnTraSan.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTraSan.IconSize = 40;
             this.btnTraSan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTraSan.Location = new System.Drawing.Point(0, 42);
+            this.btnTraSan.Location = new System.Drawing.Point(8, 107);
             this.btnTraSan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTraSan.Name = "btnTraSan";
-            this.btnTraSan.Size = new System.Drawing.Size(133, 46);
+            this.btnTraSan.Size = new System.Drawing.Size(153, 46);
             this.btnTraSan.TabIndex = 7;
             this.btnTraSan.Text = "Trả sân";
             this.btnTraSan.UseVisualStyleBackColor = false;
@@ -890,6 +894,34 @@
             this.button4.TabIndex = 1;
             this.button4.UseVisualStyleBackColor = false;
             // 
+            // btnThemGio
+            // 
+            this.btnThemGio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnThemGio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemGio.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnThemGio.IconChar = FontAwesome.Sharp.IconChar.Calendar;
+            this.btnThemGio.IconColor = System.Drawing.Color.MidnightBlue;
+            this.btnThemGio.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnThemGio.IconSize = 40;
+            this.btnThemGio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThemGio.Location = new System.Drawing.Point(8, 43);
+            this.btnThemGio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThemGio.Name = "btnThemGio";
+            this.btnThemGio.Size = new System.Drawing.Size(123, 46);
+            this.btnThemGio.TabIndex = 7;
+            this.btnThemGio.Text = "Thêm giờ";
+            this.btnThemGio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThemGio.UseVisualStyleBackColor = false;
+            this.btnThemGio.Click += new System.EventHandler(this.btnThemGio_Click);
+            // 
+            // cbbThemGio
+            // 
+            this.cbbThemGio.FormattingEnabled = true;
+            this.cbbThemGio.Location = new System.Drawing.Point(149, 52);
+            this.cbbThemGio.Name = "cbbThemGio";
+            this.cbbThemGio.Size = new System.Drawing.Size(121, 28);
+            this.cbbThemGio.TabIndex = 8;
+            // 
             // FormSudungdichvuvaThanhtoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -987,5 +1019,7 @@
         private System.Windows.Forms.FlowLayoutPanel fl2;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Button btnThemSan;
+        private FontAwesome.Sharp.IconButton btnThemGio;
+        private System.Windows.Forms.ComboBox cbbThemGio;
     }
 }

@@ -31,5 +31,9 @@ namespace Do_An_PLB03.BUS
         {
             DALDonHang.TraSan(madonhang);
         }
+        public static void UpdateTongTien(int madonhang, int tongtien)
+        {
+            DALDonHang.updateTongTien(madonhang,tongtien);
+        }
     }
 }

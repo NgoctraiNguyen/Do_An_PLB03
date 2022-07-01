@@ -14,7 +14,7 @@ namespace Do_An_PLB03.DAL
        public static List<TimeSpan> tgbd=new List<TimeSpan>();
         public static List<TimeSpan> tgkt=new List<TimeSpan>();
         public static List<int> giatheogio= new List<int>();
-        public static List<TimeSpan> tgbatdau(DTOGia gia,int loaisan)
+        public static List<TimeSpan> tgbatdau(int loaisan)
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
@@ -33,7 +33,7 @@ namespace Do_An_PLB03.DAL
 
         }
 
-        public static List<TimeSpan> tgketthuc(DTOGia gia, int loaisan)
+        public static List<TimeSpan> tgketthuc(int loaisan)
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
@@ -52,7 +52,7 @@ namespace Do_An_PLB03.DAL
 
         }
 
-        public static List<int> gia(DTOGia gia, int loaisan)
+        public static List<int> gia(int loaisan)
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();

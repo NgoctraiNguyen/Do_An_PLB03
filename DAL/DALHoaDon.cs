@@ -200,6 +200,18 @@ namespace Do_An_PLB03.DAL
             conn.Close();
             return dt;
         }
+        public static void updatetongtien(int mahoadon, int tongtien)
+        {
+            SqlConnection conn = dbConnectionData.HamketNoi();
+            conn.Open();
+            String query = "update HoaDon set HoaDon.TongTien = " + tongtien + " where MaHoaDon='" + mahoadon + "'";
+            SqlCommand command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = query;
+            command.Connection = conn;
+            command.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 
 }

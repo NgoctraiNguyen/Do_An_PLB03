@@ -39,5 +39,35 @@ namespace Do_An_PLB03.BUS
         {
             DALTrangThaiSan.deletetrangthai(matrangthaisan);
         }
+        public static void themgio(int mahoadon, int sogio)
+        {
+            DALTrangThaiSan.themgio(DALTrangThaiSan.getmatrangthai(mahoadon), sogio);
+        }
+        public static int getloaisan(int mahoadon)
+        {
+            return DALTrangThaiSan.getloaisan(mahoadon);
+        }
+        public static int tgbd(int mahoadon)
+        {
+            DALTrangThaiSan.gettgbd(DALTrangThaiSan.getmatrangthai(mahoadon));
+            return DALTrangThaiSan.tgbd;
+        }
+        public static int tgkt(int mahoadon)
+        {
+            DALTrangThaiSan.gettgbd(DALTrangThaiSan.getmatrangthai(mahoadon));
+            return DALTrangThaiSan.tgkt;
+        }
+        public static List<DateTime> BatDau(string tensan)
+        {
+            return DALTrangThaiSan.BatDau(tensan);
+        }
+        public static DateTime ThoiGianSauKhiCong(int matrangthaisan,int sogio)
+        {
+            return DALTrangThaiSan.ThoiGianSauKhiCong(matrangthaisan,sogio);
+        }
+        public static int getMaTrangThaiSan(int madonhang)
+        {
+            return DALTrangThaiSan.getMaTrangThaiSan(madonhang);
+        }
     }
 }
