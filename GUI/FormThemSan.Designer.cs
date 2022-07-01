@@ -96,6 +96,7 @@
             // 
             // tbnThemSanMoi
             // 
+            this.tbnThemSanMoi.BackColor = System.Drawing.Color.LightCyan;
             this.tbnThemSanMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbnThemSanMoi.ForeColor = System.Drawing.Color.MidnightBlue;
             this.tbnThemSanMoi.Location = new System.Drawing.Point(69, 242);
@@ -103,7 +104,7 @@
             this.tbnThemSanMoi.Size = new System.Drawing.Size(151, 50);
             this.tbnThemSanMoi.TabIndex = 5;
             this.tbnThemSanMoi.Text = "Thêm Sân Mới";
-            this.tbnThemSanMoi.UseVisualStyleBackColor = true;
+            this.tbnThemSanMoi.UseVisualStyleBackColor = false;
             this.tbnThemSanMoi.Click += new System.EventHandler(this.tbnThemSanMoi_Click);
             // 
             // FormThemSan

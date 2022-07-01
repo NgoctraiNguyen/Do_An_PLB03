@@ -40,13 +40,21 @@ namespace Do_An_PLB03.GUI
         }
 
 
+        public delegate void load();
+        public load l { get; set; }
+        
+
         private void btnHuySan_Click(object sender, EventArgs e)
         {
             try
             {
-                MessageBox.Show(" Bạn có chắc muốn xóa đơn hàng");
-                BUSTrangThaiSan.deletetrangthai(int.Parse(txtctMaTrangThai.Text));
-                BUSDonHang.deletedonhang(int.Parse(txtctMaDonHang.Text));
+               if( MessageBox.Show(" Bạn có chắc muốn xóa đơn hàng","Thong Bao" ,MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+                {
+                    BUSTrangThaiSan.deletetrangthai(int.Parse(txtctMaTrangThai.Text));
+                    BUSDonHang.deletedonhang(int.Parse(txtctMaDonHang.Text));
+                    l();
+
+                }
             }
             catch { };
         }

@@ -59,7 +59,7 @@ namespace Do_An_PLB03.GUI
                 MessageBox.Show("Sửa thành công");
                 LoadDuLieubangGia();
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 MessageBox.Show("Lỗi. Vui lòng nhập lại");
             }

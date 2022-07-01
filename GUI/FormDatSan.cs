@@ -183,39 +183,43 @@ namespace Do_An_PLB03.GUI
             }
             else
             {
-                trangthaisan.TenSan = cbbTenSan.Text;
-                trangthaisan.ThoiGianBatDau = dtpNgayGioNhan.Value;
-                trangthaisan.ThoiGianKetThuc = dtpNgayGioTra.Value;
-                BUSTrangThaiSan.TrangThaiSan(trangthaisan);
-
-                khachhang.TenKhachHang = txtTenKhachHang.Text;
-                khachhang.SDTKhachHang = txtSDTKhachHang.Text;
-                if (!BUSKhachHang.kiemtrakhachhang(khachhang, txtSDTKhachHang.Text))
+                if (MessageBox.Show("Ban đã chắc chắn muốn đặt sân này ", "Thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) 
                 {
-                    BUSKhachHang.KhachHang(khachhang);
+                    trangthaisan.TenSan = cbbTenSan.Text;
+                    trangthaisan.ThoiGianBatDau = dtpNgayGioNhan.Value;
+                    trangthaisan.ThoiGianKetThuc = dtpNgayGioTra.Value;
+                    BUSTrangThaiSan.TrangThaiSan(trangthaisan);
+
+                    khachhang.TenKhachHang = txtTenKhachHang.Text;
+                    khachhang.SDTKhachHang = txtSDTKhachHang.Text;
+                    if (!BUSKhachHang.kiemtrakhachhang(khachhang, txtSDTKhachHang.Text))
+                    {
+                        BUSKhachHang.KhachHang(khachhang);
+                    }
+
+                    BUSKhachHang.laymakhachhang(khachhang, txtSDTKhachHang.Text);
+                    donhang.MaKhachHang = BUSKhachHang.makhachhang;
+
+                    BUSTrangThaiSan.matrangthaisan(trangthaisan, dtpNgayGioNhan.Value.Hour);
+                    donhang.MaTrangThaiSan = BUSTrangThaiSan.ma;
+                    donhang.NgayGioTao = DateTime.Now;
+                    donhang.TongTienSan = int.Parse(txtGia.Text);
+                    donhang.TrangThai = 1;
+
+                    BUSDonHang.donhang(donhang);
+
+                    dtDanhSachDatSan.DataSource = BUSDanhSachDatSan.danhsach();
+
+                    if (chkNhanSan.Checked)
+                    {
+                        _formcha.Openchillform(new FormNhanSan(_formcha._user));
+                    }
                 }
-
-                BUSKhachHang.laymakhachhang(khachhang, txtSDTKhachHang.Text);
-                donhang.MaKhachHang = BUSKhachHang.makhachhang;
-
-                BUSTrangThaiSan.matrangthaisan(trangthaisan, dtpNgayGioNhan.Value.Hour);
-                donhang.MaTrangThaiSan = BUSTrangThaiSan.ma;
-                donhang.NgayGioTao = DateTime.Now;
-                donhang.TongTienSan = int.Parse(txtGia.Text);
-                donhang.TrangThai = 1;
-
-                BUSDonHang.donhang(donhang);
-
-                dtDanhSachDatSan.DataSource = BUSDanhSachDatSan.danhsach();
-
-                if (chkNhanSan.Checked)
-                {
-                    _formcha.Openchillform(new FormNhanSan(_formcha._user));
-                }
+               
+                txtTenKhachHang.Text = "";
+                txtSDTKhachHang.Text = "";
+                txtSDT.Text = "";
             }
-            txtTenKhachHang.Text = "";
-            txtSDTKhachHang.Text = "";
-            txtSDT.Text = "";
         }
 
         string ten, sdt;
@@ -276,6 +280,10 @@ namespace Do_An_PLB03.GUI
 
             }
         }
+        public void load()
+        {
+            dtDanhSachDatSan.DataSource = BUSDanhSachDatSan.danhsach();
+        }
 
         private void btnXemChiTiet_Click(object sender, EventArgs e)
         {
@@ -285,6 +293,7 @@ namespace Do_An_PLB03.GUI
                 else
                 {
                     FormXemChiTietDatSan formxct = new FormXemChiTietDatSan(ctTenSan, ctTen, ctNgayNhan, ctNgayTra, ctSDTKhachHang, ctMaDonHang, ctMaTrangThaiSan, ctLoaiSan);
+                    formxct.l += new FormXemChiTietDatSan.load(load);
                     formxct.ShowDialog();
                 }
             }

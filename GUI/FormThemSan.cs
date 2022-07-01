@@ -78,10 +78,14 @@ namespace Do_An_PLB03.GUI
         string tensan;
         private void tbnThemSanMoi_Click(object sender, EventArgs e)
         {
-            loais=cbloai.Text;
-            tensan=cbten.Text;
-            t(loais,tensan);
-            d();
+            if (MessageBox.Show(" Bạn có chắc muốn thêm sân mới này ", "Thong Bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                loais = cbloai.Text;
+                tensan = cbten.Text;
+                t(loais, tensan);
+                d();
+            }
         }
 
         private void cbten_SelectedIndexChanged(object sender, EventArgs e)

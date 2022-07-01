@@ -17,7 +17,7 @@ namespace Do_An_PLB03.GUI
     {
         private int mahoadon = -1;
         private DTONguoiDung _user;
-        private DTOSan san;
+   
      
    
         public FormSudungdichvuvaThanhtoan(DTONguoiDung user)
@@ -120,27 +120,35 @@ namespace Do_An_PLB03.GUI
             }
             else
             {
-                if (xuliSoLuong() == true)
-                {
-                    MessageBox.Show("Vượt quá số lượng trong kho");
-                    txtSL.Text = "";
-                }
-                else
-                {
-                    int madouong = BUSDoUong.MaDoUong(comboBox1.Text);
-                    BUSDoUong.ThemDichVu(mahoadon, madouong, int.Parse(txtSL.Text));
-                    dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
-                }
-                if (comboBox1.Text == "")
-                {
-                }
-                else
-                {
+                
 
-                    //BUSDoUong.updatesoluong(int.Parse(dtDichVu.Rows[i].Cells[1].Value.ToString()), dtDichVu.Rows[i].Cells[0].Value.ToString());
-                    BUSDoUong.updatesoluong(int.Parse(txtSL.Text), comboBox1.Text);
 
-                }
+                    if (xuliSoLuong() == true)
+                    {
+                        MessageBox.Show("Vượt quá số lượng trong kho");
+                        txtSL.Text = "";
+                    }
+                    else
+                    {
+                        if (MessageBox.Show(" Bạn có chắc muốn thêm dịch vụ ", "Thong Bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            int madouong = BUSDoUong.MaDoUong(comboBox1.Text);
+                            BUSDoUong.ThemDichVu(mahoadon, madouong, int.Parse(txtSL.Text));
+                            dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
+                        }
+                    }
+                    if (comboBox1.Text == "")
+                    {
+                    }
+                    else
+                    {
+                        
+                        
+                            BUSDoUong.updatesoluong(int.Parse(txtSL.Text), comboBox1.Text);
+                        
+
+                    }
+                
             }
 
            
@@ -151,27 +159,32 @@ namespace Do_An_PLB03.GUI
             txtGia.Text = BUSDoUong.GiaDoUongTheoMa(BUSDoUong.MaDoUong(comboBox1.Text)).ToString();
         }
 
-        DTOHoaDon HoaDon= new DTOHoaDon();
+        
        
         private void button3_Click(object sender, EventArgs e)
         {
-            //BUSHoaDon.updateTongTien(ma, int.Parse(txtTongTien.Text));
+            
             try
             {
-                BUSHoaDon.ThanhToan(Convert.ToInt32(lblSoHoaDon.Text));
-                if (comboBox1.Text == "")
+                if (MessageBox.Show(" Bạn có chắc muốn thanh toán đơn hàng", "Thong Bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
 
-                }
-                else
-                {
-                    int sc = dtDichVu.Rows.Count;
-                    for (int i = 0; i < sc - 1; i++)
+
+                    BUSHoaDon.ThanhToan(Convert.ToInt32(lblSoHoaDon.Text));
+                    if (comboBox1.Text == "")
                     {
-                        BUSDoUong.updatesoluong(int.Parse(dtDichVu.Rows[i].Cells[1].Value.ToString()), dtDichVu.Rows[i].Cells[0].Value.ToString());
+
                     }
+                    else
+                    {
+                        int sc = dtDichVu.Rows.Count;
+                        for (int i = 0; i < sc - 1; i++)
+                        {
+                            BUSDoUong.updatesoluong(int.Parse(dtDichVu.Rows[i].Cells[1].Value.ToString()), dtDichVu.Rows[i].Cells[0].Value.ToString());
+                        }
+                    }
+                    FormSudungdichvuvaThanhtoan_Load(sender, e);
                 }
-                FormSudungdichvuvaThanhtoan_Load(sender, e);
             }
             catch
             {
@@ -196,10 +209,15 @@ namespace Do_An_PLB03.GUI
 
         private void btnDatSan_Click(object sender, EventArgs e)
         {
+
             try
             {
-                BUSDonHang.TraSan(BUSHoaDon.GetMaDonHang(ma));
-                FormSudungdichvuvaThanhtoan_Load(sender, e);
+               if(MessageBox.Show(" Bạn có chắc muốn trả sân ", "Thong Bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    BUSDonHang.TraSan(BUSHoaDon.GetMaDonHang(ma));
+                    FormSudungdichvuvaThanhtoan_Load(sender, e);
+                }
+               
             }
             catch
             {
@@ -254,11 +272,14 @@ namespace Do_An_PLB03.GUI
         {
             try
             {
-                x = Convert.ToInt32(dtDichVu.SelectedCells[1].Value);
-                int madouong = BUSDoUong.MaDoUong(comboBox1.Text);
-                BUSDoUong.suadichvu(mahoadon, madouong, int.Parse(txtSL.Text));
-                BUSDoUong.updatesoluong(int.Parse(txtSL.Text) - x, comboBox1.Text);
-                dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
+                if (MessageBox.Show(" Bạn có chắc muốn cập nhật dịch vụ ", "Thong Bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    x = Convert.ToInt32(dtDichVu.SelectedCells[1].Value);
+                    int madouong = BUSDoUong.MaDoUong(comboBox1.Text);
+                    BUSDoUong.suadichvu(mahoadon, madouong, int.Parse(txtSL.Text));
+                    BUSDoUong.updatesoluong(int.Parse(txtSL.Text) - x, comboBox1.Text);
+                    dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
+                }
             }
             catch { }
         }
@@ -267,11 +288,14 @@ namespace Do_An_PLB03.GUI
         {
             try
             {
-                x = Convert.ToInt32(dtDichVu.SelectedCells[1].Value);
-                int madouong = BUSDoUong.MaDoUong(comboBox1.Text);
-                BUSDoUong.xoadichvu(mahoadon, madouong);
-                BUSDoUong.updatesoluong(-x, comboBox1.Text);
-                dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
+                if (MessageBox.Show(" Bạn có chắc muốn thêm dịch vụ ", "Thong Bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    x = Convert.ToInt32(dtDichVu.SelectedCells[1].Value);
+                    int madouong = BUSDoUong.MaDoUong(comboBox1.Text);
+                    BUSDoUong.xoadichvu(mahoadon, madouong);
+                    BUSDoUong.updatesoluong(-x, comboBox1.Text);
+                    dtDichVu.DataSource = BUSDoUong.DsDoUong(mahoadon);
+                }
             }
             catch
             {
@@ -286,11 +310,14 @@ namespace Do_An_PLB03.GUI
 
         private void btnThemSan_Click(object sender, EventArgs e)
         {
-            FormThemSan formThemSan = new FormThemSan();
-            formThemSan.t += new FormThemSan.them(themsan);
-            formThemSan.d += new FormThemSan.load(showsan5);
-            formThemSan.d += new FormThemSan.load(showsan7);
-            formThemSan.Show();
+            if (MessageBox.Show(" Bạn muốn thêm sân mới  ", "Thong Bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                FormThemSan formThemSan = new FormThemSan();
+                formThemSan.t += new FormThemSan.them(themsan);
+                formThemSan.d += new FormThemSan.load(showsan5);
+                formThemSan.d += new FormThemSan.load(showsan7);
+                formThemSan.Show();
+            }
 
         }
         private void themsan(string loai,string txt)
@@ -346,47 +373,52 @@ namespace Do_An_PLB03.GUI
                 MessageBox.Show("Sân đã được đặt");
                 return;
             }
-            ThemGio(Convert.ToInt32(cbbThemGio.Text));
-            List<TimeSpan> tgbd = new List<TimeSpan>();
-            List<TimeSpan> tgkt = new List<TimeSpan>();
-            List<int> giatheogio = new List<int>();
-            tgbd = BUSGia.tgbatdau(BUSTrangThaiSan.getloaisan(ma));
-            tgkt = BUSGia.tgketthuc(BUSTrangThaiSan.getloaisan(ma));
-            giatheogio = BUSGia.gia(BUSTrangThaiSan.getloaisan(ma));
+           if( MessageBox.Show(" Bạn có chắc muốn đặt thêm giờ", "Thong Bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            { 
+                ThemGio(Convert.ToInt32(cbbThemGio.Text));
+                List<TimeSpan> tgbd = new List<TimeSpan>();
+                List<TimeSpan> tgkt = new List<TimeSpan>();
+                List<int> giatheogio = new List<int>();
+                tgbd = BUSGia.tgbatdau(BUSTrangThaiSan.getloaisan(ma));
+                tgkt = BUSGia.tgketthuc(BUSTrangThaiSan.getloaisan(ma));
+                giatheogio = BUSGia.gia(BUSTrangThaiSan.getloaisan(ma));
 
 
-            int k = 0, p = 0, tien = 0, price = 0;
+                int k = 0, p = 0, tien = 0, price = 0;
 
-            for (int i = 0; i < tgbd.Count(); i++)
-            {
-                if (((int)tgbd[i].TotalHours) <= BUSTrangThaiSan.tgbd(ma) &&
-                        ((int)tgkt[i].TotalHours) > BUSTrangThaiSan.tgbd(ma))
+                for (int i = 0; i < tgbd.Count(); i++)
                 {
-                    k = i;
-                }
-                if (((int)tgbd[i].TotalHours) < BUSTrangThaiSan.tgkt(ma) &&
-                    ((int)tgkt[i].TotalHours) >= BUSTrangThaiSan.tgkt(ma))
-                {
-                    p = i;
-                }
-            }
-
-            if (k == p)
-            {
-                tien = (BUSTrangThaiSan.tgkt(ma) - BUSTrangThaiSan.tgbd(ma)) * giatheogio[k];
-            }
-            else
-            {
-                for (int i = k + 1; i < p; i++)
-                {
-                    price += ((((int)tgkt[i].TotalHours) - ((int)tgbd[i].TotalHours)) * giatheogio[i]);
+                    if (((int)tgbd[i].TotalHours) <= BUSTrangThaiSan.tgbd(ma) &&
+                            ((int)tgkt[i].TotalHours) > BUSTrangThaiSan.tgbd(ma))
+                    {
+                        k = i;
+                    }
+                    if (((int)tgbd[i].TotalHours) < BUSTrangThaiSan.tgkt(ma) &&
+                        ((int)tgkt[i].TotalHours) >= BUSTrangThaiSan.tgkt(ma))
+                    {
+                        p = i;
+                    }
                 }
 
-                tien = price + ((((int)tgkt[k].TotalHours)) - BUSTrangThaiSan.tgbd(ma)) * giatheogio[k]
-                                    + (BUSTrangThaiSan.tgkt(ma) - ((int)tgbd[p].TotalHours)) * giatheogio[p];
+                if (k == p)
+                {
+                    tien = (BUSTrangThaiSan.tgkt(ma) - BUSTrangThaiSan.tgbd(ma)) * giatheogio[k];
+                }
+                else
+                {
+                    for (int i = k + 1; i < p; i++)
+                    {
+                        price += ((((int)tgkt[i].TotalHours) - ((int)tgbd[i].TotalHours)) * giatheogio[i]);
+                    }
+
+                    tien = price + ((((int)tgkt[k].TotalHours)) - BUSTrangThaiSan.tgbd(ma)) * giatheogio[k]
+                                        + (BUSTrangThaiSan.tgkt(ma) - ((int)tgbd[p].TotalHours)) * giatheogio[p];
+                }
+                BUSDonHang.UpdateTongTien(BUSHoaDon.GetMaDonHang(ma), tien);
+                BUSHoaDon.updatetongtien(ma, tien);
+
+                FormSudungdichvuvaThanhtoan_Load(sender, e);
             }
-            BUSDonHang.UpdateTongTien(BUSHoaDon.GetMaDonHang(ma), tien);
-            BUSHoaDon.updatetongtien(ma, tien);
         }
         private void ThemGio(int sogio)
         {

@@ -74,14 +74,17 @@ namespace Do_An_PLB03.GUI
                 }
                 else
                 {
-                    BUSDanhSachDatSan.NhanSan(MaDonHang);
-                    HoaDon.NgayGioTao = DateTime.Now;
-                    HoaDon.MaDonHang = MaDonHang;
-                    HoaDon.MaNguoiDung = _user.MaNguoiDung;
-                    HoaDon.TongTien = BUSDonHang.GetTongTien(MaDonHang);
-                    HoaDon.TrangThai = 0;
-                    BUSHoaDon.HoaDon(HoaDon);
-                    dataGridView1.DataSource = BUSDanhSachDatSan.danhsachnhansan();
+                    if (MessageBox.Show(" Bạn có chắc muốn nhận sân này", "Thong Bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        BUSDanhSachDatSan.NhanSan(MaDonHang);
+                        HoaDon.NgayGioTao = DateTime.Now;
+                        HoaDon.MaDonHang = MaDonHang;
+                        HoaDon.MaNguoiDung = _user.MaNguoiDung;
+                        HoaDon.TongTien = BUSDonHang.GetTongTien(MaDonHang);
+                        HoaDon.TrangThai = 0;
+                        BUSHoaDon.HoaDon(HoaDon);
+                        dataGridView1.DataSource = BUSDanhSachDatSan.danhsachnhansan();
+                    }
                 }
             }
         }
