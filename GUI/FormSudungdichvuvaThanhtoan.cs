@@ -47,69 +47,45 @@ namespace Do_An_PLB03.GUI
             
             showsan5();
             showsan7();
-            /*
-            if(KiemTra("5A"))
+            List<string> s5 = new List<string>();
+            List<string> s7 = new List<string>();
+            s5 = BUSSan.tensandat("5");
+            s7 = BUSSan.tensandat("7");
+            foreach(var i in s5)
             {
-                btn5A.BackColor = Color.LightGreen;
-                btn5A.Enabled = true;
+                if(KiemTra(i))
+                {
+                    this.fl1.Controls["btn" + i].BackColor = Color.LightGreen;
+                    this.fl1.Controls["btn" + i].Enabled = true;
+                }
+                else
+                {
+                    this.fl1.Controls["btn" + i].BackColor = Color.Gray;
+                    this.fl1.Controls["btn" + i].Enabled = false;
+                }
             }
-            else
+            foreach (var i in s7)
             {
-                btn5A.BackColor = Color.Gray;
-                btn5A.Enabled = false;
-            }
-            if (KiemTra("5B"))
-            {
-                btn5B.BackColor = Color.LightGreen;
-                btn5B.Enabled = true;
-            }
-            else
-            {
-                btn5B.BackColor = Color.Gray;
-                btn5B.Enabled = false;
-            }
-            if (KiemTra("5C"))
-            {
-                btn5C.BackColor = Color.LightGreen;
-                btn5C.Enabled = true;
-            }
-            else
-            {
-                btn5C.BackColor = Color.Gray;
-                btn5C.Enabled = false;
-            }
-            if (KiemTra("7A"))
-            {
-                btn7A.BackColor = Color.LightYellow;
-                btn7A.Enabled = true;
-            }
-            else
-            {
-                btn7A.BackColor = Color.Gray;
-                btn7A.Enabled = false;
-            }
-            if (KiemTra("7B"))
-            {
-                btn7B.BackColor = Color.LightYellow;
-                btn7B.Enabled = true;
-            }
-            else
-            {
-                btn7B.BackColor = Color.Gray;
-                btn7B.Enabled = false;
+                if (KiemTra(i))
+                {
+                    this.fl2.Controls["btn" + i].BackColor = Color.LightYellow;
+                    this.fl2.Controls["btn" + i].Enabled = true;
+                }
+                else
+                {
+                    this.fl2.Controls["btn"+  i].BackColor = Color.Gray;
+                    this.fl2.Controls["btn" + i].Enabled = false;
+                }
             }
             comboBox1.DataSource = BUSDoUong.DoUong();
-            
-            dtThanhToan.DataSource = BUSHoaDon.DSThanhToan();*/
-
+            dtThanhToan.DataSource = BUSHoaDon.DSThanhToan();
         }
         public int ma;
         private void FormSudungdichvuvaThanhtoan_Click(object sender, EventArgs e)
         {
 
             float tiendichvu=0;
-
-            string tensan = (((Button)sender).Text).Split(' ')[1];
+            string tensan = (((Button)sender).Text);
             ma = BUSHoaDon.LayMaTheoTen(tensan);
             mahoadon = ma;
             dtDichVu.DataSource = BUSDoUong.DsDoUong(ma);
@@ -310,13 +286,11 @@ namespace Do_An_PLB03.GUI
 
         private void btnThemSan_Click(object sender, EventArgs e)
         {
-
             FormThemSan formThemSan = new FormThemSan();
             formThemSan.t += new FormThemSan.them(themsan);
-            formThemSan.d+= new FormThemSan.load(showsan5);
+            formThemSan.d += new FormThemSan.load(showsan5);
             formThemSan.d += new FormThemSan.load(showsan7);
             formThemSan.Show();
-
 
         }
         private void themsan(string loai,string txt)
@@ -328,15 +302,16 @@ namespace Do_An_PLB03.GUI
         {
             fl1.Controls.Clear();
             List<string> tensan5 = new List<string>();
-            BUSSan.tensandat(san, "5");
-            tensan5 = BUSSan.tensan;
+            tensan5 = BUSSan.tensandat("5");
             foreach (var s5 in tensan5)
             {
                 
                 Button bt1 = new Button();
                 bt1.Text = s5;
                 bt1.Size = new System.Drawing.Size(100, 50);
+                bt1.Name = "btn" + s5;
                 fl1.Controls.Add(bt1);
+                bt1.Click += new EventHandler(this.FormSudungdichvuvaThanhtoan_Click);
             }
 
             
@@ -346,17 +321,17 @@ namespace Do_An_PLB03.GUI
         {
             fl2.Controls.Clear();
             List<string> tensan7 = new List<string>();
-            BUSSan.tensandat(san, "7");
-            tensan7=BUSSan.tensan;
+            tensan7 = BUSSan.tensandat("7");
             foreach (var s7 in tensan7)
-                  {
-                      Button bt2 = new Button();
-                      bt2.Text = s7;
-                      bt2.Size = new System.Drawing.Size(100, 50);
-                      fl2.Controls.Add(bt2);
-                  }
+            {
+                Button bt2 = new Button();
+                bt2.Text = s7;
+                bt2.Size = new System.Drawing.Size(100, 50);
+                bt2.Name = "btn" + s7;
+                fl2.Controls.Add(bt2);
+                bt2.Click += new EventHandler(this.FormSudungdichvuvaThanhtoan_Click);
+            }
 
         }
-
     }
 }

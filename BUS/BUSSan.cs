@@ -22,11 +22,20 @@ namespace Do_An_PLB03.BUS
             loaisan= DALSan.san(san);
             return loaisan;
         }
-        public static List<string> tensandat(DTOSan san,string tenloaisan)
+        public static List<string> tensandat(string tenloaisan)
         {
-            tensan.Clear();
-            tensan= DALSan.tensandat(san,tenloaisan);
-            return tensan;
+            return DALSan.tensandat(tenloaisan);
+        }
+        public static List<char> chucai(string loaisan)
+        {
+            List<string> ten = new List<string>();
+            List<char> result = new List<char>();
+            ten = tensandat(loaisan);
+            foreach(string i in ten)
+            {
+                result.Add(i[1]);
+            }
+            return result;
         }
     }
 }

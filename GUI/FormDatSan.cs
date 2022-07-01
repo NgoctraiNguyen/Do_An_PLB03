@@ -56,7 +56,7 @@ namespace Do_An_PLB03.GUI
                 txtMaLoaiSan.Text = cbbLoaiSan.Text;
                 tenloaisan = cbbLoaiSan.Text;
                 tensan.Clear();
-                tensan = BUSSan.tensandat(san, tenloaisan);
+                tensan = BUSSan.tensandat(tenloaisan);
                 cbbTenSan.DataSource = null;
                 cbbTenSan.Items.Clear();
                 cbbTenSan.DataSource = tensan;
@@ -76,7 +76,8 @@ namespace Do_An_PLB03.GUI
             return giatheogio.ToArray();
         }
 
-        public static DateTime batdau, ketthuc;
+        public static List<DateTime> batdau = new List<DateTime>();
+        public static List<DateTime> ketthuc = new List<DateTime>();
         private void cbbTenSan_SelectedIndexChanged(object sender, EventArgs e)
         {
           
@@ -149,20 +150,23 @@ namespace Do_An_PLB03.GUI
                 txtGia.Text = tien.ToString();
 
             }
-
-            int s1 = DateTime.Compare(dtpNgayGioNhan.Value, batdau);
-            int s2 = DateTime.Compare(dtpNgayGioNhan.Value, ketthuc);
-            int ss1 = DateTime.Compare(dtpNgayGioTra.Value, batdau);
-            int ss2 = DateTime.Compare(dtpNgayGioTra.Value, ketthuc);
-            if ((s1 > 0 && s2 < 0) || (ss1 > 0 && ss2 < 0) || (s1 < 0 && ss2 > 0))
+            for (int i = 0; i < batdau.Count; i++)
             {
-                lbnhan.Text = "thoi gian nay da duoc dat";
 
-            }
-            else
-            {
-                lbnhan.Text = "";
+                int s1 = DateTime.Compare(dtpNgayGioNhan.Value, batdau[i]);
+                int s2 = DateTime.Compare(dtpNgayGioNhan.Value, ketthuc[i]);
+                int ss1 = DateTime.Compare(dtpNgayGioTra.Value, batdau[i]);
+                int ss2 = DateTime.Compare(dtpNgayGioTra.Value, ketthuc[i]);
+                if ((s1 > 0 && s2 < 0) || (ss1 > 0 && ss2 < 0) || (s1 < 0 && ss2 > 0))
+                {
+                    lbnhan.Text = "thoi gian nay da duoc dat";
 
+                }
+                else
+                {
+                    lbnhan.Text = "";
+
+                }
             }
         }
 
@@ -210,7 +214,9 @@ namespace Do_An_PLB03.GUI
                     _formcha.Openchillform(new FormNhanSan(_formcha._user));
                 }
             }
-
+            txtTenKhachHang.Text = "";
+            txtSDTKhachHang.Text = "";
+            txtSDT.Text = "";
         }
 
         string ten, sdt;

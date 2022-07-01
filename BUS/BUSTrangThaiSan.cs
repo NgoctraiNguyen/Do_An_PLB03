@@ -27,8 +27,8 @@ namespace Do_An_PLB03.BUS
             
         }
 
-        public static DateTime batdau ;
-        public static DateTime ketthuc ;
+        public static List<DateTime> batdau = new List<DateTime>();
+        public static List<DateTime> ketthuc = new List<DateTime>();
         public static void  kiemtrasan(DTOTrangThaiSan trangthaisan,string tensan)
         {
             DALTrangThaiSan.kiemtrasan(trangthaisan , tensan);

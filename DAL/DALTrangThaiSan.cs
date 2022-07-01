@@ -58,31 +58,38 @@ namespace Do_An_PLB03.DAL
 
             return ma;
         }
-        public static DateTime batdau ;
-        public static DateTime ketthuc ;
+        public static List<DateTime> batdau = new List<DateTime>();
+        public static List<DateTime> ketthuc = new List<DateTime>();
         public static void kiemtrasan(DTOTrangThaiSan trangthaisan, string tensan)
         {
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
             var command = new SqlCommand();
             command.Connection = conn;
-            string que = "select ThoiGianBatDau,ThoiGianKetThuc from trangthaisan where TenSan='"+tensan+"'and TrangThai=1";
+            string que = "select ThoiGianBatDau,ThoiGianKetThuc from trangthaisan where TenSan='" + tensan + "'and TrangThai=1";
             command.CommandType = CommandType.Text;
             command.CommandText = que;
-            SqlDataReader read= command.ExecuteReader();
+            SqlDataReader read = command.ExecuteReader();
+
+            DateTime bt = new DateTime(1, 1, 1, 0, 0, 0);
+            DateTime kt = new DateTime(1, 1, 1, 0, 0, 0);
+
             if (read.HasRows)
             {
+
                 while (read.Read())
                 {
-                    batdau = read.GetDateTime(0);
-                    ketthuc = read.GetDateTime(1);
+                    batdau.Add(read.GetDateTime(0));
+                    ketthuc.Add(read.GetDateTime(1));
+
                 }
             }
             else
             {
-                batdau = new DateTime(1, 1, 1, 0, 0, 0);
-                ketthuc=new DateTime(1, 1, 1,0, 0, 0);
+                batdau.Add(bt);
+                ketthuc.Add(kt);
             }
+
 
         }
         public static void deletetrangthai(int matrangthaisan)

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Do_An_PLB03.BUS;
+
 
 namespace Do_An_PLB03.GUI
 {
@@ -40,14 +42,21 @@ namespace Do_An_PLB03.GUI
         {
             loaisan.Add("5");
             loaisan.Add("7");
+            List<char> chucai5 = BUSSan.chucai("5");
+            List<char> chucai7 = BUSSan.chucai("7");
             char[] az = Enumerable.Range('A', 'Z' - 'A' + 1).Select(i => (Char)i).ToArray();
             foreach (var c in az)
             {
-                san5.Add("5"+c);
-                san7.Add("7"+c);
+                if(!chucai5.Contains(c))
+                {
+                    san5.Add("5" + c);
+                }
+                if (!chucai7.Contains(c))
+                {
+                    san7.Add("7" + c);
+                }
             }
             cbloai.DataSource = loaisan;
-          
         }
 
         private void cbloai_SelectedIndexChanged(object sender, EventArgs e)

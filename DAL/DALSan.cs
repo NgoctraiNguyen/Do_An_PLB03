@@ -12,7 +12,7 @@ namespace Do_An_PLB03.DAL
     internal class DALSan
     {
         public static List<string> loaisan= new List<string>() ;
-        public static List<string> tensan= new List<string>() ;
+        //public static List<string> tensan= new List<string>() ;
     
 
         public static void them(string loai,string ten)
@@ -46,8 +46,9 @@ namespace Do_An_PLB03.DAL
 
         }
 
-        public static List<string> tensandat(DTOSan san,string tenloaisan)
+        public static List<string> tensandat(string tenloaisan)
         {
+            List<string> tensan = new List<string>();
             SqlConnection conn = dbConnectionData.HamketNoi();
             conn.Open();
             string query = "select TenSan from San where LoaiSan= '"+tenloaisan+"'";
